@@ -6,6 +6,7 @@ import { CertificateDetailPage } from '../pages/CertificateDetailPage'
 import { HomePage } from '../pages/HomePage'
 import { LoginPage } from '../pages/LoginPage'
 import { InterestsPage } from '../pages/mypage/InterestsPage'
+import { MyCertificateRecordPage } from '../pages/mypage/MyCertificateRecordPage'
 import { MyCertificatesPage } from '../pages/mypage/MyCertificatesPage'
 import { RecordsPage } from '../pages/mypage/RecordsPage'
 import { SettingsPage } from '../pages/mypage/SettingsPage'
@@ -36,6 +37,7 @@ export const router = createBrowserRouter([
               { path: 'settings', element: <SettingsPage /> },
             ],
           },
+          { path: 'records/:jmCd', element: <MyCertificateRecordPage /> },
         ],
       },
       { path: '*', element: <NotFoundPage /> },

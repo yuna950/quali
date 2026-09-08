@@ -1,14 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Badge } from '@/components/ui/badge'
-import { Card, CardContent } from '@/components/ui/card'
 import { CertificatePreviewCard } from '@/components/certificate/CertificatePreviewCard'
 import { ExamScheduleTable } from '@/components/certificate/ExamScheduleTable'
 import { InterestButton } from '@/components/certificate/InterestButton'
 import { PassRateTable } from '@/components/certificate/PassRateTable'
 import { BackButton } from '@/components/common/BackButton'
-import { formatYyyymmdd } from '@/lib/date'
-import { useAuth } from '@/lib/auth'
 import {
   getCertificate,
   getExamFee,
@@ -17,30 +13,24 @@ import {
   getPassRateSummary,
   getSimilarCertificates,
 } from '@/services/certificateService'
-import { listExamRecords } from '@/services/userService'
 import type {
   Certificate,
   ExamFee,
   ExamSchedule,
-  ExamStageKey,
   ExamSubject,
   PassRateSummary,
 } from '@/types/certificate'
-import type { ExamRecord } from '@/types/user'
 
 const STAGE_TITLE = { written: '필기시험 일정', practical: '실기시험 일정', interview: '면접시험 일정' } as const
-const STAGE_LABEL: Record<ExamStageKey, string> = { written: '필기', practical: '실기', interview: '면접' }
 
 export function CertificateDetailPage() {
   const { jmCd } = useParams<{ jmCd: string }>()
-  const { isLoggedIn } = useAuth()
   const [certificate, setCertificate] = useState<Certificate | null>(null)
   const [fee, setFee] = useState<ExamFee | undefined>()
   const [subjects, setSubjects] = useState<ExamSubject[]>([])
   const [schedules, setSchedules] = useState<ExamSchedule[]>([])
   const [passRate, setPassRate] = useState<PassRateSummary | undefined>()
   const [similar, setSimilar] = useState<Certificate[]>([])
-  const [records, setRecords] = useState<ExamRecord[]>([])
 
   useEffect(() => {
     if (!jmCd) return
@@ -63,16 +53,10 @@ export function CertificateDetailPage() {
       setSimilar(similarResult)
     })
 
-    if (isLoggedIn) {
-      listExamRecords().then((all) => {
-        if (active) setRecords(all.filter((r) => r.jmCd === jmCd))
-      })
-    }
-
     return () => {
       active = false
     }
-  }, [jmCd, isLoggedIn])
+  }, [jmCd])
 
   if (!certificate) return null
 
@@ -138,33 +122,6 @@ export function CertificateDetailPage() {
           title={STAGE_TITLE[stage]}
         />
       ))}
-
-      {isLoggedIn && records.length > 0 && (
-        <section>
-          <h2 className="mb-3 text-lg font-bold">관련 응시기록</h2>
-          <div className="flex flex-col gap-3">
-            {records.map((record) => (
-              <Card key={record.id}>
-                <CardContent className="flex items-center justify-between gap-4">
-                  <div>
-                    <p className="mb-1 text-xs text-muted-foreground">
-                      {STAGE_LABEL[record.stage]} · {record.year}년 {record.round}회
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      {formatYyyymmdd(record.examDate)}
-                      {record.score !== undefined && ` · ${record.score}점`}
-                    </p>
-                    {record.memo && <p className="mt-1 text-sm text-muted-foreground">{record.memo}</p>}
-                  </div>
-                  <Badge variant={record.passed ? 'default' : 'secondary'}>
-                    {record.passed ? '합격' : '불합격'}
-                  </Badge>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-      )}
 
       {passRate && <PassRateTable summary={passRate} />}
 

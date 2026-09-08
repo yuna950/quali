@@ -23,7 +23,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Textarea } from '@/components/ui/textarea'
 import { formatYyyymmdd } from '@/lib/date'
 import { listCertificates } from '@/services/certificateService'
-import { addExamRecord, updateExamRecord } from '@/services/userService'
+import { addExamRecord, removeMyPlan, updateExamRecord } from '@/services/userService'
 import type { Certificate, ExamStageKey } from '@/types/certificate'
 import type { ExamRecord, MyExamPlan } from '@/types/user'
 
@@ -38,11 +38,17 @@ interface CertOption {
 type ExamRecordFormDialogProps = {
   trigger: ReactNode
   onSaved: (record: ExamRecord) => void
-} & ({ mode: 'create'; lockedPlan?: MyExamPlan } | { mode: 'edit'; record: ExamRecord })
+  /** lockedPlan을 결과입력해서 저장하면 그 플랜을 삭제한 뒤 알려줌 */
+  onPlanRemoved?: (planId: string) => void
+} & (
+  | { mode: 'create'; lockedPlan?: MyExamPlan; presetJmCd?: string }
+  | { mode: 'edit'; record: ExamRecord }
+)
 
 export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
-  const { trigger, onSaved, mode } = props
+  const { trigger, onSaved, onPlanRemoved, mode } = props
   const lockedPlan = mode === 'create' ? props.lockedPlan : undefined
+  const presetJmCd = mode === 'create' ? props.presetJmCd : undefined
   const editingRecord = mode === 'edit' ? props.record : undefined
 
   const [open, setOpen] = useState(false)
@@ -86,7 +92,8 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
       setScore('')
       setMemo('')
     } else {
-      setCertOption(null)
+      const preset = presetJmCd ? certificates.find((c) => c.jmCd === presetJmCd) : undefined
+      setCertOption(preset ? { value: preset.jmCd, label: preset.name } : null)
       setStage('written')
       setYear(String(CURRENT_YEAR))
       setRound('1')
@@ -125,6 +132,12 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
     } else {
       const created = await addExamRecord({ ...payload, planId: lockedPlan?.id })
       onSaved(created)
+
+      if (lockedPlan) {
+        await removeMyPlan(lockedPlan.id)
+        onPlanRemoved?.(lockedPlan.id)
+      }
+
       toast.success('응시기록을 추가했어요.')
     }
 

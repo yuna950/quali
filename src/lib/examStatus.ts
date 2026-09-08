@@ -23,3 +23,18 @@ export function getApplicationStatus(
 
   return 'closed'
 }
+
+/** 오늘 이후 가장 가까운 시험일(YYYYMMDD)을 여러 회차/단계 중에서 찾는다 */
+export function getNearestExamDate(
+  schedules: ExamSchedule[],
+  today: Date = new Date(),
+): string | undefined {
+  const todayStr = toYyyymmdd(today)
+  const examStarts = schedules
+    .flatMap((schedule) => Object.values(schedule.stages))
+    .map((stage) => stage?.examStart)
+    .filter((date): date is string => !!date && date >= todayStr)
+    .sort()
+
+  return examStarts[0]
+}

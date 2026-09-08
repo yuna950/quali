@@ -27,16 +27,15 @@ export function CertificateCard({ certificate }: { certificate: Certificate }) {
 
   return (
     <Link to={`/certificates/${certificate.jmCd}`}>
-      <Card className="transition-shadow hover:shadow-md">
+      <Card className="h-44 transition-shadow hover:shadow-md">
         <CardHeader>
-          <CardTitle>{certificate.name}</CardTitle>
+          <CardTitle className="line-clamp-2">{certificate.name}</CardTitle>
           <CardAction>
             <InterestButton jmCd={certificate.jmCd} />
           </CardAction>
         </CardHeader>
-        <CardContent className="flex flex-wrap items-center gap-1.5">
-          <Badge variant="secondary">{certificate.seriesName}</Badge>
-          {certificate.jobFieldName && <Badge variant="secondary">{certificate.jobFieldName}</Badge>}
+        <CardContent className="mt-auto flex flex-wrap items-center gap-1.5">
+          <Badge variant="secondary">{certificate.qualificationTypeName}</Badge>
           {status && <StatusBadge status={status} />}
           {nearestExamDate && <DdayBadge targetDate={nearestExamDate} />}
         </CardContent>

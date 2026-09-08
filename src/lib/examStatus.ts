@@ -38,3 +38,8 @@ export function getNearestExamDate(
 
   return examStarts[0]
 }
+
+/** "2026년 정기 기사 1회"처럼 회차를 사람이 읽는 표기로 만든다 */
+export function formatScheduleRound(seriesName: string, schedule: ExamSchedule): string {
+  return `${schedule.year}년 정기 ${seriesName} ${schedule.round}회`
+}

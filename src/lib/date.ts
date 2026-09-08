@@ -24,3 +24,14 @@ export function diffInDays(target: string, from: Date = new Date()): number {
   const msPerDay = 1000 * 60 * 60 * 24
   return Math.round((targetDate.getTime() - fromMidnight.getTime()) / msPerDay)
 }
+
+function formatMonthDay(value: string): string {
+  return `${Number(value.slice(4, 6))}월 ${Number(value.slice(6, 8))}일`
+}
+
+/** "3월 2일 ~ 3월 5일" 형태로 표시. 시작/종료가 같으면 하루만, 값이 없으면 "-" */
+export function formatDateRangeKorean(start?: string, end?: string): string {
+  if (!start) return '-'
+  if (!end || start === end) return formatMonthDay(start)
+  return `${formatMonthDay(start)} ~ ${formatMonthDay(end)}`
+}

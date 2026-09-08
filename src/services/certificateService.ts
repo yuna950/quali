@@ -1,4 +1,4 @@
-import { getApplicationStatus } from '@/lib/examStatus'
+import { formatScheduleRound, getApplicationStatus } from '@/lib/examStatus'
 import { mockCertificates } from '@/mocks/certificates'
 import { mockExamAreas, mockTestSites } from '@/mocks/examAreas'
 import { mockExamFees } from '@/mocks/examFees'
@@ -163,7 +163,7 @@ export async function listRegistrationWindowsInRange(
         entries.push({
           jmCd: certificate.jmCd,
           certificateName: certificate.name,
-          label: `${schedule.round} ${STAGE_LABEL[stageKey]} 접수`,
+          label: `${formatScheduleRound(certificate.seriesName, schedule)} ${STAGE_LABEL[stageKey]} 접수`,
           regStart: stage.regStart,
           regEnd: stage.regEnd,
         })

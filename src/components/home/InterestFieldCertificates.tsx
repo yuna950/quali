@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { CertificatePreviewCard } from '@/components/certificate/CertificatePreviewCard'
 import { LoginPromptBanner } from '@/components/home/LoginPromptBanner'
 import { Card, CardContent } from '@/components/ui/card'
 import { useAuth } from '@/lib/auth'
@@ -43,19 +44,7 @@ export function InterestFieldCertificates() {
       {isLoggedIn && certificates && certificates.length > 0 && (
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {certificates.map((certificate) => (
-            <Link key={certificate.jmCd} to={`/certificates/${certificate.jmCd}`}>
-              <Card className="h-full transition-shadow hover:shadow-md">
-                <CardContent className="flex h-full flex-col justify-between gap-8">
-                  <div>
-                    <p className="mb-1 text-xs text-muted-foreground">
-                      {certificate.qualificationTypeName} / {certificate.jobFieldName}
-                    </p>
-                    <p className="text-lg font-bold">{certificate.name}</p>
-                  </div>
-                  <p className="text-right text-sm text-muted-foreground">자세히 보기 →</p>
-                </CardContent>
-              </Card>
-            </Link>
+            <CertificatePreviewCard key={certificate.jmCd} certificate={certificate} />
           ))}
         </div>
       )}

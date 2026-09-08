@@ -17,4 +17,8 @@ export const mockExamSubjects: Record<string, ExamSubject[]> = {
     { jmCd: '1320', type: '객관식', subjectName: '정보시스템구축관리', order: 5, isRequired: true, optionalFieldName: '선택분야없음', fullScore: 100, totalQuestions: 20, durationMinutes: 30 },
     { jmCd: '1320', type: '실기(필답형)', subjectName: '정보처리 실무', order: 1, isRequired: true, optionalFieldName: '선택분야없음', fullScore: 100, totalQuestions: 20, durationMinutes: 150 },
   ],
+  '7798': [
+    { jmCd: '7798', type: '객관식', subjectName: '웹디자인 기획 및 웹 표준', order: 1, isRequired: true, optionalFieldName: '선택분야없음', fullScore: 100, totalQuestions: 20, durationMinutes: 30 },
+    { jmCd: '7798', type: '실기(작업형)', subjectName: '웹디자인 개발 실무', order: 1, isRequired: true, optionalFieldName: '선택분야없음', fullScore: 100, totalQuestions: 1, durationMinutes: 240 },
+  ],
 }

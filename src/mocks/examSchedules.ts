@@ -8,7 +8,8 @@ export const mockExamSchedules: Record<string, ExamSchedule[]> = {
   '0752': [
     {
       jmCd: '0752',
-      round: '2026년 정기 기술사 138회',
+      year: 2026,
+      round: 138,
       stages: {
         written: {
           regStart: '20260106',
@@ -31,7 +32,8 @@ export const mockExamSchedules: Record<string, ExamSchedule[]> = {
   '0080': [
     {
       jmCd: '0080',
-      round: '2026년 정기 기술사 138회',
+      year: 2026,
+      round: 138,
       stages: {
         written: {
           regStart: '20260106',
@@ -54,7 +56,8 @@ export const mockExamSchedules: Record<string, ExamSchedule[]> = {
   '0490': [
     {
       jmCd: '0490',
-      round: '2026년 정기 기술사 138회',
+      year: 2026,
+      round: 138,
       stages: {
         written: {
           regStart: '20260106',
@@ -77,7 +80,8 @@ export const mockExamSchedules: Record<string, ExamSchedule[]> = {
   '1320': [
     {
       jmCd: '1320',
-      round: '2026년 정기기사 1회',
+      year: 2026,
+      round: 1,
       stages: {
         written: {
           regStart: '20260113',
@@ -100,7 +104,8 @@ export const mockExamSchedules: Record<string, ExamSchedule[]> = {
   '1321': [
     {
       jmCd: '1321',
-      round: '2026년 정기산업기사 1회',
+      year: 2026,
+      round: 1,
       stages: {
         written: {
           regStart: '20260113',
@@ -123,7 +128,8 @@ export const mockExamSchedules: Record<string, ExamSchedule[]> = {
   '1322': [
     {
       jmCd: '1322',
-      round: '2026년 정기기능사 1회',
+      year: 2026,
+      round: 1,
       stages: {
         written: {
           regStart: '20260106',
@@ -144,7 +150,8 @@ export const mockExamSchedules: Record<string, ExamSchedule[]> = {
     },
     {
       jmCd: '1322',
-      round: '2026년 정기기능사 3회',
+      year: 2026,
+      round: 3,
       stages: {
         written: {
           regStart: '20260908',
@@ -159,7 +166,8 @@ export const mockExamSchedules: Record<string, ExamSchedule[]> = {
   '7793': [
     {
       jmCd: '7793',
-      round: '2026년 정기기사 1회',
+      year: 2026,
+      round: 1,
       stages: {
         written: {
           regStart: '20260113',
@@ -182,7 +190,8 @@ export const mockExamSchedules: Record<string, ExamSchedule[]> = {
   '9762': [
     {
       jmCd: '9762',
-      round: '2026년 제18회',
+      year: 2026,
+      round: 18,
       stages: {
         written: {
           regStart: '20260601',
@@ -205,7 +214,8 @@ export const mockExamSchedules: Record<string, ExamSchedule[]> = {
   '9763': [
     {
       jmCd: '9763',
-      round: '2026년 제12회',
+      year: 2026,
+      round: 12,
       stages: {
         written: {
           regStart: '20260504',
@@ -228,14 +238,89 @@ export const mockExamSchedules: Record<string, ExamSchedule[]> = {
   '7798': [
     {
       jmCd: '7798',
-      round: '2026년 정기기능사 4회',
+      year: 2026,
+      round: 1,
+      stages: {
+        written: {
+          regStart: '20260106',
+          regEnd: '20260109',
+          examStart: '20260207',
+          examEnd: '20260207',
+          passDate: '20260306',
+        },
+        practical: {
+          regStart: '20260302',
+          regEnd: '20260305',
+          examStart: '20260406',
+          examEnd: '20260419',
+          passStart: '20260501',
+          passEnd: '20260501',
+        },
+      },
+    },
+    {
+      jmCd: '7798',
+      year: 2026,
+      round: 2,
+      stages: {
+        written: {
+          regStart: '20260406',
+          regEnd: '20260409',
+          examStart: '20260509',
+          examEnd: '20260509',
+          passDate: '20260605',
+        },
+        practical: {
+          regStart: '20260601',
+          regEnd: '20260604',
+          examStart: '20260705',
+          examEnd: '20260718',
+          passStart: '20260731',
+          passEnd: '20260731',
+        },
+      },
+    },
+    {
+      jmCd: '7798',
+      year: 2026,
+      round: 3,
+      stages: {
+        written: {
+          regStart: '20260706',
+          regEnd: '20260709',
+          examStart: '20260808',
+          examEnd: '20260808',
+          passDate: '20260904',
+        },
+        practical: {
+          regStart: '20260831',
+          regEnd: '20260903',
+          examStart: '20261004',
+          examEnd: '20261017',
+          passStart: '20261030',
+          passEnd: '20261030',
+        },
+      },
+    },
+    {
+      jmCd: '7798',
+      year: 2026,
+      round: 4,
       stages: {
         written: {
           regStart: '20261005',
           regEnd: '20261009',
           examStart: '20261107',
-          examEnd: '20261120',
+          examEnd: '20261107',
           passDate: '20261204',
+        },
+        practical: {
+          regStart: '20261130',
+          regEnd: '20261203',
+          examStart: '20270103',
+          examEnd: '20270116',
+          passStart: '20270129',
+          passEnd: '20270129',
         },
       },
     },

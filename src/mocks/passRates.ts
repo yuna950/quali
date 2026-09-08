@@ -6,7 +6,7 @@ import type { PassRateSummary } from '@/types/certificate'
  * 종목별 합격률은 현재 목데이터로만 존재하며, 실제 데이터 소스는 Supabase 연동 단계에서 별도 검토 필요.
  */
 function buildSummary(jmCd: string, base: number): PassRateSummary {
-  const years = [2022, 2023, 2024, 2025].map((year, i) => {
+  const years = [2021, 2022, 2023, 2024, 2025].map((year, i) => {
     const applicants = base + i * 137
     const rate = Math.round((base % 40) + 25 + i * 1.5)
     const passers = Math.round((applicants * rate) / 100)
@@ -26,4 +26,14 @@ export const mockPassRates: Record<string, PassRateSummary> = {
   '7793': buildSummary('7793', 18700),
   '9762': buildSummary('9762', 1200),
   '9763': buildSummary('9763', 3800),
+  '0960': buildSummary('0960', 450),
+  '1790': buildSummary('1790', 5200),
+  '2434': buildSummary('2434', 2100),
+  '1512': buildSummary('1512', 1800),
+  '2432': buildSummary('2432', 1300),
+  '1982': buildSummary('1982', 2600),
+  '2982': buildSummary('2982', 1100),
+  '7798': buildSummary('7798', 3400),
+  '6793': buildSummary('6793', 900),
+  '7796': buildSummary('7796', 4700),
 }

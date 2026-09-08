@@ -18,9 +18,14 @@ export interface Certificate {
   midJobFieldName: string
 }
 
+export interface ExamFeeItem {
+  label: string
+  amount: number
+}
+
 export interface ExamFee {
   jmCd: string
-  description: string
+  items: ExamFeeItem[]
 }
 
 export interface ExamSubject {
@@ -49,7 +54,8 @@ export interface ExamStageDates {
 
 export interface ExamSchedule {
   jmCd: string
-  round: string
+  year: number
+  round: number
   stages: Partial<Record<ExamStageKey, ExamStageDates>>
 }
 

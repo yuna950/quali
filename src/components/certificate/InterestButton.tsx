@@ -12,12 +12,17 @@ export function InterestButton({ jmCd, className }: { jmCd: string; className?: 
   const [interested, setInterested] = useState(false)
 
   useEffect(() => {
-    if (!isLoggedIn) {
-      setInterested(false)
-      return
+    if (!isLoggedIn) return
+    let active = true
+    isInterested(jmCd).then((value) => {
+      if (active) setInterested(value)
+    })
+    return () => {
+      active = false
     }
-    isInterested(jmCd).then(setInterested)
   }, [jmCd, isLoggedIn])
+
+  const shownAsInterested = isLoggedIn && interested
 
   async function handleClick(e: React.MouseEvent) {
     e.preventDefault()
@@ -41,12 +46,12 @@ export function InterestButton({ jmCd, className }: { jmCd: string; className?: 
     <Button
       variant="ghost"
       size="icon"
-      aria-label={interested ? '관심 자격증 해제' : '관심 자격증 추가'}
-      aria-pressed={interested}
+      aria-label={shownAsInterested ? '관심 자격증 해제' : '관심 자격증 추가'}
+      aria-pressed={shownAsInterested}
       onClick={handleClick}
       className={className}
     >
-      <Heart className={cn('size-4', interested && 'fill-destructive text-destructive')} />
+      <Heart className={cn('size-4', shownAsInterested && 'fill-destructive text-destructive')} />
     </Button>
   )
 }

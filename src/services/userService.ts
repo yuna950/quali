@@ -11,6 +11,7 @@ const KEYS = {
   examRecords: 'quali:examRecords',
   interests: 'quali:interests',
   settings: 'quali:settings',
+  seeded: 'quali:seeded',
 } as const
 
 function readList<T>(key: string): T[] {
@@ -111,4 +112,33 @@ export async function updateSettings(patch: Partial<UserSettings>): Promise<User
   const next = { ...(await getSettings()), ...patch }
   localStorage.setItem(KEYS.settings, JSON.stringify(next))
   return next
+}
+
+/**
+ * 테스트 계정 최초 로그인 시 홈 화면(나의 시험 / 관심 직무분야)이 빈 화면으로 보이지 않도록
+ * 데모 데이터를 한 번만 채워준다. 실제 회원 데이터가 생기면(로그인 후 무언가 추가/변경하면)
+ * 다시 덮어쓰지 않는다.
+ */
+export async function seedDemoDataIfNeeded(): Promise<void> {
+  if (localStorage.getItem(KEYS.seeded)) return
+  localStorage.setItem(KEYS.seeded, '1')
+
+  await addMyPlan({
+    jmCd: '1320',
+    certificateName: '정보처리기사',
+    stage: 'practical',
+    year: 2026,
+    round: 1,
+    examDate: '20260928',
+    examLocation: '수원대학교',
+  })
+  await addMyPlan({
+    jmCd: '7793',
+    certificateName: '전기기사',
+    stage: 'written',
+    year: 2026,
+    round: 2,
+    examDate: '20261012',
+  })
+  await updateSettings({ interestFieldCodes: ['21', '20'] })
 }

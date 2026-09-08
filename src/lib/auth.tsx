@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
+import { seedDemoDataIfNeeded } from '@/services/userService'
 import type { AuthUser } from '@/types/user'
 
 const AUTH_STORAGE_KEY = 'quali:auth'
@@ -41,6 +42,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   function login(email: string, password: string): boolean {
     if (email === TEST_ACCOUNT.email && password === TEST_ACCOUNT.password) {
       setUser({ email: TEST_ACCOUNT.email, name: TEST_ACCOUNT.name })
+      void seedDemoDataIfNeeded()
       return true
     }
     return false

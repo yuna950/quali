@@ -11,7 +11,7 @@ interface ExamScheduleTableProps {
 
 function ScheduleField({ label, value }: { label: string; value: string }) {
   return (
-    <div>
+    <div className="text-center">
       <p className="mb-1 text-sm font-bold">{label}</p>
       <p className="text-sm text-muted-foreground">{value}</p>
     </div>

@@ -24,6 +24,8 @@ export interface ExamRecord {
   passed: boolean
   score?: number
   memo?: string
+  /** 나의 자격증(MyExamPlan)에서 결과를 입력해 생성된 경우 그 플랜의 id. 독립적으로 추가한 기록은 undefined */
+  planId?: string
 }
 
 /** 마이페이지 - 관심 자격증 */

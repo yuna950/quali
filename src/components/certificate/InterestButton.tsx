@@ -1,6 +1,7 @@
 import { Heart } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { useAuth } from '@/lib/auth'
 import { cn } from '@/lib/utils'
@@ -36,6 +37,7 @@ export function InterestButton({ jmCd, className }: { jmCd: string; className?: 
     if (interested) {
       await removeInterest(jmCd)
       setInterested(false)
+      toast('관심 자격증에서 삭제했어요.')
     } else {
       await addInterest(jmCd)
       setInterested(true)

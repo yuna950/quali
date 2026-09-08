@@ -35,6 +35,8 @@ export interface SearchCertificatesQuery {
   keyword?: string
   seriesCode?: string
   jobFieldCode?: string
+  midJobFieldCode?: string
+  jmCd?: string
   status?: ExamApplicationStatus
 }
 
@@ -53,6 +55,8 @@ export async function searchCertificates(query: SearchCertificatesQuery): Promis
     if (keyword && !certificate.name.toLowerCase().includes(keyword)) return false
     if (query.seriesCode && certificate.seriesCode !== query.seriesCode) return false
     if (query.jobFieldCode && certificate.jobFieldCode !== query.jobFieldCode) return false
+    if (query.midJobFieldCode && certificate.midJobFieldCode !== query.midJobFieldCode) return false
+    if (query.jmCd && certificate.jmCd !== query.jmCd) return false
     if (query.status) {
       const schedules = mockExamSchedules[certificate.jmCd] ?? []
       if (getApplicationStatus(schedules) !== query.status) return false
@@ -74,6 +78,22 @@ export async function listJobFieldOptions(): Promise<JobFieldOption[]> {
   for (const c of mockCertificates) {
     if (!c.jobFieldCode) continue
     if (!seen.has(c.jobFieldCode)) seen.set(c.jobFieldCode, { code: c.jobFieldCode, name: c.jobFieldName })
+  }
+  return [...seen.values()]
+}
+
+export interface MidJobFieldOption {
+  code: string
+  name: string
+}
+
+export async function listMidJobFieldOptions(jobFieldCode: string): Promise<MidJobFieldOption[]> {
+  const seen = new Map<string, MidJobFieldOption>()
+  for (const c of mockCertificates) {
+    if (c.jobFieldCode !== jobFieldCode || !c.midJobFieldCode) continue
+    if (!seen.has(c.midJobFieldCode)) {
+      seen.set(c.midJobFieldCode, { code: c.midJobFieldCode, name: c.midJobFieldName })
+    }
   }
   return [...seen.values()]
 }

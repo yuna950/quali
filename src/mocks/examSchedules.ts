@@ -225,4 +225,19 @@ export const mockExamSchedules: Record<string, ExamSchedule[]> = {
       },
     },
   ],
+  '7798': [
+    {
+      jmCd: '7798',
+      round: '2026년 정기기능사 4회',
+      stages: {
+        written: {
+          regStart: '20261005',
+          regEnd: '20261009',
+          examStart: '20261107',
+          examEnd: '20261120',
+          passDate: '20261204',
+        },
+      },
+    },
+  ],
 }

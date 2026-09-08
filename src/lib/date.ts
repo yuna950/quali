@@ -1,0 +1,26 @@
+/** Q-net API 날짜 포맷(YYYYMMDD 문자열)을 다루기 위한 유틸 */
+
+export function parseYyyymmdd(value: string): Date {
+  const year = Number(value.slice(0, 4))
+  const month = Number(value.slice(4, 6)) - 1
+  const day = Number(value.slice(6, 8))
+  return new Date(year, month, day)
+}
+
+export function toYyyymmdd(date: Date): string {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}${month}${day}`
+}
+
+export function formatYyyymmdd(value: string): string {
+  return `${value.slice(0, 4)}.${value.slice(4, 6)}.${value.slice(6, 8)}`
+}
+
+export function diffInDays(target: string, from: Date = new Date()): number {
+  const targetDate = parseYyyymmdd(target)
+  const fromMidnight = new Date(from.getFullYear(), from.getMonth(), from.getDate())
+  const msPerDay = 1000 * 60 * 60 * 24
+  return Math.round((targetDate.getTime() - fromMidnight.getTime()) / msPerDay)
+}

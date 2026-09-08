@@ -1,0 +1,25 @@
+import type { ExamApplicationStatus, ExamSchedule } from '@/types/certificate'
+import { toYyyymmdd } from './date'
+
+/** 여러 시행 회차의 접수 기간을 종합해 접수예정/접수중/접수마감 상태를 판단한다 */
+export function getApplicationStatus(
+  schedules: ExamSchedule[],
+  today: Date = new Date(),
+): ExamApplicationStatus {
+  const todayStr = toYyyymmdd(today)
+  const windows = schedules.flatMap((schedule) =>
+    Object.values(schedule.stages)
+      .filter((stage) => !!stage?.regStart && !!stage.regEnd)
+      .map((stage) => ({ regStart: stage!.regStart!, regEnd: stage!.regEnd! })),
+  )
+
+  if (windows.length === 0) return 'closed'
+
+  const isOpen = windows.some((w) => w.regStart <= todayStr && todayStr <= w.regEnd)
+  if (isOpen) return 'open'
+
+  const upcomingStarts = windows.filter((w) => w.regStart > todayStr).map((w) => w.regStart)
+  if (upcomingStarts.length > 0) return 'upcoming'
+
+  return 'closed'
+}

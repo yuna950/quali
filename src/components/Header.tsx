@@ -1,4 +1,4 @@
-import { LogOut, Search, UserPlus, UserRound } from 'lucide-react'
+import { CalendarDays, LogOut, Search, UserPlus, UserRound } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import {
   DropdownMenu,
@@ -41,6 +41,10 @@ export function Header() {
             )}
           </DropdownMenuContent>
         </DropdownMenu>
+
+        <Link to="/schedule" aria-label="시험 일정">
+          <CalendarDays className="size-5" />
+        </Link>
 
         <Link to="/search" aria-label="검색">
           <Search className="size-5" />

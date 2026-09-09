@@ -24,7 +24,7 @@ export function InterestsPage() {
       <Card>
         <CardContent className="flex flex-col items-center gap-3 py-10 text-center">
           <p className="text-sm text-muted-foreground">관심 자격증이 없어요.</p>
-          <Button variant="outline" size="sm" render={<Link to="/search" />}>
+          <Button variant="outline" size="sm" nativeButton={false} render={<Link to="/search" />}>
             자격증 검색하러 가기
           </Button>
         </CardContent>

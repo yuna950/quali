@@ -133,15 +133,16 @@ export function CategoryBrowser({
         {selectedMidJobFieldCode && certificates.length === 0 && (
           <p className="px-3 text-sm text-muted-foreground">해당 분류에 자격증이 없어요</p>
         )}
-        {certificates.map((certificate) => (
-          <ColumnButton
-            key={certificate.jmCd}
-            label={certificate.name}
-            selected={certificate.jmCd === selectedJmCd}
-            filled={certificate.jmCd === selectedJmCd}
-            onClick={() => onSelectCertificate(certificate.jmCd)}
-          />
-        ))}
+        {selectedMidJobFieldCode &&
+          certificates.map((certificate) => (
+            <ColumnButton
+              key={certificate.jmCd}
+              label={certificate.name}
+              selected={certificate.jmCd === selectedJmCd}
+              filled={certificate.jmCd === selectedJmCd}
+              onClick={() => onSelectCertificate(certificate.jmCd)}
+            />
+          ))}
       </div>
     </div>
   )

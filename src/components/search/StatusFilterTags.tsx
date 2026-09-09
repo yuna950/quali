@@ -1,4 +1,5 @@
 import { ToggleChip } from '@/components/common/ToggleChip'
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
 import type { ExamApplicationStatus } from '@/types/certificate'
 
 export type StatusFilterValue = ExamApplicationStatus | 'all'
@@ -18,12 +19,16 @@ export function StatusFilterTags({
   onChange: (value: StatusFilterValue) => void
 }) {
   return (
-    <div className="flex flex-wrap gap-2">
-      {OPTIONS.map((option) => (
-        <ToggleChip key={option.value} selected={value === option.value} onClick={() => onChange(option.value)}>
-          {option.label}
-        </ToggleChip>
-      ))}
-    </div>
+    <Carousel opts={{ align: 'start', dragFree: true }}>
+      <CarouselContent className="-ml-2">
+        {OPTIONS.map((option) => (
+          <CarouselItem key={option.value} className="basis-auto pl-2">
+            <ToggleChip selected={value === option.value} onClick={() => onChange(option.value)}>
+              {option.label}
+            </ToggleChip>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
   )
 }

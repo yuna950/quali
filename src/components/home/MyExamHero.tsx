@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { LoginPromptBanner } from '@/components/home/LoginPromptBanner'
 import { Card, CardContent } from '@/components/ui/card'
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel'
 import { diffInDays, formatYyyymmdd } from '@/lib/date'
 import { useAuth } from '@/lib/auth'
 import { getCertificate } from '@/services/certificateService'
@@ -24,34 +25,30 @@ function DdayText({ examDate }: { examDate: string }) {
 export function MyExamHero() {
   const { isLoggedIn, user } = useAuth()
   const [slides, setSlides] = useState<Slide[] | null>(null)
+  const [api, setApi] = useState<CarouselApi>()
   const [activeIndex, setActiveIndex] = useState(0)
-  const trackRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!isLoggedIn) return
     listMyPlans().then(async (plans) => {
+      const upcoming = plans
+        .filter((plan) => diffInDays(plan.examDate) >= 0)
+        .sort((a, b) => (a.examDate < b.examDate ? -1 : a.examDate > b.examDate ? 1 : 0))
       const withCertificates = await Promise.all(
-        plans.map(async (plan) => ({ plan, certificate: await getCertificate(plan.jmCd) })),
+        upcoming.map(async (plan) => ({ plan, certificate: await getCertificate(plan.jmCd) })),
       )
       setSlides(withCertificates)
     })
   }, [isLoggedIn])
 
-  function handleScroll() {
-    const track = trackRef.current
-    if (!track) return
-    setActiveIndex(Math.round(track.scrollLeft / track.clientWidth))
-  }
-
-  function goTo(index: number) {
-    const track = trackRef.current
-    if (!track) return
-    track.scrollTo({ left: index * track.clientWidth, behavior: 'smooth' })
-  }
+  useEffect(() => {
+    if (!api) return
+    api.on('select', () => setActiveIndex(api.selectedScrollSnap()))
+  }, [api])
 
   return (
     <section>
-      <h2 className="mb-3 text-lg font-bold">{user?.name ?? '나'}님의 시험</h2>
+      <h2 className="mb-3 text-lg font-bold">{user ? `${user.name}님의 시험` : '나의 시험'}</h2>
 
       {!isLoggedIn && (
         <LoginPromptBanner message="로그인하면 준비 중인 시험 일정을 한눈에 확인할 수 있어요." />
@@ -67,43 +64,46 @@ export function MyExamHero() {
 
       {isLoggedIn && slides && slides.length > 0 && (
         <>
-          <div
-            ref={trackRef}
-            onScroll={handleScroll}
-            className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth [scrollbar-width:none]"
-          >
-            {slides.map(({ plan, certificate }) => (
-              <Link key={plan.id} to={`/mypage/records/${plan.jmCd}`} className="w-full shrink-0 snap-start">
-                <Card className="transition-shadow hover:shadow-md">
-                  <CardContent className="flex min-h-32 flex-col justify-between gap-6 sm:flex-row">
-                    <div className="sm:self-start">
-                      <p className="mb-1 text-xs text-muted-foreground">
-                        {certificate ? `${certificate.qualificationTypeName} / ${certificate.jobFieldName}` : ' '}
-                      </p>
-                      <p className="text-xl font-bold">
-                        {plan.certificateName} {plan.round}회
-                      </p>
-                    </div>
-                    <div className="text-right sm:self-end">
-                      <p className="mb-1 text-xs text-muted-foreground">{STAGE_LABEL[plan.stage]} 시험</p>
-                      <p className="text-3xl font-extrabold">
-                        <DdayText examDate={plan.examDate} />
-                      </p>
-                      <p className="mt-1 text-xs text-muted-foreground">{formatYyyymmdd(plan.examDate)}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
+          <Carousel setApi={setApi} opts={{ align: 'start' }}>
+            <CarouselContent>
+              {slides.map(({ plan, certificate }) => (
+                <CarouselItem key={plan.id}>
+                  <Link to={`/mypage/records/${plan.jmCd}`}>
+                    <Card className="transition-shadow hover:shadow-md">
+                      <CardContent className="flex min-h-32 flex-col justify-between gap-6 sm:flex-row">
+                        <div className="sm:self-start">
+                          <p className="mb-1 text-xs text-muted-foreground">
+                            {certificate
+                              ? `${certificate.qualificationTypeName} / ${certificate.jobFieldName}`
+                              : ' '}
+                          </p>
+                          <p className="text-xl font-bold">
+                            {plan.certificateName} {plan.round}회
+                          </p>
+                        </div>
+                        <div className="text-right sm:self-end">
+                          <p className="mb-1 text-xs text-muted-foreground">{STAGE_LABEL[plan.stage]} 시험</p>
+                          <p className="text-3xl font-extrabold">
+                            <DdayText examDate={plan.examDate} />
+                          </p>
+                          <p className="mt-1 text-xs text-muted-foreground">{formatYyyymmdd(plan.examDate)}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
 
           {slides.length > 1 && (
             <div className="mt-3 flex justify-center gap-1.5">
               {slides.map((slide, i) => (
                 <button
                   key={slide.plan.id}
+                  type="button"
                   aria-label={`${i + 1}번째 시험으로 이동`}
-                  onClick={() => goTo(i)}
+                  onClick={() => api?.scrollTo(i)}
                   className={`size-1.5 rounded-full transition-colors ${
                     i === activeIndex ? 'bg-foreground' : 'bg-foreground/20'
                   }`}

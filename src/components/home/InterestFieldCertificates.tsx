@@ -4,6 +4,7 @@ import { CertificatePreviewCard } from '@/components/certificate/CertificatePrev
 import { LoginPromptBanner } from '@/components/home/LoginPromptBanner'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
 import { useAuth } from '@/lib/auth'
 import { listCertificates } from '@/services/certificateService'
 import { getSettings } from '@/services/userService'
@@ -32,7 +33,7 @@ export function InterestFieldCertificates() {
         <Card>
           <CardContent className="flex flex-col items-center gap-3 py-10 text-center">
             <p className="text-sm text-muted-foreground">아직 관심 분야가 설정되지 않았어요.</p>
-            <Button variant="outline" size="sm" render={<Link to="/mypage/settings" />}>
+            <Button variant="outline" size="sm" nativeButton={false} render={<Link to="/mypage/settings" />}>
               관심 분야 설정하기
             </Button>
           </CardContent>
@@ -40,16 +41,15 @@ export function InterestFieldCertificates() {
       )}
 
       {isLoggedIn && certificates && certificates.length > 0 && (
-        <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-1 [scrollbar-width:none]">
-          {certificates.map((certificate) => (
-            <div
-              key={certificate.jmCd}
-              className="w-[calc(50%-0.5rem)] shrink-0 snap-start sm:w-[calc(25%-0.75rem)]"
-            >
-              <CertificatePreviewCard certificate={certificate} />
-            </div>
-          ))}
-        </div>
+        <Carousel opts={{ align: 'start', dragFree: true }}>
+          <CarouselContent>
+            {certificates.map((certificate) => (
+              <CarouselItem key={certificate.jmCd} className="basis-1/2 sm:basis-1/4">
+                <CertificatePreviewCard certificate={certificate} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       )}
     </section>
   )

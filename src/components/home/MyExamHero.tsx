@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { LoginPromptBanner } from '@/components/home/LoginPromptBanner'
 import { Card, CardContent } from '@/components/ui/card'
 import { diffInDays, formatYyyymmdd } from '@/lib/date'
@@ -72,25 +73,27 @@ export function MyExamHero() {
             className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth [scrollbar-width:none]"
           >
             {slides.map(({ plan, certificate }) => (
-              <Card key={plan.id} className="w-full shrink-0 snap-start">
-                <CardContent className="flex min-h-32 flex-col justify-between gap-6 sm:flex-row">
-                  <div className="sm:self-start">
-                    <p className="mb-1 text-xs text-muted-foreground">
-                      {certificate ? `${certificate.qualificationTypeName} / ${certificate.jobFieldName}` : ' '}
-                    </p>
-                    <p className="text-xl font-bold">
-                      {plan.certificateName} {plan.round}회
-                    </p>
-                  </div>
-                  <div className="text-right sm:self-end">
-                    <p className="mb-1 text-xs text-muted-foreground">{STAGE_LABEL[plan.stage]} 시험</p>
-                    <p className="text-3xl font-extrabold">
-                      <DdayText examDate={plan.examDate} />
-                    </p>
-                    <p className="mt-1 text-xs text-muted-foreground">{formatYyyymmdd(plan.examDate)}</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <Link key={plan.id} to={`/mypage/records/${plan.jmCd}`} className="w-full shrink-0 snap-start">
+                <Card className="transition-shadow hover:shadow-md">
+                  <CardContent className="flex min-h-32 flex-col justify-between gap-6 sm:flex-row">
+                    <div className="sm:self-start">
+                      <p className="mb-1 text-xs text-muted-foreground">
+                        {certificate ? `${certificate.qualificationTypeName} / ${certificate.jobFieldName}` : ' '}
+                      </p>
+                      <p className="text-xl font-bold">
+                        {plan.certificateName} {plan.round}회
+                      </p>
+                    </div>
+                    <div className="text-right sm:self-end">
+                      <p className="mb-1 text-xs text-muted-foreground">{STAGE_LABEL[plan.stage]} 시험</p>
+                      <p className="text-3xl font-extrabold">
+                        <DdayText examDate={plan.examDate} />
+                      </p>
+                      <p className="mt-1 text-xs text-muted-foreground">{formatYyyymmdd(plan.examDate)}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
 

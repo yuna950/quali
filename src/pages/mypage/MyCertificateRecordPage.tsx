@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { toast } from 'sonner'
+import { AddMyPlanButton } from '@/components/certificate/AddMyPlanButton'
 import { DdayBadge } from '@/components/certificate/DdayBadge'
 import { BackButton } from '@/components/common/BackButton'
 import { ExamRecordFormDialog } from '@/components/mypage/ExamRecordFormDialog'
@@ -8,18 +9,47 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { diffInDays, formatYyyymmdd } from '@/lib/date'
-import { getCertificate, getExamFee, getExamSubjects } from '@/services/certificateService'
+import { getCertificate, getExamFee, getExamSchedules, getExamSubjects } from '@/services/certificateService'
 import { listExamRecords, listMyPlans, removeExamRecord, removeMyPlan } from '@/services/userService'
-import type { Certificate, ExamFee, ExamSubject } from '@/types/certificate'
+import type { Certificate, ExamFee, ExamSchedule, ExamStageKey, ExamSubject } from '@/types/certificate'
 import type { ExamRecord, MyExamPlan } from '@/types/user'
 
 const STAGE_LABEL = { written: '필기', practical: '실기', interview: '면접' } as const
+const STAGE_KEYS: ExamStageKey[] = ['written', 'practical', 'interview']
+
+interface NearestRound {
+  stage: ExamStageKey
+  year: number
+  round: number
+  examDate: string
+}
+
+function findNearestUpcomingByStage(schedules: ExamSchedule[]): NearestRound[] {
+  const nearest = new Map<ExamStageKey, NearestRound>()
+  for (const schedule of schedules) {
+    for (const stageKey of STAGE_KEYS) {
+      const stageDates = schedule.stages[stageKey]
+      if (!stageDates?.examStart || diffInDays(stageDates.examStart) < 0) continue
+      const current = nearest.get(stageKey)
+      if (!current || stageDates.examStart < current.examDate) {
+        nearest.set(stageKey, {
+          stage: stageKey,
+          year: schedule.year,
+          round: schedule.round,
+          examDate: stageDates.examStart,
+        })
+      }
+    }
+  }
+  return [...nearest.values()]
+}
 
 export function MyCertificateRecordPage() {
   const { jmCd } = useParams<{ jmCd: string }>()
   const [certificate, setCertificate] = useState<Certificate | null>(null)
   const [fee, setFee] = useState<ExamFee | undefined>()
   const [subjects, setSubjects] = useState<ExamSubject[]>([])
+  const [nearestRounds, setNearestRounds] = useState<NearestRound[]>([])
   const [plans, setPlans] = useState<MyExamPlan[] | null>(null)
   const [records, setRecords] = useState<ExamRecord[]>([])
 
@@ -31,13 +61,15 @@ export function MyCertificateRecordPage() {
       getCertificate(jmCd),
       getExamFee(jmCd),
       getExamSubjects(jmCd),
+      getExamSchedules(jmCd),
       listMyPlans(),
       listExamRecords(),
-    ]).then(([cert, feeResult, subjectsResult, allPlans, allRecords]) => {
+    ]).then(([cert, feeResult, subjectsResult, schedules, allPlans, allRecords]) => {
       if (!active) return
       setCertificate(cert ?? null)
       setFee(feeResult)
       setSubjects(subjectsResult)
+      setNearestRounds(findNearestUpcomingByStage(schedules))
       setPlans(allPlans.filter((p) => p.jmCd === jmCd))
       setRecords(allRecords.filter((r) => r.jmCd === jmCd))
     })
@@ -46,6 +78,11 @@ export function MyCertificateRecordPage() {
       active = false
     }
   }, [jmCd])
+
+  function refreshPlans() {
+    if (!jmCd) return
+    listMyPlans().then((all) => setPlans(all.filter((p) => p.jmCd === jmCd)))
+  }
 
   async function handleRemovePlan(id: string) {
     setPlans((prev) => prev?.filter((p) => p.id !== id) ?? null)
@@ -122,6 +159,37 @@ export function MyCertificateRecordPage() {
 
       <section>
         <h2 className="mb-3 text-lg font-bold">준비 중</h2>
+
+        {certificate &&
+          (() => {
+            const addable = nearestRounds.filter(
+              (nr) => !plans.some((p) => p.stage === nr.stage && p.year === nr.year && p.round === nr.round),
+            )
+            if (addable.length === 0) return null
+            return (
+              <div className="mb-3 flex flex-col gap-2">
+                {addable.map((nr) => (
+                  <Card key={nr.stage}>
+                    <CardContent className="flex items-center justify-between gap-4">
+                      <p className="text-sm text-muted-foreground">
+                        {STAGE_LABEL[nr.stage]} · {nr.year}년 {nr.round}회 · {formatYyyymmdd(nr.examDate)}
+                      </p>
+                      <AddMyPlanButton
+                        jmCd={certificate.jmCd}
+                        certificateName={certificate.name}
+                        stage={nr.stage}
+                        year={nr.year}
+                        round={nr.round}
+                        examDate={nr.examDate}
+                        onChange={refreshPlans}
+                      />
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )
+          })()}
+
         {plans.length === 0 ? (
           <Card>
             <CardContent>

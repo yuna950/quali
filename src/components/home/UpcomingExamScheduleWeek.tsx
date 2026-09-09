@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Card, CardContent } from '@/components/ui/card'
 import { toYyyymmdd, diffInDays } from '@/lib/date'
 import { listRegistrationWindowsInRange, type RegistrationWindowEntry } from '@/services/certificateService'
@@ -63,8 +64,9 @@ export function UpcomingExamScheduleWeek() {
               )}
 
               {entries?.map((entry, index) => (
-                <div
+                <Link
                   key={`${entry.jmCd}-${entry.label}`}
+                  to={`/certificates/${entry.jmCd}`}
                   style={{
                     gridColumn: `${Math.min(Math.max(diffInDays(entry.regStart, days[0]), 0), 6) + 1} / ${
                       Math.min(Math.max(diffInDays(entry.regEnd, days[0]), 0), 6) + 2
@@ -72,11 +74,11 @@ export function UpcomingExamScheduleWeek() {
                     gridRow: index + 2,
                     marginInline: '0.5rem',
                   }}
-                  className="truncate rounded-full bg-brand/15 px-3 py-2 text-xs font-medium text-brand"
+                  className="truncate rounded-full bg-brand/15 px-3 py-2 text-xs font-medium text-brand transition-colors hover:bg-brand/25"
                   title={entry.label}
                 >
                   {entry.label}
-                </div>
+                </Link>
               ))}
             </div>
           </div>

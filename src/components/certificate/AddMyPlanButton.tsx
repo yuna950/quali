@@ -14,9 +14,10 @@ interface AddMyPlanButtonProps {
   round: number
   examDate: string
   examLocation?: string
+  onChange?: () => void
 }
 
-export function AddMyPlanButton(props: AddMyPlanButtonProps) {
+export function AddMyPlanButton({ onChange, ...props }: AddMyPlanButtonProps) {
   const { isLoggedIn } = useAuth()
   const navigate = useNavigate()
   const [planId, setPlanId] = useState<string>()
@@ -49,12 +50,14 @@ export function AddMyPlanButton(props: AddMyPlanButtonProps) {
       setPlanId(undefined)
       await removeMyPlan(removedId)
       toast('나의 시험에서 삭제했어요.')
+      onChange?.()
       return
     }
 
     const created = await addMyPlan(props)
     setPlanId(created.id)
     toast.success('나의 시험에 추가했어요.')
+    onChange?.()
   }
 
   return (

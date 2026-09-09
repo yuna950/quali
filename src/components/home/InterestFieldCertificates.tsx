@@ -8,8 +8,6 @@ import { listCertificates } from '@/services/certificateService'
 import { getSettings } from '@/services/userService'
 import type { Certificate } from '@/types/certificate'
 
-const MAX_ITEMS = 4
-
 export function InterestFieldCertificates() {
   const { isLoggedIn } = useAuth()
   const [certificates, setCertificates] = useState<Certificate[] | null>(null)
@@ -17,8 +15,7 @@ export function InterestFieldCertificates() {
   useEffect(() => {
     if (!isLoggedIn) return
     Promise.all([listCertificates(), getSettings()]).then(([all, settings]) => {
-      const matched = all.filter((c) => settings.interestFieldCodes.includes(c.jobFieldCode))
-      setCertificates(matched.slice(0, MAX_ITEMS))
+      setCertificates(all.filter((c) => settings.interestFieldCodes.includes(c.jobFieldCode)))
     })
   }, [isLoggedIn])
 
@@ -42,9 +39,14 @@ export function InterestFieldCertificates() {
       )}
 
       {isLoggedIn && certificates && certificates.length > 0 && (
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-1 [scrollbar-width:none]">
           {certificates.map((certificate) => (
-            <CertificatePreviewCard key={certificate.jmCd} certificate={certificate} />
+            <div
+              key={certificate.jmCd}
+              className="w-[calc(50%-0.5rem)] shrink-0 snap-start sm:w-[calc(25%-0.75rem)]"
+            >
+              <CertificatePreviewCard certificate={certificate} />
+            </div>
           ))}
         </div>
       )}

@@ -1,37 +1,44 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { toast } from 'sonner'
+import { DdayBadge } from '@/components/certificate/DdayBadge'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { diffInDays } from '@/lib/date'
-import { listMyPlans } from '@/services/userService'
+import { diffInDays, formatYyyymmdd } from '@/lib/date'
+import { listMyPlans, removeMyPlan } from '@/services/userService'
 import type { MyExamPlan } from '@/types/user'
+
+const STAGE_LABEL = { written: '필기', practical: '실기', interview: '면접' } as const
 
 interface CertGroup {
   jmCd: string
   certificateName: string
-  count: number
+  representative: MyExamPlan
+  extraCount: number
   needsResult: boolean
 }
 
 function groupByCertificate(plans: MyExamPlan[]): CertGroup[] {
-  const groups = new Map<string, CertGroup>()
+  const byJmCd = new Map<string, MyExamPlan[]>()
   for (const plan of plans) {
-    const existing = groups.get(plan.jmCd)
-    const isPast = diffInDays(plan.examDate) < 0
-    if (existing) {
-      existing.count += 1
-      existing.needsResult = existing.needsResult || isPast
-    } else {
-      groups.set(plan.jmCd, {
-        jmCd: plan.jmCd,
-        certificateName: plan.certificateName,
-        count: 1,
-        needsResult: isPast,
-      })
-    }
+    const list = byJmCd.get(plan.jmCd) ?? []
+    list.push(plan)
+    byJmCd.set(plan.jmCd, list)
   }
-  return [...groups.values()]
+
+  return [...byJmCd.values()].map((list) => {
+    const overdue = list.filter((p) => diffInDays(p.examDate) < 0)
+    const representative =
+      overdue[0] ?? [...list].sort((a, b) => diffInDays(a.examDate) - diffInDays(b.examDate))[0]
+    return {
+      jmCd: representative.jmCd,
+      certificateName: representative.certificateName,
+      representative,
+      extraCount: list.length - 1,
+      needsResult: overdue.length > 0,
+    }
+  })
 }
 
 export function MyCertificatesPage() {
@@ -40,6 +47,14 @@ export function MyCertificatesPage() {
   useEffect(() => {
     listMyPlans().then(setPlans)
   }, [])
+
+  async function handleRemove(id: string, e: React.MouseEvent) {
+    e.preventDefault()
+    e.stopPropagation()
+    setPlans((prev) => prev?.filter((p) => p.id !== id) ?? null)
+    await removeMyPlan(id)
+    toast('나의 시험에서 삭제했어요.')
+  }
 
   if (!plans) return null
 
@@ -66,9 +81,31 @@ export function MyCertificatesPage() {
             <CardContent className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-lg font-bold">{group.certificateName}</p>
-                <p className="mt-1 text-sm text-muted-foreground">준비 중인 시험 {group.count}건</p>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  {STAGE_LABEL[group.representative.stage]} · {group.representative.year}년{' '}
+                  {group.representative.round}회
+                </p>
+                {group.needsResult ? (
+                  <p className="mt-1 text-sm text-brand">시험 결과를 입력해주세요.</p>
+                ) : (
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {formatYyyymmdd(group.representative.examDate)}
+                  </p>
+                )}
+                {group.extraCount > 0 && (
+                  <p className="mt-1 text-xs text-muted-foreground">외 {group.extraCount}건</p>
+                )}
               </div>
-              {group.needsResult && <Badge variant="outline">결과 입력 필요</Badge>}
+              <div className="flex items-center gap-3" onClick={(e) => e.preventDefault()}>
+                {group.needsResult ? (
+                  <Badge variant="outline">결과 입력 필요</Badge>
+                ) : (
+                  <DdayBadge targetDate={group.representative.examDate} />
+                )}
+                <Button variant="ghost" size="sm" onClick={(e) => handleRemove(group.representative.id, e)}>
+                  삭제
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </Link>

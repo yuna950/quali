@@ -1,15 +1,21 @@
 import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { MultiSelectBadges } from '@/components/mypage/MultiSelectBadges'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { useAuth } from '@/lib/auth'
 import { BRANCH_OPTIONS } from '@/mocks/branches'
 import { listJobFieldOptions } from '@/services/certificateService'
 import { getSettings, updateSettings } from '@/services/userService'
 import type { JobFieldOption } from '@/types/certificate'
 
 export function SettingsPage() {
+  const { user, updateName } = useAuth()
   const [jobFieldOptions, setJobFieldOptions] = useState<JobFieldOption[]>([])
   const [interestFieldCodes, setInterestFieldCodes] = useState<string[]>([])
   const [examRegionCodes, setExamRegionCodes] = useState<string[]>([])
+  const [name, setName] = useState(user?.name ?? '')
 
   useEffect(() => {
     Promise.all([listJobFieldOptions(), getSettings()]).then(([fields, settings]) => {
@@ -18,6 +24,12 @@ export function SettingsPage() {
       setExamRegionCodes(settings.examRegionCodes)
     })
   }, [])
+
+  function handleSaveName() {
+    if (!name.trim()) return
+    updateName(name.trim())
+    toast.success('개인정보를 저장했어요.')
+  }
 
   async function toggleInterestField(code: string) {
     const next = interestFieldCodes.includes(code)
@@ -39,6 +51,24 @@ export function SettingsPage() {
 
   return (
     <div className="flex flex-col gap-10">
+      <section>
+        <h2 className="mb-1 text-lg font-bold">개인정보</h2>
+        <p className="mb-3 text-sm text-muted-foreground">이름과 이메일을 확인하고 이름을 수정할 수 있어요.</p>
+        <div className="flex max-w-sm flex-col gap-3">
+          <div className="flex flex-col gap-1.5">
+            <Label>이메일</Label>
+            <Input value={user?.email ?? ''} disabled />
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <Label>이름</Label>
+            <Input value={name} onChange={(e) => setName(e.target.value)} />
+          </div>
+          <Button size="sm" className="self-start" onClick={handleSaveName}>
+            저장
+          </Button>
+        </div>
+      </section>
+
       <section>
         <h2 className="mb-1 text-lg font-bold">관심 분야</h2>
         <p className="mb-3 text-sm text-muted-foreground">

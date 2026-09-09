@@ -1,36 +1,40 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { toast } from 'sonner'
 import { ExamRecordFormDialog } from '@/components/mypage/ExamRecordFormDialog'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { listExamRecords } from '@/services/userService'
+import { formatYyyymmdd } from '@/lib/date'
+import { listExamRecords, removeExamRecord } from '@/services/userService'
 import type { ExamRecord } from '@/types/user'
+
+const STAGE_LABEL = { written: '필기', practical: '실기', interview: '면접' } as const
 
 interface CertGroup {
   jmCd: string
   certificateName: string
-  count: number
-  latestPassed: boolean
+  representative: ExamRecord
+  extraCount: number
 }
 
 function groupByCertificate(records: ExamRecord[]): CertGroup[] {
-  const groups = new Map<string, CertGroup & { latestDate: string }>()
+  const byJmCd = new Map<string, ExamRecord[]>()
   for (const record of records) {
-    const existing = groups.get(record.jmCd)
-    if (!existing || record.examDate >= existing.latestDate) {
-      groups.set(record.jmCd, {
-        jmCd: record.jmCd,
-        certificateName: record.certificateName,
-        count: (existing?.count ?? 0) + 1,
-        latestPassed: record.passed,
-        latestDate: record.examDate,
-      })
-    } else {
-      existing.count += 1
-    }
+    const list = byJmCd.get(record.jmCd) ?? []
+    list.push(record)
+    byJmCd.set(record.jmCd, list)
   }
-  return [...groups.values()]
+
+  return [...byJmCd.values()].map((list) => {
+    const representative = [...list].sort((a, b) => (a.examDate > b.examDate ? -1 : 1))[0]
+    return {
+      jmCd: representative.jmCd,
+      certificateName: representative.certificateName,
+      representative,
+      extraCount: list.length - 1,
+    }
+  })
 }
 
 export function RecordsPage() {
@@ -46,6 +50,14 @@ export function RecordsPage() {
       const exists = prev.some((r) => r.id === record.id)
       return exists ? prev.map((r) => (r.id === record.id ? record : r)) : [...prev, record]
     })
+  }
+
+  async function handleRemove(id: string, e: React.MouseEvent) {
+    e.preventDefault()
+    e.stopPropagation()
+    setRecords((prev) => prev?.filter((r) => r.id !== id) ?? null)
+    await removeExamRecord(id)
+    toast('응시기록을 삭제했어요.')
   }
 
   if (!records) return null
@@ -72,11 +84,25 @@ export function RecordsPage() {
             <CardContent className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-lg font-bold">{group.certificateName}</p>
-                <p className="mt-1 text-sm text-muted-foreground">응시 기록 {group.count}건</p>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  {STAGE_LABEL[group.representative.stage]} · {group.representative.year}년{' '}
+                  {group.representative.round}회
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {formatYyyymmdd(group.representative.examDate)}
+                </p>
+                {group.extraCount > 0 && (
+                  <p className="mt-1 text-xs text-muted-foreground">외 {group.extraCount}건</p>
+                )}
               </div>
-              <Badge variant={group.latestPassed ? 'default' : 'secondary'}>
-                {group.latestPassed ? '합격' : '불합격'}
-              </Badge>
+              <div className="flex items-center gap-3" onClick={(e) => e.preventDefault()}>
+                <Badge variant={group.representative.passed ? 'default' : 'secondary'}>
+                  {group.representative.passed ? '합격' : '불합격'}
+                </Badge>
+                <Button variant="ghost" size="sm" onClick={(e) => handleRemove(group.representative.id, e)}>
+                  삭제
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </Link>

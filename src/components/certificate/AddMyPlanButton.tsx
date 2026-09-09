@@ -46,9 +46,8 @@ export function AddMyPlanButton({ onChange, ...props }: AddMyPlanButtonProps) {
     }
 
     if (planId) {
-      const removedId = planId
+      await removeMyPlan(planId)
       setPlanId(undefined)
-      await removeMyPlan(removedId)
       toast('나의 시험에서 삭제했어요.')
       onChange?.()
       return

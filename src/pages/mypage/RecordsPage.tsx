@@ -55,8 +55,8 @@ export function RecordsPage() {
   async function handleRemove(id: string, e: React.MouseEvent) {
     e.preventDefault()
     e.stopPropagation()
-    setRecords((prev) => prev?.filter((r) => r.id !== id) ?? null)
     await removeExamRecord(id)
+    setRecords((prev) => prev?.filter((r) => r.id !== id) ?? null)
     toast('응시기록을 삭제했어요.')
   }
 
@@ -90,7 +90,11 @@ export function RecordsPage() {
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
                   {formatYyyymmdd(group.representative.examDate)}
+                  {group.representative.score !== undefined && ` · ${group.representative.score}점`}
                 </p>
+                {group.representative.memo && (
+                  <p className="mt-1 text-sm text-muted-foreground">{group.representative.memo}</p>
+                )}
                 {group.extraCount > 0 && (
                   <p className="mt-1 text-xs text-muted-foreground">외 {group.extraCount}건</p>
                 )}

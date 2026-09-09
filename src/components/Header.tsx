@@ -11,12 +11,12 @@ export function Header() {
         QUALI
       </Link>
       <div className="flex items-center gap-4">
-        <Link to="/search" aria-label="검색">
-          <Search className="size-5" />
-        </Link>
         {isLoggedIn && <span className="text-sm text-muted-foreground">{user?.name}님</span>}
         <Link to="/mypage" aria-label="마이페이지">
           <UserRound className="size-5" />
+        </Link>
+        <Link to="/search" aria-label="검색">
+          <Search className="size-5" />
         </Link>
       </div>
     </header>

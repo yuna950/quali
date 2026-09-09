@@ -85,14 +85,14 @@ export function MyCertificateRecordPage() {
   }
 
   async function handleRemovePlan(id: string) {
-    setPlans((prev) => prev?.filter((p) => p.id !== id) ?? null)
     await removeMyPlan(id)
+    setPlans((prev) => prev?.filter((p) => p.id !== id) ?? null)
     toast('나의 시험에서 삭제했어요.')
   }
 
   async function handleRemoveRecord(id: string) {
-    setRecords((prev) => prev.filter((r) => r.id !== id))
     await removeExamRecord(id)
+    setRecords((prev) => prev.filter((r) => r.id !== id))
     toast('응시기록을 삭제했어요.')
   }
 

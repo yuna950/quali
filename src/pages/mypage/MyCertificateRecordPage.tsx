@@ -192,7 +192,7 @@ export function MyCertificateRecordPage() {
 
         {plans.length === 0 ? (
           <Card>
-            <CardContent>
+            <CardContent className="py-10 text-center">
               <p className="text-sm text-muted-foreground">준비 중인 시험이 없어요.</p>
             </CardContent>
           </Card>
@@ -258,7 +258,7 @@ export function MyCertificateRecordPage() {
 
         {records.length === 0 ? (
           <Card>
-            <CardContent>
+            <CardContent className="py-10 text-center">
               <p className="text-sm text-muted-foreground">응시 기록이 없어요.</p>
             </CardContent>
           </Card>

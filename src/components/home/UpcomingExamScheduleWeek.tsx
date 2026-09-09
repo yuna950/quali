@@ -23,7 +23,12 @@ export function UpcomingExamScheduleWeek() {
 
   return (
     <section>
-      <h2 className="mb-3 text-lg font-bold">시험 일정</h2>
+      <div className="mb-3 flex items-center justify-between">
+        <h2 className="text-lg font-bold">시험 일정</h2>
+        <Link to="/schedule" className="text-sm text-muted-foreground transition-colors hover:text-brand">
+          전체 일정 보기 →
+        </Link>
+      </div>
       <Card>
         <CardContent>
           <p className="mb-4 text-xl font-bold">{currentMonth}월</p>

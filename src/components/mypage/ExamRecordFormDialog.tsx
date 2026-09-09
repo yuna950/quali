@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { toast } from 'sonner'
+import { ToggleChip } from '@/components/common/ToggleChip'
 import { Button } from '@/components/ui/button'
 import {
   Combobox,
@@ -323,22 +324,12 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
           <div className="flex flex-col gap-1.5">
             <Label>합격여부</Label>
             <div className="flex gap-2">
-              <Button
-                type="button"
-                variant={passed === true ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setPassed(true)}
-              >
+              <ToggleChip selected={passed === true} onClick={() => setPassed(true)}>
                 합격
-              </Button>
-              <Button
-                type="button"
-                variant={passed === false ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setPassed(false)}
-              >
+              </ToggleChip>
+              <ToggleChip selected={passed === false} onClick={() => setPassed(false)}>
                 불합격
-              </Button>
+              </ToggleChip>
             </div>
           </div>
 

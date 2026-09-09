@@ -59,7 +59,7 @@ export function MyExamHero() {
 
       {isLoggedIn && slides && slides.length === 0 && (
         <Card>
-          <CardContent className="text-sm text-muted-foreground">
+          <CardContent className="py-10 text-center text-sm text-muted-foreground">
             아직 준비 중인 시험이 없어요. 자격증을 검색해서 나의 시험을 추가해보세요.
           </CardContent>
         </Card>

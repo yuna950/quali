@@ -29,7 +29,7 @@ export function InterestFieldCertificates() {
 
       {isLoggedIn && certificates && certificates.length === 0 && (
         <Card>
-          <CardContent className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <CardContent className="flex flex-col items-center gap-3 py-10 text-center">
             <p className="text-sm text-muted-foreground">아직 관심 분야가 설정되지 않았어요.</p>
             <Link
               to="/mypage/settings"

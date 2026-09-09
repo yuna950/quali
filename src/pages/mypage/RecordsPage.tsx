@@ -67,12 +67,20 @@ export function RecordsPage() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex justify-end">
-        <ExamRecordFormDialog mode="create" trigger={<Button>응시 기록 추가</Button>} onSaved={handleSaved} />
+        <ExamRecordFormDialog
+          mode="create"
+          trigger={
+            <Button variant="outline" size="sm">
+              응시 기록 추가
+            </Button>
+          }
+          onSaved={handleSaved}
+        />
       </div>
 
       {groups.length === 0 && (
         <Card>
-          <CardContent>
+          <CardContent className="py-10 text-center">
             <p className="text-sm text-muted-foreground">응시 기록이 없어요.</p>
           </CardContent>
         </Card>

@@ -173,3 +173,61 @@ export async function listRegistrationWindowsInRange(
 
   return entries
 }
+
+export type ScheduleEventType = 'registration' | 'exam'
+
+export interface ScheduleEventEntry {
+  jmCd: string
+  certificateName: string
+  label: string
+  type: ScheduleEventType
+  start: string
+  end: string
+}
+
+/** rangeStart~rangeEnd(YYYYMMDD)와 겹치는 접수기간 + 시험일을 모두 모아 반환 (월간 일정 페이지용) */
+export async function listScheduleEventsInRange(
+  rangeStart: string,
+  rangeEnd: string,
+): Promise<ScheduleEventEntry[]> {
+  const entries: ScheduleEventEntry[] = []
+
+  for (const certificate of mockCertificates) {
+    const schedules = mockExamSchedules[certificate.jmCd] ?? []
+    for (const schedule of schedules) {
+      const roundLabel = formatScheduleRound(certificate.seriesName, schedule)
+
+      for (const stageKey of Object.keys(schedule.stages) as ExamStageKey[]) {
+        const stage = schedule.stages[stageKey]
+        if (!stage) continue
+
+        if (stage.regStart && stage.regEnd && !(stage.regEnd < rangeStart || stage.regStart > rangeEnd)) {
+          entries.push({
+            jmCd: certificate.jmCd,
+            certificateName: certificate.name,
+            label: `${roundLabel} ${STAGE_LABEL[stageKey]} 접수`,
+            type: 'registration',
+            start: stage.regStart,
+            end: stage.regEnd,
+          })
+        }
+
+        if (stage.examStart) {
+          const examEnd = stage.examEnd ?? stage.examStart
+          if (!(examEnd < rangeStart || stage.examStart > rangeEnd)) {
+            entries.push({
+              jmCd: certificate.jmCd,
+              certificateName: certificate.name,
+              label: `${roundLabel} ${STAGE_LABEL[stageKey]} 시험`,
+              type: 'exam',
+              start: stage.examStart,
+              end: examEnd,
+            })
+          }
+        }
+      }
+    }
+  }
+
+  return entries
+}

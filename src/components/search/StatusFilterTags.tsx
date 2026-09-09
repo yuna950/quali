@@ -1,3 +1,4 @@
+import { ToggleChip } from '@/components/common/ToggleChip'
 import type { ExamApplicationStatus } from '@/types/certificate'
 
 export type StatusFilterValue = ExamApplicationStatus | 'all'
@@ -19,18 +20,9 @@ export function StatusFilterTags({
   return (
     <div className="flex flex-wrap gap-2">
       {OPTIONS.map((option) => (
-        <button
-          key={option.value}
-          type="button"
-          onClick={() => onChange(option.value)}
-          className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${
-            value === option.value
-              ? 'border-brand bg-brand text-white'
-              : 'border-border text-foreground hover:bg-muted'
-          }`}
-        >
+        <ToggleChip key={option.value} selected={value === option.value} onClick={() => onChange(option.value)}>
           {option.label}
-        </button>
+        </ToggleChip>
       ))}
     </div>
   )

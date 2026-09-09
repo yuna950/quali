@@ -63,7 +63,7 @@ export function MyCertificatesPage() {
   if (groups.length === 0) {
     return (
       <Card>
-        <CardContent className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <CardContent className="flex flex-col items-center gap-3 py-10 text-center">
           <p className="text-sm text-muted-foreground">준비 중인 시험이 없어요.</p>
           <Button variant="outline" size="sm" render={<Link to="/search" />}>
             자격증 검색하러 가기

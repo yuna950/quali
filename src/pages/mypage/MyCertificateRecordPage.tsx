@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { toast } from 'sonner'
 import { AddMyPlanButton } from '@/components/certificate/AddMyPlanButton'
 import { DdayBadge } from '@/components/certificate/DdayBadge'
@@ -9,9 +9,9 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { diffInDays, formatYyyymmdd } from '@/lib/date'
-import { getCertificate, getExamFee, getExamSchedules, getExamSubjects } from '@/services/certificateService'
+import { getCertificate, getExamSchedules } from '@/services/certificateService'
 import { listExamRecords, listMyPlans, removeExamRecord, removeMyPlan } from '@/services/userService'
-import type { Certificate, ExamFee, ExamSchedule, ExamStageKey, ExamSubject } from '@/types/certificate'
+import type { Certificate, ExamSchedule, ExamStageKey } from '@/types/certificate'
 import type { ExamRecord, MyExamPlan } from '@/types/user'
 
 const STAGE_LABEL = { written: '필기', practical: '실기', interview: '면접' } as const
@@ -47,8 +47,6 @@ function findNearestUpcomingByStage(schedules: ExamSchedule[]): NearestRound[] {
 export function MyCertificateRecordPage() {
   const { jmCd } = useParams<{ jmCd: string }>()
   const [certificate, setCertificate] = useState<Certificate | null>(null)
-  const [fee, setFee] = useState<ExamFee | undefined>()
-  const [subjects, setSubjects] = useState<ExamSubject[]>([])
   const [nearestRounds, setNearestRounds] = useState<NearestRound[]>([])
   const [plans, setPlans] = useState<MyExamPlan[] | null>(null)
   const [records, setRecords] = useState<ExamRecord[]>([])
@@ -59,16 +57,12 @@ export function MyCertificateRecordPage() {
 
     Promise.all([
       getCertificate(jmCd),
-      getExamFee(jmCd),
-      getExamSubjects(jmCd),
       getExamSchedules(jmCd),
       listMyPlans(),
       listExamRecords(),
-    ]).then(([cert, feeResult, subjectsResult, schedules, allPlans, allRecords]) => {
+    ]).then(([cert, schedules, allPlans, allRecords]) => {
       if (!active) return
       setCertificate(cert ?? null)
-      setFee(feeResult)
-      setSubjects(subjectsResult)
       setNearestRounds(findNearestUpcomingByStage(schedules))
       setPlans(allPlans.filter((p) => p.jmCd === jmCd))
       setRecords(allRecords.filter((r) => r.jmCd === jmCd))
@@ -119,41 +113,10 @@ export function MyCertificateRecordPage() {
         </p>
         <h1 className="text-2xl font-bold">{certificate.name}</h1>
 
-        <div className="mt-6 flex flex-col gap-3">
-          <div className="flex gap-4">
-            <p className="w-24 shrink-0 text-sm font-bold">응시 수수료</p>
-            {fee && fee.items.length > 0 ? (
-              <div className="flex flex-col gap-0.5">
-                {fee.items.map((item) => (
-                  <p key={item.label} className="text-sm text-muted-foreground">
-                    {item.label} : {item.amount.toLocaleString()}원
-                  </p>
-                ))}
-              </div>
-            ) : (
-              <p className="text-sm text-muted-foreground">정보 없음</p>
-            )}
-          </div>
-          <div className="flex gap-4">
-            <p className="w-24 shrink-0 text-sm font-bold">시험 과목</p>
-            {subjects.length === 0 ? (
-              <p className="text-sm text-muted-foreground">정보 없음</p>
-            ) : (
-              <div className="flex flex-col gap-1">
-                {subjects.map((subject) => (
-                  <p
-                    key={`${subject.type}-${subject.subjectName}-${subject.order}`}
-                    className="text-sm text-muted-foreground"
-                  >
-                    {subject.subjectName}
-                    <span className="ml-2 text-xs">
-                      {subject.type} · {subject.totalQuestions}문항 · {subject.durationMinutes}분
-                    </span>
-                  </p>
-                ))}
-              </div>
-            )}
-          </div>
+        <div className="mt-6">
+          <Button variant="outline" size="sm" nativeButton={false} render={<Link to={`/certificates/${jmCd}`} />}>
+            시험 상세정보 보기
+          </Button>
         </div>
       </section>
 

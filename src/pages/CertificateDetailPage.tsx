@@ -98,14 +98,17 @@ export function CertificateDetailPage() {
             {subjects.length === 0 ? (
               <p className="text-sm text-muted-foreground">정보 없음</p>
             ) : (
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-2">
                 {subjects.map((subject) => (
-                  <p key={`${subject.type}-${subject.subjectName}-${subject.order}`} className="text-sm text-muted-foreground">
-                    {subject.subjectName}
-                    <span className="ml-2 text-xs">
+                  <div
+                    key={`${subject.type}-${subject.subjectName}-${subject.order}`}
+                    className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2"
+                  >
+                    <p className="text-sm text-muted-foreground">{subject.subjectName}</p>
+                    <p className="text-xs text-muted-foreground">
                       {subject.type} · {subject.totalQuestions}문항 · {subject.durationMinutes}분
-                    </span>
-                  </p>
+                    </p>
+                  </div>
                 ))}
               </div>
             )}

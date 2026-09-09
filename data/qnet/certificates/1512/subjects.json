@@ -1,0 +1,71 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "제품디자인기사",
+    "kmNm": "제품디자인",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "제품디자인기사",
+    "kmNm": "인간공학",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "제품디자인기사",
+    "kmNm": "디자인 재료 및 모형 제작관리",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "제품디자인기사",
+    "kmNm": "제품 마케팅 전략",
+    "kmOrder": "4",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "작업형",
+    "jmNm": "제품디자인기사",
+    "kmNm": "제1과제",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrStdPnt": "100",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "30"
+  }
+]

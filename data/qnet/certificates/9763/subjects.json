@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "손해평가사",
+    "kmNm": "「상법」보험편",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "40"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "손해평가사",
+    "kmNm": "농어업재해보험법령",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "40"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "손해평가사",
+    "kmNm": "농학개론 중 재배학 및 원예작물학",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "40"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "손해평가사",
+    "kmNm": "농작물재해보험 및 가축재해보험의 이론과 실무",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "100",
+    "qitemCnt": "10",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "60"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "손해평가사",
+    "kmNm": "농작물재해보험 및 가축재해보험 손해평가의 이론과 실무",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "100",
+    "qitemCnt": "10",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "60"
+  }
+]

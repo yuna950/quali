@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "수산물품질관리사",
+    "kmNm": "수산물품질관리 관련법령",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "수산물품질관리사",
+    "kmNm": "수산물유통론",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "수산물품질관리사",
+    "kmNm": "수확후 품질관리론",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "수산물품질관리사",
+    "kmNm": "수산일반",
+    "kmOrder": "4",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "수산물품질관리사",
+    "kmNm": "필답(전체)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "100",
+    "qitemCnt": "30",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "100"
+  }
+]

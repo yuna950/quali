@@ -16,6 +16,7 @@ export function SettingsPage() {
   const [interestFieldCodes, setInterestFieldCodes] = useState<string[]>([])
   const [examRegionCodes, setExamRegionCodes] = useState<string[]>([])
   const [name, setName] = useState(user?.name ?? '')
+  const [isEditingName, setIsEditingName] = useState(false)
 
   useEffect(() => {
     Promise.all([listJobFieldOptions(), getSettings()]).then(([fields, settings]) => {
@@ -25,9 +26,14 @@ export function SettingsPage() {
     })
   }, [])
 
-  function handleSaveName() {
+  function handleNameButtonClick() {
+    if (!isEditingName) {
+      setIsEditingName(true)
+      return
+    }
     if (!name.trim()) return
     updateName(name.trim())
+    setIsEditingName(false)
     toast.success('개인정보를 저장했어요.')
   }
 
@@ -61,10 +67,10 @@ export function SettingsPage() {
           </div>
           <div className="flex flex-col gap-1.5">
             <Label>이름</Label>
-            <Input value={name} onChange={(e) => setName(e.target.value)} />
+            <Input value={name} onChange={(e) => setName(e.target.value)} disabled={!isEditingName} />
           </div>
-          <Button size="sm" className="self-start" onClick={handleSaveName}>
-            저장
+          <Button size="sm" className="self-start" onClick={handleNameButtonClick}>
+            {isEditingName ? '저장' : '수정'}
           </Button>
         </div>
       </section>

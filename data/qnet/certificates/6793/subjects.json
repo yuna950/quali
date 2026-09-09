@@ -1,0 +1,29 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "제품응용모델링기능사",
+    "kmNm": "과목없음",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "60",
+    "omrStdPnt": "100",
+    "qitemCnt": "60",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "60"
+  },
+  {
+    "dtlTypNm": "작업형",
+    "jmNm": "제품응용모델링기능사",
+    "kmNm": "제1과제",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrStdPnt": "100",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "60"
+  }
+]

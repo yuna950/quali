@@ -1,0 +1,93 @@
+[
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "건축구조기술사",
+    "kmNm": "영역1",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrStdPnt": "300",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "100"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "건축구조기술사",
+    "kmNm": "영역2",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "2",
+    "omrStdPnt": "300",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "100"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "건축구조기술사",
+    "kmNm": "영역3",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "3",
+    "omrStdPnt": "300",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "100"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "건축구조기술사",
+    "kmNm": "영역4",
+    "kmOrder": "4",
+    "kmYn": "필수과목",
+    "lssnNo": "4",
+    "omrStdPnt": "300",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "100"
+  },
+  {
+    "dtlTypNm": "면접형",
+    "jmNm": "건축구조기술사",
+    "kmNm": "면접위원1",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrStdPnt": "100",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "100"
+  },
+  {
+    "dtlTypNm": "면접형",
+    "jmNm": "건축구조기술사",
+    "kmNm": "면접위원2",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrStdPnt": "100",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "100"
+  },
+  {
+    "dtlTypNm": "면접형",
+    "jmNm": "건축구조기술사",
+    "kmNm": "면접위원3",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrStdPnt": "100",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "100"
+  }
+]

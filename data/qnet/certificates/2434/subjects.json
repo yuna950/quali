@@ -1,0 +1,70 @@
+[
+  {
+    "dtlTypNm": "작업형",
+    "jmNm": "시각디자인산업기사",
+    "kmNm": "제1과제",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrStdPnt": "100",
+    "qitemCnt": "1",
+    "selfldNm": "IBM 호환용",
+    "seqNo": "2",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "작업형",
+    "jmNm": "시각디자인산업기사",
+    "kmNm": "제1과제",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrStdPnt": "100",
+    "qitemCnt": "1",
+    "selfldNm": "매킨토시",
+    "seqNo": "2",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "시각디자인산업기사",
+    "kmNm": "시각디자인 조사·분석",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "시각디자인산업기사",
+    "kmNm": "시각디자인 기획구상",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "시각디자인산업기사",
+    "kmNm": "시각디자인 제작",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  }
+]

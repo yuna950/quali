@@ -1,0 +1,7175 @@
+[
+  {
+    "address": "강원특별자치도 삼척시 중앙로 346 (교동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "강원대학교 삼척캠퍼스(전산정보원)[CBT시험실]_4실",
+    "plceLoctGid": "대학본부 옆 전산정보원",
+    "telNo": "0335706114"
+  },
+  {
+    "address": "경기 파주시 문산읍 당동리140",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "파주고등학교",
+    "plceLoctGid": "",
+    "telNo": "031-952-2647"
+  },
+  {
+    "address": "경기도 고양시 덕양구 고양대로 1361 (성사동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "고양직업전문학교",
+    "plceLoctGid": "3호선 원당역 5번출구 고양소방서 방향 10분",
+    "telNo": "031-967-0001"
+  },
+  {
+    "address": "경기도 고양시 덕양구 동헌로 61 (관산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "서울중장비직업전문학교(실습장)",
+    "plceLoctGid": "경기도 고양시 덕양구 관산동 47-1 (내비게이션: 서울중장비직업전문학교 고양교육장 또는 연안중장비운전학원\" 검색)",
+    "telNo": "031-969-2245"
+  },
+  {
+    "address": "경기도 고양시 덕양구 무원로 45 (행신동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "무원중학교(고양시 덕양구)",
+    "plceLoctGid": "3호선 화정역 2번출구 마을버스이용, 경의선 행신역 도보10분",
+    "telNo": "031-974-9995"
+  },
+  {
+    "address": "경기도 고양시 덕양구 삼송로 171 (삼송동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "고양고등학교",
+    "plceLoctGid": "3호선 삼송역 하차 도보5분(엘리베이터없음)",
+    "telNo": "02-350-5832"
+  },
+  {
+    "address": "경기도 고양시 덕양구 서삼릉길 281 (원당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "농협대학",
+    "plceLoctGid": "원당역",
+    "telNo": "031-960-4341"
+  },
+  {
+    "address": "경기도 고양시 덕양구 서오릉로 334-32 (용두동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "",
+    "examAreaNm": "서오릉",
+    "plceLoctGid": "경기 고양시 덕양구 명릉길(용두동)",
+    "telNo": "02-359-0090"
+  },
+  {
+    "address": "경기도 고양시 덕양구 행당로11번길 48 (토당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "능곡중학교",
+    "plceLoctGid": "지하철  3호선 화정역하차 3번출구 65번 마을버스,경의선 능곡역,좌석버스 921,800,85-1,85번",
+    "telNo": "031-974-7006"
+  },
+  {
+    "address": "경기도 고양시 덕양구 행주로 108-1 (행주내동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "수도권철도차량정비단",
+    "plceLoctGid": "지하철1호선 용산역하차(전자랜드방향 10분소요)",
+    "telNo": "02-3780-5997"
+  },
+  {
+    "address": "경기도 고양시 덕양구 화신로 199 (행신동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "백양고등학교(고양시)",
+    "plceLoctGid": "지하철 3호선 화정역에서 마을버스 이용",
+    "telNo": "031-978-8128"
+  },
+  {
+    "address": "경기도 고양시 덕양구 화신로 22 (행신동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "행신중학교",
+    "plceLoctGid": "경의선 행신역 2번출구 도보10분",
+    "telNo": "031-970-2333"
+  },
+  {
+    "address": "경기도 고양시 덕양구 화신로 22 (행신동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "행신중학교(장애인전용시험장)",
+    "plceLoctGid": "행신역2번출구 하차 후 도보 10분",
+    "telNo": "031-970-2334"
+  },
+  {
+    "address": "경기도 고양시 덕양구 화신로 65 (행신동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "무원고등학교(고양시 덕양구)",
+    "plceLoctGid": "샘터마을 2단지 하차 도보 10분",
+    "telNo": "031-978-0485"
+  },
+  {
+    "address": "경기도 고양시 일산동구 무궁화로 159 (정발산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "저동중학교(일산)",
+    "plceLoctGid": "지하철3호선 정발산역 도보20~25분",
+    "telNo": "031-915-1901"
+  },
+  {
+    "address": "경기도 고양시 일산동구 숲속마을1로 101 (풍동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "풍동중학교",
+    "plceLoctGid": "",
+    "telNo": "031-932-8750"
+  },
+  {
+    "address": "경기도 고양시 일산동구 정발산로 115 (마두동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "정발중학교(일산)",
+    "plceLoctGid": "지하철3호선 정발산역 4번출구 도보 약15분(주차불가)",
+    "telNo": "031-902-3383"
+  },
+  {
+    "address": "경기도 고양시 일산동구 정발산로 115 (마두동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "정발중학교(장애인시험장)",
+    "plceLoctGid": "지하철 3호선 정발산역 4번출구 도보 약15분",
+    "telNo": "031-902-3383"
+  },
+  {
+    "address": "경기도 고양시 일산동구 정발산로 185 (마두동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "정발고등학교",
+    "plceLoctGid": "지하철 3호선 정발산역 도보3분",
+    "telNo": ""
+  },
+  {
+    "address": "경기도 고양시 일산동구 호수로 404 (백석동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "백석중학교(고양시 일산)",
+    "plceLoctGid": "지하철 3호선 백석역 3번출구 도보 5~7분",
+    "telNo": "031-904-4073"
+  },
+  {
+    "address": "경기도 고양시 일산서구 강선로 8 (주엽동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기영상과학고등학교(일산)",
+    "plceLoctGid": "3호선 주엽역하차(호수공원앞) 도보 10분(주차협소,대중교통이용바람)",
+    "telNo": "031-919-1161"
+  },
+  {
+    "address": "경기도 고양시 일산서구 고봉로 133 (주엽동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "일산국제컨벤션고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "경기도 고양시 일산서구 고봉로 99 (주엽동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "발산중학교(고양시 일산구)",
+    "plceLoctGid": "3호선 주엽역 8번출구 도보20~25분",
+    "telNo": "031-911-1983"
+  },
+  {
+    "address": "경기도 고양시 일산서구 대산로 246 (대화동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "일산대진고등학교",
+    "plceLoctGid": "3호선 대화역 6번출구에서 도보로 10~15분거리",
+    "telNo": "031-911-2477"
+  },
+  {
+    "address": "경기도 고양시 일산서구 원일로 53 (일산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "일산고등학교",
+    "plceLoctGid": "(3호선 주엽,대화역하차 --시내버스 90번승차, 경의선 일산역하차 10분도보)",
+    "telNo": "031-910-1121"
+  },
+  {
+    "address": "경기도 고양시 일산서구 주엽로 117 (주엽동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "한수중학교",
+    "plceLoctGid": "지하철3호선 주엽역 4번출구 도보10분정도",
+    "telNo": ""
+  },
+  {
+    "address": "경기도 고양시 일산서구 주엽로 213 (주엽동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "오마중학교(일산 주엽동)",
+    "plceLoctGid": "전철3호선 주엽역 5번출구 도보12분",
+    "telNo": "031-912-2031"
+  },
+  {
+    "address": "경기도 고양시 일산서구 킨텍스로 452 (일산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "신일정보고등학교",
+    "plceLoctGid": "전철3호선주엽역하차,마을버스9-1타고학교앞하차",
+    "telNo": ""
+  },
+  {
+    "address": "경기도 고양시 일산서구 킨텍스로 452 (일산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "신일비즈니스고등학교",
+    "plceLoctGid": "",
+    "telNo": "031-929-2120"
+  },
+  {
+    "address": "경기도 고양시 일산서구 킨텍스로 452 (일산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "신일정보산업고등학교",
+    "plceLoctGid": "3호선 주엽역 5번출구 마을버스 9-1(후곡마을 건영아파트 옆)",
+    "telNo": ""
+  },
+  {
+    "address": "경기도 구리시 장자대로111번길 41 (토평동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "토평고등학교",
+    "plceLoctGid": "",
+    "telNo": "031-560-6000"
+  },
+  {
+    "address": "경기도 구리시 장자호수길 45 (교문동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "장자중학교(구리시)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "경기도 남양주시 진접읍 장현로147번길 6()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "북부신진중장비직업전문학교",
+    "plceLoctGid": "",
+    "telNo": "031-529-3131"
+  },
+  {
+    "address": "경기도 부천시 경인로120번길 82 (송내동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "부천공업고등학교(1시험실)",
+    "plceLoctGid": "",
+    "telNo": "0325107488"
+  },
+  {
+    "address": "경기도 부천시 소사구 경인로 590 (괴안동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "유한대학교",
+    "plceLoctGid": "서울과부천경계 지하철 1호선 온수역하차",
+    "telNo": ""
+  },
+  {
+    "address": "경기도 성남시 중원구 둔촌대로258번길 7 (하대원동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성남공업고등학교",
+    "plceLoctGid": "지하철 모란역에서 88,55번 버스이용,성남공고앞 하차",
+    "telNo": "031-753-0253"
+  },
+  {
+    "address": "경기도 성남시 중원구 둔촌대로258번길 7 (하대원동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성남테크노과학고등학교",
+    "plceLoctGid": "모란역 3번출구에서 55번, 55-1번, 60번, 3520번 버스 이용 성남방송고앞 하차",
+    "telNo": "0317530253"
+  },
+  {
+    "address": "경기도 안성시 원곡면 지문로 459-4()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "안성중장비시험장",
+    "plceLoctGid": "",
+    "telNo": "031-618-2500"
+  },
+  {
+    "address": "경기도 안양시 동안구 학의로 70 (비산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기게임마이스터고등학교(특성화고검정)",
+    "plceLoctGid": "범계역 하차 도보 10분",
+    "telNo": "031-386-8323"
+  },
+  {
+    "address": "경기도 안양시 만안구 양화로28번길 69 (안양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "안양공업고등학교",
+    "plceLoctGid": "안양역에서 제폐소 정문방향 도보10분",
+    "telNo": "031-463-0166"
+  },
+  {
+    "address": "경기도 의정부시 호암로 95 (호원동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "신한대학교 제1캠퍼스(강의동)",
+    "plceLoctGid": "지하철 1호선 의정부방면 망월사(신한대)역 하차 도보 1분",
+    "telNo": "0318703114"
+  },
+  {
+    "address": "경기도 파주시 광탄면 보광로 556",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(주)한국중기계(경기파주시광탄면영장리)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "경기도 파주시 문산읍 임진나루길 253-24",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "현대중장비운전전문학원(파주)",
+    "plceLoctGid": "경기도 파주시 문산읍 임진리 63-7(문산역 셔틀버스 운행불가)",
+    "telNo": "031-953-4200"
+  },
+  {
+    "address": "경기도 파주시 방촌로348번길 27 (맥금동 423)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(주)오거토탈",
+    "plceLoctGid": "파주성모병원 갈현사거리방면",
+    "telNo": "031-946-6380"
+  },
+  {
+    "address": "경기도 파주시 와석순환로172번길 16 (동패동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "",
+    "examAreaNm": "대한상공회의소 경기인력개발원",
+    "plceLoctGid": "경기 파주시 교하면 동패리 66번지",
+    "telNo": "031-943-3732~4"
+  },
+  {
+    "address": "경기도 파주시 와석순환로172번길 16(동패동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "파주중장비시험장",
+    "plceLoctGid": "",
+    "telNo": "031-945-8827"
+  },
+  {
+    "address": "경기도 파주시 파주읍 술이홀로 379",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "파주공업고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "경기도 파주시 평화로 190 (야동동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "",
+    "examAreaNm": "문산제일고등학교",
+    "plceLoctGid": "",
+    "telNo": "031-943-2313"
+  },
+  {
+    "address": "경기도 하남시 풍산로 168 (망월동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "윤슬중학교",
+    "plceLoctGid": "경기도 하남시",
+    "telNo": ""
+  },
+  {
+    "address": "서울 금천구 독산1동 사서함 171",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "육군제2626부대",
+    "plceLoctGid": "서울시 금천구 독산동 우시장 뒷편",
+    "telNo": "02-892-9211"
+  },
+  {
+    "address": "서울 동대문구 장안벚꽃로 279",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "시험본부(서울)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울 마포구 공덕동",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "",
+    "examAreaNm": "서울지역본부 총본부",
+    "plceLoctGid": "370-4",
+    "telNo": ""
+  },
+  {
+    "address": "서울 마포구 공덕동 370-4",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장",
+    "plceLoctGid": "공덕역 한국산업인력공단",
+    "telNo": "02-3273-9653"
+  },
+  {
+    "address": "서울 서대문구 북아현동",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "동향제과직업전문학교",
+    "plceLoctGid": "지하철 2호선 아현전철역",
+    "telNo": "02-365-5892~4"
+  },
+  {
+    "address": "서울 중구 신당동",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "대경중학교",
+    "plceLoctGid": "333-579",
+    "telNo": "02-2235-5115"
+  },
+  {
+    "address": "서울시 강서구 가양동 허준길 105",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "동양공업고등학교(대중교통이용)",
+    "plceLoctGid": "지하철 5호선 발산역 3번 출구 6644번 환승 5분",
+    "telNo": "02-2657-0820"
+  },
+  {
+    "address": "서울시 마포구 공덕동 370-4",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "산업인력공단중앙인력센터",
+    "plceLoctGid": "공덕역 2번출구방향",
+    "telNo": "02-3271-9362"
+  },
+  {
+    "address": "서울특별시 강남구 강남대로94길 34 K&Y 빌딩 1층(역삼동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "안단테꽃예술직업학교",
+    "plceLoctGid": "",
+    "telNo": "566-8553"
+  },
+  {
+    "address": "서울특별시 강남구 개포로 410 (개포동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "",
+    "examAreaNm": "수도전기공업고등학교",
+    "plceLoctGid": "분당선 개포동역 8번출구 도보5~10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 광평로20길 63 (일원동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울로봇고등학교",
+    "plceLoctGid": "3호선 일원역 5번출구 도보 5분 (주차불가,대중교통이용)",
+    "telNo": "02-2226-2143"
+  },
+  {
+    "address": "서울특별시 강남구 광평로20길 7(수서동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대왕중학교(주차절대불가)",
+    "plceLoctGid": "3호선 일원역 하차 4번 출구",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 광평로39길 93 (수서동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "대진디자인고등학교",
+    "plceLoctGid": "3호선 수서역 1번 출구에서 약 600미터(도보 약 10분)",
+    "telNo": "07078169176"
+  },
+  {
+    "address": "서울특별시 강남구 광평로39길 93 (수서동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "대진디자인고등학교(주차매우협소)",
+    "plceLoctGid": "3호선 수서역 1번출구 도보5분 (주차불가)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 광평로51길 36(수서동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울세종고등학교(주차절대불가)",
+    "plceLoctGid": "3호선, 수인분당선 수서역 도보 4분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 광평로59길 57(수서동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "수서중학교(주차절대불가)",
+    "plceLoctGid": "3호선, 수인분당선 수서역 도보 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 남부순환로378길 39(도곡동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대치중학교(주차절대불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 도곡로64길 21(대치동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "단국대학교부속소프트웨어고등학교",
+    "plceLoctGid": "도곡역 2번출구, 한티역 3번출구",
+    "telNo": "0221160125"
+  },
+  {
+    "address": "서울특별시 강남구 도산대로38길 27(논현동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "언북중학교(주차절대불가)",
+    "plceLoctGid": "7호선 학동역 10번출구에서 도보로 9분",
+    "telNo": "025441311"
+  },
+  {
+    "address": "서울특별시 강남구 선릉로 103 (개포동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "구룡중학교",
+    "plceLoctGid": "구룡역1번출구 이용4분, 도곡역4번출구 이용8분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 선릉로116길 57(삼성동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "언주중학교",
+    "plceLoctGid": "7호선,분당선 강남구청역 1번출구에서 도보 15분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 압구정로 225(압구정동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "압구정중학교(주차매우협소)",
+    "plceLoctGid": "3호선 압구정역 1번출구 100미터 위치",
+    "telNo": "025431394"
+  },
+  {
+    "address": "서울특별시 강남구 압구정로 419(압구정동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "청담고등학교(주차불가)",
+    "plceLoctGid": "분당선 압구정로데오역 2번출구에서 도보 2분",
+    "telNo": "0234968302"
+  },
+  {
+    "address": "서울특별시 강남구 압구정로61길 36(청담동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "청담중학교",
+    "plceLoctGid": "분당선 압구정로데오역 2번 출구 → 갤러리아 백화점 방향 도보 약 7분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 양재천로 321 (대치동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "대청중학교",
+    "plceLoctGid": "도곡역 3번출구 도보5분거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 언주로 652 (논현동, 쿠쿠빌딩)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "쿠쿠전자주식회사",
+    "plceLoctGid": "",
+    "telNo": "02-2017-6093"
+  },
+  {
+    "address": "서울특별시 강남구 역삼로87길 26(대치동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "대명중학교(주차절대불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 영동대로 101 (개포동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "개원중학교(주차절대불가)",
+    "plceLoctGid": "[주차절대불가] 수인분당선 대모산입구역 2번출구 도보 1분, 학여울역 1번출구 도보 12분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 영동대로 643 (삼성동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기고등학교(주차불가)",
+    "plceLoctGid": "(주차X, 승강기X)7호선 청담역 2번출구 도보 5분(50M), 9호선 봉은사역 2번출구 도보 15분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 일원로14길 22(일원동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "중산고등학교(주차불가)",
+    "plceLoctGid": "3호산 일원역 7번출구에서 293m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 자곡로 152 (자곡동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "풍문고등학교(주차절대불가)",
+    "plceLoctGid": "3호선 수서역 6번 출구 버스(2412,3425,강남03)이용&#xD;\n(못골마을.LH강남아이파크 하차)",
+    "telNo": "0234518901"
+  },
+  {
+    "address": "서울특별시 강남구 자곡로 152 (자곡동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "풍문고등학교",
+    "plceLoctGid": "[주차절대불가]",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 테헤란로 418(대치동) 다봉타워 7층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "디지털시험센터",
+    "examAreaNm": "서울강남디지털국가자격시험센터[CBT 2실]",
+    "plceLoctGid": "2호선·수인분당선 선릉역 1번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 테헤란로 418(대치동) 다봉타워 7층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "디지털시험센터",
+    "examAreaNm": "서울강남디지털국가자격시험센터[CBT 4실]",
+    "plceLoctGid": "2호선·수인분당선 선릉역 1번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 테헤란로 418(대치동) 다봉타워 7층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "디지털시험센터",
+    "examAreaNm": "서울강남디지털국가자격시험센터[CBT 1실]",
+    "plceLoctGid": "2호선·수인분당선 선릉역 1번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 테헤란로 418(대치동) 다봉타워 7층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "디지털시험센터",
+    "examAreaNm": "서울강남디지털국가자격시험센터[CBT 3실]",
+    "plceLoctGid": "2호선·수인분당선 선릉역 1번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 테헤란로8길 33 (역삼동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "군장대 서울입시홍보관[CBT 2실]",
+    "plceLoctGid": "2호선 강남역 1번, 신분당선 강남역 3번출구 도보 4분. 청원빌딩 지하 1층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강남구 테헤란로8길 33 (역삼동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "군장대 서울입시홍보관[CBT 1실]",
+    "plceLoctGid": "2호선 강남역 1번, 신분당선 강남역 3번출구 도보 4분. 청원빌딩 지하 1층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 고덕로 183 (고덕동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "서울종합직업전문학교",
+    "plceLoctGid": "5호선 명일역 하차",
+    "telNo": "02-441-5561"
+  },
+  {
+    "address": "서울특별시 강동구 고덕로 183 (고덕동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "서울특별시 기술교육원 동부캠퍼스(주차절대불가)",
+    "plceLoctGid": "5호선 명일역 3번출구(주차공간이 협소할 수 있으므로 가급적 대중교통 이용 바랍니다)",
+    "telNo": "024405550"
+  },
+  {
+    "address": "서울특별시 강동구 고덕로 65(암사동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신암중학교(주차절대불가)",
+    "plceLoctGid": "암사역에서 820m (도보 15분), 340번 버스 신암중학교 정류장 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 고덕로27길 12 (암사동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "강일중학교(주차절대불가)",
+    "plceLoctGid": "[주차절대불가,승강기없음]5호선 명일역 2번 출구에서 도보14분",
+    "telNo": "0220456006"
+  },
+  {
+    "address": "서울특별시 강동구 구천면로 572 (상일동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "강동고등학교",
+    "plceLoctGid": "고덕역 4번출구 도보8분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 동남로 964 (고덕동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울컨벤션고등학교(서울 강동구)",
+    "plceLoctGid": "서울컨벤션고등학교(5호선 고덕역 3번출구 700m)",
+    "telNo": "0234277711"
+  },
+  {
+    "address": "서울특별시 강동구 동남로82길 94(고덕동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "고덕중학교(주차매우협소)",
+    "plceLoctGid": "5호선 고덕역, 상일동역 도보 15분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 명일로 140(둔촌동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "둔촌고등학교(주차절대불가)",
+    "plceLoctGid": "둔촌동역 1번출구 도보 7분 거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 명일로24길 25 (길동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신명중학교(주차절대불가)",
+    "plceLoctGid": "5호선 굽은다리역에서 도보 15분거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 상일로12길 56(강일동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "강명중학교(주차절대불가)",
+    "plceLoctGid": "5호선 강일역 4번출구  약 400m(도보 10분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 성안로7길 36(성내동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "성내중학교(주차절대불가)",
+    "plceLoctGid": "8호선 강동구청역 2번출구에서 도보 12분, 5호선 둔촌동역 3번출구에서 도보 9분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 양재대로156길 57 (고덕동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "명일중학교(주차절대불가)",
+    "plceLoctGid": "5호선 고덕역 1번 출구 도보10분",
+    "telNo": "07051025757"
+  },
+  {
+    "address": "서울특별시 강동구 진황도로61길 25-30 (둔촌동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "둔촌중학교",
+    "plceLoctGid": "9호선 중앙보훈병원역 1번출구 도보 약 6분[주차불가]",
+    "telNo": "024743981"
+  },
+  {
+    "address": "서울특별시 강동구 천중로 57(천호동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "천일중학교(주차매우협소)",
+    "plceLoctGid": "8호선 암사역 2번 출구에서 550m (도보 10분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 천호대로219길 61 (상일동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "상일미디어고등학교[CBT 4실]",
+    "plceLoctGid": "주차장 공사중 주차절대불가",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 천호대로219길 61 (상일동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "상일미디어고등학교[CBT 3실]",
+    "plceLoctGid": "주차장 공사중 주차절대불가",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 천호대로219길 61 (상일동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "상일미디어고등학교",
+    "plceLoctGid": "5호선 상일동역 하차(3,4번 출구) 주공5단지 방향 도보 15분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 천호대로219길 61 (상일동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "상일미디어고등학교[CBT 1실]",
+    "plceLoctGid": "주차장 공사중 주차절대불가",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 천호대로219길 61 (상일동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "상일미디어고등학교(주차절대불가)",
+    "plceLoctGid": "5호선 상일동역 도보 약 15분 거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 천호대로219길 61 (상일동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "상일미디어고등학교[CBT 2실]",
+    "plceLoctGid": "주차장 공사중 주차절대불가",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강동구 풍성로 251(둔촌동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "한산중학교(주차절대불가)",
+    "plceLoctGid": "5호선 둔촌동역 1번출구 에서 도보 5분이내",
+    "telNo": "07051062205"
+  },
+  {
+    "address": "서울특별시 강북구 도봉로29길 52(미아동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "성암국제무역고등학교 2실(컴퓨터그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강북구 도봉로29길 52(미아동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "성암국제무역고등학교 1실(컴퓨터그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강북구 인수봉로 39(미아동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "솔샘중학교(주차절대불가)",
+    "plceLoctGid": "경전철 우이선 솔샘역 2번출구 도보10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강북구 인수봉로75길 10 (수유동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "인수중학교",
+    "plceLoctGid": "",
+    "telNo": "029005201"
+  },
+  {
+    "address": "서울특별시 강북구 한천로122길 21 (번동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "수송중학교(주차불가)",
+    "plceLoctGid": "수유역 1번출구 번동 사거리방향 도보 10분정도",
+    "telNo": "02-900-6323"
+  },
+  {
+    "address": "서울특별시 강북구 한천로150길 67(수유동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "강북중학교(주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강서구 공항대로39길 39 (등촌동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "등명중학교",
+    "plceLoctGid": "전철5호선 발산역 3번출구 도보10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강서구 방화대로34길 13 (마곡동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "세민정보고등학교",
+    "plceLoctGid": "9호선 신방화역 3번출구 도보 1분",
+    "telNo": "02-2665-0832"
+  },
+  {
+    "address": "서울특별시 강서구 방화대로47길 9 (방화동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "강서공업고등학교",
+    "plceLoctGid": "5호선 방화역 1,2번출구 도보300M(눈,비올시 주차불가)",
+    "telNo": "02-2064-4742"
+  },
+  {
+    "address": "서울특별시 강서구 양천로67가길 83 (염창동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "염창중학교",
+    "plceLoctGid": "5호선 영등포구청역, 화곡역에서 버스이용",
+    "telNo": "02-3664-2885"
+  },
+  {
+    "address": "서울특별시 강서구 허준로 36 (가양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "성재중학교",
+    "plceLoctGid": "전철9호선 양천향교역 3번출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강서구 허준로 50 (가양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "동양공업고등학교",
+    "plceLoctGid": "지하철 5호선 발산역 하차 마을버스2, 2-1",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 강서구 허준로5길 15 (가양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "영등포공업고등학교",
+    "plceLoctGid": "5호선발산역3번출구(G)6644번가양동한보구암아파트하차-주차불가",
+    "telNo": "02-2659-2982"
+  },
+  {
+    "address": "서울특별시 관악구 광신길 141 (신림동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "광신정보산업고등학교",
+    "plceLoctGid": "2호선 신림역 4번출구에서 버스 이용",
+    "telNo": "02-881-8500"
+  },
+  {
+    "address": "서울특별시 관악구 남부순환로172길 97(신림동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "남서울중학교(주차불가)",
+    "plceLoctGid": "[주차불가]지하철2호선 신림역4번출구",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 관악구 남부순환로172길 97(신림동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "남서울중학교",
+    "plceLoctGid": "지하철2호선 신림역4번출구",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 관악구 성현로 53(봉천동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "구암중학교(주차불가)",
+    "plceLoctGid": "",
+    "telNo": "02-990-9495"
+  },
+  {
+    "address": "서울특별시 관악구 양지10길 16-1 (신림동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신림중학교",
+    "plceLoctGid": "2호선 서울대입구역 3번출구 버스이용 5515번",
+    "telNo": "02-872-4857"
+  },
+  {
+    "address": "서울특별시 관악구 인헌9길 35 (봉천동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "인헌중학교",
+    "plceLoctGid": "지하철 2호선 낙성대역 1번 출구 도보 약10분",
+    "telNo": "02-877-0047"
+  },
+  {
+    "address": "서울특별시 광진구 광장로1길 1 (광장동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "광장중학교",
+    "plceLoctGid": "394-6",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 광장로1길 1 (광장동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "광장중학교",
+    "plceLoctGid": "5호선 광나루역 1번 출구에서 약 240미터(도보 약 5분, 주차불가, 약도 필독)",
+    "telNo": "07086508303"
+  },
+  {
+    "address": "서울특별시 광진구 군자로 100(군자동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "디자인교육개발원",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 능동로 120(화양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "건국대학교(생명과학관)_유료주차",
+    "plceLoctGid": "지하철 2호선 7호선 건대입구역 도보 5분",
+    "telNo": "024503114"
+  },
+  {
+    "address": "서울특별시 광진구 능동로 120(화양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "사용안함",
+    "plceLoctGid": "생명과학관 1층 및 강의동, 지하철 2호선 7호선 건대입구역 도보 5분",
+    "telNo": "024503114"
+  },
+  {
+    "address": "서울특별시 광진구 능동로 120(화양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "건국대학교(공학관B동)_유료주차",
+    "plceLoctGid": "지하철 2호선 7호선 건대입구역 도보 14분",
+    "telNo": "024503114"
+  },
+  {
+    "address": "서울특별시 광진구 능동로 120(화양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "건국대학교(동물생명과학관)_유료주차",
+    "plceLoctGid": "지하철 2호선 7호선 건대입구역 도보 5분",
+    "telNo": "024503114"
+  },
+  {
+    "address": "서울특별시 광진구 능동로 120(화양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "사용안함",
+    "plceLoctGid": "동물생명과학관, 지하철 2호선 7호선 건대입구역 도보 5분",
+    "telNo": "024503114"
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38 (자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울동부국가자격시험장(광진구)_주차불가",
+    "plceLoctGid": "7호선 자양역(구: 뚝섬유원지역) 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38 서울동부국가자격시험장 3층(자양동, 한국산업인력공단)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울동부국가자격시험장(3층,주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울동부국가자격시험장(자양역) [CBT 1실]",
+    "plceLoctGid": "7호선 자양역 1번 출구에서 도보 약 5분, 2,7호선 건대입구역 5번출구에서 도보 약 13분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(3급)서울동부국가자격시험장 자양동_주차불가",
+    "plceLoctGid": "뚝섬유원지역(7호선)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울동부국가자격시험장(자양역) [CBT 2실]",
+    "plceLoctGid": "7호선 자양역 1번 출구에서 도보 약 5분, 2,7호선 건대입구역 5번출구에서 도보 약 13분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "[가상] 서울동부국가자격시험장(자양역) [CBT 2실]",
+    "plceLoctGid": "지하철 7호선 자양역 1번출구에서 도보 약 10분거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "[가상] 서울동부국가자격시험장(자양역) [CBT 3실]",
+    "plceLoctGid": "지하철 7호선 자양역 1번출구에서 도보로 10분 거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "[가상] 서울동부국가자격시험장(자양역) [CBT 1실]",
+    "plceLoctGid": "지하철 7호선 자양역 1번출구에서 도보 약 10분거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(2급)서울동부국가자격시험장 자양동_주차불가",
+    "plceLoctGid": "뚝섬유원지역(7호선)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울동부국가자격시험장(자양역) [CBT 4실]",
+    "plceLoctGid": "7호선 자양역 1번 출구에서 도보 약 5분, 2,7호선 건대입구역 5번출구에서 도보 약 13분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울동부국가자격시험장(vietnamese,일반인접수불가",
+    "plceLoctGid": "",
+    "telNo": "0269540474"
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "[가상] 서울동부국가자격시험장(자양역) [CBT 4실]",
+    "plceLoctGid": "지하철 7호선 자양역 1번출구에서 도보로 약 10분 거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울동부국가자격시험장(자양역) [CBT 3실]",
+    "plceLoctGid": "7호선 자양역 1번 출구에서 도보 약 5분, 2,7호선 건대입구역 5번출구에서 도보 약 13분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울동부국가자격시험장(chinese,일반인 접수불가)",
+    "plceLoctGid": "",
+    "telNo": "0269540474"
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로32길 38(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(1급)서울동부국가자격시험장 자양동_주차불가",
+    "plceLoctGid": "뚝섬유원지역(7호선)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 뚝섬로41길 33 (자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "자양중학교(주차불가)",
+    "plceLoctGid": "[주차불가]2호선, 7호선 건대입구역 5번출구 도보16분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 아차산로70길 17-16 (광장동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "광남고등학교(주차불가)",
+    "plceLoctGid": "5호선 광나루역 3번출구(도보9분)",
+    "telNo": "0222048863"
+  },
+  {
+    "address": "서울특별시 광진구 아차산로70길 17-62 (광장동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "광남중학교(주차절대불가)",
+    "plceLoctGid": "5호선 광나루역 4번출구 도보 11분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 워커힐로 32 (광장동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "양진중학교(주차불가)",
+    "plceLoctGid": "5호선 광나루역 4번 출구 도보 12분(주차불가)",
+    "telNo": "0220491200"
+  },
+  {
+    "address": "서울특별시 광진구 자양로 145-1(화양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "건국대학교사범대학부속중학교",
+    "plceLoctGid": "구의역 2호선 1번출구에서 광진04번 승차, 광진구청역에서 하차",
+    "telNo": "024570317"
+  },
+  {
+    "address": "서울특별시 광진구 자양로3길 7(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "광양중학교(주차불가)",
+    "plceLoctGid": "지하철2호선 강변역 잠실대교 방향으로 도보 15분정도 소요, 지하철2호선 구의역에서 잠실대교 방향으로 도보 10분정도 소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 광진구 자양로3길 7(자양동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "광양중학교(주차불가)",
+    "plceLoctGid": "지하철2호선 강변역 잠실대교 방향으로 도보 15분정도 소요, 지하철2호선 구의역에서 잠실대교 방향으로 도보 10분정도 소요",
+    "telNo": "024526922"
+  },
+  {
+    "address": "서울특별시 구로구 경인로 301 (개봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "경인중학교(주차절대불가)",
+    "plceLoctGid": "전철1호선 개봉역 하차 5분도보",
+    "telNo": "02-2612-6508"
+  },
+  {
+    "address": "서울특별시 구로구 경인로 8 (항동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "유한공업고등학교",
+    "plceLoctGid": "1,7호선 온수역(1,2번출구 도보8분), 1호선 역곡역(도보12분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 구로구 경인로46길 31(고척동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경인고등학교(주차불가)",
+    "plceLoctGid": "개봉역에서 도보로 10분",
+    "telNo": "02-2618-6446"
+  },
+  {
+    "address": "서울특별시 구로구 경인로63길 74 (신도림동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신도림중학교(주차절대불가)",
+    "plceLoctGid": "1,2호선 신도림역 1번 출구->왼쪽 지하보도 이용->300미터 직진->우회전 200미터",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 구로구 구로동로 12 (가리봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "중국동포평생교육원",
+    "plceLoctGid": "7호선남구로역3번출구200m",
+    "telNo": "02-863-3022"
+  },
+  {
+    "address": "서울특별시 구로구 구로중앙로 48 (구로동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "구로중학교",
+    "plceLoctGid": "(주차불가)지하철 2,7호선 대림역(구로구청역) 4번출구에서 도보 10~15분",
+    "telNo": "02-890-4503"
+  },
+  {
+    "address": "서울특별시 구로구 오리로9길 25 (오류동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "오남중학교",
+    "plceLoctGid": "7호선 천왕역 2번 출구 200m",
+    "telNo": "02-2687-4235"
+  },
+  {
+    "address": "서울특별시 금천구 시흥대로47길 28-5 (시흥동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울경영정보고등학교",
+    "plceLoctGid": "양천구 신월3동 43-8",
+    "telNo": "02-694-6025"
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 232 (공릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "서울과학기술대학교(창조관,8번건물)",
+    "plceLoctGid": "7호선 공릉역 1번출구에서 약1km(도보15분),7호선 하계역3번출구에서 약1.2km(도보17분)",
+    "telNo": "02-970-6114"
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 232 (공릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "서울과학기술대학교(청운관,6번건물)",
+    "plceLoctGid": "7호선 공릉역 1번출구에서 1km(도보15분),7호선 하계역 3번출구에서 1.2km(도보17분)",
+    "telNo": "02-970-6114"
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 232(공릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "서울과학기술대학교(청운관)",
+    "plceLoctGid": "화공생명공학과 청운관",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 257 (공릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "동산정보산업고등학교",
+    "plceLoctGid": "7호선 공릉역 2번출구(도보13분/마을버스3번)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264 (하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기기계공업고등학교(주차협소)",
+    "plceLoctGid": "7호선 공릉역 1번 출구 도보 15분(주차협소)",
+    "telNo": "0222891600"
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264 (하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기기계공업고등학교 메이커제품설계과[CBT 2실]",
+    "plceLoctGid": "[지하철] 7호선 하계역 3번 출구, 7호선 공릉역 1번 출구 (도보 13분) [버스] 경기기계공업고등학고 - 1141,1224,1227,노원03 (도보2분), 한천중학교 - 1141,1224,1227,노원03 (도보 3분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264 (하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기기계공업고등학교 메이커제품설계과[CBT 1실]",
+    "plceLoctGid": "[지하철] 7호선 하계역 3번 출구, 7호선 공릉역 1번 출구 (도보 13분) [버스] 경기기계공업고등학고 - 1141,1224,1227,노원03 (도보2분), 한천중학교 - 1141,1224,1227,노원03 (도보 3분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264 (하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기기계공업고등학교",
+    "plceLoctGid": "7호선 공릉역 1번 출구에서 약 1km(도보 약 13분, 약도 필독) (주차협소)",
+    "telNo": "070-7602-1697"
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264 (하계동, 경기기계공업고등학교)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기기계공업고등학교(전산응용기계설계)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 1실(선반)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 1실(피복아크)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 2실(선반)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 1실(밀링)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 2실",
+    "plceLoctGid": "창조관 1층 자동화기계과",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 2실(전자)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교(3D)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 2실(피복아크)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 1실(자동화설비)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 2실(자동화설비)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 3실(전자)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 2실(밀링)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 3실(밀링)",
+    "plceLoctGid": "",
+    "telNo": "0222891600"
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "경기기계공업고등학교 1실(전자)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기기계공업고등학교 항공드론과컴퓨터실[CBT3시험실]",
+    "plceLoctGid": "[지하철]7호선 하계역 3번출구, 7호선 공릉역 1번출구(도보13분)[버스]1141,1224,1227,노원03",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동) 경기기계공고 창조관(정문 300m직진후 오른쪽 100m)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기기계공업고등학교 창조관 자동화기계과[CBT 2실]",
+    "plceLoctGid": "[지하철]7호선 하계역 3번출구, 7호선 공릉역 1번출구 (도보20분) [버스] 경기기계공업고등학교 하차-1141,1224,1227,노원03(도보2분) 한천중학교 하차-1141,1224,1227,노원03(도보3분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 264(하계동) 경기기계공고 창조관(정문에서300m직진 후 오른쪽 100m)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기기계공업고등학교 창조관 자동화기계과[CBT 1실]",
+    "plceLoctGid": "[지하철]7호선 하계역 3번출구, 7호선 공릉역 1번출구 (도보13분) [버스] 경기기계공업고등학교 하차-1141,1224,1227,노원03(도보2분) 한천중학교 하차-1141,1224,1227,노원03(도보3분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 공릉로 265 (공릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "한천중학교(주차절대불가)",
+    "plceLoctGid": "(주차 절대불가)[지하철] 7호선 하계역 3번 출구 (도보10분) [버스] 청솔7단지앞 - 1141, 1224, 노원03 (도보1분), 한천중학교 - 1141, 1224, 1127, 노원03 (도보1분)  (주차불가)",
+    "telNo": "029485553"
+  },
+  {
+    "address": "서울특별시 노원구 공릉로62가길 47(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대진고등학교(주차절대불가)",
+    "plceLoctGid": "7호선 하계역 2번출구(도보12분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 광운로 20(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운대학교[참빛관]_후문출입(계단통로 주차절대불가)",
+    "plceLoctGid": "1호선 광운대역(도보6분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24 (월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "광운인공지능고등학교[창조관]_주차불가",
+    "plceLoctGid": "1호선,경춘선 광운대역 1번 출구(도보 13분) / 1,6호선 석계역 1번출구(도보 8분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24 (월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "광운중학교(주차매우협소)",
+    "plceLoctGid": "1호선 광운대역 1번출구(도보13분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24 (월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "광운전자공업고등학교(Chinese)",
+    "plceLoctGid": "서울 노원구 월계4동 - 1,6호선 (광운대역 2번출구 도보 5분)(석계역 1번출구 도보 15분)",
+    "telNo": "02-918-7761"
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24 (월계동, 광운중 광운인공지능고등학교)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "광운인공지능고등학교(전기시공)1실",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운인공지능고등학교 5실(전자)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "광운인공지능고등학교[CBT6실](주차불가)",
+    "plceLoctGid": "1,6호선 석계역 1번출구 도보10분, 1호선 광운대역 1번출구 도보10분 또는 버스 환승 3정거장 하차",
+    "telNo": "029187762"
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운인공지능고등학교 4실(전자)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "광운인공지능고등학교(주차불가)",
+    "plceLoctGid": "1호선 및 경춘선 광운대역 1번 출구 도보 13분(주차불가)",
+    "telNo": "029187761"
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "광운인공지능고등학교[CBT1실](주차불가)",
+    "plceLoctGid": "1,6호선 석계역 1번출구, 보도10분, 1호선 광운대역 앞 보도 10분 또는 버스 환승 3정거장 하차",
+    "telNo": "029187762"
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운중학교(주차불가)",
+    "plceLoctGid": "1호선 광운대역 1번출구(도보13분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "광운인공지능고등학교[CBT5실](주차불가)",
+    "plceLoctGid": "1,6호선 석계역 1번출구 도보10분, 1호선 광운대역 1번출구 도보10분 또는 버스 환승 3정거장 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운인공지능고등학교[CBT8실](주차불가)",
+    "plceLoctGid": "1,6호선 석계역 1번출구, 광운대역 1번출구 도보 10분",
+    "telNo": "0269532071"
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운인공지능고등학교[CBT7실](주차불가)",
+    "plceLoctGid": "1,6호선 석계역 1번출구, 광운대역 1번출구 도보 10분",
+    "telNo": "0269532071"
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "광운인공지능고등학교[CBT3실](주차불가)",
+    "plceLoctGid": "1,6호선 석계역 1번출구 도보10분, 1호선 광운대역 1번출구 도보10분 또는 버스 환승 3정거장 하차",
+    "telNo": "029187762"
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "광운인공지능고등학교[CBT2실](주차불가)",
+    "plceLoctGid": "1,6호선 석계역 1번출구 도보10분, 1호선 광운대역 1번출구 도보10분 또는 버스 환승 3정거장 하차",
+    "telNo": "029187762"
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운인공지능고등학교 3실(전자)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "광운인공지능고등학교[CBT4실](주차불가)",
+    "plceLoctGid": "1,6호선 석계역 1번출구 도보10분, 1호선 광운대역 1번출구 도보10분 또는 버스 환승 3정거장 하차",
+    "telNo": "029187762"
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운인공지능고등학교 1실(전자)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운인공지능고등학교 2실(전자)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 광운로1길 24(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운인공지능고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 노원로 261-8 (하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "하계중학교(주차불가)",
+    "plceLoctGid": "7호선 하계역 1번 출구 도보 11분(주차불가)",
+    "telNo": "0233990200"
+  },
+  {
+    "address": "서울특별시 노원구 노원로 398 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "서울디자인고등학교",
+    "plceLoctGid": "4호선 노원역 1번출구 버스(1132,1154) 이용",
+    "telNo": "029366109"
+  },
+  {
+    "address": "서울특별시 노원구 노원로 398 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "상계중학교(Vietnamese)",
+    "plceLoctGid": "4호선 노원역 1,2번출구 버스(1132,1154)이용 후 \"상계중학교\"하차",
+    "telNo": "029366450"
+  },
+  {
+    "address": "서울특별시 노원구 노원로 398 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "상계중학교(Chinese)",
+    "plceLoctGid": "4호선 노원역 1,2번출구 버스(1132,1154)이용 후 \"상계중학교\"하차",
+    "telNo": "029366450"
+  },
+  {
+    "address": "서울특별시 노원구 노원로 398 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "상계중학교(주차매우협소)",
+    "plceLoctGid": "4호선 노원역 1번출구 버스(1132,1154) 이용, 4호선 노원역 1번 출구 도보 12분, 7호선 노원역 4번 출구 도보 15분",
+    "telNo": "029366109"
+  },
+  {
+    "address": "서울특별시 노원구 노원로 492 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "온곡중학교(주차절대불가)",
+    "plceLoctGid": "4호선 노원역 10번출구 도보 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 노원로 586 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "노원고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 노원로1길 42(공릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "공릉중학교(주차불가)",
+    "plceLoctGid": "6호선 화랑대역 3번 출구 도보 3분(주차불가)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 노원로1길 42(공릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "공릉중학교(주차불가)",
+    "plceLoctGid": "지하철 6호선 화랑대역 3분 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 노해로 432 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "상계고등학교(주차협소)",
+    "plceLoctGid": "4호선 및 7호선 노원역 6번 출구 도보 6분, 1호선 및 4호선 창동역 1번 출구 도보 14분(주차협소)",
+    "telNo": "07086782505"
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로70가길 73 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "상계직업전문학교",
+    "plceLoctGid": "7호선 중계역 5번출구,1호선 녹번역에서 15분 도보",
+    "telNo": "02-938-4672~5"
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로70가길 81 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울북부기술교육원",
+    "plceLoctGid": "1호선 녹천역하차 2번출구 도보 10분거리(주차불가,엘리베이터 없음)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로70가길 81 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "서울특별시 기술교육원 북부캠퍼스 1실(주차불가)",
+    "plceLoctGid": "1호선 녹천역하차 2번출구 도보10분거리(주차불가), 1실: 공조냉동에너지관리과",
+    "telNo": "0220924700"
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로70가길 81 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "서울북부기술교육원 3관 3층[CBT 2실](주차불가)",
+    "plceLoctGid": "7호선 중계역 하차 5번출구 북부기술교육원방향(도보 10분정도)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로70가길 81 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "서울특별시 기술교육원 북부캠퍼스 2실(주차불가)",
+    "plceLoctGid": "1호선 녹천역하차 2번출구 도보10분거리(주차불가), 2실: 그린에너지설비과",
+    "telNo": "0220924700"
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로70가길 81 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "서울특별시 기술교육원 북부캠퍼스(주차불가)",
+    "plceLoctGid": "1호선 녹천역하차 2번출구 도보10분거리(주차불가,엘리베이터없음)",
+    "telNo": "02-2092-4700"
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로70가길 81 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "서울북부기술교육원 3관 3층[CBT 1실](주차불가)",
+    "plceLoctGid": "7호선 중계역 하차 5번출구 북부기술교육원방향(도보 10분정도)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로70가길 81(상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울북부기술교육원 3관 3층[CBT 4실](주차불가)",
+    "plceLoctGid": "중계역 5번출구에서 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로70가길 81(상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울북부기술교육원 3관 3층[CBT 3실](주차불가)",
+    "plceLoctGid": "중계역 5번출구에서 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로70가길 81(상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "면제자 단체접수(북부기술)_일반인접수불가",
+    "plceLoctGid": "서울특별시 기술교육원 북부캠퍼스",
+    "telNo": "0220924700"
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로76길 23(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "중계중학교(주차불가)",
+    "plceLoctGid": "4호선 상계역 3번출구 도보15분, 5번 출구에서 1224번 버스 이용",
+    "telNo": "029322545"
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54 (중계4동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "미래산업과학고등학교(주차협소)",
+    "plceLoctGid": "4호선 상계역 2번 출구 도보 8분(주차협소)",
+    "telNo": "0269218477"
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "미래산업과학고등학교 2실(3D)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "미래산업과학고등학교",
+    "plceLoctGid": "4호선 상계역 2번 출구(도보8분)",
+    "telNo": "0269218477"
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "미래산업과학고등학교 2실(컴퓨터 그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "미래산업과학고등학교 1실(3D)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "미래산업과학고등학교 3실(컴퓨터 그래픽 매킨토시)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "미래산업과학고등학교 3실(3D)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "미래산업과학고등학교[주차절대불가, (CBT7실)]",
+    "plceLoctGid": "4호선 상계역 2번출구, 도보 8분 소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "미래산업과학고등학교 1실 (컴퓨터 그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "미래산업과학고등학교[주차절대불가, (CBT8실)]",
+    "plceLoctGid": "상계역 2번출구, 도보 8분 소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "미래산업과학고등학교[주차절대불가, (CBT6실)]",
+    "plceLoctGid": "4호선 상계역 2번출구, 도보 8분소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동) 미래산업과학고등학교",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "미래산업과학고등학교[주차절대불가, (CBT2실)]",
+    "plceLoctGid": "4호선 상계역 2번출구, 도보 8분소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동) 미래산업과학고등학교",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "미래산업과학고등학교[주차절대불가, (CBT3실)]",
+    "plceLoctGid": "4호선 상계역 2번출구, 도보 8분소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동) 미래산업과학고등학교",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "미래산업과학고등학교[주차절대불가, (CBT4실)]",
+    "plceLoctGid": "4호선 상계역 2번출구, 도보 8분소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동) 미래산업과학고등학교",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "미래산업과학고등학교[주차절대불가, (CBT5실)]",
+    "plceLoctGid": "4호선 상계역 2번출구, 도보 8분소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로82길 54(중계동), 미래산업과학고등학교",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "미래산업과학고등학교[주차절대불가, (CBT1실)]",
+    "plceLoctGid": "4호선 상계역 2번출구, 도보 8분소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 덕릉로86길 29-15(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "상계제일중학교(주차절대불가)",
+    "plceLoctGid": "4호선 상계역 1번출구(도보5분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 동일로 1335(상계동) 대원빌딩 8층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "은곡직업전문학교 실습장(본관아님)_주차불가",
+    "plceLoctGid": "은곡직업전문학교 3관: 7호선 중계역 6번출구 도보 4분, 올리브영 건물 대원빌딩 8층(본관과 다른 건물 주의)",
+    "telNo": "05071422116"
+  },
+  {
+    "address": "서울특별시 노원구 동일로 1379(상계동) 상계다모아빌딩 6층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "상계다모아]은곡직업전문학교[주차절대불가,(CBT3실)]",
+    "plceLoctGid": "4호선 노원역 2번출구, 7호선 노원역 6번출구에서 도보 4분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 동일로 1379(상계동) 상계다모아빌딩 6층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "상계다모아]은곡직업전문학교[주차절대불가,(CBT4실)]",
+    "plceLoctGid": "4호선 노원역 2번출구, 7호선 노원역 6번출구에서 도보 4분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 동일로 1379(상계동), 상계다모아빌딩 6층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "상계다모아]은곡직업전문학교[주차절대불가,(CBT1실)]",
+    "plceLoctGid": "4호선 노원역 2번출구, 7호선 노원역 6번출구에서 도보 4분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 동일로 1379(상계동), 상계다모아빌딩 6층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "상계다모아]은곡직업전문학교[주차절대불가,(CBT2실)]",
+    "plceLoctGid": "4호선 노원역 2번출구, 7호선 노원역 6번출구에서 도보 4분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 동일로203길 87 (하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "중평중학교",
+    "plceLoctGid": "7호선 하계역 6번출구 도보 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 동일로203길 87(하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "중평중학교(주차불가)",
+    "plceLoctGid": "7호선 하계역 6번 출구 도보 9분(주차절대불가)",
+    "telNo": "029773026"
+  },
+  {
+    "address": "서울특별시 노원구 동일로213길 26 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "노원중학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 동일로227길 61(상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "상경중학교(주차절대불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 동일로231길 24 (상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "노일중학교",
+    "plceLoctGid": "지하철 7호선 수락산역 4번출구 도보5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로 77(상계동) 다나플라자 2층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 2실](절대주차불가)",
+    "plceLoctGid": "노원역 9번, 10번 출구 사이",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로 77(상계동) 다나플라자 2층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 1실](절대주차불가)",
+    "plceLoctGid": "노원역 9번, 10번 출구 사이",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로 77(상계동) 다나플라자 2층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 4실](절대주차불가)",
+    "plceLoctGid": "노원역 9번, 10번 출구 사이",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로 77(상계동) 다나플라자 2층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 3실](절대주차불가)",
+    "plceLoctGid": "노원역 9번, 10번 출구 사이",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로 77(상계동) 다나플라자 5층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(5층)[CBT 7실](절대주차불가)",
+    "plceLoctGid": "노원역 9번, 10번 출구 사이",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로 77(상계동) 다나플라자 5층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(5층)[CBT 5실](절대주차불가)",
+    "plceLoctGid": "노원역 9번, 10번 출구 사이",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로 77(상계동) 다나플라자 5층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(5층)[CBT 6실](절대주차불가)",
+    "plceLoctGid": "노원역 9번, 10번 출구 사이",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로1길 34(상계동) 5층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "(노원역)코리아IT아카데미 노원점[CBT1실] 절대주차불가(대중교통이용요망)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로1길 34(상계동) 5층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "(노원역)코리아IT아카데미 노원점[CBT2실] 절대주차불가(대중교통이용요망)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로3길 21 (상계동) 화일빌딩) 3층, 6층 일부(상계동, 화일빌딩)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "노원그린컴퓨터학원",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로3길 21(상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "그린컴퓨터아카데미 노원[주차절대불가,(CBT6실)]",
+    "plceLoctGid": "4,7호선 노원역 2번출구, 도보 4분소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로3길 21(상계동) 3층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "그린컴퓨터아카데미 노원[주차절대불가,(CBT2실)]",
+    "plceLoctGid": "4,7호선 노원역 9번출구, 도보 4분소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로3길 21(상계동) 3층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "그린컴퓨터아카데미 노원[주차절대불가,(CBT4실)]",
+    "plceLoctGid": "4,7호선 노원역 9번출구, 도보 4분소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로3길 21(상계동) 3층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "그린컴퓨터아카데미 노원[주차절대불가,(CBT3실)]",
+    "plceLoctGid": "4,7호선 노원역 9번출구, 도보 4분소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로3길 21(상계동) 6층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "그린컴퓨터아카데미 노원[주차절대불가,(CBT5실)]",
+    "plceLoctGid": "4,7호선 노원역 9번출구, 도보 4분소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로3길 21(상계동) 화일빌딩 3층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "그린컴퓨터아카데미 노원[주차절대불가,(CBT1실)]",
+    "plceLoctGid": "4,7호선 노원역 9번출구, 도보 4분소요",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로5길 32(상계동) 금호프라자 6층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "하이미디어컴퓨터학원 노원점[CBT5실, 주차절대불가]",
+    "plceLoctGid": "노원역 7호선 4번 출구 도보 5분, 노원역 4호선 9번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로5길 32(상계동) 금호프라자 6층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "하이미디어컴퓨터학원 노원점[CBT6실, 주차절대불가]",
+    "plceLoctGid": "노원역 7호선 4번 출구 도보 5분, 노원역 4호선 9번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로5길 32(상계동) 금호프라자 6층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "하이미디어컴퓨터학원 노원점[CBT3실, 주차절대불가]",
+    "plceLoctGid": "노원역 7호선 4번 출구 도보 5분, 노원역 4호선 9번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로5길 32(상계동) 금호프라자 6층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "하이미디어컴퓨터학원 노원점[CBT4실, 주차절대불가]",
+    "plceLoctGid": "노원역 7호선 4번 출구 도보 5분, 노원역 4호선 9번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로5길 32(상계동) 금호프라자, 6층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "하이미디어컴퓨터학원 노원점[CBT7실, 주차절대불가]",
+    "plceLoctGid": "노원역 7호선 4번 출구 도보 5분, 노원역 4호선 9번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로5길 32(상계동), 금호프라자 6층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "하이미디어컴퓨터학원 노원점[CBT1실, 주차절대불가]",
+    "plceLoctGid": "7호선 노원역 4번출구 도보 5분, 노원역 4호선 9번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 상계로5길 32(상계동), 금호프라자 6층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "하이미디어컴퓨터학원 노원점[CBT2실, 주차절대불가]",
+    "plceLoctGid": "노원역 7호선 4번 출구 도보 5분, 노원역 4호선 9번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 석계로18길 23(월계동, 삼능스페이스향)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운대학교 인적자원개발센터[CBT] 2실_주차불가",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 석계로18길 23(월계동, 삼능스페이스향)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운대학교 인적자원개발센터[CBT] 1실_주차불가",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 석계로18길 23(월계동, 삼능스페이스향)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광운대학교 인적자원개발센터[CBT] 3실_주차불가",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 섬밭로 299 (중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울아이티고등학교(주차절대불가)",
+    "plceLoctGid": "[지하철] 7호선 중계역 4번출구 도보 5분(주차 불가)",
+    "telNo": "07076064822"
+  },
+  {
+    "address": "서울특별시 노원구 섬밭로 299 (중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울아이티고[2실 CBT](주차불가)",
+    "plceLoctGid": "중계역 4번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 섬밭로 299 (중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울아이티고[1실 CBT](주차불가)",
+    "plceLoctGid": "중계역 4번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 섬밭로 299(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울아이티고등학교[CBT 1실] (주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 섬밭로 299(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울아이티고등학교[CBT 2실] (주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 섬밭로 299(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울아이티고등학교[CBT 3실] (주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 섬밭로 299(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울아이티고등학교 1실(컴퓨터그래픽기능사)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 섬밭로 299(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울아이티고등학교 3실(컴퓨터그래픽기능사)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 섬밭로 299(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울아이티고등학교 2실(컴퓨터그래픽기능사)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 수락산로 182(상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "상원중학교(주차절대불가)",
+    "plceLoctGid": "7호선 마들역 1번출구 800m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 수락산로 182(상계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "상원중학교(주차불가,승강기없음)",
+    "plceLoctGid": "[주차협소]수락산역 5번출구에서 노원 02 승차 후 상계주공 14단지역에서 하차",
+    "telNo": "07050885901"
+  },
+  {
+    "address": "서울특별시 노원구 월계로 376 (월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "녹천중학교(주차협소)",
+    "plceLoctGid": "지하철 1호선 월계역 1번 출구 도보 7분",
+    "telNo": "029784591"
+  },
+  {
+    "address": "서울특별시 노원구 월계로45가길 9(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "염광메디텍고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 중계로16나길 13(중계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "영신간호비지니스고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12 (월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "인덕공업고등학교",
+    "plceLoctGid": "월계역",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12 (월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "인덕과학기술고등학교(주차불가)",
+    "plceLoctGid": "1호선 월계역 2번출구 도보5분",
+    "telNo": "02-902-2060"
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12 (월계동, 인덕대학교,인덕과학기술고등학교)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "인덕과학기술고등학교(CNC선반가공)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12 (월계동, 인덕대학교,인덕과학기술고등학교)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "인덕과학기술고등학교(자동차정비)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12 (월계동, 인덕대학교,인덕과학기술고등학교)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "사용안함",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교 인관[CBT5실](주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교 인관[CBT6실](주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "인덕대학교 인관[CBT4실](주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교 인관[CBT8실](주차불가)",
+    "plceLoctGid": "인덕대학교 내 인관 건물",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교 인관[CBT9실](주차불가)",
+    "plceLoctGid": "인덕대학교 내 인관 건물",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교 인관[CBT3실](주차불가)",
+    "plceLoctGid": "1호선 월계역 2번출구에서 694m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "인덕과학기술고등학교[CBT3실-주차불가]",
+    "plceLoctGid": "[지하철]1호선 월계-인덕대학역 하차 도보 100m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교 인관[CBT2실](주차불가)",
+    "plceLoctGid": "1호선 월계역 2번출구에서 694m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "사용안함",
+    "plceLoctGid": "1호선 월계역 하차 도보 5분거리",
+    "telNo": "029507000"
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교 인관[CBT1실](주차불가)",
+    "plceLoctGid": "1호선 월계역 2번출구에서 694m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교(덕관)_유료주차",
+    "plceLoctGid": "지하철 1호선 월계역 3번출구 도보 5분거리",
+    "telNo": "029507000"
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "인덕과학기술고등학교[CBT1실-주차불가]",
+    "plceLoctGid": "[지하철]1호선 월계-인덕대학역 도보 100m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교 인관[CBT7실](주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "인덕과학기술고등학교(주차절대불가)",
+    "plceLoctGid": "1호선 월계역 2번 출구 도보 7분(주차절대불가)",
+    "telNo": "023022060"
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "인덕과학기술고등학교[CBT4실-주차불가]",
+    "plceLoctGid": "[지하철]1호선 월계-인덕대학역 하차 도보 100m거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교(제1공학관)_유료주차",
+    "plceLoctGid": "지하철 1호선 월계역 3번출구 도보 5분거리",
+    "telNo": "029507000"
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교(은봉관)_유료주차",
+    "plceLoctGid": "지하철 1호선 월계역 3번출구 도보 5분거리",
+    "telNo": "029507000"
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "인덕과학기술고등학교[CBT5실, 주차불가]",
+    "plceLoctGid": "월계_인덕대학역 도부 100m",
+    "telNo": "029022060"
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교(제2공학관)_유료주차",
+    "plceLoctGid": "지하철 1호선 월계역 3번출구 도보 5분거리",
+    "telNo": "029507000"
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "인덕과학기술고등학교[CBT2실-주차불가]",
+    "plceLoctGid": "[지하철]1호선 월계-인덕대학역 하차 도보 100M거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 초안산로 12(월계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "인덕대학교(인관)_유료주차",
+    "plceLoctGid": "지하철 1호선 월계역 3번출구 도보 5분거리",
+    "telNo": "029507000"
+  },
+  {
+    "address": "서울특별시 노원구 한글비석로5길 45 (하계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "불암중학교",
+    "plceLoctGid": "중계역에서 도보 15분 거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 화랑로 621(공릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울여자대학교(유료주차)",
+    "plceLoctGid": "조형예술관 2층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 노원구 화랑로 815 (공릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "삼육대학교[제1과학관]",
+    "plceLoctGid": "6호선 화랑대역 1번 출구에서 삼육대학교행 버스 이용",
+    "telNo": "0233993636"
+  },
+  {
+    "address": "서울특별시 노원구 화랑로51나길 51 (공릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "태랑중학교(주차불가)",
+    "plceLoctGid": "6호선 화랑대역 4번 출구 도보 20분(주차불가)",
+    "telNo": "029731408"
+  },
+  {
+    "address": "서울특별시 도봉구 노해로66길 60(창동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "창일중학교(주차절대불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 도봉로115길 16(쌍문동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신도봉중학교(주차절대불가)",
+    "plceLoctGid": "쌍문역 3번출구 도보 1분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 도봉로129길 50(쌍문동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "백운중학교(주차매우협소)",
+    "plceLoctGid": "4호선 쌍문역 4번 출구(도보 15분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 도봉로169가길 33(도봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "북서울중학교(주차불가)",
+    "plceLoctGid": "1호선 도봉역 1번 출구 도보 6분(주차불가)",
+    "telNo": "029561004"
+  },
+  {
+    "address": "서울특별시 도봉구 도봉산길 58(도봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "도봉구 목재문화체험장",
+    "plceLoctGid": "도봉산역 1번출구 도보10분",
+    "telNo": "07077959312"
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울문화고등학교[CBT2실](절대주차불가)",
+    "plceLoctGid": "지하철 1호선 방학역 도보6분/지하철 1,4호선 창동역 1번출구에서 마을버스 8번,9번 승차/대중교통 이용권장",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울문화고등학교(주차불가)",
+    "plceLoctGid": "지하철 1호선 방학역 도보6분/지하철 1,4호선 창동역 1번 출구에서 마을버스 8번, 9번 승차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울문화고등학교[CBT1실](절대주차불가)",
+    "plceLoctGid": "지하철 1호선 방학역 도보6분/지하철 1,4호선 창동역 1번출구에서 마을버스 8번,9번 승차/대중교통 이용권장",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울문화고등학교 1실(컴퓨터 그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울문화고등학교[CBT4실](절대주차불가)",
+    "plceLoctGid": "지하철 1호선 방학역 도보6분/지하철 1,4호선 창동역 1번출구에서 마을버스 8번,9번 승차/대중교통 이용권장",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울문화고등학교[CBT5실](절대주차불가)",
+    "plceLoctGid": "지하철 1호선 방학역 도보6분/지하철 1,4호선 창동역 1번출구에서 마을버스 8번,9번 승차/대중교통 이용권장",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울문화고등학교 2실 (컴퓨터 그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울문화고등학교[CBT6실](절대주차불가)",
+    "plceLoctGid": "지하철 1호선 방학역 도보6분/지하철 1,4호선 창동역 1번출구에서 마을버스 8번,9번 승차/대중교통 이용권장",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울문화고등학교[CBT3실](절대주차불가)",
+    "plceLoctGid": "지하철 1호선 방학역 도보6분/지하철 1,4호선 창동역 1번출구에서 마을버스 8번,9번 승차/대중교통 이용권장",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울문화고등학교[CBT8실](절대주차불가)",
+    "plceLoctGid": "지하철 1호선 방학역 도보6분/지하철 1,4호선 창동역 1번출구에서 마을버스 8번,9번 승차/대중교통 이용권장",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울문화고등학교[CBT7실](절대주차불가)",
+    "plceLoctGid": "지하철 1호선 방학역 도보6분/지하철 1,4호선 창동역 1번출구에서 마을버스 8번,9번 승차/대중교통 이용권장",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울문화고등학교(주차불가)",
+    "plceLoctGid": "지하철 1호선 방학역 도보6분/지하철 1,4호선 창동역 1번출구에서 마을버스 8번,9번 승차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울문화고등학교 1실 (컴퓨터 그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 598(방학동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울문화고등학교 2실(컴퓨터 그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 671(도봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "도봉중학교(주차불가)",
+    "plceLoctGid": "지하철 1호선 방학역 2번출구(도보6분)",
+    "telNo": "029544117"
+  },
+  {
+    "address": "서울특별시 도봉구 마들로 849(도봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "누원고등학교(주차협소)",
+    "plceLoctGid": "1호선, 7호선 도봉산역 2번출구에서 도보 12분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 시루봉로 53(쌍문동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "세그루패션디자인고등학교 2실 (컴퓨터 그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 시루봉로 53(쌍문동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "세그루패션디자인고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 시루봉로 53(쌍문동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "세그루패션디자인고등학교 1실 (컴퓨터 그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 시루봉로 53(쌍문동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "세그루패션디자인고등학교 3실 (컴퓨터 그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 도봉구 우이천로 432(쌍문동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "효문중학교(주차불가)",
+    "plceLoctGid": "우이신설선 솔밭공원역 1번 출구 도보 10분, 4.19민주묘지역 1번 출구 도보 12분(주차불가)",
+    "telNo": "029991785"
+  },
+  {
+    "address": "서울특별시 동대문구 겸재로 21 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "휘경공업고등학교",
+    "plceLoctGid": "회기역 2번 출구에서 03번 마을버스 탑승 후 한국산업인력공단(종점) 하차, 도보 50m 이동 후 횡단보도 건너편",
+    "telNo": "0222163643"
+  },
+  {
+    "address": "서울특별시 동대문구 겸재로 21 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울반도체고등학교[CBT 1실](주차불가,실습동2층)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 겸재로 21 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울반도체고등학교(주차협소)",
+    "plceLoctGid": "1호선 회기역 2번 출구 동대문03 서울준법지원센터.동성빌라 도보 5분, 7호선 사가정역 2번 출구 2311, 2112 서울반도체고교 도보 3분",
+    "telNo": "0222309833"
+  },
+  {
+    "address": "서울특별시 동대문구 겸재로 21 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "휘경공업고등학교(장애인전용)",
+    "plceLoctGid": "1호선 회기역 2번출구 마을버스03(휘경공고),시내버스 2211버스이용 (휘경여고 하차)",
+    "telNo": "07086309836"
+  },
+  {
+    "address": "서울특별시 동대문구 겸재로 21(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울반도체고등학교[CBT 2실](주차불가,실습동2층)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 겸재로 21(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "휘경공업고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 답십리로72길 158 (장안동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "장평중학교(주차절대불가)",
+    "plceLoctGid": "5호선 장한평역 3번출구 도보 12분",
+    "telNo": "02-245-5748~9"
+  },
+  {
+    "address": "서울특별시 동대문구 망우로 82(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "삼육보건대학교H관[CBT2실]-주차불가",
+    "plceLoctGid": "1호선, 경의중앙선, 경춘선 회기역 2번 출구에서 828m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 망우로 82(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "삼육보건대학교H관[CBT1실]-주차불가",
+    "plceLoctGid": "1호선, 경의중앙선, 경춘선 회기역 2번 출구에서 828m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 망우로 82(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "삼육보건대학교(H관)",
+    "plceLoctGid": "회기역 2번출구에서 739",
+    "telNo": "02-2212-0082"
+  },
+  {
+    "address": "서울특별시 동대문구 망우로 82(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "삼육보건대학교H관[CBT3실]-주차불가",
+    "plceLoctGid": "1호선, 경의중앙선, 경춘선 회기역 2번 출구에서 828m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 망우로18길 38(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "[회기역]OPIc서울SDA센터[CBT1실](주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 왕산로 117(제기동) 불로장생타워 4층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "MJC보석직업전문학교[CBT2실](주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 왕산로 117(제기동) 불로장생타워 4층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "MJC보석직업전문학교[CBT1실](주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 왕산로 14 (신설동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국항공직업전문학교(신관)",
+    "plceLoctGid": "신설동역 4번출구에서 5번출구방향, 또는 5번출구에서 4번출구방향으로 도보 1분 이내 건물",
+    "telNo": "029448911"
+  },
+  {
+    "address": "서울특별시 동대문구 왕산로 14 (신설동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "한국항공직업전문학교(주차절대불가)",
+    "plceLoctGid": "신설동역 4번출구에서 5번출구방향, 또는 5번출구에서 4번출구방향으로 도보 1분 이내 건물",
+    "telNo": "029448911"
+  },
+  {
+    "address": "서울특별시 동대문구 왕산로 14(신설동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "한국항공직업전문학교(주차불가)",
+    "plceLoctGid": "신설동역 4번출구에서 5번출구방향, 또는 5번출구에서 4번출구방향으로 도보 1분 이내 건물",
+    "telNo": "02-925-0037"
+  },
+  {
+    "address": "서울특별시 동대문구 왕산로 301(청량리동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "청량중학교(주차불가)",
+    "plceLoctGid": "지하철 1호선 회기역 경희대방면출구, 청량리쪽으로 도보 10분",
+    "telNo": "029664284"
+  },
+  {
+    "address": "서울특별시 동대문구 왕산로 303(청량리동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "청량고등학교(주차불가)",
+    "plceLoctGid": "1호선 회기역 1번출구 도보 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 왕산로 68 (용두동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국항공직업전문학교(항공산업기사)",
+    "plceLoctGid": "제기동역 6번 출구에서 용두동사거리 방향으로 도보 약 5분 소요 용운빌딩 지하 1층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 왕산로23길 55(제기동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "성일중학교(주차절대불가)",
+    "plceLoctGid": "1호선 제기동역 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국산업인력공단 서울지역본부",
+    "plceLoctGid": "회기역(1호선) 2번출구 마을버스 03번 승차후 \"한국산업인력공단 서울지역본부\" 정류장 하차",
+    "telNo": "0221370503"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국산업인력공단 서울지역본부(시간연장수험자전용)",
+    "plceLoctGid": "회기역(1호선) 2번출구 마을버스 03번 승차후 \"한국산업인력공단 서울지역본부\" 정류장 하차",
+    "telNo": "02-2137-0503"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국산업인력공단 본관 10층 강당(서울소재)",
+    "plceLoctGid": "지하철 5호선 공덕역 2번출구(도보 약 15분)",
+    "telNo": "02-3271-9160"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장(휘경동)",
+    "plceLoctGid": "회기역(1호선) 2번출구 마을버스 03번 승차후 \"한국산업인력공단 서울지역본부\" 정류장 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장(Chinese)",
+    "plceLoctGid": "지하철5,6호선 공덕역 2번출구 신촌방향 200M(도보약15분,엘리베이터없음)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[CBT 8실]",
+    "plceLoctGid": "휘경동 전동중학교 앞,(구)경찰수사연수원, 한국산업인력공단 서울지역본부 3층 CBT 8시험실",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장(상시)(CBT실)[3실]",
+    "plceLoctGid": "휘경동 전동중학교 앞, (구)경찰수사연수원, 한국산업인력공단 서울지역본부 3층 CBT시험실",
+    "telNo": "02-6710-3152"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장(상시)(CBT실][1실]",
+    "plceLoctGid": "휘경동 전동중학교 앞, (구)경찰수사연수원, 한국산업인력공단 서울지역본부 3층 CBT시험실",
+    "telNo": "02-6710-3152"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(정기)서울가상시험장",
+    "plceLoctGid": "",
+    "telNo": "0221370512"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "[시간연장 편의제공시험장]서울국가자격시험장_주차매우협소",
+    "plceLoctGid": "1호선, 경의중앙선 회기역 도보 30분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장 2층(휘경동)",
+    "plceLoctGid": "한국산업인력공단 서울지역본부(주차공간이 협소할 수 있으므로 가급적 대중교통 이용 바랍니다)",
+    "telNo": "02-6710-3144"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장",
+    "plceLoctGid": "지하철 5,6호선 공덕역 2번출구에서 15분거리",
+    "telNo": "02-3274-9645"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "서울상설시험장(서울)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장 5층(휘경동)_주차협소",
+    "plceLoctGid": "한국산업인력공단 서울지역본부 5층(주차공간이 협소할 수 있으므로 가급적 대중교통 이용 바랍니다)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[CBT 10실]",
+    "plceLoctGid": "휘경동 전동중학교 앞,(구)경찰수사연수원, 한국산업인력공단 서울지역본부 3층 CBT 10시험실",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "서울지부가상시험장2(시험장 추후배정)",
+    "plceLoctGid": "본 시험장은 가상 시험장으로 접수이후 시험장이 배정됨을 알려드립니다. 9월14일 이후 수험표 재출력 바랍니다.&#xD;\n(노원,성북구 시험장 중 임의배정)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국산업인력공단 서울지역본부(휘경동)[CBT 9실]",
+    "plceLoctGid": "휘경동 전동중학교 앞, (구)경찰수사연수원, 한국산업인력공단 서울지역본부 3층 CBT 시험실",
+    "telNo": "0221370513"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장",
+    "plceLoctGid": "회기역(1호선) 2번출구 마을버스 03번 승차후 \"한국산업인력공단 서울지역본부\" 정류장 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장(Vietnamese)",
+    "plceLoctGid": "지하철5,6호선 공덕역 2번출구 신촌방향 200M(도보약15분,엘리베이터없음)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울조리상설시험장(휘경동)",
+    "plceLoctGid": "한국산업인력공단 서울지역본부 5층 조리시험장(주차공간이 협소할 수 있으므로 가급적 대중교통 이용 바랍니다)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울지역본부 회의실",
+    "plceLoctGid": "지하철5,6호선 공덕역 2번출구 신촌방향 200M(도보약15분,엘리베이터없음)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장",
+    "plceLoctGid": "지하철 공덕역 2번출구",
+    "telNo": "02-3274-9619"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[CBT 1실]",
+    "plceLoctGid": "휘경동 전동중학교 앞,(구)경찰수사연수원, 한국산업인력공단 서울지역본부 2층 CBT 1시험실",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국산업인력공단 서울지역본부[CBT기능장2실](휘경동)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국산업인력공단 서울지역본부[CBT기능장1실](휘경동)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[CBT 9실]",
+    "plceLoctGid": "휘경동 전동중학교 앞,(구)경찰수사연수원, 한국산업인력공단 서울지역본부 3층 CBT 9시험실",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장 지하1층(휘경동)",
+    "plceLoctGid": "한국산업인력공단 서울지역본부 지하1층 (주차공간이 협소할 수 있으므로 가급적 대중교통 이용 바랍니다)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[CBT 4실]",
+    "plceLoctGid": "휘경동 전동중학교 앞,(구)경찰수사연수원, 한국산업인력공단 서울지역본부 2층 CBT 4시험실",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(상시)서울국가자격시험장 연기시험자(필기)",
+    "plceLoctGid": "전동중학교 앞, (구)경찰수사연수원, 한국산업인력공단 서울지역본부 3층 CBT 시험실",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국산업인력공단 서울지역본부[CBT이용사](휘경동)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "서울지부가상시험장1(노원구예정)",
+    "plceLoctGid": "본 시험장은 가상 시험장으로 접수이후 시험장이 배정됨을 알려드립니다. 9월14일 이후 수험표 재출력 바랍니다.",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장(상시)(CBT실)[4실]",
+    "plceLoctGid": "휘경동 전동중학교 앞, (구)경찰수사연수원, 한국산업인력공단 서울지역본부 3층 CBT시험실",
+    "telNo": "02-6710-3152"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장(상시)(CBT실)[2실]",
+    "plceLoctGid": "휘경동 전동중학교 앞, (구)경찰수사연수원, 한국산업인력공단 서울지역본부 3층 CBT시험실",
+    "telNo": "02-6710-3152"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국산업인력공단 서울지역본부(CBT실) 편의제공",
+    "plceLoctGid": "휘경동 전동중학교 앞,(구)경찰수사연수원, 한국산업인력공단 서울지역본부 3층 CBT 시험실",
+    "telNo": "0221370513"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)_주차협소",
+    "plceLoctGid": "1호선 회기역 2번 출구에서 3번 마을버스 종점",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장",
+    "plceLoctGid": "지하철5,6호선 공덕역 2번출구 10분거리(1,3,5번 이용가능)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[CBT 6실]",
+    "plceLoctGid": "휘경동 전동중학교 앞,(구)경찰수사연수원, 한국산업인력공단 서울지역본부 2층 CBT 6시험실",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국산업인력공단",
+    "plceLoctGid": "공덕역 2번출구, 도보 15분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울미용상설시험장(휘경동 Chinese)",
+    "plceLoctGid": "",
+    "telNo": "0267103144"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[CBT 2실]",
+    "plceLoctGid": "휘경동 전동중학교 앞,(구)경찰수사연수원, 한국산업인력공단 서울지역본부 2층 CBT 2시험실",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[CBT 3실]",
+    "plceLoctGid": "휘경동 전동중학교 앞,(구)경찰수사연수원, 한국산업인력공단 서울지역본부 2층 CBT 3시험실",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(상시)서울가상시험장",
+    "plceLoctGid": "",
+    "telNo": "0221370565"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[CBT 5실]",
+    "plceLoctGid": "휘경동 전동중학교 앞,(구)경찰수사연수원, 한국산업인력공단 서울지역본부 2층 CBT 5시험실",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[CBT 7실]",
+    "plceLoctGid": "휘경동 전동중학교 앞,(구)경찰수사연수원, 한국산업인력공단 서울지역본부 3층 CBT 7시험실",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장 3층(휘경동)_주차협소",
+    "plceLoctGid": "한국산업인력공단 서울지역본부 3층(주차공간이 협소할 수 있으므로 가급적 대중교통 이용 바랍니다)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동, 한국산업인력공단 서울지역본부)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(1급)서울국가자격시험장 휘경동_주차협소",
+    "plceLoctGid": "회기역(1호선, 경의중앙선)2번출구 마을버스03번 승차 후 \"한국산업인력공단 서울지역본부\" 정류장 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 (휘경동, 한국산업인력공단 서울지역본부)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(2층)",
+    "plceLoctGid": "회기역(1호선) 2번출구 마을버스 03번 승차후 \"한국산업인력공단 서울지역본부\" 정류장 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279 상설시험장(휘경동, 한국산업인력공단서울지역본부)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울지부 임시시험장(시험장 추후배정)",
+    "plceLoctGid": "지하철 1호선 회기역 2번 출구 마을버스(3번) 탑승→종점",
+    "telNo": "02-2137-0542"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울지역본부가상시험장1",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(Chinese) 2층 [1실]_다국어 시험",
+    "plceLoctGid": "휘경동 전동중학교 맞은편,  한국산업인력공단 서울지역본부 2층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)_주차불가",
+    "plceLoctGid": "1호선, 경의중앙선 회기역 도보 30분",
+    "telNo": "16448000"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장 5층[조리](휘경동)_주차협소",
+    "plceLoctGid": "회기역(1호선) 2번출구 마을버스 03번 승차후 \"한국산업인력공단 서울지역본부\" 정류장 하차",
+    "telNo": "0221370562"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "가상시험장(서울)_큐넷-공지사항 확인 필수",
+    "plceLoctGid": "장소변경서비스 기간 시험장 변경 필요(큐넷-공지사항 확인 필수)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[10실](vietnamses)",
+    "plceLoctGid": "휘경동 전동중학교 앞, (구) 경찰수사연수원, 한국산업인력공단 서울지역본부 3층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[7실](chinese)",
+    "plceLoctGid": "휘경동 전동중학교 앞, (구) 경찰수사연수원, 한국산업인력공단 서울지역본부 3층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(Vietnamese)[CBT 10실]_다국어 시험",
+    "plceLoctGid": "전동중학교 맞은편, 한국산업인력공단 서울국가자격시험장 3층에 위치",
+    "telNo": "0221370503"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(Chinese)[CBT 7실]_다국어 시험",
+    "plceLoctGid": "전동중학교 맞은편, 한국산업인력공단 서울국가자격시험장 3층에 위치",
+    "telNo": "0221370503"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울지역본부가상시험장",
+    "plceLoctGid": "1호선 회기역 2번출구 마을버스 03번 승차후 \"한국산업인력공단 서울지역본부\" 정류장 하차",
+    "telNo": "16448000"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[8실](chinese)",
+    "plceLoctGid": "휘경동 전동중학교 앞, (구) 경찰수사연수원 한국산업인력공단 서울지역본부 3층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장 5층[피부](휘경동)_주차협소",
+    "plceLoctGid": "회기역(1호선) 2번출구 마을버스 03번 승차후 \"한국산업인력공단 서울지역본부\" 정류장 하차",
+    "telNo": "0221370562"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(Chinese) 2층 [2실]_다국어 시험",
+    "plceLoctGid": "휘경동 전동중학교 맞은편,  한국산업인력공단 서울지역본부 2층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(I자 없음,제도책상)서울국가자격시험장 1층",
+    "plceLoctGid": "회기역 2번 출구에서 동대문03번 마을버스 이용, \"가든아파트,산업인력공단\" 정류장 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(Vietnamese) 2층 [5실]_다국어 시험",
+    "plceLoctGid": "휘경동 전동중학교 맞은편,  한국산업인력공단 서울지역본부 2층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(휘경동)[9실](vietnamses)",
+    "plceLoctGid": "휘경동 전동중학교 앞, (구) 경찰수사연수원 한국산업인력공단 서울지역본부 3층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(제도판지참자만접수가능)서울국가자격시험장(휘경동)",
+    "plceLoctGid": "회기역 2번 출구에서 동대문03번 마을버스 이용, \"가든아파트,산업인력공단\" 정류장 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장 3층(chinese,일반인 접수불가)",
+    "plceLoctGid": "",
+    "telNo": "0221370562"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장 3층(vietnamese)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(Vietnamese) 2층 [4실]_다국어 시험",
+    "plceLoctGid": "휘경동 전동중학교 맞은편,  한국산업인력공단 서울지역본부 2층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(Vietnamese) 2층 [6실]_다국어 시험",
+    "plceLoctGid": "휘경동 전동중학교 맞은편,  한국산업인력공단 서울지역본부 2층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장 3층[미용일반](휘경동)_주차협소",
+    "plceLoctGid": "회기역(1호선) 2번출구 마을버스 03번 승차후 \"한국산업인력공단 서울지역본부\" 정류장 하차",
+    "telNo": "0221370562"
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(3급)서울국가자격시험장 휘경동_주차협소",
+    "plceLoctGid": "회기역(1호선, 경의중앙선)2번출구 마을버스03번 승차 후 \"한국산업인력공단 서울지역본부\" 정류장 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "(2급)서울국가자격시험장 휘경동_주차협소",
+    "plceLoctGid": "회기역(1호선, 경의중앙선)2번출구 마을버스03번 승차 후 \"한국산업인력공단 서울지역본부\"정류장 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "삼각대_서울국가자격시험장",
+    "plceLoctGid": "7호선 사가정역에서 2112 또는 2233 버스로 이동",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 279(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울국가자격시험장(Chinese) 2층 [3실]_다국어 시험",
+    "plceLoctGid": "휘경동 전동중학교 맞은편,  한국산업인력공단 서울지역본부 2층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 장안벚꽃로 291(휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "전동중학교",
+    "plceLoctGid": "1호선회기역 2번출구-동대문03번 마을버스 산업인력공단 서울지역본부앞 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동대문구 한천로 290 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "휘봉고등학교(시간연장 장애인 전용)",
+    "plceLoctGid": "",
+    "telNo": "0221167205"
+  },
+  {
+    "address": "서울특별시 동대문구 한천로 290 (휘경동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "휘봉고등학교",
+    "plceLoctGid": "지하철 7호선 사가정역 2번출구 2233번 버스",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동작구 대방동1길 46 (대방동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울공업고등학교(주차불가)",
+    "plceLoctGid": "7호선 보라매역 7,8번 출구 도보5분",
+    "telNo": "070-8640-3220"
+  },
+  {
+    "address": "서울특별시 동작구 대방동1길 46 (대방동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울공업고등학교",
+    "plceLoctGid": "7호선 보라매역 7,8번 출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동작구 대방동1길 46(대방동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울공업고등학교(외국어대체자전용)",
+    "plceLoctGid": "7호선 보라매역 7,8번 출구 도보5분",
+    "telNo": "07086403220"
+  },
+  {
+    "address": "서울특별시 동작구 사당로9가길 58 (사당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "사당중학교",
+    "plceLoctGid": "7호선 남성역 3번출구 500m",
+    "telNo": "02-537-7156"
+  },
+  {
+    "address": "서울특별시 동작구 사당로9가길 58 (사당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "사당중학교",
+    "plceLoctGid": "7호선 남성역 3번 출구 도보 약10분",
+    "telNo": "02-533-3704"
+  },
+  {
+    "address": "서울특별시 동작구 상도로13라길 22(상도동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "강현중학교",
+    "plceLoctGid": "7호선 신대방삼거리역 6번출구에서 484m, 대중교통 이용 바람",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 동작구 여의대방로10길 24(신대방동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "대방중학교(주차절대불가)",
+    "plceLoctGid": "(주차불가)7호선 보라매역 2번출구 도보 15분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 마포구 마포대로 247 (아현동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "아현중학교",
+    "plceLoctGid": "2호선 아현역 3번출구, 5호선 애오개역 2번출구(각각 도보 10분)",
+    "telNo": "02-363-1812"
+  },
+  {
+    "address": "서울특별시 마포구 마포대로 249 (아현동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "",
+    "examAreaNm": "아현산업정보학교",
+    "plceLoctGid": "5호선 애오개역하차",
+    "telNo": "02-364-3711"
+  },
+  {
+    "address": "서울특별시 마포구 마포대로7길 22 (공덕동, 래미안 공덕3차)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "한세사이버보안고등학교",
+    "plceLoctGid": "2호선 아현역 4,5번 출구 마을버스이용 (주차불가 운동장 없음)",
+    "telNo": "02-362-0131"
+  },
+  {
+    "address": "서울특별시 마포구 모래내로9길 16 (성산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "성사중학교",
+    "plceLoctGid": "마포구청 사거리에서 유원아파트옆",
+    "telNo": "02-373-8001"
+  },
+  {
+    "address": "서울특별시 마포구 백범로 139 (염리동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울동도중학교",
+    "plceLoctGid": "5호선 공덕역하차 신촌방향300미터",
+    "telNo": "02-716-5340"
+  },
+  {
+    "address": "서울특별시 마포구 백범로 139 (염리동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울디자인고등학교",
+    "plceLoctGid": "(주차불가, 엘리베이터없음) [지하철] 5호선/6호선/공항철도/경의중앙선 공덕역 2번 출구 (도보6분) 6호선 대흥역 2번 출구(도보6분) [버스] 동도중학교.서울디자인고등학교 - 마포10, 110B, 173, 604, 740, 7016, 7613",
+    "telNo": "070-8662-6050"
+  },
+  {
+    "address": "서울특별시 마포구 백범로 139 (염리동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "동도중학교",
+    "plceLoctGid": "5호선 공덕역2번출구 500미터",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 마포구 백범로 139 (염리동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울디자인고등학교",
+    "plceLoctGid": "지하철 5,6호선 공덕역 2번출구 (주차불가,신촌방향 도보300M,엘리베이터없음)",
+    "telNo": "02-716-8211"
+  },
+  {
+    "address": "서울특별시 마포구 백범로 139 (염리동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "서울여자중학교",
+    "plceLoctGid": "5호선공덕역하차 신촌방향350미터",
+    "telNo": "02-716-4922"
+  },
+  {
+    "address": "서울특별시 마포구 백범로25길 34 (염리동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울여자고등학교",
+    "plceLoctGid": "지하철 5,6호선,공항철도, 경의선 공덕역 2번출구, 6호선 대흥역 2번출구",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 마포구 백범로31길 21 (공덕동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울상설시험장",
+    "plceLoctGid": "지하철5호선 공덕역 2번출구",
+    "telNo": "02-3273-9653~4"
+  },
+  {
+    "address": "서울특별시 마포구 성산로4길 42 (성산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "성서중학교(마포)",
+    "plceLoctGid": "6호선 마포구청역 3번출구 마포구청뒤 도보 10분~15분",
+    "telNo": "02-324-8023"
+  },
+  {
+    "address": "서울특별시 마포구 성암로 202 (상암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "",
+    "examAreaNm": "서울철도차량사업소",
+    "plceLoctGid": "도보5분(팬택본사뒷) 붉은벽돌5층건물",
+    "telNo": "02-3149-2304"
+  },
+  {
+    "address": "서울특별시 마포구 성암로 202 (상암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "",
+    "examAreaNm": "수색차량사업소",
+    "plceLoctGid": "6호선 수색역 하차 능곡방향 도보로 500m",
+    "telNo": "02-374-0368"
+  },
+  {
+    "address": "서울특별시 마포구 성암로 202 (상암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "",
+    "examAreaNm": "서울철도차량사업소(마포구 상암동)",
+    "plceLoctGid": "도보5분(팬택본사뒷)붉은벽돌 5층건물",
+    "telNo": "02-3149-2304"
+  },
+  {
+    "address": "서울특별시 마포구 성지1길 32-13(합정동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "성산중학교(주차절대불가)",
+    "plceLoctGid": "지하철2호선 합정하차후 합정시장쪽 도보10분",
+    "telNo": "02-332-0307"
+  },
+  {
+    "address": "서울특별시 마포구 신수로 49 (신수동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신수중학교",
+    "plceLoctGid": "6호선 광흥창역 4번출구 도보5분",
+    "telNo": "02-717-6003"
+  },
+  {
+    "address": "서울특별시 마포구 월드컵북로 445 (상암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "상암고등학교",
+    "plceLoctGid": "6호선 DMC역 2번출구 건너편 771, 7711, 7730승차 후  월드컵파크5단지 및 상암중고등학교 하차",
+    "telNo": "02-373-0067"
+  },
+  {
+    "address": "서울특별시 마포구 월드컵북로38길 25 (중동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "중암중학교",
+    "plceLoctGid": "지하철6호선 디지털미디어시티역 3번출구 도보 약15분 (주차불가)",
+    "telNo": "02-309-5779"
+  },
+  {
+    "address": "서울특별시 서대문구 가좌로 134 (홍은동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "명지전문대학",
+    "plceLoctGid": "",
+    "telNo": "02-300-1000"
+  },
+  {
+    "address": "서울특별시 서대문구 명지2길 56 (홍은동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "명지고등학교",
+    "plceLoctGid": "전철 3호선 홍제역 2번출구 환승버스 7019번, 7021번,  3번출구 환승버스 7713번",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서대문구 모래내로 408(연희동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신연중학교(주차절대불가)",
+    "plceLoctGid": "3호선 홍제역에서 7738,7739번 이용",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서대문구 세검정로4길 69 (홍제동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "인왕중학교(주차불가)",
+    "plceLoctGid": "[지하철]3호선 홍제역 2번출구 (도보17분) [버스]오동나무-서대문07 (도보 1분), 금강빌라.인왕중학교 앞 - 서대문07 (도보 2분)(주차협소)",
+    "telNo": "07052023104"
+  },
+  {
+    "address": "서울특별시 서대문구 연희로11마길 9-6 (연희동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "서연중학교",
+    "plceLoctGid": "연희입체교차로에서 성산대교방향",
+    "telNo": "02-332-7375"
+  },
+  {
+    "address": "서울특별시 서대문구 연희로41길 94 (홍은동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "홍은중학교",
+    "plceLoctGid": "홍제역에서 마을버스 2번 학교앞 하차(힐튼호텔주변)",
+    "telNo": "02-3216-0511"
+  },
+  {
+    "address": "서울특별시 서대문구 통일로37길 51 (홍제동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "한성직업전문학교",
+    "plceLoctGid": "지하철3호선 홍제역 3번출구",
+    "telNo": "02-396-0171"
+  },
+  {
+    "address": "서울특별시 서초구 강남대로69길 8 케이아이타워 8층(서초동, 케이아이타워(K I타워))",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "브랜뉴디자인아카데미학원",
+    "plceLoctGid": "신논현역 6번출구",
+    "telNo": "02-522-5437"
+  },
+  {
+    "address": "서울특별시 서초구 과천대로 852-23 (방배동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울전자고등학교",
+    "plceLoctGid": "지하철4호선 남태령역 하차. 5분거리.",
+    "telNo": "0260114123"
+  },
+  {
+    "address": "서울특별시 서초구 과천대로 852-23 (방배동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울전자고등학교(주차협소)",
+    "plceLoctGid": "4호선 남태령역 도보 7분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 과천대로 852-23 (방배동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울전자고등학교",
+    "plceLoctGid": "4호선 남태령역 5분거리",
+    "telNo": "070-8660-4936"
+  },
+  {
+    "address": "서울특별시 서초구 남부순환로346길 9(서초동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "양재고등학교(주차불가)",
+    "plceLoctGid": "3호선 양재역 12번출구에서 도보로 2분거리",
+    "telNo": "07050732507"
+  },
+  {
+    "address": "서울특별시 서초구 남부순환로347길 69(서초동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "서초문화예술정보학교",
+    "plceLoctGid": "",
+    "telNo": "0234885200"
+  },
+  {
+    "address": "서울특별시 서초구 동광로 144 (반포동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "방배중학교(주차절대불가)",
+    "plceLoctGid": "2호선 서초역 도보 16분, 3호선 고속터미널역 도보 19분, 9호선 신반포역 20분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 동산로 55(양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "언남중학교",
+    "plceLoctGid": "지하철  신분당선(양재시민의숲역 3번출구 도보15분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 동산로13길 35 (양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "언남고등학교(주차불가)",
+    "plceLoctGid": "신분당선 양재시민의숲역 5번출구 도보7분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로 87(양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국IT직업전문학교 양재관(CBT5실)",
+    "plceLoctGid": "3호선 양재역 11번출구에서 버스(마을8,18,18-1)승차, 우성아파트/양재초등학교 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로 87(양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "강남직업전문학교",
+    "plceLoctGid": "지하철 3호선/신분당선 양재역 11번 출구 전방 10m 환승 마을버스 서초08,서초18, 서초18-1",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로 87(양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국IT직업전문학교 양재관(CBT10실)",
+    "plceLoctGid": "3호선 양재역 11번출구에서 버스(마을8,18,18-1)승차, 우성아파트/양재초등학교 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로 87(양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국IT직업전문학교 양재관(CBT9실)",
+    "plceLoctGid": "3호선 양재역 11번출구에서 버스(마을8,18,18-1)승차, 우성아파트/양재초등학교 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로 87(양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국IT직업전문학교 양재관(CBT1실)",
+    "plceLoctGid": "3호선 양재역 11번출구에서 버스(마을8,18,18-1)승차, 우성아파트/양재초등학교 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로 87(양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국IT직업전문학교 양재관(CBT7실)",
+    "plceLoctGid": "3호선 양재역 11번출구에서 버스(마을8,18,18-1)승차, 우성아파트/양재초등학교 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로 87(양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국IT직업전문학교 양재관(CBT2실)",
+    "plceLoctGid": "양재역 11번 출구에서 버스(마을버스8, 18,18-1)타고 우성아파트/양재초등학교 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로 87(양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국IT직업전문학교 양재관(CBT4실)",
+    "plceLoctGid": "3호선 양재역 11번출구에서 버스(마을8,18,18-1)승차, 우성아파트/양재초등학교 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로 87(양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국IT직업전문학교 양재관(CBT3실)",
+    "plceLoctGid": "3호선 양재역 11번 출구에서 버스(마을8,18,18-1)탑승, 우성아파트/양재초등학교 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로 87(양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국IT직업전문학교 양재관(CBT6실)",
+    "plceLoctGid": "3호선 양재역 11번출구에서 버스(마을8,18,18-1)승차, 우성아파트/양재초등학교 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로 87(양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국IT직업전문학교 양재관(CBT8실)",
+    "plceLoctGid": "3호선 양재역 11번출구에서 버스(마을8,18,18-1)승차, 우성아파트/양재초등학교 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로20길 8 (양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국IT직업전문학교 다산관(CBT 5실)",
+    "plceLoctGid": "한국IT직업전문학교 다산관",
+    "telNo": "025785551"
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로20길 8 (양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국IT직업전문학교 다산관(CBT 2실)",
+    "plceLoctGid": "한국IT직업전문학교 다산관",
+    "telNo": "025785551"
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로20길 8 (양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국IT직업전문학교 다산관(CBT 1실)",
+    "plceLoctGid": "한국IT직업전문학교 다산관",
+    "telNo": "025785551"
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로20길 8 (양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국IT직업전문학교 다산관(CBT 4실)",
+    "plceLoctGid": "한국IT직업전문학교 다산관",
+    "telNo": "025785551"
+  },
+  {
+    "address": "서울특별시 서초구 바우뫼로20길 8 (양재동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국IT직업전문학교 다산관(CBT 3실)",
+    "plceLoctGid": "한국IT직업전문학교 다산관",
+    "telNo": "025785551"
+  },
+  {
+    "address": "서울특별시 서초구 반포대로13길 48 (서초동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "서초중학교",
+    "plceLoctGid": "2호선 서초역 3번 출구 또는 3호선 남부터미널역 6번 출구 도보 800미터(10분 이내)",
+    "telNo": "02-583-0105"
+  },
+  {
+    "address": "서울특별시 서초구 반포대로13길 48 (서초동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "서초중학교",
+    "plceLoctGid": "2호선 서초역3번 출구, 3호선 남부터미널역 6번출구 도보800m",
+    "telNo": "02-583-0105"
+  },
+  {
+    "address": "서울특별시 서초구 사평대로45길 10(반포동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "원촌중학교",
+    "plceLoctGid": "7호선 반포역 1번출구, 9호선 사평역 1번 출구",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 서운로 115(서초동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "서운중학교(주차절대불가)",
+    "plceLoctGid": "2호선, 분당선 강남역 도보 6분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 서초중앙로 151(서초동), 정암빌딩 지하2층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "TIEC강남센터[CBT2실] (주차불가, 대기실없음)",
+    "plceLoctGid": "(구)국제사이버대학교, 교대역 11번 출구 200m, 정암빌딩 지하 2층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 서초중앙로 151(서초동), 정암빌딩 지하2층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "TIEC강남센터[CBT1실] (주차불가, 대기실없음)",
+    "plceLoctGid": "(구)국제사이버대학교, 교대역 11번 출구 200m, 정암빌딩 지하 2층",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 서초중앙로 96(서초동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "서울교육대학교[에듀웰센터]_(주차절대불가)",
+    "plceLoctGid": "3호선 교대역 13번출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 성촌길 14(우면동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "영동중학교(주차절대불가)",
+    "plceLoctGid": "신분당선 양재시민의숲 도보 28분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 서초구 성촌길 14(우면동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "영동중학교(주차불가)",
+    "plceLoctGid": "신분당선 양재시민의숲 도보 28분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성동구 고산자로 197 (행당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "무학여자고등학교",
+    "plceLoctGid": "행당역3번출구, 왕십리역9.10번출구 도보 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성동구 고산자로 197(행당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "무학여자고등학교",
+    "plceLoctGid": "[주차불가]왕십리역 9번,10번 출구에서 도보 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성동구 독서당로62길 46 (응봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "광희중학교(주차절대불가)",
+    "plceLoctGid": "중앙선 응봉역 1번출구 도보5분",
+    "telNo": "0222980250"
+  },
+  {
+    "address": "서울특별시 성동구 독서당로62길 46 (응봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "광희중학교",
+    "plceLoctGid": "중앙선(응봉역) 도보 5분",
+    "telNo": "02-2298-0250"
+  },
+  {
+    "address": "서울특별시 성동구 동호로5길 131 (옥수동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울방송고등학교(주차불가)",
+    "plceLoctGid": "지하철 3호선,6호선 약수역 5번출구 도보 20분",
+    "telNo": "0222810094"
+  },
+  {
+    "address": "서울특별시 성동구 동호로5길 131 (옥수동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울방송고등학교",
+    "plceLoctGid": "3,6호선 약수역 5번출구 도보10~15분(인터넷약도 필수참조)",
+    "telNo": "02-2281-0091~5"
+  },
+  {
+    "address": "서울특별시 성동구 동호로5길 131(옥수동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울방송고등학교[CBT 4실]-주차불가",
+    "plceLoctGid": "지하철3,6호선 약수역 5번출구에서 도보 766m 또는 마을버스 성동12번(서울방송고방향) 3분소요",
+    "telNo": "0222810094"
+  },
+  {
+    "address": "서울특별시 성동구 동호로5길 131(옥수동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울방송고등학교 2실(컴퓨터 그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성동구 동호로5길 131(옥수동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울방송고등학교 1실 (컴퓨터 그래픽)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성동구 동호로5길 131(옥수동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울방송고등학교[CBT 3실]-주차불가",
+    "plceLoctGid": "지하철3,6호선 약수역 5번출구에서 도보 766m 또는 마을버스 성동12번(서울방송고방향) 3분소요",
+    "telNo": "0222810094"
+  },
+  {
+    "address": "서울특별시 성동구 동호로5길 131(옥수동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울방송고등학교[CBT 2실]-주차불가",
+    "plceLoctGid": "지하철3,6호선 약수역 5번출구에서 도보 766m 또는 마을버스 성동12번(서울방송고방향) 3분소요",
+    "telNo": "0222810094"
+  },
+  {
+    "address": "서울특별시 성동구 동호로5길 131(옥수동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울방송고등학교[CBT 1실]-주차불가",
+    "plceLoctGid": "지하철3,6호선 약수역 5번출구에서 10여분 등 (약도참조)",
+    "telNo": "0222810094"
+  },
+  {
+    "address": "서울특별시 성동구 동호로5길 131(옥수동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울방송고등학교[CBT 5실]-주차불가",
+    "plceLoctGid": "지하철3,6호선 약수역 5번출구에서 도보 766m 또는 마을버스 성동12번(서울방송고방향) 3분소요",
+    "telNo": "0222810094"
+  },
+  {
+    "address": "서울특별시 성동구 뚝섬로 365",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성수공업고등학교(주차불가)",
+    "plceLoctGid": "2호선 성수역 4번 출구에서 약 700m(도보 약 10분, 약도 필독)",
+    "telNo": "070-4088-7650"
+  },
+  {
+    "address": "서울특별시 성동구 뚝섬로 365",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성수공업고등학교 후문출입(주차매우협소)",
+    "plceLoctGid": "2호선 성수역  4번출구  도보 7~10분, 수인분당선 서울숲역 도보 11분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성동구 뚝섬로13길 14",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "경수중학교(성동구)",
+    "plceLoctGid": "2호선 성수역 3번출구이용 도보15~20분 (인터넷약도 필히 참조)",
+    "telNo": "02-464-0675"
+  },
+  {
+    "address": "서울특별시 성동구 뚝섬로13길 14",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "경수중학교",
+    "plceLoctGid": "성수역 3번출구 도보로5분",
+    "telNo": "02-464-0675"
+  },
+  {
+    "address": "서울특별시 성동구 마장로 156 (하왕십리동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "도선고등학교(주차불가)",
+    "plceLoctGid": "지하철 2호선 상왕십리역 1번출구(도보6분)",
+    "telNo": "0222928175"
+  },
+  {
+    "address": "서울특별시 성동구 마장로 208 (홍익동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "한서항공직업전문학교(상왕십리)",
+    "plceLoctGid": "상왕십리역 2번출구(왕십리역 1,2번 출구) 성동구보건소 방향 5~10분거리",
+    "telNo": "024670886"
+  },
+  {
+    "address": "서울특별시 성동구 마장로 208 1층(홍익동, 동림빌딩)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "한서항공직업전문학교(성동)",
+    "plceLoctGid": "",
+    "telNo": "02-467-0886"
+  },
+  {
+    "address": "서울특별시 성동구 마장로 208(홍익동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한서항공직업전문학교[CBT 1실](주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성동구 마조로11길 18(마장동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "동마중학교(주차절대불가)",
+    "plceLoctGid": "왕십리역 2호선,5호선,경의중앙선,분당선 →  6번, 13번 출구(5분거리)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성동구 살곶이길 200 (사근동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "한양여자대학교_(일요일주차절대불가)",
+    "plceLoctGid": "2호선 한양대역하차 (한양여자대학교 본관 B1층)",
+    "telNo": "02-2290-2176"
+  },
+  {
+    "address": "서울특별시 성동구 서울숲길 18",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "성수중학교(주차불가)",
+    "plceLoctGid": "2호선 뚝섬역 8번 출구 도보 9분, 수인분당선 서울숲역 5번 출구 도보 10분(주차불가)",
+    "telNo": "02-463-4993"
+  },
+  {
+    "address": "서울특별시 성동구 서울숲길 18()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "성수중학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성동구 서울숲길 18()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "성수중학교",
+    "plceLoctGid": "2호선 뚝섬역 하차, 8번출구(향군회관 빌딩옆길 도보 10분 소요)",
+    "telNo": "024634993"
+  },
+  {
+    "address": "서울특별시 성동구 서울숲길 18()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성수고등학교(주차절대불가)",
+    "plceLoctGid": "2호선 뚝섬역8번 출구에서 도보로 10분, 분당선 서울숲역 4번출구 서울숲 통과하여 도보 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성동구 성수일로 27()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경일고등학교(주차협소)",
+    "plceLoctGid": "수인분당선 서울숲역 1번 출구 도보 4분, 2호선 뚝섬역 6번 출구 도보 5분",
+    "telNo": "024633520"
+  },
+  {
+    "address": "서울특별시 성동구 왕십리로 189 (행당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "행당중학교(주차불가)",
+    "plceLoctGid": "2호선 한양대역 4번출구 도보 2분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성동구 왕십리로 199(행당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "덕수고등학교",
+    "plceLoctGid": "",
+    "telNo": "0222990701"
+  },
+  {
+    "address": "서울특별시 성동구 왕십리로 206 (행당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "한양대학교 제1공학관",
+    "plceLoctGid": "지하철 2호선 한양대역 2번출구(주차시 주차비 발생)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성동구 한림말길 11 (옥수동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "옥정중학교",
+    "plceLoctGid": "지하철 3호선 옥수역 4번 출구 도보 10분",
+    "telNo": "02-2298-1407"
+  },
+  {
+    "address": "서울특별시 성북구 고려대로17가길 46 ()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "용문고등학교(성북구)",
+    "plceLoctGid": "6호선 안암역 1번출구 도보 8분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 동소문로3길 69 ()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "삼선중학교",
+    "plceLoctGid": "4호선 한성대입구역 6번출구 도보 7분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 보문로34다길 2 (돈암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "성신여자대학교",
+    "plceLoctGid": "4호선 성신여대입구역, 6호선 보문역 도보 20분",
+    "telNo": "02-920-7050"
+  },
+  {
+    "address": "서울특별시 성북구 북악산로 870(돈암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "고명외식고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 삼선교로16길 118()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한성여자중학교(주차절대불가)",
+    "plceLoctGid": "4호선 한성대입구역 2번출구 마을버스 2번 승차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 서경로 118 (정릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대일관광고등학교",
+    "plceLoctGid": "지하철 4호선 길음역 3번출구 1164번 마을버스이용",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 서경로 124 (정릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "서경대학교(북악관)",
+    "plceLoctGid": "서경대학교 북악관",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 서경로 124 유담관 6층(로비층)(정릉동, 서경대학교)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "서경대학교 [과정평가형]",
+    "plceLoctGid": "유담관 5층",
+    "telNo": "02-940-7020"
+  },
+  {
+    "address": "서울특별시 성북구 장월로 6 (상월곡동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "월곡중학교(성북구)",
+    "plceLoctGid": "월곡역에서 도보 5분이내 거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 정릉로12길 41 (정릉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "북악중학교(주차매우협소)",
+    "plceLoctGid": "4호선 길음역 2번 출구 1213, 7211, 171 버스 5개 정류장 이동 고려대사범대학부속고등학교 하차 도보 7분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 종암로 196 (하월곡동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울도시과학기술고등학교 [CBT 1실]_주차불가",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 종암로 196 (하월곡동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울도시과학기술고등학교 [기술사]",
+    "plceLoctGid": "지하철 4호선 미아사거리역 3번 출구에서 약 700M",
+    "telNo": "029402682"
+  },
+  {
+    "address": "서울특별시 성북구 종암로 196 (하월곡동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울도시과학기술고등학교(주차불가)",
+    "plceLoctGid": "4호선 미아사거리역 3번 출구 도보 13분, 6호선 월곡역 2번 출구 도보 15분",
+    "telNo": "029402541"
+  },
+  {
+    "address": "서울특별시 성북구 종암로 196 (하월곡동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울도시과학기술고등학교 [CBT 2실]_주차불가",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 종암로 196(하월곡동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울도시과학기술고등학교 [CBT 3실]_주차불가",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 종암로 196(하월곡동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울도시과학기술고등학교 [CBT 4실]_주차불가",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 종암로 208 (하월곡동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "숭곡중학교(주차불가)",
+    "plceLoctGid": "4호선 미아사거리역 3번 출구 도보 8분(주차불가)",
+    "telNo": "029127572"
+  },
+  {
+    "address": "서울특별시 성북구 종암로5길 80-17 (종암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "종암중학교(주차절대불가)",
+    "plceLoctGid": "[지하철] 6호선 고려대역 2번 출구 (도보 10분) [버스] 종암중학교 - 성북21 (도보5분) (주차협소)",
+    "telNo": "0267492087"
+  },
+  {
+    "address": "서울특별시 성북구 한천로 526 (석관동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "석관중학교",
+    "plceLoctGid": "석계역 5번출구 또는 신이문역 1번출구에서 도보 15분거리",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 성북구 한천로 660-30 (장위동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "남대문중학교(주차불가)",
+    "plceLoctGid": "1호선 및 경춘선 광운대역 1번 출구 도보 16분, 6호선 돌곶이역 3번 출구 도보 18분, 1호선 및 6호선 석계역 1번 출구 도보 20분",
+    "telNo": "029196540"
+  },
+  {
+    "address": "서울특별시 성북구 한천로70길 30 (석관동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "석관고등학교(주차불가)",
+    "plceLoctGid": "1호선 및 6호선 석계역 5번 출구 도보 10분(주차불가)",
+    "telNo": "029581163"
+  },
+  {
+    "address": "서울특별시 성북구 한천로95길 28 (장위동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "남대문중학교",
+    "plceLoctGid": "지하철 1호선 성북역 및 석계역 하차(도보 15분)",
+    "telNo": "02-942-3182"
+  },
+  {
+    "address": "서울특별시 성북구 화랑로 286 (석관동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "동이한옥학교",
+    "plceLoctGid": "지하철 6호선 돌곶이역 5번출구 도보5분, 1호선 석계역 7번출구 도보 5분 장위사거리외환은행건물3층(주차가능)",
+    "telNo": "02-948-1203"
+  },
+  {
+    "address": "서울특별시 송파구 강동대로2길 27(풍납동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "풍성중학교(주차매우협소)",
+    "plceLoctGid": "8호선 강동구청역 도보 18분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 강동대로2길 27(풍납동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "풍성중학교(주차협소)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 동남로 203 (가락동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "송파중학교",
+    "plceLoctGid": "5호선 개롱역 4번출구 400m 전방",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 동남로 203 (가락동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "송파중학교",
+    "plceLoctGid": "5호선 개롱역 4번출구 400m 전방",
+    "telNo": "07072043004"
+  },
+  {
+    "address": "서울특별시 송파구 동남로 281 (오금동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "오주중학교",
+    "plceLoctGid": "5호선 개롱역 1번출구 송파도서관옆",
+    "telNo": "0234347561"
+  },
+  {
+    "address": "서울특별시 송파구 동남로 281 (오금동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "오주중학교(주차절대불가)",
+    "plceLoctGid": "5호선 개롱역 1번출구 도보 3분거리(송파도서관옆)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 문정로 73(문정동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "문정중학교",
+    "plceLoctGid": "문정역(8호선) 2번출구 앞에서 3322번 승차, 문정대우아파트역에서 하차",
+    "telNo": "024486845"
+  },
+  {
+    "address": "서울특별시 송파구 백제고분로 11 (잠실동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신천중학교",
+    "plceLoctGid": "2호선 종합운동장역 8번출구 도보10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 백제고분로 11 (잠실동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신천중학교",
+    "plceLoctGid": "지하철 2호선 종합운동장역 8번출구 도보10분",
+    "telNo": "024223946"
+  },
+  {
+    "address": "서울특별시 송파구 송이로 42(송파동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "가락고등학교",
+    "plceLoctGid": "송파역 1번 출구에서 도보로 15분",
+    "telNo": "024164658"
+  },
+  {
+    "address": "서울특별시 송파구 송이로 45 (송파동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "가락중학교(주차절대불가)",
+    "plceLoctGid": "지하철 8호선 송파역 하차 후 가락고등학교 방향으로 약 500m (도보 10분거리, 약도 필독)",
+    "telNo": "0221433102"
+  },
+  {
+    "address": "서울특별시 송파구 송이로15길 13 (가락동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "석촌중학교",
+    "plceLoctGid": "지하철 : 경찰병원역(3호선), 오금역(5호선), 송파역(8호선)  버스 : 3416(가락동 제일은행 앞)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 송이로15길 13 (가락동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "석촌중학교(주차불가)",
+    "plceLoctGid": "5호선, 3호선 오금역 6번(5번) 출구에서 약 800m(도보 약 12분, 약도 필독)",
+    "telNo": "02-448-4031"
+  },
+  {
+    "address": "서울특별시 송파구 송파대로38길 2-9(송파동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "송파컴퓨터회계학원[CBT2실] (주차불가, 대기실없음)",
+    "plceLoctGid": "송파역 1번 출구 52m(주차불가)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 송파대로38길 2-9(송파동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "송파컴퓨터회계학원[CBT3실] (주차불가, 대기실없음)",
+    "plceLoctGid": "송파역 1번 출구 52m(주차불가)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 송파대로38길 2-9(송파동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "송파컴퓨터회계학원[CBT1실] (주차불가, 대기실없음)",
+    "plceLoctGid": "송파역 1번 출구 52m(주차불가)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 송파대로38길 8(송파동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "일신여자상업고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 양산로 21 (거여동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울인공지능고등학교(주차절대불가)",
+    "plceLoctGid": "5호선 거여역 도보 3분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 양재대로72길 41(오금동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "세륜중학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 양재대로72길 41(오금동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "세륜중학교(주차절대불가)",
+    "plceLoctGid": "방이역 1번 출구에서 도보 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 오금로11길 64 (방이동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "방이중학교(주차절대불가)",
+    "plceLoctGid": "몽촌토성역2번출구 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 오금로27길 18(방이동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "방산고등학교(주차불가)",
+    "plceLoctGid": "(주차절대불가)5호선 방이역에서 도보로 11분",
+    "telNo": "024182600"
+  },
+  {
+    "address": "서울특별시 송파구 오금로35길 20 (오금동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "오금중학교",
+    "plceLoctGid": "3호선, 5호선 오금역 7번출구에서 도보 5분",
+    "telNo": "02-402-4777"
+  },
+  {
+    "address": "서울특별시 송파구 오금로35길 20 (오금동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "오금중학교",
+    "plceLoctGid": "5호선, 3호선 오금역 1번(7번) 출구에서 약 550m (도보 약 10분, 약도 필독)",
+    "telNo": "02-402-4777"
+  },
+  {
+    "address": "서울특별시 송파구 오금로35길 20 (오금동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "오금중학교(주차절대불가)",
+    "plceLoctGid": "3,5호선 오금역 7번출구 도보5분",
+    "telNo": "02-402-4777"
+  },
+  {
+    "address": "서울특별시 송파구 올림픽로33길 71 (신천동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "잠실고등학교",
+    "plceLoctGid": "서울특별시 송파구 신천동 17-1 잠실고등학교",
+    "telNo": "0221413704"
+  },
+  {
+    "address": "서울특별시 송파구 올림픽로35길 130(신천동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "잠실중학교",
+    "plceLoctGid": "2호선 잠실역 7번출구 잠실대교 방향 250m 직진 후 잠실대교 남단3거리에서 오른쪽 방향 향군회관으로 200m 이동 후 횡단보도 건너 도착",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 위례순환로 429(장지동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "송례중학교(주차매우협소)",
+    "plceLoctGid": "8호선, 수인분당선 복정역 도보 30분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 잠실로 24 (잠실동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "잠신고등학교",
+    "plceLoctGid": "전철 2호선 잠실새내역(구 신천역) 7번, 8번 출구 도보 약 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 중대로10길 40-18 (가락동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "가원중학교(주차매우협소)",
+    "plceLoctGid": "3호선, 8호선 가락시장역 6번 출구 약 700m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 송파구 충민로 99(장지동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "문현중학교",
+    "plceLoctGid": "지하철8호선 장지역 1번출구 우측 도보 200m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 양천구 가로공원로55길 19 (신월동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신원중학교",
+    "plceLoctGid": "5호선 화곡역하차 신한은행출구 버스이용",
+    "telNo": "02-699-0183"
+  },
+  {
+    "address": "서울특별시 양천구 남부순환로 380 (신월동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "양서중학교",
+    "plceLoctGid": "5호선 화곡역하차 388번버스이용 신월3동우체국하차",
+    "telNo": "02-676-2282"
+  },
+  {
+    "address": "서울특별시 양천구 남부순환로 604 (신월동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "강신중학교",
+    "plceLoctGid": "325,326,327,328버스종점 도보5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 양천구 남부순환로 604 (신월동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "강신중학교",
+    "plceLoctGid": "화물터미널, 국립과학수사연구소사이",
+    "telNo": "02-695-8517"
+  },
+  {
+    "address": "서울특별시 양천구 남부순환로29길 25 (신월동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신월중학교",
+    "plceLoctGid": "강서교육청 앞",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 양천구 남부순환로29길 35 (신월동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신화중학교",
+    "plceLoctGid": "전철 5호선 화곡역 7번출구 도보 약 15분(주차절대불가)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 양천구 목동동로 172 (신정동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "목동중학교",
+    "plceLoctGid": "5호선 오목교역 8번출구 도보10분",
+    "telNo": "02-2643-1101"
+  },
+  {
+    "address": "서울특별시 양천구 목동동로 235 (목동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "목운중학교(주차매우협소)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 양천구 목동동로8길 70 (신정동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "목일중학교",
+    "plceLoctGid": "2호선 양천구청역 도보 15분, 5호선 오목교역 7번출구 도보 20-30분",
+    "telNo": "02-2646-0552"
+  },
+  {
+    "address": "서울특별시 양천구 목동서로 31(목동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "월촌중학교(주차절대불가)",
+    "plceLoctGid": "이대목동병원 맞은편,목1공원 뒤편, 당산역하차 마을버스 1-1",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 양천구 목동중앙로 88 (목동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "신목중학교",
+    "plceLoctGid": "902-1",
+    "telNo": "02-2648-2143"
+  },
+  {
+    "address": "서울특별시 양천구 목동중앙북로 49 (목동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "양동중학교",
+    "plceLoctGid": "9호선 등촌역 4번 출구에서 양화대교 방향, 염창역 4번출구에서 김포공향 방향으로 5분 소요",
+    "telNo": "02-2642-9055"
+  },
+  {
+    "address": "서울특별시 양천구 목동중앙북로 49(목동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "양동중학교(주차절대불가)",
+    "plceLoctGid": "9호선 등촌역 4번출구 약 410m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 양천구 신정로 213 (신정동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "금옥여자고등학교",
+    "plceLoctGid": "",
+    "telNo": "02-2086-7503"
+  },
+  {
+    "address": "서울특별시 양천구 신정로 213 (신정동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "금옥중학교",
+    "plceLoctGid": "",
+    "telNo": "02-2606-6477"
+  },
+  {
+    "address": "서울특별시 양천구 안양천로 739 (신정동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "신목고등학교",
+    "plceLoctGid": "지하철2호선 신도림역 하차, 지선버스 양천04이용 목일중학교에서 하차",
+    "telNo": "07087205010"
+  },
+  {
+    "address": "서울특별시 양천구 중앙로 319 (신월동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "양강중학교",
+    "plceLoctGid": "5호선 신정역 도보7분, 2호선 신정네거리역 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 양천구 지양로7길 32 (신월동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "양천중학교",
+    "plceLoctGid": "버스211,212,212-1,좌석64,64-1이용 우성상가앞 하차",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 영등포구 경인로 885",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "서강직업전문학교",
+    "plceLoctGid": "지하철1호선 영등포역 5번출구 여의도방향 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 영등포구 국제금융로7길 37 (여의도동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "여의도고등학교",
+    "plceLoctGid": "지하철 5호선 여의나루역 4번출구 도보 5~10분",
+    "telNo": "02-782-0802"
+  },
+  {
+    "address": "서울특별시 영등포구 국제금융로7길 37(여의도동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "여의도고등학교",
+    "plceLoctGid": "5호선 여의나루역 4번출구(도보 5분 소요)",
+    "telNo": "027820852"
+  },
+  {
+    "address": "서울특별시 영등포구 국제금융로7길 46 (여의도동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "여의도중학교",
+    "plceLoctGid": "여의도 선착장 앞, 지하철5호선 여의나루역 4번출구 도보5분",
+    "telNo": "02-782-0801"
+  },
+  {
+    "address": "서울특별시 영등포구 국제금융로7길 46 (여의도동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "여의도중학교(주차절대불가)",
+    "plceLoctGid": "5호선 여의나루역 4번출구 도보5분(주차절대불가)",
+    "telNo": "02-782-0801"
+  },
+  {
+    "address": "서울특별시 영등포구 국회대로 539",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "대한측량협회",
+    "plceLoctGid": "지하철 5호선 영등포구청역 7번출구",
+    "telNo": "02-2670-7100"
+  },
+  {
+    "address": "서울특별시 영등포구 당산로 56()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "양화중학교",
+    "plceLoctGid": "2호선 문래역4번출구 도보5분",
+    "telNo": "02-2633-9284"
+  },
+  {
+    "address": "서울특별시 영등포구 당산로41길 12",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "당산서중학교",
+    "plceLoctGid": "전철2호선 당산역 11번출구 도보 7분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 영등포구 대림로31나길 17 (대림동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "영남중학교",
+    "plceLoctGid": "대림역 5번,10번 출구(주차불가)",
+    "telNo": "02-833-1003"
+  },
+  {
+    "address": "서울특별시 영등포구 도림로80가길 14 (신길동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "대영중학교",
+    "plceLoctGid": "7호선 신풍역 4번출구 도보6~7분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 110(당산동) 한국산업인력공단 서울남부지사",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울남부국가자격시험장(CBT4실)_주차절대불가",
+    "plceLoctGid": "",
+    "telNo": "0221370509"
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 110(당산동) 한국산업인력공단 서울남부지사",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울남부국가자격시험장(CBT3실)_주차절대불가",
+    "plceLoctGid": "",
+    "telNo": "0221370509"
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 110(당산동) 한국산업인력공단 서울남부지사",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울남부국가자격시험장(CBT1실)_주차절대불가",
+    "plceLoctGid": "",
+    "telNo": "0221370509"
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 110(당산동) 한국산업인력공단 서울남부지사",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울남부국가자격시험장(CBT2실)_주차절대불가",
+    "plceLoctGid": "",
+    "telNo": "0221370509"
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 110(당산동), 한국산업인력공단 4층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울남부국가자격시험장(영등포구)[CBT 5실]★주차불가★",
+    "plceLoctGid": "2,9호선 당산역 9번 출구 뒤쪽 마을버스 정류장에서 [영등포03] 마을버스 탑승 후 한국산업인력공단 서울남부지사 하차",
+    "telNo": "0269077152"
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 110(당산동), 한국산업인력공단 4층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울남부국가자격시험장(영등포구)[CBT 6실]★주차불가★",
+    "plceLoctGid": "2,9호선 당산역 9번 출구 뒤쪽 마을버스 정류장에서 [영등포03] 마을버스 탑승 후 한국산업인력공단 서울남부지사 하차",
+    "telNo": "0269077152"
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 110(당산동), 한국산업인력공단 5층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울남부국가자격시험장(영등포구)[CBT 8실]★주차불가★",
+    "plceLoctGid": "2,9호선 당산역 9번 출구 뒤쪽 마을버스 정류장에서 [영등포03] 마을버스 탑승 후 한국산업인력공단 서울남부지사 하차",
+    "telNo": "0269077152"
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 110(당산동), 한국산업인력공단 5층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울남부국가자격시험장(영등포구)[CBT 7실]★주차불가★",
+    "plceLoctGid": "2,9호선 당산역 9번 출구 뒤쪽 마을버스 정류장에서 [영등포03] 마을버스 탑승 후 한국산업인력공단 서울남부지사 하차",
+    "telNo": "0269077152"
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 112(당산동), 영등포구·동작구 선거관리위원회 건물 2층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "디지털시험센터",
+    "examAreaNm": "서울남부디지털시험센터(영등포구)[CBT 1실]★주차불가★",
+    "plceLoctGid": "2,9호선 당산역 9번 출구 뒤쪽 마을버스 정류장에서 [영등포03] 마을버스 탑승 후 한국산업인력공단 서울남부지사 하차",
+    "telNo": "0269077152"
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 112(당산동), 영등포구·동작구 선거관리위원회 건물 2층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "디지털시험센터",
+    "examAreaNm": "서울남부디지털시험센터(영등포구)[CBT 2실]★주차불가★",
+    "plceLoctGid": "2,9호선 당산역 9번 출구 뒤쪽 마을버스 정류장에서 [영등포03] 마을버스 탑승 후 한국산업인력공단 서울남부지사 하차",
+    "telNo": "0269077152"
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 112(당산동), 영등포구·동작구 선거관리위원회 건물 2층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "디지털시험센터",
+    "examAreaNm": "서울남부디지털시험센터(영등포구)[CBT 4실]★주차불가★",
+    "plceLoctGid": "2,9호선 당산역 9번 출구 뒤쪽 마을버스 정류장에서 [영등포03] 마을버스 탑승 후 한국산업인력공단 서울남부지사 하차",
+    "telNo": "0269077152"
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 112(당산동), 영등포구·동작구 선거관리위원회 건물 2층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "디지털시험센터",
+    "examAreaNm": "서울남부디지털시험센터(영등포구)[CBT 3실]★주차불가★",
+    "plceLoctGid": "2,9호선 당산역 9번 출구 뒤쪽 마을버스 정류장에서 [영등포03] 마을버스 탑승 후 한국산업인력공단 서울남부지사 하차",
+    "telNo": "0269077152"
+  },
+  {
+    "address": "서울특별시 영등포구 버드나루로 160 (당산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "당산중학교",
+    "plceLoctGid": "2호선 당산역 6번출구 에서 5분거리",
+    "telNo": "02-2631-5233~4"
+  },
+  {
+    "address": "서울특별시 영등포구 선유로 227",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "선유고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 영등포구 선유로 227",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "선유고등학교",
+    "plceLoctGid": "9호선 선유도역 6번출구 도보 5분, 2,9호선 당산역 도보 10분(주차절대불가)",
+    "telNo": "070-4005-2123"
+  },
+  {
+    "address": "서울특별시 영등포구 선유로 227",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "선유고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 영등포구 선유로 227",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "선유고등학교",
+    "plceLoctGid": "9호선 선유도역 6번 출구",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 영등포구 선유로55길 22",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "한강미디어고등학교",
+    "plceLoctGid": "9호선 선유도역 3번출구 4분, 2호선 당산역 1번출구 도보 20분 6514, 6623 롯데제과 앞 하차(당산초등학교 옆)",
+    "telNo": "070-8852-1460"
+  },
+  {
+    "address": "서울특별시 영등포구 선유로55길 22",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "(주차절대불가)한강미디어고등학교",
+    "plceLoctGid": "9호선 선유도역 3번 출구 도보 3분, 2호선 당산역 1번 출구 도보10분",
+    "telNo": "07088521494"
+  },
+  {
+    "address": "서울특별시 영등포구 선유서로13길 6",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "문래중학교",
+    "plceLoctGid": "지하철2호선 문래역하차 도보10~15분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 영등포구 선유서로21길 19 , 양평동벽산블루밍아파트",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "관악고등학교",
+    "plceLoctGid": "2호선 문래역 3번출구 도보 15분, 5호선 양평역 2번출구 도보 10분 또는 영등포 05번, 5호선 오목교역 5번출구",
+    "telNo": "02-2633-6175"
+  },
+  {
+    "address": "서울특별시 영등포구 시흥대로185길 6 (대림동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "대림중학교(주차절대불가)",
+    "plceLoctGid": "구로디지털역(2호선) 6번출구, 신풍역(7호선) 3번출구",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 영등포구 신길로28길 43(신길동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신길중학교(주차절대불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 영등포구 여의동로3길 3 (여의도동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "윤중중학교(주차절대불가)",
+    "plceLoctGid": "[주차공간협소]지하철5,9호선 여의도역 6번출구 도보5-10분",
+    "telNo": "02-783-4478"
+  },
+  {
+    "address": "서울특별시 영등포구 여의동로3길 3 (여의도동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "윤중중학교(2급)",
+    "plceLoctGid": "지하철5,9호선 여의도역 6번출구 도보 5~10분",
+    "telNo": "027834478"
+  },
+  {
+    "address": "서울특별시 영등포구 여의동로3길 3 (여의도동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "윤중중학교(3급)",
+    "plceLoctGid": "지하철 5,9호선 여의도역 6번출구 도보5-10분",
+    "telNo": "027834478"
+  },
+  {
+    "address": "서울특별시 영등포구 영등포로5길 19()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "군장대학교영등포센터[CBT1실](주차불가)",
+    "plceLoctGid": "5호선 양평역 2번출구 275m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 영등포구 영등포로5길 19()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "군장대학교영등포센터[CBT2실](주차불가)",
+    "plceLoctGid": "5호선 양평역 2번출구 275m",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 영등포구 영등포로62길 31 (영등포동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "영원중학교",
+    "plceLoctGid": "지하철1호선,5호선 신길역 순영아파트방향 도보5-10분",
+    "telNo": "02-843-1960"
+  },
+  {
+    "address": "서울특별시 용산구 두텁바위로 60",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "용산고등학교",
+    "plceLoctGid": "4호선 숙대입구역 3번출구 도보15분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 용산구 두텁바위로 60",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "용산고등학교",
+    "plceLoctGid": "4호선 숙대입구역 3번출구 도보 약15분",
+    "telNo": "02-3706-6700"
+  },
+  {
+    "address": "서울특별시 용산구 백범로45길 15 (효창동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울자동차고등학교",
+    "plceLoctGid": "지하철 6호선 효창공원앞역 1번출구 도보로 8분",
+    "telNo": "02-718-4969"
+  },
+  {
+    "address": "서울특별시 용산구 보광로 63-6 (보광동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "한국폴리텍ㅣ대학  서울정수캠퍼스",
+    "plceLoctGid": "6호선 이태원역 3,4번 출구 도보 10분 (유료주차 수험표와 1,000원,엘리베이터없음)",
+    "telNo": "02-2001-4000"
+  },
+  {
+    "address": "서울특별시 용산구 보광로7길 17 (보광동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "오산고등학교(용산구)",
+    "plceLoctGid": "6호선 이태원역,국철 한남역에서 버스이용",
+    "telNo": "02-799-9500"
+  },
+  {
+    "address": "서울특별시 용산구 서빙고로 24",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "용산철도고등학교(주차절대불가)",
+    "plceLoctGid": "4호선 신용산역 2번출구 도보 약15분(주차불가, 엘리베이터폐쇄)",
+    "telNo": "02-6905-7773"
+  },
+  {
+    "address": "서울특별시 용산구 서빙고로 24",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "용산철도고등학교",
+    "plceLoctGid": "용산역(1호선, 도보 12분), 신용산역(2번출구, 도보10분), 이촌역(5번출구, 도보8분)",
+    "telNo": "02-6905-7777"
+  },
+  {
+    "address": "서울특별시 용산구 서빙고로 24",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "용산철도고등학교",
+    "plceLoctGid": "4호선 신용산역 2번출구 도보 약15(엘리베이터 사용불가)",
+    "telNo": "02-794-0803"
+  },
+  {
+    "address": "서울특별시 용산구 서빙고로 24(현, 용산철도고등학교)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "용산철도고등학교(주차불가)",
+    "plceLoctGid": "(주차불가) [지하철] 4호선 신용산역 2번출구(도보 10분), 1호선/경의중앙선 용산역 1번 출구(도보 12분), [버스] 용산세무서 - 400, 502, 6030 (도보 6분), 용산공고 - 400, 502 (도보 3분)",
+    "telNo": "02-6905-7773"
+  },
+  {
+    "address": "서울특별시 용산구 원효로 271",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "기독발명직업전문학교",
+    "plceLoctGid": "지하철1호선 남영역하차 선린정보산업고방면50미터",
+    "telNo": "02-714-9790"
+  },
+  {
+    "address": "서울특별시 용산구 원효로97길 25",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "아세아항공전문학교",
+    "plceLoctGid": "1호선 남영역 선린상고앞(엘리베이터있음)",
+    "telNo": "02-714-9702"
+  },
+  {
+    "address": "서울특별시 용산구 원효로97길 33-4",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "선린인터넷고등학교(주차불가)",
+    "plceLoctGid": "[주차절대불가]1호선 남영역하차 도보5분, 4호선 숙대입구역 도보10~15분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 용산구 원효로97길 33-4()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "선린중학교(주차불가)",
+    "plceLoctGid": "지하철1호선 남영전철역 도보15분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 용산구 원효로97길 33-4()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "선린인터넷고등학교(주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 용산구 원효로97길 33-4()",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "선린인터넷고등학교",
+    "plceLoctGid": "1호선 남영역하차 도보5분, 4호선 숙대입구역 도보10~15분",
+    "telNo": "02-713-6213"
+  },
+  {
+    "address": "서울특별시 용산구 이촌로65가길 91(이촌동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "용강중학교(주차절대불가)",
+    "plceLoctGid": "지하철4호선 이촌역 도보5분",
+    "telNo": "02-795-6176"
+  },
+  {
+    "address": "서울특별시 용산구 이촌로84길 34(이촌동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "중경고등학교(주차불가)",
+    "plceLoctGid": "4호선 이촌역(3-1번 출구) 도보 10~15분, 중앙선 이촌역 4번출구 이용가능",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 용산구 청파로 263",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신광여자중학교",
+    "plceLoctGid": "4호선 숙대역, 1호선 남영역 에서 숙명여대방면",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 용산구 한강대로 254 (남영동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울디지털직업전문학교",
+    "plceLoctGid": "4호선숙대입구역,1호선남영역 도보5분",
+    "telNo": "02-792-8001"
+  },
+  {
+    "address": "서울특별시 용산구 한강대로43길 8 , 벽산메가트리움",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "우양직업전문학교",
+    "plceLoctGid": "지하철4호선 신용산역 6번출구 삼각지 방면 100 미터",
+    "telNo": "02-792-4361"
+  },
+  {
+    "address": "서울특별시 용산구 한강대로57길 5",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "(시각 관련 편의제공 시험장)서울맹학교",
+    "plceLoctGid": "서울시 용산구 한강로2가 1(삼각지역7,8번출구)",
+    "telNo": "02-3279-5552"
+  },
+  {
+    "address": "서울특별시 용산구 한남대로 136 (한남동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "서울중부기술교육원",
+    "plceLoctGid": "6호선 한강진역 2번 출구 도보 10분 거리(엘리베이터없음)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 용산구 회나무로12길 27 (이태원동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울디지텍고등학교",
+    "plceLoctGid": "",
+    "telNo": "02-795-7454"
+  },
+  {
+    "address": "서울특별시 은평구 가좌로 208 (응암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "은평문화예술정보학교[CBT 4실]",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 은평구 가좌로 208 (응암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "은평문화예술정보학교[CBT 2실]",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 은평구 가좌로 208 (응암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "은평문화예술정보학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 은평구 가좌로 208 (응암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "은평문화예술정보학교[CBT 1실]",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 은평구 가좌로 208 (응암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "은평문화예술정보학교[CBT 3실]",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 은평구 가좌로 208 (응암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "은평문화예술정보학교(주차불가)",
+    "plceLoctGid": "",
+    "telNo": "0231525700"
+  },
+  {
+    "address": "서울특별시 은평구 가좌로 400 (신사동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "덕산중학교",
+    "plceLoctGid": "신사동고개 버스정류장하차 도보600M",
+    "telNo": "02-365-8582"
+  },
+  {
+    "address": "서울특별시 은평구 갈현로15길 20-23(구산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "구산중학교(주차불가)",
+    "plceLoctGid": "(주차 절대 불가) [지하철] 6호선 구산역 3번 출구 (도보 16분) [정류장] 구산동주민센터. 구산치안센터 - 702A,702B,751,7022,8774 (도보 6분), 구산중학교.구산교회 - 702A,702B,751,7022,8774 (도보 6분)",
+    "telNo": "02-389-8784"
+  },
+  {
+    "address": "서울특별시 은평구 갈현로15길 51 (구산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "은평고등학교",
+    "plceLoctGid": "산41-1",
+    "telNo": "02-383-0873"
+  },
+  {
+    "address": "서울특별시 은평구 갈현로17나길 12-1(구산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "은평중학교",
+    "plceLoctGid": "",
+    "telNo": "02-382-3588"
+  },
+  {
+    "address": "서울특별시 은평구 갈현로29길 27 (갈현동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "선일이비즈니스고등학교",
+    "plceLoctGid": "",
+    "telNo": "023555648"
+  },
+  {
+    "address": "서울특별시 은평구 갈현로29길 27 (갈현동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "선일여자상업고등학교",
+    "plceLoctGid": "",
+    "telNo": "02-355-5648"
+  },
+  {
+    "address": "서울특별시 은평구 불광로 180 (불광동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "불광중학교(주차불가)",
+    "plceLoctGid": "[지하철] 6호선 독바위역 1번 출구 (도보 10분), [버스] 불광중학교 - 은평06,7720,7734 (도보 2분)(주차협소)",
+    "telNo": "0263759204"
+  },
+  {
+    "address": "서울특별시 은평구 서오릉로20길 19 (갈현동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "선정관광고등학교",
+    "plceLoctGid": "",
+    "telNo": "02-3156-1613"
+  },
+  {
+    "address": "서울특별시 은평구 연서로 117 (구산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "예일디자인고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 은평구 연서로33길 16-32 (불광동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "연신중학교(주차불가)",
+    "plceLoctGid": "[주차협소]지하철3호선,6호선 연신내역 하차, 도보10분",
+    "telNo": "02-383-7835"
+  },
+  {
+    "address": "서울특별시 은평구 은평로6길 16 (응암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "신진과학기술고등학교(주차불가)",
+    "plceLoctGid": "6호선 응암역 4번 출구에서 도보 4분",
+    "telNo": "023840172"
+  },
+  {
+    "address": "서울특별시 은평구 은평로6길 16 (응암동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "신진자동차고등학교",
+    "plceLoctGid": "구, 은평구 응암동 114-1",
+    "telNo": "02-364-0171"
+  },
+  {
+    "address": "서울특별시 은평구 증산로5길 27-30 (증산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "증산중학교",
+    "plceLoctGid": "6호선 증산역 3번출구 도보 약10분(엘리베이터없음)",
+    "telNo": "02-303-9293"
+  },
+  {
+    "address": "서울특별시 은평구 증산서길 125-6 (증산동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "연서중학교",
+    "plceLoctGid": "[지하철] 6호선 증산역 4번출구 (도보 5분) [버스] 연서중학교입구 - 571, 753, 7018, 7021, 7611, 7728, 7730 (도보 6분), 새마을금고앞 - 7017 (도보 6분)(주차불가)",
+    "telNo": "02-6715-8105"
+  },
+  {
+    "address": "서울특별시 은평구 진관1로 77-30(진관동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신도중학교(주차불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 은평구 진관2로 57-57 (진관동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "은평메디텍고등학교(주차불가)",
+    "plceLoctGid": "(주차불가) [지하철] 3호선 구파발역 2번출구 (도보 16분) [버스] 신도초교. 은평메디텍고등학교 - 720, 7723 (도보 3분), 동부센트레빌320동앞 - 720, 7723 (도보 4분), 기자촌사거리 - 7723 (도보 5분)",
+    "telNo": "07040206843"
+  },
+  {
+    "address": "서울특별시 은평구 진관3로 36 한국산업인력공단 서울서부지사(진관동, (한국산업인력공단서울동부지사))",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "시험본부(서울서부)",
+    "plceLoctGid": "서울서부지사",
+    "telNo": "02-2024-1722"
+  },
+  {
+    "address": "서울특별시 은평구 진관4로 36 (진관동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "진관중학교(주차불가)",
+    "plceLoctGid": "(주차장 협소) [지하철] 3호선 구파발역 1번출구 (도보 10분) [버스] 아이파크714동 앞 - 704, 708, 7211, 7723 (도보 3분), 진관중고교 - 704, 708, 7211, 7723 (도보 3분)",
+    "telNo": "023835379"
+  },
+  {
+    "address": "서울특별시 은평구 통일로92가길 33 세명컴퓨터고등학교(불광동, 세명컴퓨터고등학교)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "세명컴퓨터고등학교",
+    "plceLoctGid": "3호선연신내역 구파발방향 도보이용",
+    "telNo": "02-354-1324"
+  },
+  {
+    "address": "서울특별시 종로구 계동길 84-10 (계동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대동세무고등학교",
+    "plceLoctGid": "안국역 3번출구 현대빌딩 옆 큰골목으로 도보(도보10분), 인근 길이 협소하므로 가급적 대중교통 및 도보이용 권장",
+    "telNo": "070-8685-5739"
+  },
+  {
+    "address": "서울특별시 종로구 대학로 64 (이화동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "서울사대부설여자중학교",
+    "plceLoctGid": "지하철 4호선 혜화역 2번출구 도보10분",
+    "telNo": "02-762-5251"
+  },
+  {
+    "address": "서울특별시 종로구 새문안로5가길 32 (적선동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "한국생산성본부",
+    "plceLoctGid": "3호선 경복궁역 6번 지하현대아케이드 관통",
+    "telNo": "027241114"
+  },
+  {
+    "address": "서울특별시 종로구 새문안로5가길 32 (적선동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "(2급)한국생산성본부",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 종로구 새문안로5가길 32 (적선동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "(3급)한국생산성본부",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 종로구 자하문로 136 (청운동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기상업고등학교(종로구)",
+    "plceLoctGid": "3호선 경복궁역하차 버스이용",
+    "telNo": "02-737-6480"
+  },
+  {
+    "address": "서울특별시 종로구 종로58길 28 (숭인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "종로산업정보학교",
+    "plceLoctGid": "",
+    "telNo": "02-2237-0465"
+  },
+  {
+    "address": "서울특별시 종로구 종로58길 28(숭인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "종로산업정보학교(주차불가)",
+    "plceLoctGid": "지하철1호선 동묘앞역 3번출구 도보 5분(정문이용)",
+    "telNo": "02-2237-5861~2"
+  },
+  {
+    "address": "서울특별시 종로구 종로58길 30 (숭인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "서울다솜관광고등학교",
+    "plceLoctGid": "",
+    "telNo": "07086857789"
+  },
+  {
+    "address": "서울특별시 종로구 지봉로17길 49 (창신동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서일정보산업고등학교",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 종로구 창의문로 51 (청운동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "청운중학교",
+    "plceLoctGid": "지하철 3호선 경북궁역 3번출구에서 7022,7212,1020번 버스이용",
+    "telNo": "02-737-0581"
+  },
+  {
+    "address": "서울특별시 종로구 혜화로 74 (혜화동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경신고등학교",
+    "plceLoctGid": "지하철4호선 혜화역 하차 도보18분, 마을버스42번",
+    "telNo": "02-762-0393"
+  },
+  {
+    "address": "서울특별시 종로구 혜화로 74 (혜화동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "경신중학교",
+    "plceLoctGid": "지하철4호선 혜화역 도보19분, 마을버스42",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동공업고등학교(창조관)[CBT 5실]",
+    "plceLoctGid": "(주차불가) [지하철] 2호선/6호선 신당역 11번 출구 (도보 3분), 1호선/6호선 동묘앞역 5번 출구 (도보 4분) [버스] 청계8가. 영도교 - 173, 2013 (도보 4분), 성동공업고등학교앞 - 142, 2013 (도보 5분), 성동공업고등학교(무궁화회관) - 142, 2015, 9403 (도보 5분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동공업고등학교(장애인전용)",
+    "plceLoctGid": "지하철 2,6호선 신당역 11번출구 도보 5분",
+    "telNo": "02-2234-8101"
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동공업고등학교(CBT실)[2실]",
+    "plceLoctGid": "",
+    "telNo": "07086857600"
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동공업고등학교(CBT실)[3실]",
+    "plceLoctGid": "",
+    "telNo": "07086857600"
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동공업고등학교",
+    "plceLoctGid": "신당역 11번 출구에서 도보 400m, 동묘앞역 5번 출구에서 도보 400m",
+    "telNo": "07086857600"
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동공업고등학교(창조관)[CBT 2실]",
+    "plceLoctGid": "(주차불가) [지하철] 2호선/6호선 신당역 11번 출구 (도보 3분), 1호선/6호선 동묘앞역 5번 출구 (도보 4분) [버스] 청계8가. 영도교 - 173, 2013 (도보 4분), 성동공업고등학교앞 - 142, 2013 (도보 5분), 성동공업고등학교(무궁화회관) - 142, 2015, 9403 (도보 5분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동공업고등학교(창조관)[CBT 4실]",
+    "plceLoctGid": "(주차불가) [지하철] 2호선/6호선 신당역 11번 출구 (도보 3분), 1호선/6호선 동묘앞역 5번 출구 (도보 4분) [버스] 청계8가. 영도교 - 173, 2013 (도보 4분), 성동공업고등학교앞 - 142, 2013 (도보 5분), 성동공업고등학교(무궁화회관) - 142, 2015, 9403 (도보 5분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동공업고등학교(주차불가)",
+    "plceLoctGid": "(주차불가) [지하철] 2호선/6호선 신당역 11번 출구 (도보 3분), 1호선/6호선 동묘앞역 5번 출구 (도보 4분) [버스] 청계8가. 영도교 - 173, 2013 (도보 4분), 성동공업고등학교앞 - 142, 2013 (도보 5분), 성동공업고등학교(무궁화회관) - 142, 2015, 9403 (도보 5분)",
+    "telNo": "070-8685-7668"
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동공업고등학교(CBT실)[1실]",
+    "plceLoctGid": "",
+    "telNo": "07086857600"
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동공업고등학교(창조관)[CBT 1실]",
+    "plceLoctGid": "(주차불가) [지하철] 2호선/6호선 신당역 11번 출구 (도보 3분), 1호선/6호선 동묘앞역 5번 출구 (도보 4분) [버스] 청계8가. 영도교 - 173, 2013 (도보 4분), 성동공업고등학교앞 - 142, 2013 (도보 5분), 성동공업고등학교(무궁화회관) - 142, 2015, 9403 (도보 5분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동공업고등학교(창조관)[CBT 3실]",
+    "plceLoctGid": "(주차불가) [지하철] 2호선/6호선 신당역 11번 출구 (도보 3분), 1호선/6호선 동묘앞역 5번 출구 (도보 4분) [버스] 청계8가. 영도교 - 173, 2013 (도보 4분), 성동공업고등학교앞 - 142, 2013 (도보 5분), 성동공업고등학교(무궁화회관) - 142, 2015, 9403 (도보 5분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "서울다솜학교",
+    "plceLoctGid": "",
+    "telNo": "070-8685-7650"
+  },
+  {
+    "address": "서울특별시 중구 다산로 290 (흥인동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동공업고등학교 창조관(주차불가)",
+    "plceLoctGid": "(주차불가) [지하철] 2호선/6호선 신당역 11번 출구 (도보 3분), 1호선/6호선 동묘앞역 5번 출구 (도보 4분) [버스] 청계8가. 영도교 - 173, 2013 (도보 4분), 성동공업고등학교앞 - 142, 2013 (도보 5분), 성동공업고등학교(무궁화회관) - 142, 2015, 9403 (도보 5분)",
+    "telNo": "070-8685-7600"
+  },
+  {
+    "address": "서울특별시 중구 마른내로9길 10",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "덕수중학교(장애인-시간추가전용시험장)",
+    "plceLoctGid": "전철 2호선 을지로4가역 9번출구 도보 약 10분",
+    "telNo": "02-2265-9077"
+  },
+  {
+    "address": "서울특별시 중구 마른내로9길 10",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "덕수중학교",
+    "plceLoctGid": "2호선 을지로4가역 9번출구 도보 약10분",
+    "telNo": "02-2265-9077"
+  },
+  {
+    "address": "서울특별시 중구 만리재로37길 30",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "경기여자상업고등학교",
+    "plceLoctGid": "지하철 2,5호선 충정로역 5번 출구 도보 10분, 지하철 1,4호선 서울역 1,2번 출구 도보 10분",
+    "telNo": "02-392-5553"
+  },
+  {
+    "address": "서울특별시 중구 매봉18길 111 (신당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "대경정보산업고등학교",
+    "plceLoctGid": "지하철 5호선 신금호역 1번출구",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중구 소파로 103 (예장동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "리라아트고등학교",
+    "plceLoctGid": "",
+    "telNo": "02-777-7463~4"
+  },
+  {
+    "address": "서울특별시 중구 을지로 299 (신당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "한양중학교",
+    "plceLoctGid": "2호선 신당역하차(동대문운동장옆)",
+    "telNo": "02-238-5181"
+  },
+  {
+    "address": "서울특별시 중구 을지로 299 (신당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "한양과학기술고등학교((구)한양공업고등학교,주차불가)",
+    "plceLoctGid": "(주차 불가, 엘리베이터 없음)지하철 2,4,5호선 동대문역사문화공원역 2번출구 도보3분",
+    "telNo": "070-4048-3990"
+  },
+  {
+    "address": "서울특별시 중구 퇴계로 367 (신당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동여자실업고등학교",
+    "plceLoctGid": "2호선 동대문운동장에서 왕십리 방면 100미터",
+    "telNo": "02-2252-1643"
+  },
+  {
+    "address": "서울특별시 중구 퇴계로 375 (신당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동글로벌고등학교",
+    "plceLoctGid": "2,4,5호선 동대문운동장옆",
+    "telNo": "02-2252-1932"
+  },
+  {
+    "address": "서울특별시 중구 퇴계로16길 21",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "정화예술대학",
+    "plceLoctGid": "지하철 4호선 명동역 3,4번 출구(도보 5분거리)(퍼시픽호텔옆)",
+    "telNo": "02-3789-2020"
+  },
+  {
+    "address": "서울특별시 중구 퇴계로90길 17 (신당동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "성동고등학교(주차불가)",
+    "plceLoctGid": "지하철 신당역2호선 3번출구 100m(도보3분), 신당역 6호선 5번출구 300m(도보5분)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 공릉로2길 60-25(묵동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "태릉중학교(주차매우협소)",
+    "plceLoctGid": "7호선 먹골역 1번출구 도보 10분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 동일로 780 (중화동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "장안중학교(주차절대불가)",
+    "plceLoctGid": "7호선 중화역 2번 출구에서 약 200m(도보 약 4분, 주차 절대불가, 약도 필독)",
+    "telNo": "02-6930-3306"
+  },
+  {
+    "address": "서울특별시 중랑구 동일로 942(묵동, 위더스빌)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "오픽 서울동부자격검정센터[CBT2실,주차불가]",
+    "plceLoctGid": "6,7호선 태릉입구역 7번출구 350m, 7호선 먹골역 7번출구 351m(묵동위더스빌상가2층)(전화:0507-1427-1284)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 동일로 942(묵동, 위더스빌)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "오픽 서울동부자격검정센터[CBT1실,주차불가]",
+    "plceLoctGid": "6,7호선 태릉입구역 7번출구 350m, 7호선 먹골역 7번출구 351m 묵동위더스빌 2층(전화:0507-1427-1284)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 동일로140길 33(중화동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "중랑중학교(주차매우협소)",
+    "plceLoctGid": "7호선 중화역 1번 출구 도보 5분(주차매우협소)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 244(상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국디지털융합직업전문학원[CBT1실, 주차불가]",
+    "plceLoctGid": "경의중앙, 경춘선 중랑역 3번출구 354m, 7호선 상봉역 5번출구",
+    "telNo": "05071448806"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 244(상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국디지털융합직업전문학원[CBT2실, 주차불가]",
+    "plceLoctGid": "경의중앙, 경춘선 중랑역 3번출구 354m",
+    "telNo": "05071477880"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 244(상봉동) 덕화빌딩 3층",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "한국디지털융합직업전문학교",
+    "plceLoctGid": "중랑역 3번 출구에서 동일로 지하차도 사거리 방면 도보 5분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 285-1(상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대우능력개발원(UM타워4층)[CBT1실,주차불가]",
+    "plceLoctGid": "7호선 상봉역 6번출구, 경의중앙, 경춘 상봉역6번출구 100M",
+    "telNo": "029780012"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 285-1(상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대우능력개발원(UM타워4층)[CBT4실, 주차불가]",
+    "plceLoctGid": "7호선 상봉역, 경의중앙, 경춘 상봉역 6번출구 100m",
+    "telNo": "029780012"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 285-1(상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대우능력개발원(UM타워4층)[CBT3실, 주차불가]",
+    "plceLoctGid": "7호선 상봉역, 경의중앙, 경춘 상봉역 6번출구 100m",
+    "telNo": "029780012"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 285-1(상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대우능력개발원(UM타워4층)[CBT5실, 주차불가]",
+    "plceLoctGid": "7호선 상봉역, 경의중앙, 경춘 상봉역 6번출구 100m",
+    "telNo": "029780012"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 285-1(상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대우능력개발원(UM타워4층)[CBT2실,주차불가]",
+    "plceLoctGid": "7호선 상봉역, 경의중앙, 경춘 상봉역 6번출구 100m",
+    "telNo": "029780012"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 291(상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대우직업능력개발원(상봉빌딩6층)[CBT3실, 주차불가]",
+    "plceLoctGid": "7호선 6번출구, 경의중앙, 경춘 상봉역 6번출구 30m,커피빈상봉역점 건물",
+    "telNo": "029780012"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 291(상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대우직업능력개발원(상봉빌딩6층)[CBT2실, 주차불가]",
+    "plceLoctGid": "7호선 6번출구, 경의중앙, 경춘 상봉역 6번출구 30m,커피빈상봉역점 건물",
+    "telNo": "029780012"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 291(상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "대우직업능력개발원(상봉빌딩6층)[CBT1실, 주차불가]",
+    "plceLoctGid": "7호선 6번출구, 경의중앙, 경춘 상봉역 6번출구 30m,커피빈상봉역점 건물",
+    "telNo": "029780012"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 353 (상봉동, 상봉 프레미어스 엠코)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "중랑직업전문학교[CBT 2실]",
+    "plceLoctGid": "망우역 1번 출구 로터리 우측 건물 10층 위치",
+    "telNo": "024932233"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 353 (상봉동, 상봉 프레미어스 엠코)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "중랑직업전문학교",
+    "plceLoctGid": "상봉프레미어스 엠코 C동 10층(망우역 바로 옆, 중랑아트센터 위치)",
+    "telNo": "024932233"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 353 (상봉동, 상봉 프레미어스 엠코)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "중랑직업전문학교[CBT 1실]",
+    "plceLoctGid": "망우역 1번 출구 로터리 우측 건물 10층 위치",
+    "telNo": "024932233"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 353 (상봉동, 상봉 프레미어스 엠코)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "중랑직업전문학교[CBT 3실]",
+    "plceLoctGid": "망우역 1번 출구 로터리 우측 건물 10층 위치",
+    "telNo": "024932233"
+  },
+  {
+    "address": "서울특별시 중랑구 망우로 353(상봉동, 상봉 프레미어스 엠코)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "(제도판지참자만접수가능)중랑직업전문학교",
+    "plceLoctGid": "상봉프레미어스엠코 C동 10층(망우역 바로 옆, 중랑아트센터 위치)",
+    "telNo": "024932233"
+  },
+  {
+    "address": "서울특별시 중랑구 면목로28길 18(면목동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "용마중학교(주차매우협소)",
+    "plceLoctGid": "7호선 용마산역 1번 출구에서 도보 1분(주차매우협소)",
+    "telNo": "024394841"
+  },
+  {
+    "address": "서울특별시 중랑구 봉화산로 162(상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "신현중학교(주차절대불가)",
+    "plceLoctGid": "7호선 상봉역, 중화역 도보 19분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 봉화산로 174 (상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "신현고등학교",
+    "plceLoctGid": "망우역2번출구 이용 12분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 봉화산로 56(중화동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "대우직업능력개발원(CBT3실)",
+    "plceLoctGid": "7호선 중화역 2번출구 200미터",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 봉화산로 56(중화동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "대우직업능력개발원(cbt2실)",
+    "plceLoctGid": "7호선 중화역 2번출구 200미터,",
+    "telNo": "029780012"
+  },
+  {
+    "address": "서울특별시 중랑구 봉화산로27길 62 (중화동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "중화고등학교(주차절대불가)",
+    "plceLoctGid": "7호선 중화역 1번 출구 도보 7분(주차절대불가)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 봉화산로27길 62(중화동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "중화고등학교",
+    "plceLoctGid": "중화역 7호선 1번출구에서 도보로 5분",
+    "telNo": "0262170390"
+  },
+  {
+    "address": "서울특별시 중랑구 봉화산로56길 1(신내동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "대우직업능력개발원(cbt1실)",
+    "plceLoctGid": "7호선 중화역 2번출구 200미터",
+    "telNo": "029780012"
+  },
+  {
+    "address": "서울특별시 중랑구 상봉중앙로8나길 28 (상봉동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "상봉중학교",
+    "plceLoctGid": "중앙선 망우역 2번 출구 100M, 7호선 상봉역 7번 출구 500M",
+    "telNo": "02-436-4452"
+  },
+  {
+    "address": "서울특별시 중랑구 신내로23길 36(묵동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "태릉고등학교(주차불가)",
+    "plceLoctGid": "6호선 화랑대역 7번 출구 도보 4분(주차불가)",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 신내로23길 57 (묵동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "원묵중학교(주차불가)",
+    "plceLoctGid": "지하철 6호선 화랑대역 7번 출구, 도보3분",
+    "telNo": "0220949808"
+  },
+  {
+    "address": "서울특별시 중랑구 양원역로 32(망우동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "동원중학교(주차절대불가)",
+    "plceLoctGid": "",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 양원역로 67(망우동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "고등학교",
+    "examAreaNm": "송곡관광고등학교",
+    "plceLoctGid": "",
+    "telNo": "024321837"
+  },
+  {
+    "address": "서울특별시 중랑구 용마산로 364(면목동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "중화중학교(주차불가)",
+    "plceLoctGid": "사가정역 1번출구에서 도보로 15분",
+    "telNo": "024945763"
+  },
+  {
+    "address": "서울특별시 중랑구 용마산로70길 37(면목동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "중학교",
+    "examAreaNm": "면목중학교(주차협소)",
+    "plceLoctGid": "7호선 사가정역 4번 출구 도보 14분(주차협소)",
+    "telNo": "024370292"
+  },
+  {
+    "address": "서울특별시 중랑구 용마산로90길 28 (면목동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "서일대학교[서일관]_주차불가",
+    "plceLoctGid": "지하철 7호선 면목역 2번 출구",
+    "telNo": "024907456"
+  },
+  {
+    "address": "서울특별시 중랑구 용마산로90길 28(면목동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "서일대학교[배양관]_(주차절대불가)",
+    "plceLoctGid": "7호선 면목역 도보 20분",
+    "telNo": ""
+  },
+  {
+    "address": "서울특별시 중랑구 용마산로90길 28(면목동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "서일대학교[호천관]_(주차절대불가)",
+    "plceLoctGid": "7호선 면목역 도보 20분",
+    "telNo": ""
+  },
+  {
+    "address": "울산광역시 중구 종가로 345(교동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "공단 총본부",
+    "plceLoctGid": "공단총본부(울산)",
+    "telNo": "029561004"
+  },
+  {
+    "address": "전남광주통합특별시 북구 첨단벤처로 82 (대촌동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "광주국가자격시험장(한국산업인력공단 광주지역본부)",
+    "plceLoctGid": "광주 첨단지구 내(엠코코리아 후문 쪽)",
+    "telNo": "062-970-1700"
+  },
+  {
+    "address": "전남광주통합특별시 순천시 기적의도서관1길 41(조례동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "기타",
+    "examAreaNm": "한국폴리텍대학 순천캠퍼스1공학관[CBT1실]",
+    "plceLoctGid": "1공학관",
+    "telNo": ""
+  },
+  {
+    "address": "전남광주통합특별시 순천시 제일대학길 17 (덕월동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "순천제일대학교",
+    "plceLoctGid": "",
+    "telNo": "0617208500"
+  },
+  {
+    "address": "제주특별자치도 제주시 영평동 2235",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "대학교",
+    "examAreaNm": "제주산업정보대학",
+    "plceLoctGid": "",
+    "telNo": "064-754-0236"
+  },
+  {
+    "address": "충남 부여군 규암면 합정리 430",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "국가자격시험장(구공단상설)",
+    "examAreaNm": "한국전통문화학교",
+    "plceLoctGid": "백재역사재현단지내",
+    "telNo": "041-830-7114"
+  },
+  {
+    "address": "충청남도 천안시 동남구 문화로 16 (대흥동)",
+    "brchCd": "01",
+    "brchNm": "서울",
+    "examAreaGbNm": "훈련기관(구사설기관)",
+    "examAreaNm": "동천안희망직업전문학교",
+    "plceLoctGid": "천안역하차 동광장 좌측 길건너 우체국 뒷건물",
+    "telNo": "0415570060"
+  }
+]

@@ -31,7 +31,10 @@ export function InterestFieldCertificates() {
         <Card>
           <CardContent className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-muted-foreground">아직 관심 분야가 설정되지 않았어요.</p>
-            <Link to="/mypage/settings" className="text-sm font-medium underline">
+            <Link
+              to="/mypage/settings"
+              className="text-sm font-medium text-muted-foreground underline transition-colors hover:text-brand"
+            >
               관심 분야 설정하기 →
             </Link>
           </CardContent>

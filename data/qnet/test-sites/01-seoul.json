@@ -1,0 +1,502 @@
+[
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(1급)서울국가자격시험장 휘경동_주차협소",
+    "fcltyGb": "교실",
+    "fcltyNm": "",
+    "totFcltyCnt": "0",
+    "usePosbtFcltyCnt": "0"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(1급)서울동부국가자격시험장 자양동_주차불가",
+    "fcltyGb": "교실",
+    "fcltyNm": "교실",
+    "totFcltyCnt": "10",
+    "usePosbtFcltyCnt": "10"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(2급)서울국가자격시험장 휘경동_주차협소",
+    "fcltyGb": "교실",
+    "fcltyNm": "교실",
+    "totFcltyCnt": "15",
+    "usePosbtFcltyCnt": "15"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(2급)서울동부국가자격시험장 자양동_주차불가",
+    "fcltyGb": "교실",
+    "fcltyNm": "교실",
+    "totFcltyCnt": "10",
+    "usePosbtFcltyCnt": "10"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(2급)한국생산성본부",
+    "fcltyGb": "교실",
+    "fcltyNm": "한국생산성본부",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(3급)서울국가자격시험장 휘경동_주차협소",
+    "fcltyGb": "교실",
+    "fcltyNm": "교실",
+    "totFcltyCnt": "15",
+    "usePosbtFcltyCnt": "15"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(3급)서울동부국가자격시험장 자양동_주차불가",
+    "fcltyGb": "교실",
+    "fcltyNm": "교실",
+    "totFcltyCnt": "10",
+    "usePosbtFcltyCnt": "10"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(3급)한국생산성본부",
+    "fcltyGb": "교실",
+    "fcltyNm": "한국생산성본부",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(I자 없음,제도책상)서울국가자격시험장 1층",
+    "fcltyGb": "교실",
+    "fcltyNm": "(I자 없음,제도책상)서울국가자격시험장 1층",
+    "totFcltyCnt": "28",
+    "usePosbtFcltyCnt": "28"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 1실](절대주차불가)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 1실]",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 2실](절대주차불가)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 2실](절대주차불가)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 3실](절대주차불가)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 3실](절대주차불가)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 4실](절대주차불가)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 4실](절대주차불가)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(5층)[CBT 5실](절대주차불가)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(노원역)MBC아카데미 컴퓨터교육센터(2층)[CBT 5실](절대주차불가)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(5층)[CBT 6실](절대주차불가)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(노원역)MBC아카데미 컴퓨터교육센터(5층)[CBT 6실](절대주차불가)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(5층)[CBT 7실](절대주차불가)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(노원역)MBC아카데미 컴퓨터교육센터(5층)[CBT 7실](절대주차불가)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(5층)[CBT 8실](절대주차불가)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(노원역)MBC아카데미 컴퓨터교육센터(5층)[CBT 8실](절대주차불가)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(노원역)MBC아카데미 컴퓨터교육센터(5층)[CBT 9실](절대주차불가)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(노원역)MBC아카데미 컴퓨터교육센터(5층)[CBT 9실](절대주차불가)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(노원역)코리아IT아카데미 노원점[CBT1실] 절대주차불가(대중교통이용요망)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(노원역)코리아IT아카데미 노원점[CBT1실] 절대주차불가(대중교통이용요망)",
+    "totFcltyCnt": "2",
+    "usePosbtFcltyCnt": "2"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(노원역)코리아IT아카데미 노원점[CBT2실] 절대주차불가(대중교통이용요망)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(노원역)코리아IT아카데미 노원점[CBT2실] 절대주차불가(대중교통이용요망)",
+    "totFcltyCnt": "2",
+    "usePosbtFcltyCnt": "2"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(상시)서울가상시험장",
+    "fcltyGb": "교실",
+    "fcltyNm": "(상시)서울가상시험장",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(상시)서울국가자격시험장 연기시험자(필기)",
+    "fcltyGb": "교실",
+    "fcltyNm": "서울국가자격시험장 연기시험자(필기)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "가상시험장(장애인)",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(시각 관련 편의제공 시험장)서울맹학교",
+    "fcltyGb": "교실",
+    "fcltyNm": "교실",
+    "totFcltyCnt": "9",
+    "usePosbtFcltyCnt": "9"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(재)한국아이티교육재단 한국IT직업전문학교",
+    "fcltyGb": "교실",
+    "fcltyNm": "(재)한국아이티교육재단 한국IT직업전문학교",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "가상시험장(장애인)",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "(정기)서울가상시험장",
+    "fcltyGb": "교실",
+    "fcltyNm": "CBT",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(제도판지참자만접수가능)서울국가자격시험장(휘경동)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(제도판없음,수험자필수지참)서울국가자격시험장(휘경동,주차장협소)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(제도판지참자만접수가능)중랑직업전문학교",
+    "fcltyGb": "교실",
+    "fcltyNm": "",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(주)C.S구조엔지니어링",
+    "fcltyGb": "교실",
+    "fcltyNm": "",
+    "totFcltyCnt": "",
+    "usePosbtFcltyCnt": ""
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(주)KD아카데미 컴퓨터학원(노원)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(주)KD아카데미 컴퓨터학원(노원)",
+    "totFcltyCnt": "",
+    "usePosbtFcltyCnt": ""
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(주)KD아카데미 컴퓨터학원(상봉)",
+    "fcltyGb": "교실",
+    "fcltyNm": "(주)KD아카데미 컴퓨터학원(상봉)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(주)노아모드",
+    "fcltyGb": "교실",
+    "fcltyNm": "",
+    "totFcltyCnt": "",
+    "usePosbtFcltyCnt": ""
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(주)대신기술능력개발원",
+    "fcltyGb": "복도",
+    "fcltyNm": "",
+    "totFcltyCnt": "",
+    "usePosbtFcltyCnt": ""
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(주)동양구조안전기술",
+    "fcltyGb": "교실",
+    "fcltyNm": "",
+    "totFcltyCnt": "",
+    "usePosbtFcltyCnt": ""
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(주)비와이엔블랙야크",
+    "fcltyGb": "교실",
+    "fcltyNm": "",
+    "totFcltyCnt": "",
+    "usePosbtFcltyCnt": ""
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(주)씨앤피동양",
+    "fcltyGb": "복도",
+    "fcltyNm": "",
+    "totFcltyCnt": "",
+    "usePosbtFcltyCnt": ""
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "(주)에르모소뷰티직업전문학교",
+    "fcltyGb": "교실",
+    "fcltyNm": "",
+    "totFcltyCnt": "",
+    "usePosbtFcltyCnt": ""
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": ".",
+    "fcltyGb": "교실",
+    "fcltyNm": "",
+    "totFcltyCnt": "46",
+    "usePosbtFcltyCnt": "46"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "JES미용예술직업전문학교",
+    "fcltyGb": "교실",
+    "fcltyNm": "",
+    "totFcltyCnt": "",
+    "usePosbtFcltyCnt": ""
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "KH정보교육원 강남지원",
+    "fcltyGb": "복도",
+    "fcltyNm": "",
+    "totFcltyCnt": "",
+    "usePosbtFcltyCnt": ""
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "N",
+    "examAreaNm": "MJC보석직업전문학교",
+    "fcltyGb": "교실",
+    "fcltyNm": "",
+    "totFcltyCnt": "",
+    "usePosbtFcltyCnt": ""
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "MJC보석직업전문학교[CBT1실](주차불가)",
+    "fcltyGb": "교실",
+    "fcltyNm": "MJC보석직업전문학교",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "MJC보석직업전문학교[CBT2실](주차불가)",
+    "fcltyGb": "교실",
+    "fcltyNm": "MJC보석직업전문학교",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "SRTC[CBT 1실]",
+    "fcltyGb": "교실",
+    "fcltyNm": "SRTC",
+    "totFcltyCnt": "2",
+    "usePosbtFcltyCnt": "2"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "SRTC[CBT 2실]",
+    "fcltyGb": "교실",
+    "fcltyNm": "",
+    "totFcltyCnt": "0",
+    "usePosbtFcltyCnt": "0"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "TIEC강남센터[CBT1실] (주차불가, 대기실없음)",
+    "fcltyGb": "교실",
+    "fcltyNm": "TIEC강남센터[CBT1실] (주차불가,대기실없음)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "TIEC강남센터[CBT2실] (주차불가, 대기실없음)",
+    "fcltyGb": "교실",
+    "fcltyNm": "TIEC강남센터[CBT2실] (주차불가,대기실없음)",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "[가상] 서울동부국가자격시험장(자양역) [CBT 1실]",
+    "fcltyGb": "교실",
+    "fcltyNm": "교실",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "[가상] 서울동부국가자격시험장(자양역) [CBT 2실]",
+    "fcltyGb": "교실",
+    "fcltyNm": "교실",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "[가상] 서울동부국가자격시험장(자양역) [CBT 3실]",
+    "fcltyGb": "교실",
+    "fcltyNm": "교실",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  },
+  {
+    "areaRole": "시험장",
+    "brchNm": "서울",
+    "cbtFcltyYnCcd": "Y",
+    "examAreaNm": "[가상] 서울동부국가자격시험장(자양역) [CBT 4실]",
+    "fcltyGb": "교실",
+    "fcltyNm": "교실",
+    "totFcltyCnt": "1",
+    "usePosbtFcltyCnt": "1"
+  }
+]

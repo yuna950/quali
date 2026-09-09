@@ -5,7 +5,7 @@ import type { Certificate } from '@/types/certificate'
 /** 라벨 + 제목 + "자세히 보기"만 있는 심플 카드 (홈 관심분야, 상세페이지 유사분야 등에서 공용) */
 export function CertificatePreviewCard({ certificate }: { certificate: Certificate }) {
   return (
-    <Link to={`/certificates/${certificate.jmCd}`}>
+    <Link to={`/certificates/${certificate.jmCd}`} className="group">
       <Card className="h-full transition-shadow hover:shadow-md">
         <CardContent className="flex h-full flex-col justify-between gap-8">
           <div>
@@ -14,7 +14,9 @@ export function CertificatePreviewCard({ certificate }: { certificate: Certifica
             </p>
             <p className="text-lg font-bold">{certificate.name}</p>
           </div>
-          <p className="text-right text-sm text-muted-foreground">자세히 보기 →</p>
+          <p className="text-right text-sm text-muted-foreground transition-colors group-hover:text-brand">
+            자세히 보기 →
+          </p>
         </CardContent>
       </Card>
     </Link>

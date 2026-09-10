@@ -43,6 +43,12 @@ export function SearchPage() {
     setJmCd(undefined)
   }
 
+  function handleClearJobField() {
+    setJobFieldCode(undefined)
+    setMidJobFieldCode(undefined)
+    setJmCd(undefined)
+  }
+
   function handleSelectMidJobField(code: string) {
     setKeyword('')
     setMidJobFieldCode(code)
@@ -72,6 +78,7 @@ export function SearchPage() {
           selectedMidJobFieldCode={midJobFieldCode}
           selectedJmCd={jmCd}
           onSelectJobField={handleSelectJobField}
+          onClearJobField={handleClearJobField}
           onSelectMidJobField={handleSelectMidJobField}
           onSelectCertificate={handleSelectCertificate}
         />

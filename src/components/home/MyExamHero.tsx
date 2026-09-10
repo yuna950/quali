@@ -53,7 +53,7 @@ export function MyExamHero() {
         <QuickAddPlanDialog
           onAdded={handleAdded}
           trigger={
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" className="text-brand hover:bg-brand/5">
               <Plus />
               시험 추가
             </Button>

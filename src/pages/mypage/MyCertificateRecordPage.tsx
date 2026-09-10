@@ -1,3 +1,4 @@
+import { ArrowUpRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { toast } from 'sonner'
@@ -114,8 +115,15 @@ export function MyCertificateRecordPage() {
         <h1 className="text-2xl font-bold">{certificate.name}</h1>
 
         <div className="mt-6">
-          <Button variant="outline" size="sm" nativeButton={false} render={<Link to={`/certificates/${jmCd}`} />}>
-            시험 상세정보 보기
+          <Button
+            variant="outline"
+            size="sm"
+            className="text-neutral"
+            nativeButton={false}
+            render={<Link to={`/certificates/${jmCd}`} />}
+          >
+            시험 상세 정보
+            <ArrowUpRight />
           </Button>
         </div>
       </section>

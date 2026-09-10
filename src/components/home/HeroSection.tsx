@@ -10,7 +10,7 @@ const FEATURES = [
 
 export function HeroSection() {
   return (
-    <section className="flex flex-col items-center gap-10 py-10 text-center">
+    <section className="flex flex-col items-center gap-10 py-20 text-center">
       <div className="flex flex-col items-center gap-4">
         <h1 className="text-3xl font-extrabold sm:text-4xl">
           자격증을 찾고, 시험을 관리하고,

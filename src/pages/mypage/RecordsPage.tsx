@@ -1,3 +1,4 @@
+import { Plus } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { toast } from 'sonner'
@@ -10,12 +11,13 @@ import { listExamRecords, removeExamRecord } from '@/services/userService'
 import type { ExamRecord } from '@/types/user'
 
 const STAGE_LABEL = { written: '필기', practical: '실기', interview: '면접' } as const
+const VISIBLE_LIMIT = 2
 
 interface CertGroup {
   jmCd: string
   certificateName: string
-  representative: ExamRecord
-  extraCount: number
+  visible: ExamRecord[]
+  moreCount: number
 }
 
 function groupByCertificate(records: ExamRecord[]): CertGroup[] {
@@ -27,12 +29,12 @@ function groupByCertificate(records: ExamRecord[]): CertGroup[] {
   }
 
   return [...byJmCd.values()].map((list) => {
-    const representative = [...list].sort((a, b) => (a.examDate > b.examDate ? -1 : 1))[0]
+    const sorted = [...list].sort((a, b) => (a.examDate > b.examDate ? -1 : 1))
     return {
-      jmCd: representative.jmCd,
-      certificateName: representative.certificateName,
-      representative,
-      extraCount: list.length - 1,
+      jmCd: sorted[0].jmCd,
+      certificateName: sorted[0].certificateName,
+      visible: sorted.slice(0, VISIBLE_LIMIT),
+      moreCount: Math.max(0, sorted.length - VISIBLE_LIMIT),
     }
   })
 }
@@ -70,8 +72,9 @@ export function RecordsPage() {
         <ExamRecordFormDialog
           mode="create"
           trigger={
-            <Button variant="outline" size="sm">
-              응시 기록 추가
+            <Button variant="outline" size="sm" className="text-brand hover:bg-brand/5">
+              <Plus />
+              기록 추가
             </Button>
           }
           onSaved={handleSaved}
@@ -89,32 +92,60 @@ export function RecordsPage() {
       {groups.map((group) => (
         <Link key={group.jmCd} to={`/mypage/records/${group.jmCd}`}>
           <Card className="transition-shadow hover:shadow-md">
-            <CardContent className="flex items-center justify-between gap-4">
-              <div>
-                <p className="text-lg font-bold">{group.certificateName}</p>
-                <p className="mt-1 text-xs text-muted-foreground">
-                  {STAGE_LABEL[group.representative.stage]} · {group.representative.year}년{' '}
-                  {group.representative.round}회
-                </p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {formatYyyymmdd(group.representative.examDate)}
-                  {group.representative.score !== undefined && ` · ${group.representative.score}점`}
-                </p>
-                {group.representative.memo && (
-                  <p className="mt-1 text-sm text-muted-foreground">{group.representative.memo}</p>
-                )}
-                {group.extraCount > 0 && (
-                  <p className="mt-1 text-xs text-muted-foreground">외 {group.extraCount}건</p>
-                )}
-              </div>
-              <div className="flex items-center gap-3" onClick={(e) => e.preventDefault()}>
-                <Badge variant={group.representative.passed ? 'default' : 'secondary'}>
-                  {group.representative.passed ? '합격' : '불합격'}
-                </Badge>
-                <Button variant="ghost" size="sm" onClick={(e) => handleRemove(group.representative.id, e)}>
-                  삭제
-                </Button>
-              </div>
+            <CardContent className="flex flex-col gap-3">
+              <p className="text-lg font-bold">{group.certificateName}</p>
+
+              {group.visible.map((record, i) => (
+                <div
+                  key={record.id}
+                  className={`flex items-center justify-between gap-4 ${i > 0 ? 'border-t border-border pt-3' : ''}`}
+                >
+                  <div>
+                    <p className="text-xs text-muted-foreground">
+                      {STAGE_LABEL[record.stage]} · {record.year}년 {record.round}회
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {formatYyyymmdd(record.examDate)}
+                      {record.score !== undefined && ` · ${record.score}점`}
+                    </p>
+                    {record.memo && <p className="mt-1 text-sm text-muted-foreground">{record.memo}</p>}
+                  </div>
+                  <div className="flex items-center gap-2" onClick={(e) => e.preventDefault()}>
+                    <Badge
+                      variant="outline"
+                      className={
+                        record.passed
+                          ? 'h-7 rounded-full border-transparent bg-brand-light px-3 text-brand'
+                          : 'h-7 rounded-full border-transparent bg-neutral-light px-3 text-neutral'
+                      }
+                    >
+                      {record.passed ? '합격' : '불합격'}
+                    </Badge>
+                    <ExamRecordFormDialog
+                      mode="edit"
+                      record={record}
+                      trigger={
+                        <Button variant="outline" size="sm" className="rounded-full px-3 text-neutral">
+                          수정
+                        </Button>
+                      }
+                      onSaved={handleSaved}
+                    />
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="rounded-full px-3 text-status-red hover:bg-status-red/5"
+                      onClick={(e) => handleRemove(record.id, e)}
+                    >
+                      삭제
+                    </Button>
+                  </div>
+                </div>
+              ))}
+
+              {group.moreCount > 0 && (
+                <p className="text-xs text-muted-foreground">외 {group.moreCount}건 더 보기 →</p>
+              )}
             </CardContent>
           </Card>
         </Link>

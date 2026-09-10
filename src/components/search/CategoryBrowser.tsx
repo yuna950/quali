@@ -13,6 +13,7 @@ interface CategoryBrowserProps {
   selectedMidJobFieldCode?: string
   selectedJmCd?: string
   onSelectJobField: (code: string) => void
+  onClearJobField: () => void
   onSelectMidJobField: (code: string) => void
   onSelectCertificate: (jmCd: string) => void
 }
@@ -53,6 +54,7 @@ export function CategoryBrowser({
   selectedMidJobFieldCode,
   selectedJmCd,
   onSelectJobField,
+  onClearJobField,
   onSelectMidJobField,
   onSelectCertificate,
 }: CategoryBrowserProps) {
@@ -95,6 +97,11 @@ export function CategoryBrowser({
     <div className="grid grid-cols-1 divide-y divide-border rounded-xl border border-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
       <div className="max-h-72 overflow-y-auto p-3">
         <p className="mb-2 px-3 text-xs font-bold text-muted-foreground">직무분야</p>
+        <ColumnButton
+          label="전체"
+          selected={!selectedJobFieldCode}
+          onClick={onClearJobField}
+        />
         {jobFields.map((field) => (
           <ColumnButton
             key={field.code}

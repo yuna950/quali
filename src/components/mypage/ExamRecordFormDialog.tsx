@@ -80,6 +80,7 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
 
   const isLocked = !!lockedPlan
   const certOptions: CertOption[] = certificates.map((c) => ({ value: c.jmCd, label: c.name }))
+  const scoreError = score !== '' && Number(score) > 100
 
   useEffect(() => {
     listCertificates().then(setCertificates)
@@ -175,6 +176,11 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
   async function handleSubmit() {
     if (!certOption || !examDate || passed === null) {
       toast.error('자격증, 시험날짜, 합격여부는 필수예요.')
+      return
+    }
+
+    if (scoreError) {
+      toast.error('점수는 100점을 넘을 수 없어요.')
       return
     }
 
@@ -335,7 +341,14 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
 
           <div className="flex flex-col gap-1.5">
             <Label>점수 (선택)</Label>
-            <Input type="number" value={score} onChange={(e) => setScore(e.target.value)} />
+            <Input
+              type="number"
+              min={0}
+              max={100}
+              value={score}
+              onChange={(e) => setScore(e.target.value)}
+            />
+            {scoreError && <p className="text-xs text-destructive">100점을 넘을 수 없어요.</p>}
           </div>
 
           <div className="flex flex-col gap-1.5">

@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { CertificatePreviewCard } from '@/components/certificate/CertificatePreviewCard'
+import { CertificateCard } from '@/components/certificate/CertificateCard'
 import { ExamScheduleTable } from '@/components/certificate/ExamScheduleTable'
 import { InterestButton } from '@/components/certificate/InterestButton'
 import { PassRateTable } from '@/components/certificate/PassRateTable'
 import { BackButton } from '@/components/common/BackButton'
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
 import {
   getCertificate,
   getExamFee,
@@ -42,7 +43,7 @@ export function CertificateDetailPage() {
       getExamSubjects(jmCd),
       getExamSchedules(jmCd),
       getPassRateSummary(jmCd),
-      getSimilarCertificates(jmCd, 3),
+      getSimilarCertificates(jmCd, Infinity),
     ]).then(([cert, feeResult, subjectsResult, schedulesResult, passRateResult, similarResult]) => {
       if (!active) return
       setCertificate(cert ?? null)
@@ -131,11 +132,15 @@ export function CertificateDetailPage() {
       {similar.length > 0 && (
         <section>
           <h2 className="mb-3 text-xl font-bold">유사 분야 자격증</h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {similar.map((c) => (
-              <CertificatePreviewCard key={c.jmCd} certificate={c} />
-            ))}
-          </div>
+          <Carousel opts={{ align: 'start', dragFree: true }}>
+            <CarouselContent>
+              {similar.map((c) => (
+                <CarouselItem key={c.jmCd} className="basis-1/2 sm:basis-1/3">
+                  <CertificateCard certificate={c} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </section>
       )}
     </div>

@@ -17,6 +17,14 @@ export function Header() {
         QUALI
       </Link>
       <div className="flex items-center gap-4">
+        <Link to="/search" aria-label="검색">
+          <Search className="size-5" />
+        </Link>
+
+        <Link to="/schedule" aria-label="시험 일정">
+          <CalendarDays className="size-5" />
+        </Link>
+
         <DropdownMenu>
           <DropdownMenuTrigger aria-label="마이페이지 메뉴">
             <UserRound className="size-5" />
@@ -39,14 +47,6 @@ export function Header() {
             )}
           </DropdownMenuContent>
         </DropdownMenu>
-
-        <Link to="/schedule" aria-label="시험 일정">
-          <CalendarDays className="size-5" />
-        </Link>
-
-        <Link to="/search" aria-label="검색">
-          <Search className="size-5" />
-        </Link>
       </div>
     </header>
   )

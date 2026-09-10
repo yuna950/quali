@@ -1,5 +1,7 @@
+import { ArrowUpRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { toYyyymmdd, diffInDays } from '@/lib/date'
 import { listRegistrationWindowsInRange, type RegistrationWindowEntry } from '@/services/certificateService'
@@ -25,9 +27,16 @@ export function UpcomingExamScheduleWeek() {
     <section>
       <div className="mb-3 flex items-center justify-between">
         <h2 className="text-lg font-bold">시험 일정</h2>
-        <Link to="/schedule" className="text-sm text-muted-foreground transition-colors hover:text-brand">
-          전체 일정 보기 →
-        </Link>
+        <Button
+          variant="outline"
+          size="sm"
+          className="text-neutral"
+          nativeButton={false}
+          render={<Link to="/schedule" />}
+        >
+          전체 일정 보기
+          <ArrowUpRight />
+        </Button>
       </div>
       <Card>
         <CardContent>

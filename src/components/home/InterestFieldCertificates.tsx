@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { CertificatePreviewCard } from '@/components/certificate/CertificatePreviewCard'
+import { CertificateCard } from '@/components/certificate/CertificateCard'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
@@ -37,7 +37,7 @@ export function InterestFieldCertificates() {
           <CarouselContent>
             {certificates.map((certificate) => (
               <CarouselItem key={certificate.jmCd} className="basis-1/2 sm:basis-1/4">
-                <CertificatePreviewCard certificate={certificate} />
+                <CertificateCard certificate={certificate} />
               </CarouselItem>
             ))}
           </CarouselContent>

@@ -9,9 +9,9 @@ const STATUS_LABEL: Record<ExamApplicationStatus, string> = {
 }
 
 const STATUS_CLASS: Record<ExamApplicationStatus, string> = {
-  upcoming: 'bg-blue-50 text-blue-600 border-blue-200',
-  open: 'bg-brand/10 text-brand border-brand/30',
-  closed: 'bg-muted text-muted-foreground border-transparent',
+  upcoming: 'bg-status-orange-bg text-status-orange border-transparent',
+  open: 'bg-status-green-bg text-status-green border-transparent',
+  closed: 'bg-neutral-light text-neutral border-transparent',
 }
 
 export function StatusBadge({ status }: { status: ExamApplicationStatus }) {

@@ -10,13 +10,13 @@ import { listMyPlans, removeMyPlan } from '@/services/userService'
 import type { MyExamPlan } from '@/types/user'
 
 const STAGE_LABEL = { written: '필기', practical: '실기', interview: '면접' } as const
+const VISIBLE_LIMIT = 2
 
 interface CertGroup {
   jmCd: string
   certificateName: string
-  representative: MyExamPlan
-  extraCount: number
-  needsResult: boolean
+  visible: MyExamPlan[]
+  moreCount: number
 }
 
 function groupByCertificate(plans: MyExamPlan[]): CertGroup[] {
@@ -29,14 +29,13 @@ function groupByCertificate(plans: MyExamPlan[]): CertGroup[] {
 
   return [...byJmCd.values()].map((list) => {
     const overdue = list.filter((p) => diffInDays(p.examDate) < 0)
-    const representative =
-      overdue[0] ?? [...list].sort((a, b) => diffInDays(a.examDate) - diffInDays(b.examDate))[0]
+    const rest = list.filter((p) => diffInDays(p.examDate) >= 0).sort((a, b) => diffInDays(a.examDate) - diffInDays(b.examDate))
+    const sorted = [...overdue, ...rest]
     return {
-      jmCd: representative.jmCd,
-      certificateName: representative.certificateName,
-      representative,
-      extraCount: list.length - 1,
-      needsResult: overdue.length > 0,
+      jmCd: sorted[0].jmCd,
+      certificateName: sorted[0].certificateName,
+      visible: sorted.slice(0, VISIBLE_LIMIT),
+      moreCount: Math.max(0, sorted.length - VISIBLE_LIMIT),
     }
   })
 }
@@ -82,44 +81,58 @@ export function MyCertificatesPage() {
       {groups.map((group) => (
         <Link key={group.jmCd} to={`/mypage/records/${group.jmCd}`}>
           <Card className="transition-shadow hover:shadow-md">
-            <CardContent className="flex items-center justify-between gap-4">
-              <div>
-                <p className="text-lg font-bold">{group.certificateName}</p>
-                <p className="mt-1 text-xs text-muted-foreground">
-                  {STAGE_LABEL[group.representative.stage]} · {group.representative.year}년{' '}
-                  {group.representative.round}회
-                </p>
-                {group.needsResult ? (
-                  <p className="mt-1 text-sm text-brand">시험 결과를 입력해주세요.</p>
-                ) : (
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    {formatYyyymmdd(group.representative.examDate)}
-                  </p>
-                )}
-                {group.extraCount > 0 && (
-                  <p className="mt-1 text-xs text-muted-foreground">외 {group.extraCount}건</p>
-                )}
-              </div>
-              <div className="flex items-center gap-3" onClick={(e) => e.preventDefault()}>
-                {group.needsResult ? (
-                  <ExamRecordFormDialog
-                    mode="create"
-                    lockedPlan={group.representative}
-                    trigger={
-                      <Button variant="outline" size="sm">
-                        결과 입력
+            <CardContent className="flex flex-col gap-3">
+              <p className="text-lg font-bold">{group.certificateName}</p>
+
+              {group.visible.map((plan, i) => {
+                const needsResult = diffInDays(plan.examDate) < 0
+                return (
+                  <div
+                    key={plan.id}
+                    className={`flex items-center justify-between gap-4 ${i > 0 ? 'border-t border-border pt-3' : ''}`}
+                  >
+                    <div>
+                      <p className="text-xs text-muted-foreground">
+                        {STAGE_LABEL[plan.stage]} · {plan.year}년 {plan.round}회
+                      </p>
+                      {needsResult ? (
+                        <p className="mt-1 text-sm text-brand">시험 결과를 입력해주세요.</p>
+                      ) : (
+                        <p className="mt-1 text-sm text-muted-foreground">{formatYyyymmdd(plan.examDate)}</p>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-3" onClick={(e) => e.preventDefault()}>
+                      {needsResult ? (
+                        <ExamRecordFormDialog
+                          mode="create"
+                          lockedPlan={plan}
+                          trigger={
+                            <Button variant="outline" size="sm">
+                              결과 입력
+                            </Button>
+                          }
+                          onSaved={() => {}}
+                          onPlanRemoved={handlePlanRemoved}
+                        />
+                      ) : (
+                        <DdayBadge targetDate={plan.examDate} />
+                      )}
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="rounded-full px-3 text-status-red hover:bg-status-red/5"
+                        onClick={(e) => handleRemove(plan.id, e)}
+                      >
+                        삭제
                       </Button>
-                    }
-                    onSaved={() => {}}
-                    onPlanRemoved={handlePlanRemoved}
-                  />
-                ) : (
-                  <DdayBadge targetDate={group.representative.examDate} />
-                )}
-                <Button variant="ghost" size="sm" onClick={(e) => handleRemove(group.representative.id, e)}>
-                  삭제
-                </Button>
-              </div>
+                    </div>
+                  </div>
+                )
+              })}
+
+              {group.moreCount > 0 && (
+                <p className="text-xs text-muted-foreground">외 {group.moreCount}건 더 보기 →</p>
+              )}
             </CardContent>
           </Card>
         </Link>

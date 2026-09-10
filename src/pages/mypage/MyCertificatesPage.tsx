@@ -4,8 +4,7 @@ import { toast } from 'sonner'
 import { ExamRecordFormDialog } from '@/components/mypage/ExamRecordFormDialog'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { DdayBadge } from '@/components/certificate/DdayBadge'
-import { diffInDays, formatYyyymmdd } from '@/lib/date'
+import { diffInDays, formatDday, formatYyyymmdd } from '@/lib/date'
 import { listMyPlans, removeMyPlan } from '@/services/userService'
 import type { MyExamPlan } from '@/types/user'
 
@@ -98,11 +97,13 @@ export function MyCertificatesPage() {
                       {needsResult ? (
                         <p className="mt-1 text-sm text-brand">시험 결과를 입력해주세요.</p>
                       ) : (
-                        <p className="mt-1 text-sm text-muted-foreground">{formatYyyymmdd(plan.examDate)}</p>
+                        <p className="mt-1 text-sm text-muted-foreground">
+                          {formatYyyymmdd(plan.examDate)} · {formatDday(plan.examDate)}
+                        </p>
                       )}
                     </div>
                     <div className="flex items-center gap-3" onClick={(e) => e.preventDefault()}>
-                      {needsResult ? (
+                      {needsResult && (
                         <ExamRecordFormDialog
                           mode="create"
                           lockedPlan={plan}
@@ -114,8 +115,6 @@ export function MyCertificatesPage() {
                           onSaved={() => {}}
                           onPlanRemoved={handlePlanRemoved}
                         />
-                      ) : (
-                        <DdayBadge targetDate={plan.examDate} />
                       )}
                       <Button
                         variant="outline"

@@ -36,7 +36,7 @@ export function InterestFieldCertificates() {
         <Carousel opts={{ align: 'start', dragFree: true }}>
           <CarouselContent>
             {certificates.map((certificate) => (
-              <CarouselItem key={certificate.jmCd} className="basis-1/2 sm:basis-1/4">
+              <CarouselItem key={certificate.jmCd} className="basis-2/3 sm:basis-1/4">
                 <CertificateCard certificate={certificate} />
               </CarouselItem>
             ))}

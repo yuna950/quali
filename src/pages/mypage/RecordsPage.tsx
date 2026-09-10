@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { toast } from 'sonner'
 import { ExamRecordFormDialog } from '@/components/mypage/ExamRecordFormDialog'
-import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { formatYyyymmdd } from '@/lib/date'
@@ -107,20 +106,14 @@ export function RecordsPage() {
                     <p className="mt-1 text-sm text-muted-foreground">
                       {formatYyyymmdd(record.examDate)}
                       {record.score !== undefined && ` · ${record.score}점`}
+                      {' · '}
+                      <span className={record.passed ? 'font-medium text-brand' : 'font-medium text-neutral'}>
+                        {record.passed ? '합격' : '불합격'}
+                      </span>
                     </p>
                     {record.memo && <p className="mt-1 text-sm text-muted-foreground">{record.memo}</p>}
                   </div>
                   <div className="flex items-center gap-2" onClick={(e) => e.preventDefault()}>
-                    <Badge
-                      variant="outline"
-                      className={
-                        record.passed
-                          ? 'h-7 rounded-full border-transparent bg-brand-light px-3 text-brand'
-                          : 'h-7 rounded-full border-transparent bg-neutral-light px-3 text-neutral'
-                      }
-                    >
-                      {record.passed ? '합격' : '불합격'}
-                    </Badge>
                     <ExamRecordFormDialog
                       mode="edit"
                       record={record}

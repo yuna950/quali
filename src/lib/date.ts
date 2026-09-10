@@ -25,6 +25,12 @@ export function diffInDays(target: string, from: Date = new Date()): number {
   return Math.round((targetDate.getTime() - fromMidnight.getTime()) / msPerDay)
 }
 
+/** "D-3" / "D-DAY" / "D+2" 형태로 표시 */
+export function formatDday(examDate: string, from: Date = new Date()): string {
+  const days = diffInDays(examDate, from)
+  return days === 0 ? 'D-DAY' : days > 0 ? `D-${days}` : `D+${Math.abs(days)}`
+}
+
 function formatMonthDay(value: string): string {
   return `${Number(value.slice(4, 6))}월 ${Number(value.slice(6, 8))}일`
 }

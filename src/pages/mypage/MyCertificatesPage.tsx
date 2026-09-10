@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { toast } from 'sonner'
-import { DdayBadge } from '@/components/certificate/DdayBadge'
-import { Badge } from '@/components/ui/badge'
+import { ExamRecordFormDialog } from '@/components/mypage/ExamRecordFormDialog'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { DdayBadge } from '@/components/certificate/DdayBadge'
 import { diffInDays, formatYyyymmdd } from '@/lib/date'
 import { listMyPlans, removeMyPlan } from '@/services/userService'
 import type { MyExamPlan } from '@/types/user'
@@ -56,6 +56,10 @@ export function MyCertificatesPage() {
     toast('나의 시험에서 삭제했어요.')
   }
 
+  function handlePlanRemoved(planId: string) {
+    setPlans((prev) => prev?.filter((p) => p.id !== planId) ?? null)
+  }
+
   if (!plans) return null
 
   const groups = groupByCertificate(plans)
@@ -98,7 +102,17 @@ export function MyCertificatesPage() {
               </div>
               <div className="flex items-center gap-3" onClick={(e) => e.preventDefault()}>
                 {group.needsResult ? (
-                  <Badge variant="outline">결과 입력 필요</Badge>
+                  <ExamRecordFormDialog
+                    mode="create"
+                    lockedPlan={group.representative}
+                    trigger={
+                      <Button variant="outline" size="sm">
+                        결과 입력
+                      </Button>
+                    }
+                    onSaved={() => {}}
+                    onPlanRemoved={handlePlanRemoved}
+                  />
                 ) : (
                   <DdayBadge targetDate={group.representative.examDate} />
                 )}

@@ -9,7 +9,7 @@ import {
 import { useAuth } from '@/lib/auth'
 
 export function Header() {
-  const { isLoggedIn, user, logout } = useAuth()
+  const { isLoggedIn, logout } = useAuth()
 
   return (
     <header className="flex items-center justify-between border-b border-gray-200 px-6 py-4">
@@ -17,8 +17,6 @@ export function Header() {
         QUALI
       </Link>
       <div className="flex items-center gap-4">
-        {isLoggedIn && <span className="text-sm text-muted-foreground">{user?.name}님</span>}
-
         <DropdownMenu>
           <DropdownMenuTrigger aria-label="마이페이지 메뉴">
             <UserRound className="size-5" />

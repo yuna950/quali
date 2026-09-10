@@ -1,9 +1,11 @@
+import { Plus } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { LoginPromptBanner } from '@/components/home/LoginPromptBanner'
+import { QuickAddPlanDialog } from '@/components/home/QuickAddPlanDialog'
+import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel'
-import { diffInDays, formatYyyymmdd } from '@/lib/date'
+import { diffInDays, formatDday, formatYyyymmdd } from '@/lib/date'
 import { useAuth } from '@/lib/auth'
 import { getCertificate } from '@/services/certificateService'
 import { listMyPlans } from '@/services/userService'
@@ -17,44 +19,49 @@ interface Slide {
   certificate: Certificate | undefined
 }
 
-function DdayText({ examDate }: { examDate: string }) {
-  const days = diffInDays(examDate)
-  return <>{days === 0 ? 'D-DAY' : days > 0 ? `D-${days}` : `D+${Math.abs(days)}`}</>
+async function loadSlides(): Promise<Slide[]> {
+  const plans = await listMyPlans()
+  const upcoming = plans
+    .filter((plan) => diffInDays(plan.examDate) >= 0)
+    .sort((a, b) => (a.examDate < b.examDate ? -1 : a.examDate > b.examDate ? 1 : 0))
+  return Promise.all(upcoming.map(async (plan) => ({ plan, certificate: await getCertificate(plan.jmCd) })))
 }
 
 export function MyExamHero() {
-  const { isLoggedIn, user } = useAuth()
+  const { user } = useAuth()
   const [slides, setSlides] = useState<Slide[] | null>(null)
   const [api, setApi] = useState<CarouselApi>()
   const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
-    if (!isLoggedIn) return
-    listMyPlans().then(async (plans) => {
-      const upcoming = plans
-        .filter((plan) => diffInDays(plan.examDate) >= 0)
-        .sort((a, b) => (a.examDate < b.examDate ? -1 : a.examDate > b.examDate ? 1 : 0))
-      const withCertificates = await Promise.all(
-        upcoming.map(async (plan) => ({ plan, certificate: await getCertificate(plan.jmCd) })),
-      )
-      setSlides(withCertificates)
-    })
-  }, [isLoggedIn])
+    loadSlides().then(setSlides)
+  }, [])
 
   useEffect(() => {
     if (!api) return
     api.on('select', () => setActiveIndex(api.selectedScrollSnap()))
   }, [api])
 
+  function handleAdded() {
+    loadSlides().then(setSlides)
+  }
+
   return (
     <section>
-      <h2 className="mb-3 text-lg font-bold">{user ? `${user.name}님의 시험` : '나의 시험'}</h2>
+      <div className="mb-3 flex items-center justify-between">
+        <h2 className="text-lg font-bold">{user ? `${user.name}님의 시험` : '나의 시험'}</h2>
+        <QuickAddPlanDialog
+          onAdded={handleAdded}
+          trigger={
+            <Button variant="outline" size="sm">
+              <Plus />
+              시험 추가
+            </Button>
+          }
+        />
+      </div>
 
-      {!isLoggedIn && (
-        <LoginPromptBanner message="로그인하면 준비 중인 시험 일정을 한눈에 확인할 수 있어요." />
-      )}
-
-      {isLoggedIn && slides && slides.length === 0 && (
+      {slides && slides.length === 0 && (
         <Card>
           <CardContent className="py-10 text-center text-sm text-muted-foreground">
             아직 준비 중인 시험이 없어요. 자격증을 검색해서 나의 시험을 추가해보세요.
@@ -62,7 +69,7 @@ export function MyExamHero() {
         </Card>
       )}
 
-      {isLoggedIn && slides && slides.length > 0 && (
+      {slides && slides.length > 0 && (
         <>
           <Carousel setApi={setApi} opts={{ align: 'start' }}>
             <CarouselContent>
@@ -83,9 +90,7 @@ export function MyExamHero() {
                         </div>
                         <div className="text-right sm:self-end">
                           <p className="mb-1 text-xs text-muted-foreground">{STAGE_LABEL[plan.stage]} 시험</p>
-                          <p className="text-3xl font-extrabold">
-                            <DdayText examDate={plan.examDate} />
-                          </p>
+                          <p className="text-3xl font-extrabold">{formatDday(plan.examDate)}</p>
                           <p className="mt-1 text-xs text-muted-foreground">{formatYyyymmdd(plan.examDate)}</p>
                         </div>
                       </CardContent>

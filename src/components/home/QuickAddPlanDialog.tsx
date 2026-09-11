@@ -213,7 +213,7 @@ export function QuickAddPlanDialog({
                 </SelectContent>
               </Select>
             ) : (
-              <p className="text-xs text-muted-foreground">
+              <p className="desc-5 text-muted-foreground">
                 {certOption ? '실제 등록된 회차 정보가 없어요. 아래에서 직접 입력해주세요.' : '자격증을 먼저 선택하세요.'}
               </p>
             )}
@@ -239,7 +239,7 @@ export function QuickAddPlanDialog({
             </>
           ) : (
             examDate && (
-              <p className="text-sm text-muted-foreground">{formatYyyymmdd(examDate.replaceAll('-', ''))}</p>
+              <p className="desc-4 text-muted-foreground">{formatYyyymmdd(examDate.replaceAll('-', ''))}</p>
             )
           )}
         </div>

@@ -229,7 +229,7 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
           <div className="flex flex-col gap-1.5">
             <Label>자격증</Label>
             {isLocked ? (
-              <p className="text-sm font-medium">{certOption?.label}</p>
+              <p className="desc-4">{certOption?.label}</p>
             ) : (
               <Combobox items={certOptions} value={certOption} onValueChange={(v) => setCertOption(v)}>
                 <ComboboxInput placeholder="자격증을 검색하세요" />
@@ -250,7 +250,7 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
           <div className="flex flex-col gap-1.5">
             <Label>단계</Label>
             {isLocked ? (
-              <p className="text-sm font-medium">{STAGE_LABEL[stage]}</p>
+              <p className="desc-4">{STAGE_LABEL[stage]}</p>
             ) : (
               <Select value={stage} onValueChange={(v) => setStage(v as ExamStageKey)}>
                 <SelectTrigger className="w-full">
@@ -267,7 +267,7 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
 
           {isLocked ? (
             <div className="flex gap-4">
-              <p className="text-sm text-muted-foreground">
+              <p className="desc-4 text-muted-foreground">
                 {year}년 {round}회 · {formatYyyymmdd(lockedPlan!.examDate)}
               </p>
             </div>
@@ -297,7 +297,7 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
                     </SelectContent>
                   </Select>
                 ) : (
-                  <p className="text-xs text-muted-foreground">
+                  <p className="desc-5 text-muted-foreground">
                     실제 등록된 회차 정보가 없어요. 아래에서 직접 입력해주세요.
                   </p>
                 )}
@@ -322,7 +322,7 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
                   </div>
                 </>
               ) : (
-                <p className="text-sm text-muted-foreground">{formatYyyymmdd(examDate.replaceAll('-', ''))}</p>
+                <p className="desc-4 text-muted-foreground">{formatYyyymmdd(examDate.replaceAll('-', ''))}</p>
               )}
             </>
           )}
@@ -348,7 +348,7 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
               value={score}
               onChange={(e) => setScore(e.target.value)}
             />
-            {scoreError && <p className="text-xs text-destructive">100점을 넘을 수 없어요.</p>}
+            {scoreError && <p className="desc-5 text-status-red">100점을 넘을 수 없어요.</p>}
           </div>
 
           <div className="flex flex-col gap-1.5">

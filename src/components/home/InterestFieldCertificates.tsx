@@ -19,12 +19,12 @@ export function InterestFieldCertificates() {
 
   return (
     <section>
-      <h2 className="mb-3 text-lg font-bold">관심 직무분야 자격증</h2>
+      <h2 className="heading-3 mb-3">관심 직무분야 자격증</h2>
 
       {certificates && certificates.length === 0 && (
         <Card>
           <CardContent className="flex flex-col items-center gap-3 py-10 text-center">
-            <p className="text-sm text-muted-foreground">아직 관심 분야가 설정되지 않았어요.</p>
+            <p className="desc-3 text-muted-foreground">아직 관심 분야가 설정되지 않았어요.</p>
             <Button variant="outline" size="sm" nativeButton={false} render={<Link to="/mypage/settings" />}>
               관심 분야 설정하기
             </Button>
@@ -36,7 +36,7 @@ export function InterestFieldCertificates() {
         <Carousel opts={{ align: 'start', dragFree: true }}>
           <CarouselContent>
             {certificates.map((certificate) => (
-              <CarouselItem key={certificate.jmCd} className="basis-2/3 sm:basis-1/4">
+              <CarouselItem key={certificate.jmCd} className="basis-[76.9%] sm:basis-1/4">
                 <CertificateCard certificate={certificate} />
               </CarouselItem>
             ))}

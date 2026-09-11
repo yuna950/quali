@@ -3,13 +3,11 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { toast } from 'sonner'
 import { AddMyPlanButton } from '@/components/certificate/AddMyPlanButton'
-import { DdayBadge } from '@/components/certificate/DdayBadge'
 import { BackButton } from '@/components/common/BackButton'
 import { ExamRecordFormDialog } from '@/components/mypage/ExamRecordFormDialog'
-import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { diffInDays, formatYyyymmdd } from '@/lib/date'
+import { diffInDays, formatDday, formatYyyymmdd } from '@/lib/date'
 import { getCertificate, getExamSchedules } from '@/services/certificateService'
 import { listExamRecords, listMyPlans, removeExamRecord, removeMyPlan } from '@/services/userService'
 import type { Certificate, ExamSchedule, ExamStageKey } from '@/types/certificate'
@@ -109,10 +107,10 @@ export function MyCertificateRecordPage() {
       <BackButton />
 
       <section>
-        <p className="mb-1 text-xs text-muted-foreground">
+        <p className="desc-5 mb-1 text-muted-foreground">
           {certificate.qualificationTypeName} / {certificate.jobFieldName}
         </p>
-        <h1 className="text-2xl font-bold">{certificate.name}</h1>
+        <h1 className="heading-2">{certificate.name}</h1>
 
         <div className="mt-6">
           <Button
@@ -129,7 +127,7 @@ export function MyCertificateRecordPage() {
       </section>
 
       <section>
-        <h2 className="mb-3 text-lg font-bold">준비 중</h2>
+        <h2 className="heading-3 mb-3">준비 중</h2>
 
         {certificate &&
           (() => {
@@ -142,7 +140,7 @@ export function MyCertificateRecordPage() {
                 {addable.map((nr) => (
                   <Card key={nr.stage}>
                     <CardContent className="flex items-center justify-between gap-4">
-                      <p className="text-sm text-muted-foreground">
+                      <p className="desc-4 text-muted-foreground">
                         {STAGE_LABEL[nr.stage]} · {nr.year}년 {nr.round}회 · {formatYyyymmdd(nr.examDate)}
                       </p>
                       <AddMyPlanButton
@@ -164,7 +162,7 @@ export function MyCertificateRecordPage() {
         {plans.length === 0 ? (
           <Card>
             <CardContent className="py-10 text-center">
-              <p className="text-sm text-muted-foreground">준비 중인 시험이 없어요.</p>
+              <p className="desc-3 text-muted-foreground">준비 중인 시험이 없어요.</p>
             </CardContent>
           </Card>
         ) : (
@@ -173,34 +171,44 @@ export function MyCertificateRecordPage() {
               const isPast = diffInDays(plan.examDate) < 0
               return (
                 <Card key={plan.id}>
-                  <CardContent className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <CardContent className="flex items-center justify-between gap-4">
                     <div>
-                      <p className="mb-1 text-xs text-muted-foreground">
+                      <p className="desc-5 mb-1 text-muted-foreground">
                         {STAGE_LABEL[plan.stage]} · {plan.year}년 {plan.round}회
                       </p>
-                      <p className="text-sm text-muted-foreground">
-                        {formatYyyymmdd(plan.examDate)}
-                        {plan.examLocation && ` · ${plan.examLocation}`}
-                      </p>
-                      {isPast && <p className="mt-1 text-sm text-brand">시험 결과를 입력해주세요.</p>}
+                      {isPast ? (
+                        <p className="desc-4 text-brand">시험 결과를 입력해주세요.</p>
+                      ) : (
+                        <p className="desc-4 text-muted-foreground">
+                          {formatYyyymmdd(plan.examDate)} · <span className="text-brand">{formatDday(plan.examDate)}</span>
+                          {plan.examLocation && ` · ${plan.examLocation}`}
+                        </p>
+                      )}
                     </div>
                     <div className="flex items-center gap-3">
-                      {isPast ? (
+                      {isPast && (
                         <ExamRecordFormDialog
                           mode="create"
                           lockedPlan={plan}
                           trigger={
-                            <Button variant="outline" size="sm">
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="rounded-full border-transparent bg-brand-light px-3 text-brand hover:bg-brand-light/70"
+                            >
                               결과 입력
                             </Button>
                           }
                           onSaved={handleRecordSaved}
                           onPlanRemoved={handlePlanRemoved}
                         />
-                      ) : (
-                        <DdayBadge targetDate={plan.examDate} />
                       )}
-                      <Button variant="ghost" size="sm" onClick={() => handleRemovePlan(plan.id)}>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="rounded-full px-3 text-status-red hover:bg-status-red/5"
+                        onClick={() => handleRemovePlan(plan.id)}
+                      >
                         삭제
                       </Button>
                     </div>
@@ -214,12 +222,12 @@ export function MyCertificateRecordPage() {
 
       <section>
         <div className="mb-3 flex items-center justify-between">
-          <h2 className="text-lg font-bold">응시 기록</h2>
+          <h2 className="heading-3">응시 기록</h2>
           <ExamRecordFormDialog
             mode="create"
             presetJmCd={jmCd}
             trigger={
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="text-brand hover:bg-brand/5">
                 기록 추가
               </Button>
             }
@@ -230,7 +238,7 @@ export function MyCertificateRecordPage() {
         {records.length === 0 ? (
           <Card>
             <CardContent className="py-10 text-center">
-              <p className="text-sm text-muted-foreground">응시 기록이 없어요.</p>
+              <p className="desc-3 text-muted-foreground">응시 기록이 없어요.</p>
             </CardContent>
           </Card>
         ) : (
@@ -239,30 +247,36 @@ export function MyCertificateRecordPage() {
               <Card key={record.id}>
                 <CardContent className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="mb-1 text-xs text-muted-foreground">
+                    <p className="desc-5 mb-1 text-muted-foreground">
                       {STAGE_LABEL[record.stage]} · {record.year}년 {record.round}회
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="desc-4 text-muted-foreground">
                       {formatYyyymmdd(record.examDate)}
                       {record.score !== undefined && ` · ${record.score}점`}
+                      {' · '}
+                      <span className={record.passed ? 'font-medium text-brand' : 'font-medium text-neutral'}>
+                        {record.passed ? '합격' : '불합격'}
+                      </span>
                     </p>
-                    {record.memo && <p className="mt-1 text-sm text-muted-foreground">{record.memo}</p>}
+                    {record.memo && <p className="desc-4 mt-1 text-muted-foreground">{record.memo}</p>}
                   </div>
                   <div className="flex items-center gap-2">
-                    <Badge variant={record.passed ? 'default' : 'secondary'}>
-                      {record.passed ? '합격' : '불합격'}
-                    </Badge>
                     <ExamRecordFormDialog
                       mode="edit"
                       record={record}
                       trigger={
-                        <Button variant="ghost" size="sm">
+                        <Button variant="outline" size="sm" className="rounded-full px-3 text-neutral">
                           수정
                         </Button>
                       }
                       onSaved={handleRecordSaved}
                     />
-                    <Button variant="ghost" size="sm" onClick={() => handleRemoveRecord(record.id)}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="rounded-full px-3 text-status-red hover:bg-status-red/5"
+                      onClick={() => handleRemoveRecord(record.id)}
+                    >
                       삭제
                     </Button>
                   </div>

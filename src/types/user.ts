@@ -28,6 +28,22 @@ export interface ExamRecord {
   planId?: string
 }
 
+/** 시험 준비물 체크리스트에서 라벨이 고정된 기본 항목(신분증/수험표/필기구) */
+export type DefaultChecklistItemId = 'idCard' | 'admissionTicket' | 'writingTools'
+
+export interface ChecklistCustomItem {
+  id: string
+  label: string
+  checked: boolean
+}
+
+/** 마이페이지 - 시험 준비물 체크리스트 (나의 시험 플랜 하나당 하나) */
+export interface ExamChecklist {
+  planId: string
+  checkedDefaults: DefaultChecklistItemId[]
+  customItems: ChecklistCustomItem[]
+}
+
 /** 마이페이지 - 관심 자격증 */
 export interface InterestCertificate {
   jmCd: string
@@ -37,7 +53,6 @@ export interface InterestCertificate {
 /** 마이페이지 - 설정 */
 export interface UserSettings {
   interestFieldCodes: string[]
-  examRegionCodes: string[]
 }
 
 export interface AuthUser {

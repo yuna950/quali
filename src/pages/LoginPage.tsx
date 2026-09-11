@@ -27,7 +27,7 @@ export function LoginPage() {
   return (
     <div className="flex min-h-[70svh] flex-col items-center justify-center p-6">
       <div className="w-full max-w-sm">
-        <h1 className="mb-6 text-2xl font-bold">로그인</h1>
+        <h1 className="heading-2 mb-6">로그인</h1>
         <Card>
           <CardContent>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -51,12 +51,12 @@ export function LoginPage() {
                   placeholder="4자리 숫자"
                 />
               </div>
-              {error && <p className="text-sm text-destructive">이메일 또는 비밀번호가 올바르지 않아요.</p>}
+              {error && <p className="desc-4 text-status-red">이메일 또는 비밀번호가 올바르지 않아요.</p>}
               <Button type="submit">로그인</Button>
-              <p className="text-center text-xs text-muted-foreground">
+              <p className="desc-5 text-center text-muted-foreground">
                 테스트 계정: {TEST_ACCOUNT.email} / {TEST_ACCOUNT.password}
               </p>
-              <p className="text-center text-xs text-muted-foreground">
+              <p className="desc-5 text-center text-muted-foreground">
                 아직 계정이 없으신가요?{' '}
                 <Link to="/signup" className="text-brand hover:underline">
                   회원가입

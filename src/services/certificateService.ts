@@ -137,43 +137,6 @@ export async function getTestSites(branchName?: string): Promise<TestSite[]> {
   return branchName ? mockTestSites.filter((s) => s.branchName === branchName) : mockTestSites
 }
 
-export interface RegistrationWindowEntry {
-  jmCd: string
-  certificateName: string
-  label: string
-  regStart: string
-  regEnd: string
-}
-
-/** rangeStart~rangeEnd(YYYYMMDD)와 접수기간이 겹치는 모든 자격증의 회차/단계를 모아 반환 */
-export async function listRegistrationWindowsInRange(
-  rangeStart: string,
-  rangeEnd: string,
-): Promise<RegistrationWindowEntry[]> {
-  const entries: RegistrationWindowEntry[] = []
-
-  for (const certificate of mockCertificates) {
-    const schedules = mockExamSchedules[certificate.jmCd] ?? []
-    for (const schedule of schedules) {
-      for (const stageKey of Object.keys(schedule.stages) as ExamStageKey[]) {
-        const stage = schedule.stages[stageKey]
-        if (!stage?.regStart || !stage.regEnd) continue
-        if (stage.regEnd < rangeStart || stage.regStart > rangeEnd) continue
-
-        entries.push({
-          jmCd: certificate.jmCd,
-          certificateName: certificate.name,
-          label: `${formatScheduleRound(certificate.seriesName, schedule)} ${STAGE_LABEL[stageKey]} 접수`,
-          regStart: stage.regStart,
-          regEnd: stage.regEnd,
-        })
-      }
-    }
-  }
-
-  return entries
-}
-
 export type ScheduleEventType = 'registration' | 'exam'
 
 export interface ScheduleEventEntry {

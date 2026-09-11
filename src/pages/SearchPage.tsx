@@ -91,7 +91,7 @@ export function SearchPage() {
           <CertificateCard key={certificate.jmCd} certificate={certificate} />
         ))}
         {certificates.length === 0 && (
-          <p className="col-span-full text-sm text-muted-foreground">조건에 맞는 자격증이 없어요.</p>
+          <p className="desc-3 col-span-full text-muted-foreground">조건에 맞는 자격증이 없어요.</p>
         )}
       </div>
     </div>

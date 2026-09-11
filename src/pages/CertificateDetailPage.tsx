@@ -71,10 +71,10 @@ export function CertificateDetailPage() {
       <section>
         <div className="flex items-start justify-between">
           <div>
-            <p className="mb-1 text-xs text-muted-foreground">
+            <p className="desc-5 mb-1 text-muted-foreground">
               {certificate.qualificationTypeName} / {certificate.jobFieldName}
             </p>
-            <h1 className="text-2xl font-bold">{certificate.name}</h1>
+            <h1 className="heading-2">{certificate.name}</h1>
           </div>
           <InterestButton jmCd={certificate.jmCd} />
         </div>
@@ -85,19 +85,19 @@ export function CertificateDetailPage() {
             {fee && fee.items.length > 0 ? (
               <div className="flex flex-col gap-0.5">
                 {fee.items.map((item) => (
-                  <p key={item.label} className="text-sm text-muted-foreground">
+                  <p key={item.label} className="desc-4 text-muted-foreground">
                     {item.label} : {item.amount.toLocaleString()}원
                   </p>
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-muted-foreground">정보 없음</p>
+              <p className="desc-4 text-muted-foreground">정보 없음</p>
             )}
           </div>
           <div className="flex gap-4">
             <p className="w-24 shrink-0 text-sm font-bold">시험 과목</p>
             {subjects.length === 0 ? (
-              <p className="text-sm text-muted-foreground">정보 없음</p>
+              <p className="desc-4 text-muted-foreground">정보 없음</p>
             ) : (
               <div className="flex flex-col gap-2">
                 {subjects.map((subject) => (
@@ -105,8 +105,8 @@ export function CertificateDetailPage() {
                     key={`${subject.type}-${subject.subjectName}-${subject.order}`}
                     className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2"
                   >
-                    <p className="text-sm text-muted-foreground">{subject.subjectName}</p>
-                    <p className="text-xs text-muted-foreground">
+                    <p className="desc-4 text-muted-foreground">{subject.subjectName}</p>
+                    <p className="desc-5 text-muted-foreground">
                       {subject.type} · {subject.totalQuestions}문항 · {subject.durationMinutes}분
                     </p>
                   </div>
@@ -131,7 +131,7 @@ export function CertificateDetailPage() {
 
       {similar.length > 0 && (
         <section>
-          <h2 className="mb-3 text-xl font-bold">유사 분야 자격증</h2>
+          <h2 className="heading-3 mb-3">유사 분야 자격증</h2>
           <Carousel opts={{ align: 'start', dragFree: true }}>
             <CarouselContent>
               {similar.map((c) => (

@@ -1,4 +1,12 @@
-import type { ExamRecord, InterestCertificate, MyExamPlan, UserSettings } from '@/types/user'
+import type {
+  ChecklistCustomItem,
+  DefaultChecklistItemId,
+  ExamChecklist,
+  ExamRecord,
+  InterestCertificate,
+  MyExamPlan,
+  UserSettings,
+} from '@/types/user'
 
 /**
  * 마이페이지 관련 사용자 액션 데이터 접근 레이어.
@@ -12,6 +20,7 @@ const KEYS = {
   interests: 'quali:interests',
   settings: 'quali:settings',
   seeded: 'quali:seeded',
+  checklists: 'quali:checklists',
 } as const
 
 function readList<T>(key: string): T[] {
@@ -43,6 +52,75 @@ export async function removeMyPlan(id: string): Promise<void> {
     KEYS.myPlans,
     (await listMyPlans()).filter((p) => p.id !== id),
   )
+  writeList(
+    KEYS.checklists,
+    (await listChecklists()).filter((c) => c.planId !== id),
+  )
+}
+
+// 시험 준비물 체크리스트
+async function listChecklists(): Promise<ExamChecklist[]> {
+  return readList<ExamChecklist>(KEYS.checklists)
+}
+
+function emptyChecklist(planId: string): ExamChecklist {
+  return { planId, checkedDefaults: [], customItems: [] }
+}
+
+export async function getChecklist(planId: string): Promise<ExamChecklist> {
+  const checklists = await listChecklists()
+  return checklists.find((c) => c.planId === planId) ?? emptyChecklist(planId)
+}
+
+async function updateChecklist(
+  planId: string,
+  updater: (checklist: ExamChecklist) => ExamChecklist,
+): Promise<ExamChecklist> {
+  const checklists = await listChecklists()
+  const current = checklists.find((c) => c.planId === planId) ?? emptyChecklist(planId)
+  const updated = updater(current)
+  const exists = checklists.some((c) => c.planId === planId)
+  writeList(
+    KEYS.checklists,
+    exists ? checklists.map((c) => (c.planId === planId ? updated : c)) : [...checklists, updated],
+  )
+  return updated
+}
+
+export async function toggleDefaultChecklistItem(
+  planId: string,
+  itemId: DefaultChecklistItemId,
+): Promise<ExamChecklist> {
+  return updateChecklist(planId, (checklist) => ({
+    ...checklist,
+    checkedDefaults: checklist.checkedDefaults.includes(itemId)
+      ? checklist.checkedDefaults.filter((id) => id !== itemId)
+      : [...checklist.checkedDefaults, itemId],
+  }))
+}
+
+export async function addChecklistCustomItem(planId: string, label: string): Promise<ExamChecklist> {
+  const item: ChecklistCustomItem = { id: createId(), label, checked: false }
+  return updateChecklist(planId, (checklist) => ({
+    ...checklist,
+    customItems: [...checklist.customItems, item],
+  }))
+}
+
+export async function toggleChecklistCustomItem(planId: string, itemId: string): Promise<ExamChecklist> {
+  return updateChecklist(planId, (checklist) => ({
+    ...checklist,
+    customItems: checklist.customItems.map((item) =>
+      item.id === itemId ? { ...item, checked: !item.checked } : item,
+    ),
+  }))
+}
+
+export async function removeChecklistCustomItem(planId: string, itemId: string): Promise<ExamChecklist> {
+  return updateChecklist(planId, (checklist) => ({
+    ...checklist,
+    customItems: checklist.customItems.filter((item) => item.id !== itemId),
+  }))
 }
 
 // 응시 기록
@@ -101,7 +179,7 @@ export async function removeInterest(jmCd: string): Promise<void> {
 }
 
 // 설정
-const DEFAULT_SETTINGS: UserSettings = { interestFieldCodes: [], examRegionCodes: [] }
+const DEFAULT_SETTINGS: UserSettings = { interestFieldCodes: [] }
 
 export async function getSettings(): Promise<UserSettings> {
   const raw = localStorage.getItem(KEYS.settings)

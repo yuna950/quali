@@ -29,7 +29,7 @@ export function SignupPage() {
   return (
     <div className="flex min-h-[70svh] flex-col items-center justify-center p-6">
       <div className="w-full max-w-sm">
-        <h1 className="mb-6 text-2xl font-bold">회원가입</h1>
+        <h1 className="heading-2 mb-6">회원가입</h1>
         <Card>
           <CardContent>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -66,9 +66,9 @@ export function SignupPage() {
                   onChange={(e) => setPasswordConfirm(e.target.value)}
                 />
               </div>
-              {error && <p className="text-sm text-destructive">{error}</p>}
+              {error && <p className="desc-4 text-status-red">{error}</p>}
               <Button type="submit">회원가입</Button>
-              <p className="text-center text-xs text-muted-foreground">
+              <p className="desc-5 text-center text-muted-foreground">
                 이미 계정이 있으신가요?{' '}
                 <Link to="/login" className="text-brand hover:underline">
                   로그인

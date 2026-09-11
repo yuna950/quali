@@ -35,8 +35,8 @@
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
+  --border: var(--color-line);
+  --input: var(--color-line);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
@@ -148,4 +148,45 @@ body {
   button:not(:disabled) {
     cursor: pointer;
   }
+}
+
+/*
+ * 타이포그래피 스케일
+ * 제목(H1~H5, 전부 bold): 페이지 구조에서 몇 번이나 등장하는가로 단계를 나눔
+ *   H1 마케팅 헤드라인(사이트 전체 1곳) > H2 페이지 제목(페이지당 1곳) > H3 섹션 제목(페이지당 여러 곳)
+ *   > H4 목록/카드 제목(섹션당 여러 곳) > H5(예비, 아직 사용처 없음)
+ * 설명(D1~D5, 전부 medium): 제목과 얼마나 가깝게 붙어 비중 있게 읽혀야 하는가로 단계를 나눔
+ *   D1 헤드라인 아래 서브카피 > D2 섹션 소개문 > D3 본문 기본값 > D4 카드/리스트 보조정보 > D5 캡션·메타정보
+ * 모바일 값은 지금 앱에서 실제로 쓰이던 크기를 그대로 유지하고, sm(640px) 이상부터 데스크탑 값으로 커짐.
+ */
+@utility heading-1 {
+  @apply text-[1.75rem] leading-[1.2] font-bold sm:text-[2.75rem];
+}
+@utility heading-2 {
+  @apply text-2xl leading-[1.2] font-bold sm:text-4xl;
+}
+@utility heading-3 {
+  @apply text-xl leading-[1.25] font-bold sm:text-3xl;
+}
+@utility heading-4 {
+  @apply text-lg leading-[1.3] font-bold sm:text-2xl;
+}
+@utility heading-5 {
+  @apply text-base leading-[1.3] font-bold sm:text-xl;
+}
+
+@utility desc-1 {
+  @apply text-base font-medium sm:text-2xl;
+}
+@utility desc-2 {
+  @apply text-xl font-medium;
+}
+@utility desc-3 {
+  @apply text-base font-medium;
+}
+@utility desc-4 {
+  @apply text-sm font-medium;
+}
+@utility desc-5 {
+  @apply text-xs font-medium;
 }

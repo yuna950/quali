@@ -3,30 +3,36 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { toYyyymmdd, diffInDays } from '@/lib/date'
-import { listRegistrationWindowsInRange, type RegistrationWindowEntry } from '@/services/certificateService'
+import { toYyyymmdd } from '@/lib/date'
+import { listScheduleEventsInRange, type ScheduleEventEntry } from '@/services/certificateService'
 
 function buildWeekDays(from: Date): Date[] {
+  const sunday = new Date(from)
+  sunday.setDate(sunday.getDate() - sunday.getDay())
   return Array.from({ length: 7 }, (_, i) => {
-    const d = new Date(from)
+    const d = new Date(sunday)
     d.setDate(d.getDate() + i)
     return d
   })
 }
 
 export function UpcomingExamScheduleWeek() {
-  const [entries, setEntries] = useState<RegistrationWindowEntry[] | null>(null)
+  const [entries, setEntries] = useState<ScheduleEventEntry[] | null>(null)
   const [days] = useState(() => buildWeekDays(new Date()))
   const currentMonth = new Date().getMonth() + 1
 
   useEffect(() => {
-    listRegistrationWindowsInRange(toYyyymmdd(days[0]), toYyyymmdd(days[6])).then(setEntries)
+    listScheduleEventsInRange(toYyyymmdd(days[0]), toYyyymmdd(days[6])).then(setEntries)
   }, [days])
+
+  function entriesOnDay(dateStr: string): ScheduleEventEntry[] {
+    return (entries ?? []).filter((entry) => entry.start <= dateStr && dateStr <= entry.end)
+  }
 
   return (
     <section>
       <div className="mb-3 flex items-center justify-between">
-        <h2 className="text-lg font-bold">시험 일정</h2>
+        <h2 className="heading-3">시험 일정</h2>
         <Button
           variant="outline"
           size="sm"
@@ -39,63 +45,60 @@ export function UpcomingExamScheduleWeek() {
         </Button>
       </div>
       <Card>
-        <CardContent>
-          <p className="mb-4 text-xl font-bold">{currentMonth}월</p>
-
-          <div className="relative min-h-44">
-            <div className="pointer-events-none absolute inset-0 grid grid-cols-7">
-              {days.map((_, i) => (
-                <div key={i} className={i < 6 ? 'border-r border-border' : ''} />
-              ))}
+        <CardContent className="flex flex-col gap-4">
+          <div className="flex items-center justify-between">
+            <p className="text-xl font-bold">{currentMonth}월</p>
+            <div className="desc-5 flex items-center gap-3 text-muted-foreground">
+              <span className="flex items-center gap-1.5">
+                <span className="size-1.5 rounded-full bg-brand" /> 접수기간
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="size-1.5 rounded-full bg-foreground" /> 시험일
+              </span>
             </div>
+          </div>
 
-            <div
-              className="relative grid gap-y-4"
-              style={{ gridTemplateColumns: 'repeat(7, minmax(0, 1fr))' }}
-            >
-              {days.map((day, i) => {
-                const isOtherMonth = day.getMonth() + 1 !== currentMonth
-                return (
-                  <div
-                    key={i}
-                    style={{ gridColumn: i + 1, gridRow: 1 }}
-                    className={`border-b border-border px-2 pt-1 pb-3 text-sm ${
-                      isOtherMonth ? 'text-muted-foreground' : 'font-medium'
-                    }`}
-                  >
-                    {isOtherMonth ? `${day.getMonth() + 1}/${day.getDate()}` : day.getDate()}
+          <div className="grid grid-cols-7 border-t border-l border-border">
+            {days.map((day) => {
+              const dateStr = toYyyymmdd(day)
+              const dayEvents = entriesOnDay(dateStr)
+              const hasRegistration = dayEvents.some((e) => e.type === 'registration')
+              const hasExam = dayEvents.some((e) => e.type === 'exam')
+              return (
+                <div
+                  key={dateStr}
+                  className="flex flex-col items-center gap-1.5 border-r border-b border-border py-2"
+                >
+                  <span className="text-sm font-medium">{day.getDate()}</span>
+                  <span className="flex h-1.5 gap-0.5">
+                    {hasRegistration && <span className="size-1.5 rounded-full bg-brand" />}
+                    {hasExam && <span className="size-1.5 rounded-full bg-foreground" />}
+                  </span>
+                </div>
+              )
+            })}
+          </div>
+
+          {entries?.length === 0 && (
+            <p className="desc-3 py-6 text-center text-muted-foreground">이번 주 일정이 없어요.</p>
+          )}
+
+          {entries && entries.length > 0 && (
+            <div className="flex flex-col gap-2">
+              {entries.map((entry, i) => (
+                <Link key={`${entry.jmCd}-${entry.label}-${i}`} to={`/certificates/${entry.jmCd}`}>
+                  <div className="flex items-center gap-2.5 rounded-lg border border-border px-3 py-2 transition-colors hover:bg-muted">
+                    <span
+                      className={`size-1.5 shrink-0 rounded-full ${
+                        entry.type === 'registration' ? 'bg-brand' : 'bg-foreground'
+                      }`}
+                    />
+                    <p className="desc-4 truncate">{entry.label}</p>
                   </div>
-                )
-              })}
-
-              {entries?.length === 0 && (
-                <p
-                  style={{ gridColumn: '1 / 8', gridRow: 2 }}
-                  className="px-2 pt-4 text-sm text-muted-foreground"
-                >
-                  이번 주 접수 예정인 시험이 없어요.
-                </p>
-              )}
-
-              {entries?.map((entry, index) => (
-                <Link
-                  key={`${entry.jmCd}-${entry.label}`}
-                  to={`/certificates/${entry.jmCd}`}
-                  style={{
-                    gridColumn: `${Math.min(Math.max(diffInDays(entry.regStart, days[0]), 0), 6) + 1} / ${
-                      Math.min(Math.max(diffInDays(entry.regEnd, days[0]), 0), 6) + 2
-                    }`,
-                    gridRow: index + 2,
-                    marginInline: '0.5rem',
-                  }}
-                  className="truncate rounded-full bg-brand/15 px-3 py-2 text-xs font-medium text-brand transition-colors hover:bg-brand/25"
-                  title={entry.label}
-                >
-                  {entry.label}
                 </Link>
               ))}
             </div>
-          </div>
+          )}
         </CardContent>
       </Card>
     </section>

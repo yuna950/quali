@@ -13,7 +13,7 @@ function ScheduleField({ label, value }: { label: string; value: string }) {
   return (
     <div className="text-center">
       <p className="mb-1 text-sm font-bold">{label}</p>
-      <p className="text-sm text-muted-foreground">{value}</p>
+      <p className="desc-4 text-muted-foreground">{value}</p>
     </div>
   )
 }
@@ -43,7 +43,7 @@ export function ExamScheduleTable({ certificate, schedules, stage, title }: Exam
     const stageDates = schedule.stages[stage]!
     return (
       <section>
-        <h2 className="mb-3 text-lg font-bold">{title}</h2>
+        <h2 className="heading-3 mb-3">{title}</h2>
         <div className="flex flex-col items-center gap-6 rounded-xl border border-border p-4 sm:flex-row sm:justify-around">
           <ScheduleFields stageDates={stageDates} />
           {stageDates.examStart && (
@@ -63,7 +63,7 @@ export function ExamScheduleTable({ certificate, schedules, stage, title }: Exam
 
   return (
     <section>
-      <h2 className="mb-3 text-lg font-bold">{title}</h2>
+      <h2 className="heading-3 mb-3">{title}</h2>
       <div className="overflow-x-auto rounded-xl border border-border">
         <div className="grid" style={{ gridTemplateColumns: `repeat(${rounds.length}, minmax(180px, 1fr))` }}>
           {rounds.map((schedule) => (

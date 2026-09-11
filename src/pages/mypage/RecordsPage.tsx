@@ -83,7 +83,7 @@ export function RecordsPage() {
       {groups.length === 0 && (
         <Card>
           <CardContent className="py-10 text-center">
-            <p className="text-sm text-muted-foreground">응시 기록이 없어요.</p>
+            <p className="desc-3 text-muted-foreground">응시 기록이 없어요.</p>
           </CardContent>
         </Card>
       )}
@@ -92,7 +92,7 @@ export function RecordsPage() {
         <Link key={group.jmCd} to={`/mypage/records/${group.jmCd}`}>
           <Card className="transition-shadow hover:shadow-md">
             <CardContent className="flex flex-col gap-3">
-              <p className="text-lg font-bold">{group.certificateName}</p>
+              <p className="heading-4">{group.certificateName}</p>
 
               {group.visible.map((record, i) => (
                 <div
@@ -100,10 +100,10 @@ export function RecordsPage() {
                   className={`flex items-center justify-between gap-4 ${i > 0 ? 'border-t border-border pt-3' : ''}`}
                 >
                   <div>
-                    <p className="text-xs text-muted-foreground">
+                    <p className="desc-5 text-muted-foreground">
                       {STAGE_LABEL[record.stage]} · {record.year}년 {record.round}회
                     </p>
-                    <p className="mt-1 text-sm text-muted-foreground">
+                    <p className="desc-4 mt-1 text-muted-foreground">
                       {formatYyyymmdd(record.examDate)}
                       {record.score !== undefined && ` · ${record.score}점`}
                       {' · '}
@@ -111,7 +111,7 @@ export function RecordsPage() {
                         {record.passed ? '합격' : '불합격'}
                       </span>
                     </p>
-                    {record.memo && <p className="mt-1 text-sm text-muted-foreground">{record.memo}</p>}
+                    {record.memo && <p className="desc-4 mt-1 text-muted-foreground">{record.memo}</p>}
                   </div>
                   <div className="flex items-center gap-2" onClick={(e) => e.preventDefault()}>
                     <ExamRecordFormDialog
@@ -137,7 +137,7 @@ export function RecordsPage() {
               ))}
 
               {group.moreCount > 0 && (
-                <p className="text-xs text-muted-foreground">외 {group.moreCount}건 더 보기 →</p>
+                <p className="desc-5 text-muted-foreground">외 {group.moreCount}건 더 보기 →</p>
               )}
             </CardContent>
           </Card>

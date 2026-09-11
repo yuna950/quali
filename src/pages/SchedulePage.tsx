@@ -61,7 +61,7 @@ export function SchedulePage() {
   return (
     <div className="mx-auto flex max-w-4xl flex-col gap-6 p-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">시험 일정</h1>
+        <h1 className="heading-2">시험 일정</h1>
         <Button variant="outline" size="sm" onClick={goToToday}>
           오늘
         </Button>
@@ -80,7 +80,7 @@ export function SchedulePage() {
           </Button>
         </div>
 
-        <div className="mb-3 flex items-center gap-4 text-xs text-muted-foreground">
+        <div className="desc-5 mb-3 flex items-center gap-4 text-muted-foreground">
           <span className="flex items-center gap-1.5">
             <span className="size-1.5 rounded-full bg-brand" /> 접수기간
           </span>
@@ -112,7 +112,7 @@ export function SchedulePage() {
                 key={dateStr}
                 type="button"
                 onClick={() => handleSelectDate(dateStr)}
-                className={`flex min-h-11 flex-col items-center gap-1 border-r border-b border-border py-1.5 text-sm transition-colors sm:min-h-16 sm:py-2 ${
+                className={`flex aspect-square flex-col items-center justify-center gap-1 border-r border-b border-border text-sm transition-colors ${
                   isOtherMonth ? 'text-muted-foreground/40' : ''
                 } ${isSelected ? 'bg-brand/10' : 'hover:bg-muted'}`}
               >
@@ -136,11 +136,11 @@ export function SchedulePage() {
       </div>
 
       <section ref={eventListRef}>
-        <h2 className="mb-3 text-lg font-bold">{formatDateRangeKorean(selectedDate, selectedDate)}</h2>
+        <h2 className="heading-3 mb-3">{formatDateRangeKorean(selectedDate, selectedDate)}</h2>
         {selectedEvents.length === 0 ? (
           <Card>
             <CardContent className="py-10 text-center">
-              <p className="text-sm text-muted-foreground">이 날짜에 해당하는 일정이 없어요.</p>
+              <p className="desc-3 text-muted-foreground">이 날짜에 해당하는 일정이 없어요.</p>
             </CardContent>
           </Card>
         ) : (
@@ -154,7 +154,7 @@ export function SchedulePage() {
                         event.type === 'registration' ? 'bg-brand' : 'bg-foreground'
                       }`}
                     />
-                    <p className="text-sm">{event.label}</p>
+                    <p className="desc-4">{event.label}</p>
                   </CardContent>
                 </Card>
               </Link>

@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { useAuth } from '@/lib/auth'
-import { BRANCH_OPTIONS } from '@/mocks/branches'
 import { listJobFieldOptions } from '@/services/certificateService'
 import { getSettings, updateSettings } from '@/services/userService'
 import type { JobFieldOption } from '@/types/certificate'
@@ -14,7 +13,6 @@ export function SettingsPage() {
   const { user, updateName } = useAuth()
   const [jobFieldOptions, setJobFieldOptions] = useState<JobFieldOption[]>([])
   const [interestFieldCodes, setInterestFieldCodes] = useState<string[]>([])
-  const [examRegionCodes, setExamRegionCodes] = useState<string[]>([])
   const [name, setName] = useState(user?.name ?? '')
   const [isEditingName, setIsEditingName] = useState(false)
 
@@ -22,7 +20,6 @@ export function SettingsPage() {
     Promise.all([listJobFieldOptions(), getSettings()]).then(([fields, settings]) => {
       setJobFieldOptions(fields)
       setInterestFieldCodes(settings.interestFieldCodes)
-      setExamRegionCodes(settings.examRegionCodes)
     })
   }, [])
 
@@ -46,20 +43,11 @@ export function SettingsPage() {
     toast('관심 분야를 저장했어요.')
   }
 
-  async function toggleExamRegion(code: string) {
-    const next = examRegionCodes.includes(code)
-      ? examRegionCodes.filter((c) => c !== code)
-      : [...examRegionCodes, code]
-    setExamRegionCodes(next)
-    await updateSettings({ examRegionCodes: next })
-    toast('응시 지역을 저장했어요.')
-  }
-
   return (
     <div className="flex flex-col gap-10">
       <section>
-        <h2 className="mb-1 text-lg font-bold">개인정보</h2>
-        <p className="mb-3 text-sm text-muted-foreground">이름과 이메일을 확인하고 이름을 수정할 수 있어요.</p>
+        <h2 className="heading-3 mb-1">개인정보</h2>
+        <p className="desc-3 mb-3 text-muted-foreground">이름과 이메일을 확인하고 이름을 수정할 수 있어요.</p>
         <div className="flex max-w-sm flex-col gap-3">
           <div className="flex flex-col gap-1.5">
             <Label>이메일</Label>
@@ -76,21 +64,14 @@ export function SettingsPage() {
       </section>
 
       <section>
-        <h2 className="mb-1 text-lg font-bold">관심 분야</h2>
-        <p className="mb-3 text-sm text-muted-foreground">
-          선택한 분야의 자격증을 홈 화면에서 추천해드려요.
-        </p>
+        <h2 className="heading-3 mb-1">관심 분야</h2>
+        <p className="desc-3 mb-1 text-muted-foreground">선택한 분야의 자격증을 홈 화면에서 추천해드려요.</p>
+        <p className="desc-5 mb-3 text-muted-foreground">여러 분야를 함께 선택할 수 있어요.</p>
         <MultiSelectBadges
           options={jobFieldOptions}
           selected={interestFieldCodes}
           onToggle={toggleInterestField}
         />
-      </section>
-
-      <section>
-        <h2 className="mb-1 text-lg font-bold">응시 지역</h2>
-        <p className="mb-3 text-sm text-muted-foreground">주로 시험을 응시하는 지역을 선택해주세요.</p>
-        <MultiSelectBadges options={BRANCH_OPTIONS} selected={examRegionCodes} onToggle={toggleExamRegion} />
       </section>
     </div>
   )

@@ -1,12 +1,11 @@
 import { Plus } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { toast } from 'sonner'
 import { ExamRecordFormDialog } from '@/components/mypage/ExamRecordFormDialog'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { formatYyyymmdd } from '@/lib/date'
-import { listExamRecords, removeExamRecord } from '@/services/userService'
+import { listExamRecords } from '@/services/userService'
 import type { ExamRecord } from '@/types/user'
 
 const STAGE_LABEL = { written: '필기', practical: '실기', interview: '면접' } as const
@@ -53,14 +52,6 @@ export function RecordsPage() {
     })
   }
 
-  async function handleRemove(id: string, e: React.MouseEvent) {
-    e.preventDefault()
-    e.stopPropagation()
-    await removeExamRecord(id)
-    setRecords((prev) => prev?.filter((r) => r.id !== id) ?? null)
-    toast('응시기록을 삭제했어요.')
-  }
-
   if (!records) return null
 
   const groups = groupByCertificate(records)
@@ -95,44 +86,19 @@ export function RecordsPage() {
               <p className="heading-4">{group.certificateName}</p>
 
               {group.visible.map((record, i) => (
-                <div
-                  key={record.id}
-                  className={`flex items-center justify-between gap-4 ${i > 0 ? 'border-t border-border pt-3' : ''}`}
-                >
-                  <div>
-                    <p className="desc-5 text-muted-foreground">
-                      {STAGE_LABEL[record.stage]} · {record.year}년 {record.round}회
-                    </p>
-                    <p className="desc-4 mt-1 text-muted-foreground">
-                      {formatYyyymmdd(record.examDate)}
-                      {record.score !== undefined && ` · ${record.score}점`}
-                      {' · '}
-                      <span className={record.passed ? 'font-medium text-brand' : 'font-medium text-neutral'}>
-                        {record.passed ? '합격' : '불합격'}
-                      </span>
-                    </p>
-                    {record.memo && <p className="desc-4 mt-1 text-muted-foreground">{record.memo}</p>}
-                  </div>
-                  <div className="flex items-center gap-2" onClick={(e) => e.preventDefault()}>
-                    <ExamRecordFormDialog
-                      mode="edit"
-                      record={record}
-                      trigger={
-                        <Button variant="outline" size="sm" className="rounded-full px-3 text-neutral">
-                          수정
-                        </Button>
-                      }
-                      onSaved={handleSaved}
-                    />
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="rounded-full px-3 text-status-red hover:bg-status-red/5"
-                      onClick={(e) => handleRemove(record.id, e)}
-                    >
-                      삭제
-                    </Button>
-                  </div>
+                <div key={record.id} className={i > 0 ? 'border-t border-border pt-3' : ''}>
+                  <p className="desc-5 text-muted-foreground">
+                    {STAGE_LABEL[record.stage]} · {record.year}년 {record.round}회
+                  </p>
+                  <p className="desc-4 mt-1 text-muted-foreground">
+                    {formatYyyymmdd(record.examDate)}
+                    {record.score !== undefined && ` · ${record.score}점`}
+                    {' · '}
+                    <span className={record.passed ? 'font-medium text-brand' : 'font-medium text-neutral'}>
+                      {record.passed ? '합격' : '불합격'}
+                    </span>
+                  </p>
+                  {record.memo && <p className="desc-4 mt-1 text-muted-foreground">{record.memo}</p>}
                 </div>
               ))}
 

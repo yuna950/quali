@@ -135,7 +135,7 @@ export function CertificateDetailPage() {
           <Carousel opts={{ align: 'start', dragFree: true }}>
             <CarouselContent>
               {similar.map((c) => (
-                <CarouselItem key={c.jmCd} className="basis-1/2 sm:basis-1/3">
+                <CarouselItem key={c.jmCd} className="basis-[76.9%] sm:basis-1/3">
                   <CertificateCard certificate={c} />
                 </CarouselItem>
               ))}

@@ -96,77 +96,70 @@ export function CategoryBrowser({
     }
   }, [selectedJobFieldCode, selectedMidJobFieldCode])
 
+  const selectedJobFieldName = jobFields.find((f) => f.code === selectedJobFieldCode)?.name
+  const selectedMidJobFieldName = midJobFields.find((f) => f.code === selectedMidJobFieldCode)?.name
+  const selectedCertificateName = certificates.find((c) => c.jmCd === selectedJmCd)?.name
+  const selectedSummary = [selectedJobFieldName, selectedMidJobFieldName, selectedCertificateName]
+    .filter(Boolean)
+    .join(' > ')
+
   return (
     <>
-      <div className="flex flex-col gap-3 sm:hidden">
-        <Select
-          value={selectedJobFieldCode ?? ALL_VALUE}
-          onValueChange={(v) => (v && v !== ALL_VALUE ? onSelectJobField(v) : onClearJobField())}
-        >
-          <SelectTrigger className="w-full">
-            <SelectValue>
-              {() =>
-                selectedJobFieldCode
-                  ? (jobFields.find((f) => f.code === selectedJobFieldCode)?.name ?? '직무분야')
-                  : '직무분야: 전체'
-              }
-            </SelectValue>
-          </SelectTrigger>
-          <SelectContent alignItemWithTrigger={false}>
-            <SelectItem value={ALL_VALUE}>전체</SelectItem>
-            {jobFields.map((field) => (
-              <SelectItem key={field.code} value={field.code}>
-                {field.name}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+      <div className="flex flex-col gap-1.5 sm:hidden">
+        <div className="flex gap-2">
+          <Select
+            value={selectedJobFieldCode ?? ALL_VALUE}
+            onValueChange={(v) => (v && v !== ALL_VALUE ? onSelectJobField(v) : onClearJobField())}
+          >
+            <SelectTrigger className="min-w-0 flex-1">
+              <SelectValue>{() => selectedJobFieldName ?? '직무분야'}</SelectValue>
+            </SelectTrigger>
+            <SelectContent alignItemWithTrigger={false}>
+              <SelectItem value={ALL_VALUE}>전체</SelectItem>
+              {jobFields.map((field) => (
+                <SelectItem key={field.code} value={field.code}>
+                  {field.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
 
-        <Select
-          value={selectedMidJobFieldCode ?? null}
-          onValueChange={(v) => v && onSelectMidJobField(v)}
-          disabled={!selectedJobFieldCode}
-        >
-          <SelectTrigger className="w-full">
-            <SelectValue>
-              {(v: string | null) => {
-                if (!selectedJobFieldCode) return '직무분야를 먼저 선택하세요'
-                if (!v) return '분류를 선택하세요'
-                return midJobFields.find((f) => f.code === v)?.name ?? '분류를 선택하세요'
-              }}
-            </SelectValue>
-          </SelectTrigger>
-          <SelectContent alignItemWithTrigger={false}>
-            {midJobFields.map((field) => (
-              <SelectItem key={field.code} value={field.code}>
-                {field.name}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+          <Select
+            value={selectedMidJobFieldCode ?? null}
+            onValueChange={(v) => v && onSelectMidJobField(v)}
+            disabled={!selectedJobFieldCode}
+          >
+            <SelectTrigger className="min-w-0 flex-1">
+              <SelectValue>{() => selectedMidJobFieldName ?? '분류'}</SelectValue>
+            </SelectTrigger>
+            <SelectContent alignItemWithTrigger={false}>
+              {midJobFields.map((field) => (
+                <SelectItem key={field.code} value={field.code}>
+                  {field.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
 
-        <Select
-          value={selectedJmCd ?? null}
-          onValueChange={(v) => v && onSelectCertificate(v)}
-          disabled={!selectedMidJobFieldCode}
-        >
-          <SelectTrigger className="w-full">
-            <SelectValue>
-              {(v: string | null) => {
-                if (!selectedMidJobFieldCode) return '분류를 먼저 선택하세요'
-                if (!v) return '시행종목을 선택하세요'
-                return certificates.find((c) => c.jmCd === v)?.name ?? '시행종목을 선택하세요'
-              }}
-            </SelectValue>
-          </SelectTrigger>
-          <SelectContent alignItemWithTrigger={false}>
-            {certificates.map((certificate) => (
-              <SelectItem key={certificate.jmCd} value={certificate.jmCd}>
-                {certificate.name}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+          <Select
+            value={selectedJmCd ?? null}
+            onValueChange={(v) => v && onSelectCertificate(v)}
+            disabled={!selectedMidJobFieldCode}
+          >
+            <SelectTrigger className="min-w-0 flex-1">
+              <SelectValue>{() => selectedCertificateName ?? '시행종목'}</SelectValue>
+            </SelectTrigger>
+            <SelectContent alignItemWithTrigger={false}>
+              {certificates.map((certificate) => (
+                <SelectItem key={certificate.jmCd} value={certificate.jmCd}>
+                  {certificate.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
+        {selectedSummary && <p className="desc-5 px-1 text-muted-foreground">{selectedSummary}</p>}
       </div>
 
       <div className="hidden divide-x divide-border rounded-xl border border-border sm:grid sm:grid-cols-3">

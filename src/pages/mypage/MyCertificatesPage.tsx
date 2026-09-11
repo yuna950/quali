@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { toast } from 'sonner'
 import { ExamRecordFormDialog } from '@/components/mypage/ExamRecordFormDialog'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { diffInDays, formatDday, formatYyyymmdd } from '@/lib/date'
-import { listMyPlans, removeMyPlan } from '@/services/userService'
+import { listMyPlans } from '@/services/userService'
 import type { MyExamPlan } from '@/types/user'
 
 const STAGE_LABEL = { written: '필기', practical: '실기', interview: '면접' } as const
@@ -45,14 +44,6 @@ export function MyCertificatesPage() {
   useEffect(() => {
     listMyPlans().then(setPlans)
   }, [])
-
-  async function handleRemove(id: string, e: React.MouseEvent) {
-    e.preventDefault()
-    e.stopPropagation()
-    await removeMyPlan(id)
-    setPlans((prev) => prev?.filter((p) => p.id !== id) ?? null)
-    toast('나의 시험에서 삭제했어요.')
-  }
 
   function handlePlanRemoved(planId: string) {
     setPlans((prev) => prev?.filter((p) => p.id !== planId) ?? null)
@@ -102,8 +93,8 @@ export function MyCertificatesPage() {
                         </p>
                       )}
                     </div>
-                    <div className="flex items-center gap-3" onClick={(e) => e.preventDefault()}>
-                      {needsResult && (
+                    {needsResult && (
+                      <div onClick={(e) => e.preventDefault()}>
                         <ExamRecordFormDialog
                           mode="create"
                           lockedPlan={plan}
@@ -119,16 +110,8 @@ export function MyCertificatesPage() {
                           onSaved={() => {}}
                           onPlanRemoved={handlePlanRemoved}
                         />
-                      )}
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="rounded-full px-3 text-status-red hover:bg-status-red/5"
-                        onClick={(e) => handleRemove(plan.id, e)}
-                      >
-                        삭제
-                      </Button>
-                    </div>
+                      </div>
+                    )}
                   </div>
                 )
               })}

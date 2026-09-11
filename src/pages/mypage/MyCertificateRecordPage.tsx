@@ -5,6 +5,17 @@ import { toast } from 'sonner'
 import { AddMyPlanButton } from '@/components/certificate/AddMyPlanButton'
 import { BackButton } from '@/components/common/BackButton'
 import { ExamRecordFormDialog } from '@/components/mypage/ExamRecordFormDialog'
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { diffInDays, formatDday, formatYyyymmdd } from '@/lib/date'
@@ -15,6 +26,40 @@ import type { ExamRecord, MyExamPlan } from '@/types/user'
 
 const STAGE_LABEL = { written: '필기', practical: '실기', interview: '면접' } as const
 const STAGE_KEYS: ExamStageKey[] = ['written', 'practical', 'interview']
+
+function ConfirmDeleteButton({ description, onConfirm }: { description: string; onConfirm: () => void }) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <AlertDialog open={open} onOpenChange={setOpen}>
+      <AlertDialogTrigger
+        render={
+          <Button variant="outline" size="sm" className="rounded-full px-3 text-status-red hover:bg-status-red/5">
+            삭제
+          </Button>
+        }
+      />
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>정말 삭제하시겠어요?</AlertDialogTitle>
+          <AlertDialogDescription>{description}</AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>취소</AlertDialogCancel>
+          <AlertDialogAction
+            className="bg-status-red text-white hover:bg-status-red/90"
+            onClick={() => {
+              onConfirm()
+              setOpen(false)
+            }}
+          >
+            삭제
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  )
+}
 
 interface NearestRound {
   stage: ExamStageKey
@@ -203,14 +248,10 @@ export function MyCertificateRecordPage() {
                           onPlanRemoved={handlePlanRemoved}
                         />
                       )}
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="rounded-full px-3 text-status-red hover:bg-status-red/5"
-                        onClick={() => handleRemovePlan(plan.id)}
-                      >
-                        삭제
-                      </Button>
+                      <ConfirmDeleteButton
+                        description="이 시험 일정을 나의 시험에서 삭제할까요? 이 작업은 되돌릴 수 없어요."
+                        onConfirm={() => handleRemovePlan(plan.id)}
+                      />
                     </div>
                   </CardContent>
                 </Card>
@@ -271,14 +312,10 @@ export function MyCertificateRecordPage() {
                       }
                       onSaved={handleRecordSaved}
                     />
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="rounded-full px-3 text-status-red hover:bg-status-red/5"
-                      onClick={() => handleRemoveRecord(record.id)}
-                    >
-                      삭제
-                    </Button>
+                    <ConfirmDeleteButton
+                      description="이 응시기록을 삭제할까요? 이 작업은 되돌릴 수 없어요."
+                      onConfirm={() => handleRemoveRecord(record.id)}
+                    />
                   </div>
                 </CardContent>
               </Card>

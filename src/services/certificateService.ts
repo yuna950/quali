@@ -1,9 +1,5 @@
 import { formatScheduleRound, getApplicationStatus } from '@/lib/examStatus'
-import { mockCertificates } from '@/mocks/certificates'
-import { mockExamFees } from '@/mocks/examFees'
-import { mockExamSchedules } from '@/mocks/examSchedules'
-import { mockExamSubjects } from '@/mocks/examSubjects'
-import { mockPassRates } from '@/mocks/passRates'
+import { supabase } from '@/lib/supabase'
 import type {
   Certificate,
   ExamApplicationStatus,
@@ -15,6 +11,7 @@ import type {
   PassRateSummary,
   SeriesOption,
 } from '@/types/certificate'
+import type { Tables } from '@/types/supabase'
 
 const STAGE_LABEL: Record<ExamStageKey, string> = {
   written: '필기',
@@ -24,9 +21,59 @@ const STAGE_LABEL: Record<ExamStageKey, string> = {
 
 /**
  * 자격증 관련 데이터 접근 레이어.
- * 지금은 목데이터를 반환하지만, Supabase 연동 시 이 함수들의 내부 구현만
- * Supabase 테이블 조회로 교체하면 되고 화면 코드는 그대로 유지된다.
+ * Supabase의 공개 테이블(certificates 등)을 조회해서 화면이 쓰는 camelCase 타입으로 변환해 반환한다.
+ * 화면 코드는 이 함수들의 반환 타입만 보고 동작하므로, 여기 내부만 바뀌고 화면은 그대로다.
  */
+
+function toCertificate(row: Tables<'certificates'>): Certificate {
+  return {
+    jmCd: row.jm_cd,
+    name: row.name,
+    qualificationTypeCode: row.qualification_type_code,
+    qualificationTypeName: row.qualification_type_name,
+    seriesCode: row.series_code,
+    seriesName: row.series_name,
+    jobFieldCode: row.job_field_code,
+    jobFieldName: row.job_field_name,
+    midJobFieldCode: row.mid_job_field_code,
+    midJobFieldName: row.mid_job_field_name,
+  }
+}
+
+function toExamSchedule(row: Tables<'exam_schedules'>): ExamSchedule {
+  return {
+    jmCd: row.jm_cd,
+    year: row.year,
+    round: row.round,
+    stages: (row.stages ?? {}) as ExamSchedule['stages'],
+  }
+}
+
+function toExamFee(row: Tables<'exam_fees'>): ExamFee {
+  return { jmCd: row.jm_cd, items: (row.items ?? []) as unknown as ExamFee['items'] }
+}
+
+function toExamSubject(row: Tables<'exam_subjects'>): ExamSubject {
+  return {
+    jmCd: row.jm_cd,
+    type: row.type,
+    subjectName: row.subject_name,
+    order: row.subject_order,
+    isRequired: row.is_required,
+    optionalFieldName: row.optional_field_name,
+    fullScore: row.full_score,
+    totalQuestions: row.total_questions,
+    durationMinutes: row.duration_minutes,
+  }
+}
+
+function toPassRateSummary(row: Tables<'pass_rates'>): PassRateSummary {
+  return {
+    jmCd: row.jm_cd,
+    years: (row.years ?? []) as unknown as PassRateSummary['years'],
+    averageRate: row.average_rate,
+  }
+}
 
 export interface SearchCertificatesQuery {
   keyword?: string
@@ -38,45 +85,50 @@ export interface SearchCertificatesQuery {
 }
 
 export async function listCertificates(): Promise<Certificate[]> {
-  return mockCertificates
+  const { data, error } = await supabase.from('certificates').select('*')
+  if (error) throw error
+  return data.map(toCertificate)
 }
 
 export async function getCertificate(jmCd: string): Promise<Certificate | undefined> {
-  return mockCertificates.find((c) => c.jmCd === jmCd)
+  const { data, error } = await supabase.from('certificates').select('*').eq('jm_cd', jmCd).maybeSingle()
+  if (error) throw error
+  return data ? toCertificate(data) : undefined
 }
 
 export async function searchCertificates(query: SearchCertificatesQuery): Promise<Certificate[]> {
-  const keyword = query.keyword?.trim().toLowerCase()
+  let request = supabase.from('certificates').select('*')
 
-  return mockCertificates.filter((certificate) => {
-    if (keyword && !certificate.name.toLowerCase().includes(keyword)) return false
-    if (query.seriesCode && certificate.seriesCode !== query.seriesCode) return false
-    if (query.jobFieldCode && certificate.jobFieldCode !== query.jobFieldCode) return false
-    if (query.midJobFieldCode && certificate.midJobFieldCode !== query.midJobFieldCode) return false
-    if (query.jmCd && certificate.jmCd !== query.jmCd) return false
-    if (query.status) {
-      const schedules = mockExamSchedules[certificate.jmCd] ?? []
-      if (getApplicationStatus(schedules) !== query.status) return false
-    }
-    return true
-  })
+  if (query.keyword?.trim()) request = request.ilike('name', `%${query.keyword.trim()}%`)
+  if (query.seriesCode) request = request.eq('series_code', query.seriesCode)
+  if (query.jobFieldCode) request = request.eq('job_field_code', query.jobFieldCode)
+  if (query.midJobFieldCode) request = request.eq('mid_job_field_code', query.midJobFieldCode)
+  if (query.jmCd) request = request.eq('jm_cd', query.jmCd)
+
+  const { data, error } = await request
+  if (error) throw error
+  const certificates = data.map(toCertificate)
+
+  if (!query.status) return certificates
+
+  const results: Certificate[] = []
+  for (const certificate of certificates) {
+    const schedules = await getExamSchedules(certificate.jmCd)
+    if (getApplicationStatus(schedules) === query.status) results.push(certificate)
+  }
+  return results
 }
 
 export async function listSeriesOptions(): Promise<SeriesOption[]> {
-  const seen = new Map<string, SeriesOption>()
-  for (const c of mockCertificates) {
-    if (!seen.has(c.seriesCode)) seen.set(c.seriesCode, { code: c.seriesCode, name: c.seriesName })
-  }
-  return [...seen.values()]
+  const { data, error } = await supabase.from('series_options').select('*')
+  if (error) throw error
+  return data.map((row) => ({ code: row.code!, name: row.name! }))
 }
 
 export async function listJobFieldOptions(): Promise<JobFieldOption[]> {
-  const seen = new Map<string, JobFieldOption>()
-  for (const c of mockCertificates) {
-    if (!c.jobFieldCode) continue
-    if (!seen.has(c.jobFieldCode)) seen.set(c.jobFieldCode, { code: c.jobFieldCode, name: c.jobFieldName })
-  }
-  return [...seen.values()]
+  const { data, error } = await supabase.from('job_field_options').select('*')
+  if (error) throw error
+  return data.filter((row) => row.code).map((row) => ({ code: row.code!, name: row.name! }))
 }
 
 export interface MidJobFieldOption {
@@ -85,44 +137,76 @@ export interface MidJobFieldOption {
 }
 
 export async function listMidJobFieldOptions(jobFieldCode: string): Promise<MidJobFieldOption[]> {
+  const { data, error } = await supabase
+    .from('certificates')
+    .select('mid_job_field_code, mid_job_field_name')
+    .eq('job_field_code', jobFieldCode)
+  if (error) throw error
+
   const seen = new Map<string, MidJobFieldOption>()
-  for (const c of mockCertificates) {
-    if (c.jobFieldCode !== jobFieldCode || !c.midJobFieldCode) continue
-    if (!seen.has(c.midJobFieldCode)) {
-      seen.set(c.midJobFieldCode, { code: c.midJobFieldCode, name: c.midJobFieldName })
-    }
+  for (const row of data) {
+    if (!row.mid_job_field_code || seen.has(row.mid_job_field_code)) continue
+    seen.set(row.mid_job_field_code, { code: row.mid_job_field_code, name: row.mid_job_field_name })
   }
   return [...seen.values()]
 }
 
 export async function getExamSchedules(jmCd: string): Promise<ExamSchedule[]> {
-  return mockExamSchedules[jmCd] ?? []
+  const { data, error } = await supabase.from('exam_schedules').select('*').eq('jm_cd', jmCd)
+  if (error) throw error
+  return data.map(toExamSchedule)
 }
 
 export async function getExamFee(jmCd: string): Promise<ExamFee | undefined> {
-  return mockExamFees[jmCd]
+  const { data, error } = await supabase.from('exam_fees').select('*').eq('jm_cd', jmCd).maybeSingle()
+  if (error) throw error
+  return data ? toExamFee(data) : undefined
 }
 
 export async function getExamSubjects(jmCd: string): Promise<ExamSubject[]> {
-  return mockExamSubjects[jmCd] ?? []
+  const { data, error } = await supabase
+    .from('exam_subjects')
+    .select('*')
+    .eq('jm_cd', jmCd)
+    .order('subject_order')
+  if (error) throw error
+  return data.map(toExamSubject)
 }
 
 export async function getPassRateSummary(jmCd: string): Promise<PassRateSummary | undefined> {
-  return mockPassRates[jmCd]
+  const { data, error } = await supabase.from('pass_rates').select('*').eq('jm_cd', jmCd).maybeSingle()
+  if (error) throw error
+  return data ? toPassRateSummary(data) : undefined
 }
 
 export async function getSimilarCertificates(jmCd: string, limit = 4): Promise<Certificate[]> {
   const current = await getCertificate(jmCd)
   if (!current) return []
-  return mockCertificates
-    .filter((c) => c.jmCd !== jmCd && c.jobFieldCode === current.jobFieldCode)
-    .slice(0, limit)
+
+  let request = supabase
+    .from('certificates')
+    .select('*')
+    .eq('job_field_code', current.jobFieldCode)
+    .neq('jm_cd', jmCd)
+  if (Number.isFinite(limit)) request = request.limit(limit)
+
+  const { data, error } = await request
+  if (error) throw error
+  return data.map(toCertificate)
 }
 
 /** 합격률 4년 평균 기준 인기 자격증 정렬 (기획서 기준. 추후 실제 인기 지표 확정 시 교체) */
 export async function getPopularCertificates(limit = 5): Promise<Certificate[]> {
-  return [...mockCertificates]
-    .sort((a, b) => (mockPassRates[b.jmCd]?.averageRate ?? 0) - (mockPassRates[a.jmCd]?.averageRate ?? 0))
+  const [certificates, passRates] = await Promise.all([
+    listCertificates(),
+    supabase.from('pass_rates').select('jm_cd, average_rate').then(({ data, error }) => {
+      if (error) throw error
+      return new Map(data.map((row) => [row.jm_cd, row.average_rate]))
+    }),
+  ])
+
+  return [...certificates]
+    .sort((a, b) => (passRates.get(b.jmCd) ?? 0) - (passRates.get(a.jmCd) ?? 0))
     .slice(0, limit)
 }
 
@@ -142,40 +226,49 @@ export async function listScheduleEventsInRange(
   rangeStart: string,
   rangeEnd: string,
 ): Promise<ScheduleEventEntry[]> {
+  const [certificates, scheduleRows] = await Promise.all([
+    listCertificates(),
+    supabase.from('exam_schedules').select('*').then(({ data, error }) => {
+      if (error) throw error
+      return data.map(toExamSchedule)
+    }),
+  ])
+
+  const certificateByJmCd = new Map(certificates.map((c) => [c.jmCd, c]))
   const entries: ScheduleEventEntry[] = []
 
-  for (const certificate of mockCertificates) {
-    const schedules = mockExamSchedules[certificate.jmCd] ?? []
-    for (const schedule of schedules) {
-      const roundLabel = formatScheduleRound(certificate.seriesName, schedule)
+  for (const schedule of scheduleRows) {
+    const certificate = certificateByJmCd.get(schedule.jmCd)
+    if (!certificate) continue
 
-      for (const stageKey of Object.keys(schedule.stages) as ExamStageKey[]) {
-        const stage = schedule.stages[stageKey]
-        if (!stage) continue
+    const roundLabel = formatScheduleRound(certificate.seriesName, schedule)
 
-        if (stage.regStart && stage.regEnd && !(stage.regEnd < rangeStart || stage.regStart > rangeEnd)) {
+    for (const stageKey of Object.keys(schedule.stages) as ExamStageKey[]) {
+      const stage = schedule.stages[stageKey]
+      if (!stage) continue
+
+      if (stage.regStart && stage.regEnd && !(stage.regEnd < rangeStart || stage.regStart > rangeEnd)) {
+        entries.push({
+          jmCd: certificate.jmCd,
+          certificateName: certificate.name,
+          label: `${roundLabel} ${STAGE_LABEL[stageKey]} 접수`,
+          type: 'registration',
+          start: stage.regStart,
+          end: stage.regEnd,
+        })
+      }
+
+      if (stage.examStart) {
+        const examEnd = stage.examEnd ?? stage.examStart
+        if (!(examEnd < rangeStart || stage.examStart > rangeEnd)) {
           entries.push({
             jmCd: certificate.jmCd,
             certificateName: certificate.name,
-            label: `${roundLabel} ${STAGE_LABEL[stageKey]} 접수`,
-            type: 'registration',
-            start: stage.regStart,
-            end: stage.regEnd,
+            label: `${roundLabel} ${STAGE_LABEL[stageKey]} 시험`,
+            type: 'exam',
+            start: stage.examStart,
+            end: examEnd,
           })
-        }
-
-        if (stage.examStart) {
-          const examEnd = stage.examEnd ?? stage.examStart
-          if (!(examEnd < rangeStart || stage.examStart > rangeEnd)) {
-            entries.push({
-              jmCd: certificate.jmCd,
-              certificateName: certificate.name,
-              label: `${roundLabel} ${STAGE_LABEL[stageKey]} 시험`,
-              type: 'exam',
-              start: stage.examStart,
-              end: examEnd,
-            })
-          }
         }
       }
     }

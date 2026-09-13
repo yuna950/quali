@@ -17,9 +17,11 @@ const OUT_DIR = path.resolve(import.meta.dirname, '../data/qnet')
 // jmcd 앞자리 0, brchCd "00" 같은 코드값이 숫자로 변환되며 깨지는 걸 막기 위해 끔
 const parser = new XMLParser({ parseTagValue: false })
 
-// src/mocks/certificates.ts와 동일한 jmCd 목록
+// src/mocks/certificates.ts와 동일한 jmCd 목록.
+// 2026-09-14 재검증: 1321(정보처리산업기사)은 실제 코드가 2290, 7793(전기기사)은 1150으로 확인돼 수정.
+// 1322(정보처리기능사)는 국가기술자격 목록 자체에 없는 폐지된 자격증이라 제외(18개로 축소).
 const JM_CODES = [
-  '0752', '0080', '0490', '1320', '1321', '1322', '7793', '9762', '9763',
+  '0752', '0080', '0490', '1320', '2290', '1150', '9762', '9763',
   '0960', '1790', '2434', '1512', '2432', '1982', '2982', '7798', '6793', '7796',
 ]
 
@@ -40,10 +42,22 @@ async function callApi(path, params, { retries = 2 } = {}) {
   }
 
   for (let attempt = 0; attempt <= retries; attempt += 1) {
-    const res = await fetch(url)
-    const xmlText = await res.text()
-    const json = parser.parse(xmlText)
-    const resultCode = json?.response?.header?.resultCode
+    let resultCode
+    let json
+
+    try {
+      // Q-net이 요청을 받고도 응답을 안 주는 경우가 있어서, 10초 넘으면 포기하고 재시도하도록 타임아웃 추가
+      const res = await fetch(url, { signal: AbortSignal.timeout(10_000) })
+      const xmlText = await res.text()
+      json = parser.parse(xmlText)
+      resultCode = json?.response?.header?.resultCode
+    } catch (err) {
+      if (attempt < retries) {
+        await sleep(400)
+        continue
+      }
+      throw new Error(`[${path}?${new URLSearchParams(params)}] ${err.message}`)
+    }
 
     if (resultCode === '00') {
       return toArray(json?.response?.body?.items?.item)
@@ -78,17 +92,9 @@ async function main() {
   const seriesRules = await callApi('InquirySeriesSVC/getRule', { pageNo: 1, numOfRows: 100 })
   await writeJson('series-rules.json', seriesRules)
 
-  console.log('\n=== 시험장소 기본정보 (brchCd=01 서울) ===')
-  const examAreas = await callApi('InquiryExamAreaSVC/getList', { brchCd: '01', pageNo: 1, numOfRows: 50 })
-  await writeJson('exam-areas/01-seoul.json', examAreas)
-
-  console.log('\n=== CBT 시설여부 (brchCd=01 서울) ===')
-  const testSites = await callApi('InquiryTestSiteSVC/getList', { brchCd: '01', pageNo: 1, numOfRows: 50 })
-  await writeJson('test-sites/01-seoul.json', testSites)
-
-  console.log('\n=== 연도별 응시자/합격자 수 (baseYY=2023) ===')
-  const stat = await callApi('InquiryStatSVC/getTotExamList', { baseYY: '2023' })
-  await writeJson('stats/2023.json', stat)
+  // 시험장 정보(InquiryExamAreaSVC/InquiryTestSiteSVC)와 연도별 통계(InquiryStatSVC)는
+  // 이미 폐기하기로 확정한 기능/못 쓰기로 확인된 데이터라 더 이상 스냅샷을 안 받음
+  // (자세한 근거는 PROGRESS.md "시험장 정보 기능" 섹션 참고).
 
   console.log(`\n=== 종목별 상세 (${JM_CODES.length}개) ===`)
   for (const jmCd of JM_CODES) {

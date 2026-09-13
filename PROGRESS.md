@@ -1,4 +1,4 @@
-# QUALI 진행 상황 (2026-09-13 기준)
+# QUALI 진행 상황 (2026-09-14 기준)
 
 여러 컴퓨터(집/학원)를 오가며 작업 중이라 만든 인수인계용 문서.
 새 컴퓨터에서 이어갈 때는 `git pull` 후 이 파일부터 읽으면 됨.
@@ -7,8 +7,9 @@
 
 자격증 정보 + 나의 시험 일정/응시 기록을 한 곳에서 관리하는 개인 맞춤형 자격증 관리 서비스.
 Q-net 공공데이터 API(XML)를 Supabase Edge Function이 받아 테이블로 적재하고, 프론트는 Supabase만
-조회하는 구조로 갈 계획이지만, **지금은 프론트엔드를 mock 데이터로 전부 완성하는 단계**이고
-백엔드는 아직 손대지 않았음.
+조회하는 구조로 갈 계획. 프론트엔드는 완성됐고, 지금은 Supabase 연동(Phase 8) 진행 중 —
+공개 자격증 데이터(`certificateService.ts`)는 이미 실제 Supabase DB를 조회하도록 바뀌었고,
+로그인이 필요한 마이페이지 데이터(`userService.ts`)는 아직 localStorage 그대로임(Auth 연동 후 교체 예정).
 
 ## 작업 순서 (합의된 원칙)
 
@@ -27,8 +28,9 @@ Q-net 공공데이터 API(XML)를 Supabase Edge Function이 받아 테이블로 
 - **Phase 6 (마이페이지)**: 완료
 - **Phase 7 (인증 화면 디자인)**: 완료. 로그인/회원가입 모두 같은 톤으로 완성 (회원가입은 실제 계정
   생성 백엔드가 없어서 제출하면 "준비 중" 토스트만 뜨고 테스트 계정 로그인으로 유도)
-- **Phase 8 (Supabase/API 연동)**: 착수함. 인프라 준비(프로젝트 생성/연결, CLI, 패키지)까지 완료,
-  테이블 설계는 초안만 나온 상태 — 아래 "Phase 8 착수" 참고
+- **Phase 8 (Supabase/API 연동)**: 진행 중. 테이블/마이그레이션/실데이터 시딩(자격증 18개)까지
+  완료, 공개 데이터 서비스 레이어(`certificateService.ts`)도 교체 완료. 남은 건 Auth 연동과
+  Edge Function — 아래 "Phase 8 착수"/"Phase 8 진행" 참고
 
 ## 지금까지 커밋된 것 (마이페이지 v2)
 
@@ -413,12 +415,51 @@ Q-net 공공데이터 API(XML)를 Supabase Edge Function이 받아 테이블로 
 - **아직 결정 안 된 것**: 회원가입을 실제로 열지(지금은 테스트 계정 로그인만), Docker 로컬 스택을
   나중에라도 쓸지 — Phase 8 진행하면서 정하기로 함
 
+## Phase 8 진행 (2026-09-14)
+
+전날 인프라 준비에 이어 테이블/데이터/서비스 레이어까지 진행함.
+
+- **테이블 설계 확정 + 마이그레이션 작성/적용**: `supabase/migrations/`에 2개 파일
+  (`create_public_certificate_tables`, `create_user_data_tables`)로 지난번 설계안을 SQL화해서
+  `supabase db push`로 원격 DB에 적용 완료. 공개 테이블은 select만 열어둔 RLS, 사용자 테이블은
+  `auth.uid() = user_id` 정책. 직무분야/계열 옵션은 별도 테이블 대신 `certificates`에서 파생한
+  뷰(`job_field_options`, `series_options`)로 처리.
+- **자격증 코드 오류 발견/수정**: mock 19개 중 3개가 실제 Q-net 코드와 안 맞는 걸 발견 —
+  `1321`(정보처리산업기사)→`2290`, `7793`(전기기사)→`1150`으로 수정, `1322`(정보처리기능사)는
+  국가기술자격 목록 자체에서 폐지된 걸로 확인돼 제외(18개로 축소). `scripts/fetch-qnet-snapshot.mjs`의
+  `JM_CODES`도 같이 수정.
+- **`fetch-qnet-snapshot.mjs` 안정성 개선**: 재실행 중 Q-net API가 응답 없이 무한 대기하는 문제
+  발견 → `AbortSignal.timeout(10초)` 추가해서 응답 없으면 재시도 후 다음으로 넘어가도록 수정.
+  이미 폐기 결정된 시험장/통계 API 호출(`InquiryExamAreaSVC` 등)도 제거.
+- **service_role 키 없이 시딩하는 방식으로 전환**: 처음엔 Node 스크립트에 `service_role` 키를 써서
+  직접 삽입하려 했는데, "이게 안전한가" 재검토하다가 `supabase/config.toml`에 이미 있던
+  `[db.seed]` 기능을 발견 → **JSON→SQL 변환(자격정보 없는 순수 로컬 스크립트)** +
+  `supabase db push --include-seed`(CLI 로그인 세션만 사용) 방식으로 변경. API 키가 스크립트/`.env`
+  어디에도 필요 없어짐. `scripts/generate-seed-sql.mjs` 신규 작성 → `supabase/seed.sql` 생성
+  (전부 `on conflict do update`라 재실행해도 안전, 자격증 늘리고 싶으면 이 스크립트만 다시 돌리면 됨).
+- **자격증 18개만 시딩, 나머지는 보류**: 실제 Q-net엔 국가자격이 613개(국가기술자격 513 +
+  국가전문자격 100) 있는 걸 확인했지만(`data/qnet/qualifications.json`), 회차/응시료/과목
+  상세정보는 자격증 코드당 API 호출이 3번씩 필요해서 지금은 기존 mock 18개 범위만 실데이터로
+  채움. 나머지 595개(식품 계열 등 포함)는 ⑦단계(Edge Function + pg_cron)에서 자동으로 채우기로
+  결정 — 지금은 검색해도 안 나오는 자격증이 많은 게 정상.
+- **`certificateService.ts` 전면 교체**: mock import 제거, Supabase 테이블/뷰 조회로 교체.
+  snake_case↔camelCase 변환 함수만 새로 추가했고 `lib/examStatus.ts`의 기존 비즈니스 로직은 그대로
+  재사용. 실제 데이터로 검색/상세페이지 정상 동작 브라우저에서 확인 완료.
+- **`userService.ts`는 의도적으로 보류**: 지금 로그인 여부와 무관하게 localStorage를 쓰는 구조라,
+  `auth.uid()` 기반 RLS를 통과할 실제 로그인 세션 없이 바꾸면 마이페이지 전체가 깨짐 →
+  ⑥(Supabase Auth 연동) 이후로 순서를 미룸.
+- `src/types/supabase.ts`(`supabase gen types typescript --linked`로 생성한 스키마 타입),
+  `src/lib/supabase.ts`(anon 키로 만든 공용 클라이언트) 신규 추가.
+- `npx tsc -b --noEmit`, `npx oxlint`, `npm run build` 확인 완료 (신규 에러 없음)
+
 ## 남은 것
 
-- 마이페이지 전체적으로 브라우저에서 실사용 흐름 검증 필요 (플랜 추가 → 결과 입력 → 그룹 카드
-  반영 → 새 페이지 이동까지 한 사이클을 직접 클릭해보면서 확인하면 좋음) — 아직 미완료, 다음
-  컴퓨터에서 `npm run dev` 띄운 뒤 진행 예정
-- Phase 8: 위 "Phase 8 착수" 참고, 다음은 테이블 설계 확정 + 마이그레이션 SQL 작성부터
+- 마이페이지 실사용 흐름(플랜 추가 → 결과 입력 → 그룹 카드 반영 → 삭제) 전체 사이클 검증 —
+  `userService.ts`는 아직 안 건드려서 급하진 않지만 여전히 미완료
+- 다음은 **⑥ Supabase Auth 연동** — 시작 전에 "회원가입을 실제로 열지" 결정 필요(지금은 테스트
+  계정 로그인만 있음)
+- 그다음 **⑦ Edge Function + pg_cron** — 나머지 595개 자격증 + 상세정보 자동 적재, 여기서
+  `pass_rates`(Q-net 미제공)만 예외적으로 계속 mock 유지
 
 ## 테스트 계정
 
@@ -444,10 +485,13 @@ npx oxlint       # 린트
   `link` 정보는 `config.toml`에 이미 있어서 다시 `link` 할 필요는 없음). `.env`에
   `VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY`도 새로 추가해야 함(git에 안 올라가는 값이라 컴퓨터마다
   따로 설정 필요).
-- `.env`의 `QNET_API_KEY`로 Q-net API 직접 조회 가능 (실제 데이터 확인용, 아직 앱에서 직접 호출은 안 함)
-- `scripts/test-qnet-api.mjs`, `scripts/fetch-qnet-snapshot.mjs`로 서버 사이드 호출 + XML→JSON
-  파싱이 실제로 되는지 검증해둠 (`node --env-file=.env scripts/fetch-qnet-snapshot.mjs`). 결과는
-  `data/qnet/`에 mock 19개 자격증 전부 저장되어 있음 — Edge Function 만들 때 참고자료로 재사용 가능.
-  `parseTagValue: false` 꼭 필요(안 하면 `jmcd="0080"` 같은 코드값 앞자리 0이 날아감).
+- `.env`의 `QNET_API_KEY`로 Q-net API 직접 조회 가능 (`scripts/`의 두 스크립트 전용, 앱 자체는
+  호출 안 함). `parseTagValue: false` 꼭 필요(안 하면 `jmcd="0080"` 같은 코드값 앞자리 0이 날아감)
+- **실데이터 파이프라인**: `scripts/fetch-qnet-snapshot.mjs`(API 호출 → `data/qnet/`에 JSON 저장,
+  현재 18개 자격증) → `scripts/generate-seed-sql.mjs`(JSON → `supabase/seed.sql` 변환, API 키 불필요)
+  → `npx supabase db push --include-seed`(실제 DB에 반영). 자격증을 더 채우고 싶으면 이 3단계를
+  그대로 다시 돌리면 됨 (전부 upsert라 안전)
+- 지금 `certificates` 테이블엔 Q-net 전체 613개 중 18개만 있음 — 나머지(⑦단계에서 채울 예정)는
+  검색해도 안 나오는 게 정상
 - 카드 컴포넌트 등은 shadcn CLI로 관리 (`npx shadcn@latest add <component>`)
 - 커밋 메시지는 "왜"를 설명하는 스타일 유지, Co-Authored-By 트레일러 포함

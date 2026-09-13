@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { toast } from 'sonner'
+import { FormFieldGroup } from '@/components/common/FormFieldGroup'
 import { ToggleChip } from '@/components/common/ToggleChip'
 import { Button } from '@/components/ui/button'
 import {
@@ -12,7 +13,9 @@ import {
 } from '@/components/ui/combobox'
 import {
   Dialog,
+  DialogBody,
   DialogContent,
+  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -222,143 +225,163 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
       <DialogTrigger render={trigger as React.ReactElement} />
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{editingRecord ? '응시기록 수정' : '응시기록 추가'}</DialogTitle>
+          <DialogTitle>
+            {editingRecord ? '응시기록 수정' : isLocked ? '시험 결과 입력' : '응시기록 추가'}
+          </DialogTitle>
+          {isLocked && (
+            <DialogDescription>
+              이미 등록된 시험 정보라 자격증·회차·날짜는 수정할 수 없어요. 합격 여부만 입력해주세요.
+            </DialogDescription>
+          )}
         </DialogHeader>
 
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-col gap-1.5">
-            <Label>자격증</Label>
+        <DialogBody>
+          <FormFieldGroup title="시험 정보">
             {isLocked ? (
-              <p className="desc-4">{certOption?.label}</p>
+              <div className="flex flex-col gap-2 rounded-lg border border-border p-3">
+                <div className="flex items-center justify-between gap-4">
+                  <span className="desc-5 text-muted-foreground">자격증</span>
+                  <span className="desc-4 truncate text-right">{certOption?.label}</span>
+                </div>
+                <div className="flex items-center justify-between gap-4">
+                  <span className="desc-5 text-muted-foreground">단계</span>
+                  <span className="desc-4">{STAGE_LABEL[stage]}</span>
+                </div>
+                <div className="flex items-center justify-between gap-4">
+                  <span className="desc-5 text-muted-foreground">회차 · 날짜</span>
+                  <span className="desc-4">
+                    {year}년 {round}회 · {formatYyyymmdd(lockedPlan!.examDate)}
+                  </span>
+                </div>
+              </div>
             ) : (
-              <Combobox items={certOptions} value={certOption} onValueChange={(v) => setCertOption(v)}>
-                <ComboboxInput placeholder="자격증을 검색하세요" />
-                <ComboboxContent>
-                  <ComboboxEmpty>검색 결과가 없어요</ComboboxEmpty>
-                  <ComboboxList>
-                    {(item: CertOption) => (
-                      <ComboboxItem key={item.value} value={item}>
-                        {item.label}
-                      </ComboboxItem>
-                    )}
-                  </ComboboxList>
-                </ComboboxContent>
-              </Combobox>
-            )}
-          </div>
+              <>
+                <div className="flex flex-col gap-1.5">
+                  <Label>자격증</Label>
+                  <Combobox items={certOptions} value={certOption} onValueChange={(v) => setCertOption(v)}>
+                    <ComboboxInput placeholder="자격증을 검색하세요" />
+                    <ComboboxContent>
+                      <ComboboxEmpty>검색 결과가 없어요</ComboboxEmpty>
+                      <ComboboxList>
+                        {(item: CertOption) => (
+                          <ComboboxItem key={item.value} value={item}>
+                            {item.label}
+                          </ComboboxItem>
+                        )}
+                      </ComboboxList>
+                    </ComboboxContent>
+                  </Combobox>
+                </div>
 
-          <div className="flex flex-col gap-1.5">
-            <Label>단계</Label>
-            {isLocked ? (
-              <p className="desc-4">{STAGE_LABEL[stage]}</p>
-            ) : (
-              <Select value={stage} onValueChange={(v) => setStage(v as ExamStageKey)}>
-                <SelectTrigger className="w-full">
-                  <SelectValue>{(v: ExamStageKey | null) => (v ? STAGE_LABEL[v] : '단계를 선택하세요')}</SelectValue>
-                </SelectTrigger>
-                <SelectContent alignItemWithTrigger={false}>
-                  <SelectItem value="written">필기</SelectItem>
-                  <SelectItem value="practical">실기</SelectItem>
-                  <SelectItem value="interview">면접</SelectItem>
-                </SelectContent>
-              </Select>
-            )}
-          </div>
-
-          {isLocked ? (
-            <div className="flex gap-4">
-              <p className="desc-4 text-muted-foreground">
-                {year}년 {round}회 · {formatYyyymmdd(lockedPlan!.examDate)}
-              </p>
-            </div>
-          ) : (
-            <>
-              <div className="flex flex-col gap-1.5">
-                <Label>회차</Label>
-                {roundOptions.length > 0 ? (
-                  <Select value={selectedRoundKey} onValueChange={handleRoundSelect}>
+                <div className="flex flex-col gap-1.5">
+                  <Label>단계</Label>
+                  <Select value={stage} onValueChange={(v) => setStage(v as ExamStageKey)}>
                     <SelectTrigger className="w-full">
-                      <SelectValue>
-                        {(v: string | null) => {
-                          if (!v || v === MANUAL_KEY) return '직접 입력'
-                          const option = roundOptions.find((o) => o.key === v)
-                          return option ? `${option.year}년 ${option.round}회` : '회차를 선택하세요'
-                        }}
-                      </SelectValue>
+                      <SelectValue>{(v: ExamStageKey | null) => (v ? STAGE_LABEL[v] : '단계를 선택하세요')}</SelectValue>
                     </SelectTrigger>
                     <SelectContent alignItemWithTrigger={false}>
-                      {roundOptions.map((option) => (
-                        <SelectItem key={option.key} value={option.key}>
-                          {option.year}년 {option.round}회
-                          {option.examDate && ` · ${formatYyyymmdd(option.examDate)}`}
-                        </SelectItem>
-                      ))}
-                      <SelectItem value={MANUAL_KEY}>직접 입력</SelectItem>
+                      <SelectItem value="written">필기</SelectItem>
+                      <SelectItem value="practical">실기</SelectItem>
+                      <SelectItem value="interview">면접</SelectItem>
                     </SelectContent>
                   </Select>
-                ) : (
-                  <p className="desc-5 text-muted-foreground">
-                    실제 등록된 회차 정보가 없어요. 아래에서 직접 입력해주세요.
-                  </p>
-                )}
-              </div>
+                </div>
 
-              {selectedRoundKey === MANUAL_KEY ? (
-                <>
-                  <div className="flex gap-3">
-                    <div className="flex flex-1 flex-col gap-1.5">
-                      <Label>연도</Label>
-                      <Input type="number" value={year} onChange={(e) => setYear(e.target.value)} />
-                    </div>
-                    <div className="flex flex-1 flex-col gap-1.5">
+                {certOption && (
+                  <>
+                    <div className="flex flex-col gap-1.5">
                       <Label>회차</Label>
-                      <Input type="number" value={round} onChange={(e) => setRound(e.target.value)} />
+                      {roundOptions.length > 0 ? (
+                        <Select value={selectedRoundKey} onValueChange={handleRoundSelect}>
+                          <SelectTrigger className="w-full">
+                            <SelectValue>
+                              {(v: string | null) => {
+                                if (!v || v === MANUAL_KEY) return '직접 입력'
+                                const option = roundOptions.find((o) => o.key === v)
+                                return option ? `${option.year}년 ${option.round}회` : '회차를 선택하세요'
+                              }}
+                            </SelectValue>
+                          </SelectTrigger>
+                          <SelectContent alignItemWithTrigger={false}>
+                            {roundOptions.map((option) => (
+                              <SelectItem key={option.key} value={option.key}>
+                                {option.year}년 {option.round}회
+                                {option.examDate && ` · ${formatYyyymmdd(option.examDate)}`}
+                              </SelectItem>
+                            ))}
+                            <SelectItem value={MANUAL_KEY}>직접 입력</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      ) : (
+                        <p className="desc-5 text-muted-foreground">
+                          실제 등록된 회차 정보가 없어요. 아래에서 직접 입력해주세요.
+                        </p>
+                      )}
                     </div>
-                  </div>
 
-                  <div className="flex flex-col gap-1.5">
-                    <Label>시험날짜</Label>
-                    <Input type="date" value={examDate} onChange={(e) => setExamDate(e.target.value)} />
-                  </div>
-                </>
-              ) : (
-                <p className="desc-4 text-muted-foreground">{formatYyyymmdd(examDate.replaceAll('-', ''))}</p>
-              )}
-            </>
-          )}
+                    {selectedRoundKey === MANUAL_KEY ? (
+                      <>
+                        <div className="flex gap-3">
+                          <div className="flex flex-1 flex-col gap-1.5">
+                            <Label>연도</Label>
+                            <Input type="number" value={year} onChange={(e) => setYear(e.target.value)} />
+                          </div>
+                          <div className="flex flex-1 flex-col gap-1.5">
+                            <Label>회차</Label>
+                            <Input type="number" value={round} onChange={(e) => setRound(e.target.value)} />
+                          </div>
+                        </div>
 
-          <div className="flex flex-col gap-1.5">
-            <Label>합격여부</Label>
-            <div className="flex gap-2">
-              <ToggleChip selected={passed === true} onClick={() => setPassed(true)}>
-                합격
-              </ToggleChip>
-              <ToggleChip selected={passed === false} onClick={() => setPassed(false)}>
-                불합격
-              </ToggleChip>
+                        <div className="flex flex-col gap-1.5">
+                          <Label>시험날짜</Label>
+                          <Input type="date" value={examDate} onChange={(e) => setExamDate(e.target.value)} />
+                        </div>
+                      </>
+                    ) : (
+                      <p className="desc-4 text-muted-foreground">{formatYyyymmdd(examDate.replaceAll('-', ''))}</p>
+                    )}
+                  </>
+                )}
+              </>
+            )}
+          </FormFieldGroup>
+
+          <FormFieldGroup title="응시 결과">
+            <div className="flex flex-col gap-1.5">
+              <Label>합격여부</Label>
+              <div className="flex gap-2">
+                <ToggleChip selected={passed === true} onClick={() => setPassed(true)}>
+                  합격
+                </ToggleChip>
+                <ToggleChip selected={passed === false} onClick={() => setPassed(false)}>
+                  불합격
+                </ToggleChip>
+              </div>
             </div>
-          </div>
 
-          <div className="flex flex-col gap-1.5">
-            <Label>점수 (선택)</Label>
-            <Input
-              type="number"
-              min={0}
-              max={100}
-              value={score}
-              onChange={(e) => setScore(e.target.value)}
-            />
-            {scoreError && <p className="desc-5 text-status-red">100점을 넘을 수 없어요.</p>}
-          </div>
+            <div className="flex flex-col gap-1.5">
+              <Label>점수 (선택)</Label>
+              <Input
+                type="number"
+                min={0}
+                max={100}
+                value={score}
+                onChange={(e) => setScore(e.target.value)}
+              />
+              {scoreError && <p className="desc-5 text-status-red">100점을 넘을 수 없어요.</p>}
+            </div>
 
-          <div className="flex flex-col gap-1.5">
-            <Label>메모 (선택)</Label>
-            <Textarea value={memo} onChange={(e) => setMemo(e.target.value)} />
-          </div>
-        </div>
+            <div className="flex flex-col gap-1.5">
+              <Label>메모 (선택)</Label>
+              <Textarea value={memo} onChange={(e) => setMemo(e.target.value)} />
+            </div>
+          </FormFieldGroup>
+        </DialogBody>
 
         <DialogFooter>
-          <Button onClick={handleSubmit}>저장</Button>
+          <Button variant="brand" onClick={handleSubmit}>
+            저장
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

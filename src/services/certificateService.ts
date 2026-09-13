@@ -1,6 +1,5 @@
 import { formatScheduleRound, getApplicationStatus } from '@/lib/examStatus'
 import { mockCertificates } from '@/mocks/certificates'
-import { mockExamAreas, mockTestSites } from '@/mocks/examAreas'
 import { mockExamFees } from '@/mocks/examFees'
 import { mockExamSchedules } from '@/mocks/examSchedules'
 import { mockExamSubjects } from '@/mocks/examSubjects'
@@ -8,7 +7,6 @@ import { mockPassRates } from '@/mocks/passRates'
 import type {
   Certificate,
   ExamApplicationStatus,
-  ExamArea,
   ExamFee,
   ExamSchedule,
   ExamStageKey,
@@ -16,7 +14,6 @@ import type {
   JobFieldOption,
   PassRateSummary,
   SeriesOption,
-  TestSite,
 } from '@/types/certificate'
 
 const STAGE_LABEL: Record<ExamStageKey, string> = {
@@ -127,14 +124,6 @@ export async function getPopularCertificates(limit = 5): Promise<Certificate[]> 
   return [...mockCertificates]
     .sort((a, b) => (mockPassRates[b.jmCd]?.averageRate ?? 0) - (mockPassRates[a.jmCd]?.averageRate ?? 0))
     .slice(0, limit)
-}
-
-export async function getExamAreas(branchCode?: string): Promise<ExamArea[]> {
-  return branchCode ? mockExamAreas.filter((a) => a.branchCode === branchCode) : mockExamAreas
-}
-
-export async function getTestSites(branchName?: string): Promise<TestSite[]> {
-  return branchName ? mockTestSites.filter((s) => s.branchName === branchName) : mockTestSites
 }
 
 export type ScheduleEventType = 'registration' | 'exam'

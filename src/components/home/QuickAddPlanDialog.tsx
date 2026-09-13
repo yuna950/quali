@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { toast } from 'sonner'
+import { FormFieldGroup } from '@/components/common/FormFieldGroup'
 import { Button } from '@/components/ui/button'
 import {
   Combobox,
@@ -11,6 +12,7 @@ import {
 } from '@/components/ui/combobox'
 import {
   Dialog,
+  DialogBody,
   DialogContent,
   DialogFooter,
   DialogHeader,
@@ -157,95 +159,103 @@ export function QuickAddPlanDialog({
           <DialogTitle>나의 시험 추가</DialogTitle>
         </DialogHeader>
 
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-col gap-1.5">
-            <Label>자격증</Label>
-            <Combobox items={certOptions} value={certOption} onValueChange={(v) => setCertOption(v)}>
-              <ComboboxInput placeholder="자격증을 검색하세요" />
-              <ComboboxContent>
-                <ComboboxEmpty>검색 결과가 없어요</ComboboxEmpty>
-                <ComboboxList>
-                  {(item: CertOption) => (
-                    <ComboboxItem key={item.value} value={item}>
-                      {item.label}
-                    </ComboboxItem>
-                  )}
-                </ComboboxList>
-              </ComboboxContent>
-            </Combobox>
-          </div>
+        <DialogBody>
+          <FormFieldGroup>
+            <div className="flex flex-col gap-1.5">
+              <Label>자격증</Label>
+              <Combobox items={certOptions} value={certOption} onValueChange={(v) => setCertOption(v)}>
+                <ComboboxInput placeholder="자격증을 검색하세요" />
+                <ComboboxContent>
+                  <ComboboxEmpty>검색 결과가 없어요</ComboboxEmpty>
+                  <ComboboxList>
+                    {(item: CertOption) => (
+                      <ComboboxItem key={item.value} value={item}>
+                        {item.label}
+                      </ComboboxItem>
+                    )}
+                  </ComboboxList>
+                </ComboboxContent>
+              </Combobox>
+            </div>
 
-          <div className="flex flex-col gap-1.5">
-            <Label>단계</Label>
-            <Select value={stage} onValueChange={(v) => setStage(v as ExamStageKey)}>
-              <SelectTrigger className="w-full">
-                <SelectValue>{(v: ExamStageKey | null) => (v ? STAGE_LABEL[v] : '단계를 선택하세요')}</SelectValue>
-              </SelectTrigger>
-              <SelectContent alignItemWithTrigger={false}>
-                <SelectItem value="written">필기</SelectItem>
-                <SelectItem value="practical">실기</SelectItem>
-                <SelectItem value="interview">면접</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="flex flex-col gap-1.5">
-            <Label>회차</Label>
-            {roundOptions.length > 0 ? (
-              <Select value={selectedRoundKey} onValueChange={handleRoundSelect}>
+            <div className="flex flex-col gap-1.5">
+              <Label>단계</Label>
+              <Select value={stage} onValueChange={(v) => setStage(v as ExamStageKey)}>
                 <SelectTrigger className="w-full">
-                  <SelectValue>
-                    {(v: string | null) => {
-                      if (!v || v === MANUAL_KEY) return '직접 입력'
-                      const option = roundOptions.find((o) => o.key === v)
-                      return option ? `${option.year}년 ${option.round}회` : '회차를 선택하세요'
-                    }}
-                  </SelectValue>
+                  <SelectValue>{(v: ExamStageKey | null) => (v ? STAGE_LABEL[v] : '단계를 선택하세요')}</SelectValue>
                 </SelectTrigger>
                 <SelectContent alignItemWithTrigger={false}>
-                  {roundOptions.map((option) => (
-                    <SelectItem key={option.key} value={option.key}>
-                      {option.year}년 {option.round}회
-                      {option.examDate && ` · ${formatYyyymmdd(option.examDate)}`}
-                    </SelectItem>
-                  ))}
-                  <SelectItem value={MANUAL_KEY}>직접 입력</SelectItem>
+                  <SelectItem value="written">필기</SelectItem>
+                  <SelectItem value="practical">실기</SelectItem>
+                  <SelectItem value="interview">면접</SelectItem>
                 </SelectContent>
               </Select>
-            ) : (
-              <p className="desc-5 text-muted-foreground">
-                {certOption ? '실제 등록된 회차 정보가 없어요. 아래에서 직접 입력해주세요.' : '자격증을 먼저 선택하세요.'}
-              </p>
-            )}
-          </div>
+            </div>
 
-          {selectedRoundKey === MANUAL_KEY ? (
-            <>
-              <div className="flex gap-3">
-                <div className="flex flex-1 flex-col gap-1.5">
-                  <Label>연도</Label>
-                  <Input type="number" value={year} onChange={(e) => setYear(e.target.value)} />
-                </div>
-                <div className="flex flex-1 flex-col gap-1.5">
+            {certOption && (
+              <>
+                <div className="flex flex-col gap-1.5">
                   <Label>회차</Label>
-                  <Input type="number" value={round} onChange={(e) => setRound(e.target.value)} />
+                  {roundOptions.length > 0 ? (
+                    <Select value={selectedRoundKey} onValueChange={handleRoundSelect}>
+                      <SelectTrigger className="w-full">
+                        <SelectValue>
+                          {(v: string | null) => {
+                            if (!v || v === MANUAL_KEY) return '직접 입력'
+                            const option = roundOptions.find((o) => o.key === v)
+                            return option ? `${option.year}년 ${option.round}회` : '회차를 선택하세요'
+                          }}
+                        </SelectValue>
+                      </SelectTrigger>
+                      <SelectContent alignItemWithTrigger={false}>
+                        {roundOptions.map((option) => (
+                          <SelectItem key={option.key} value={option.key}>
+                            {option.year}년 {option.round}회
+                            {option.examDate && ` · ${formatYyyymmdd(option.examDate)}`}
+                          </SelectItem>
+                        ))}
+                        <SelectItem value={MANUAL_KEY}>직접 입력</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  ) : (
+                    <p className="desc-5 text-muted-foreground">
+                      실제 등록된 회차 정보가 없어요. 아래에서 직접 입력해주세요.
+                    </p>
+                  )}
                 </div>
-              </div>
 
-              <div className="flex flex-col gap-1.5">
-                <Label>시험날짜</Label>
-                <Input type="date" value={examDate} onChange={(e) => setExamDate(e.target.value)} />
-              </div>
-            </>
-          ) : (
-            examDate && (
-              <p className="desc-4 text-muted-foreground">{formatYyyymmdd(examDate.replaceAll('-', ''))}</p>
-            )
-          )}
-        </div>
+                {selectedRoundKey === MANUAL_KEY ? (
+                  <>
+                    <div className="flex gap-3">
+                      <div className="flex flex-1 flex-col gap-1.5">
+                        <Label>연도</Label>
+                        <Input type="number" value={year} onChange={(e) => setYear(e.target.value)} />
+                      </div>
+                      <div className="flex flex-1 flex-col gap-1.5">
+                        <Label>회차</Label>
+                        <Input type="number" value={round} onChange={(e) => setRound(e.target.value)} />
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-1.5">
+                      <Label>시험날짜</Label>
+                      <Input type="date" value={examDate} onChange={(e) => setExamDate(e.target.value)} />
+                    </div>
+                  </>
+                ) : (
+                  examDate && (
+                    <p className="desc-4 text-muted-foreground">{formatYyyymmdd(examDate.replaceAll('-', ''))}</p>
+                  )
+                )}
+              </>
+            )}
+          </FormFieldGroup>
+        </DialogBody>
 
         <DialogFooter>
-          <Button onClick={handleSubmit}>추가</Button>
+          <Button variant="brand" onClick={handleSubmit}>
+            추가
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

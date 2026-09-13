@@ -1,4 +1,4 @@
-# QUALI 진행 상황 (2026-09-11 기준)
+# QUALI 진행 상황 (2026-09-13 기준)
 
 여러 컴퓨터(집/학원)를 오가며 작업 중이라 만든 인수인계용 문서.
 새 컴퓨터에서 이어갈 때는 `git pull` 후 이 파일부터 읽으면 됨.
@@ -27,7 +27,8 @@ Q-net 공공데이터 API(XML)를 Supabase Edge Function이 받아 테이블로 
 - **Phase 6 (마이페이지)**: 완료
 - **Phase 7 (인증 화면 디자인)**: 완료. 로그인/회원가입 모두 같은 톤으로 완성 (회원가입은 실제 계정
   생성 백엔드가 없어서 제출하면 "준비 중" 토스트만 뜨고 테스트 계정 로그인으로 유도)
-- **Phase 8 (Supabase/API 연동)**: 다음 차례
+- **Phase 8 (Supabase/API 연동)**: 착수함. 인프라 준비(프로젝트 생성/연결, CLI, 패키지)까지 완료,
+  테이블 설계는 초안만 나온 상태 — 아래 "Phase 8 착수" 참고
 
 ## 지금까지 커밋된 것 (마이페이지 v2)
 
@@ -341,15 +342,83 @@ Q-net 공공데이터 API(XML)를 Supabase Edge Function이 받아 테이블로 
   이상 단계형 방식의 이점(되돌아가기)이 사라져서 사용자가 제안한 가로 배치안으로 결정.
 - `npx tsc -b --noEmit`, `npx oxlint`, `npm run build` 매 변경마다 확인 완료 (신규 에러 없음)
 
+## 추가 반영 (2026-09-13)
+
+- **다이얼로그 스크롤/레이아웃 구조 개선**: 폼 필드가 많은 다이얼로그(`ExamRecordFormDialog`,
+  `QuickAddPlanDialog`)가 모바일 화면보다 커지면 저장 버튼까지 화면 밖으로 밀려나던 문제 →
+  `dialog.tsx`에 `DialogBody` 서브컴포넌트 신규 추가, `DialogContent`를
+  `grid-rows-[auto_1fr_auto]`(헤더/본문/푸터) 구조로 바꿔서 헤더·푸터는 고정하고 본문만
+  스크롤되게 함. 이 구조를 쓰는 3곳(`ExamRecordFormDialog`, `QuickAddPlanDialog`,
+  `ExamReadinessChecklist`) 전부 적용.
+- **다이얼로그 디자인 리뉴얼** (레퍼런스 이미지 `modal1`/`modal2` 참고, 그대로 베끼지 않고 QUALI
+  톤 유지하는 방향으로):
+  - `Button`에 상시 파란색인 `brand` variant 신규 추가 — 기존 `default` variant는 평소엔 회색이고
+    호버해야만 파란색이 되는 구조라(`hover:bg-brand`), 호버가 없는 모바일에선 사실상 항상 회색
+    버튼으로 보이는 문제가 있었음. 다이얼로그의 저장/추가 버튼에 전부 `brand` 적용.
+  - `DialogFooter`/`AlertDialogFooter`의 회색 배경(`bg-muted/50`) 제거, 테두리만 남겨서 화이트
+    배경 원칙과 통일.
+  - 공용 `FormFieldGroup` 컴포넌트(`src/components/common/`) 신규 추가 — 관련 필드를 하나로 묶고
+    그룹 사이 간격을 넓혀 위계를 만듦. `ExamRecordFormDialog`는 "시험 정보"/"응시 결과" 두 그룹으로
+    분리, "결과 입력"(플랜 잠금) 모드일 땐 자격증/단계/회차·날짜 3개 필드를 라벨—값 요약 박스
+    하나로 압축.
+  - "결과 입력" 모드일 때 다이얼로그 제목을 "응시기록 추가" 대신 "시험 결과 입력"으로 구분하고,
+    잠긴 필드가 왜 안 바뀌는지 `DialogDescription`으로 안내문 추가.
+- **회차 선택 UI를 자격증 선택 후에만 노출**: `ExamRecordFormDialog`/`QuickAddPlanDialog` 둘 다
+  자격증을 고르기 전부터 연도/회차/시험날짜 직접입력 필드가 먼저 보이던 버그 → 회차 관련 섹션
+  전체를 `{certOption && (...)}`로 감싸서 자격증 선택 전엔 아예 안 보이게 통일.
+- **마이페이지 "나의 자격증" 탭에 시험 추가 버튼 신규**: 지금까지 홈 화면에서만 시험을 추가할 수
+  있었는데, `RecordsPage.tsx`(응시기록 탭)와 동일한 패턴으로 상단에 "+ 시험 추가" 버튼 추가(홈과
+  같은 `QuickAddPlanDialog` 재사용). 빈 상태에서도 버튼이 보이도록 조기 `return` 구조를 제거.
+- **비로그인 홈 히어로 재조정**: 헤드라인을 기능 나열형 2줄에서 짧은 슬로건("자격증 준비의 모든
+  순간, QUALI와 함께")으로 줄이고, 지난번에 슬로건과 내용이 겹친다는 이유로 제거했던 검색→일정
+  등록→기록관리 3단계 아이콘 흐름을 다시 배치(이번엔 헤드라인이 짧아져서 안 겹침).
+- **준비물 체크리스트를 세로 목록 → 가로 나열(칩 형태)로 변경**, 커스텀 항목은 칩 안에 삭제(X)
+  버튼 포함.
+- **"시험 일정" 캘린더 날짜 칸**: 홈 위젯/`/schedule` 페이지 둘 다 숫자+점이 세로 중앙정렬돼 있던
+  걸 상단 고정으로 변경(`pt-1.5 sm:pt-2`), 정사각형 비율(`aspect-square`)은 유지.
+- **정리**: `Footer.tsx`/`Header.tsx`의 하드코딩 `border-gray-200` → `border-border`,
+  `MyPageLayout.tsx` 탭 밑줄의 `border-black`/`text-black`/`text-gray-500` → 브랜드 컬러
+  (`border-brand`/`text-brand`)와 공용 톤(`text-muted-foreground`)으로 교체. 안 쓰는
+  `getExamAreas`/`getTestSites`(`certificateService.ts`), `ExamArea`/`TestSite` 타입
+  (`types/certificate.ts`), `src/mocks/examAreas.ts` 삭제(시험장 정보 기능 폐기로 완전히 죽은
+  코드가 된 것들 — 위 "시험장 정보 기능" 섹션 참고).
+- `npx tsc -b --noEmit`, `npx oxlint`, `npm run build` 매 변경마다 확인 완료 (신규 에러 없음)
+
+## Phase 8 착수 (2026-09-13)
+
+프론트엔드 마무리 작업을 끝내고 Supabase 연동을 시작함. 이번엔 인프라 준비까지만 진행했고, 실제
+테이블/마이그레이션 작업은 아직 시작 전.
+
+- Supabase 프로젝트 생성 완료 (리전: Tokyo, 프로젝트명 `quali`, ref `kfytuojajjrnydwudxxb`)
+- `supabase` CLI를 devDependency로 설치(`npm install supabase --save-dev`, `npx supabase`로 실행 —
+  전역 설치 대신 프로젝트 종속성으로 설치하는 게 공식 권장 방식)
+- `npx supabase login` → `npx supabase link --project-ref kfytuojajjrnydwudxxb` →
+  `npx supabase init`으로 `supabase/config.toml` 생성, 프로젝트 연결 완료
+- `@supabase/supabase-js` 설치
+- `.env`에 `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` 추가 (프론트에서 쓸 anon 키 — `service_role`
+  키는 절대 여기 넣지 않고, 나중에 Edge Function 쪽 시크릿으로만 등록할 것)
+- **테이블 설계 초안 작성** (아직 SQL로 옮기지 않음):
+  - 공개 테이블: `certificates`, `exam_schedules`(단계별 날짜는 jsonb 컬럼), `exam_fees`,
+    `exam_subjects`, `pass_rates`(Q-net 실API가 종목별 합격률을 안 줘서 당분간 mock 값을 시드
+    데이터로 사용)
+  - 사용자 테이블(전부 `user_id` + RLS 정책): `my_exam_plans`, `exam_records`, `exam_checklists`
+    (`plan_id`에 `ON DELETE CASCADE`로 플랜 삭제 시 체크리스트 자동 정리), `interest_certificates`,
+    `user_settings`
+  - 사용자 이름(`AuthUser.name`)은 별도 테이블 대신 Supabase Auth의 `user_metadata` 활용 예정
+- **합의된 다음 작업 순서**: ①테이블 설계 확정 → ②마이그레이션 SQL 작성 → ③원격 dev 프로젝트에
+  적용(`supabase db push`, 로컬 Docker가 없어서 바로 클라우드로 적용) → ④mock 19개 자격증 데이터를
+  공개 테이블에 시드 → ⑤`certificateService.ts`/`userService.ts` 내부 구현만 Supabase 쿼리로 교체
+  (화면 코드는 유지) → ⑥Supabase Auth로 실제 로그인 연동 → ⑦Edge Function + pg_cron으로 Q-net
+  실데이터 자동 적재
+- **아직 결정 안 된 것**: 회원가입을 실제로 열지(지금은 테스트 계정 로그인만), Docker 로컬 스택을
+  나중에라도 쓸지 — Phase 8 진행하면서 정하기로 함
+
 ## 남은 것
 
 - 마이페이지 전체적으로 브라우저에서 실사용 흐름 검증 필요 (플랜 추가 → 결과 입력 → 그룹 카드
-  반영 → 새 페이지 이동까지 한 사이클을 직접 클릭해보면서 확인하면 좋음)
-- `Footer.tsx`/`MyPageLayout.tsx`에 브랜드 컬러 도입 이전의 `border-gray-200`/`text-black`/
-  `text-gray-500` 하드코딩이 아직 남아있음 (발견만 해두고 아직 안 고침)
-- `getTestSites`/`mockTestSites`/`getExamAreas`/`mockExamAreas` — 위 "시험장 정보 기능" 참고,
-  완전히 안 쓰는 코드라 정리 대상 후보
-- 다음은 Phase 8: Supabase Edge Function + pg_cron으로 Q-net API 연동 시작
+  반영 → 새 페이지 이동까지 한 사이클을 직접 클릭해보면서 확인하면 좋음) — 아직 미완료, 다음
+  컴퓨터에서 `npm run dev` 띄운 뒤 진행 예정
+- Phase 8: 위 "Phase 8 착수" 참고, 다음은 테이블 설계 확정 + 마이그레이션 SQL 작성부터
 
 ## 테스트 계정
 
@@ -370,6 +439,11 @@ npx oxlint       # 린트
 
 ## 참고
 
+- **Supabase 프로젝트 연결됨** (`supabase/config.toml`, ref `kfytuojajjrnydwudxxb`). 다른 컴퓨터에서
+  이어서 작업할 땐 `npx supabase login`을 한 번 더 해야 함(로그인 세션은 컴퓨터별로 따로 필요,
+  `link` 정보는 `config.toml`에 이미 있어서 다시 `link` 할 필요는 없음). `.env`에
+  `VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY`도 새로 추가해야 함(git에 안 올라가는 값이라 컴퓨터마다
+  따로 설정 필요).
 - `.env`의 `QNET_API_KEY`로 Q-net API 직접 조회 가능 (실제 데이터 확인용, 아직 앱에서 직접 호출은 안 함)
 - `scripts/test-qnet-api.mjs`, `scripts/fetch-qnet-snapshot.mjs`로 서버 사이드 호출 + XML→JSON
   파싱이 실제로 되는지 검증해둠 (`node --env-file=.env scripts/fetch-qnet-snapshot.mjs`). 결과는

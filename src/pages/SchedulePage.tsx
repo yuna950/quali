@@ -112,7 +112,7 @@ export function SchedulePage() {
                 key={dateStr}
                 type="button"
                 onClick={() => handleSelectDate(dateStr)}
-                className={`flex aspect-square flex-col items-center justify-center gap-1 border-r border-b border-border text-sm transition-colors ${
+                className={`flex aspect-square flex-col items-center gap-1 border-r border-b border-border pt-1.5 text-sm transition-colors sm:pt-2 ${
                   isOtherMonth ? 'text-muted-foreground/40' : ''
                 } ${isSelected ? 'bg-brand/10' : 'hover:bg-muted'}`}
               >

@@ -12,7 +12,7 @@ export function Header() {
   const { isLoggedIn, logout } = useAuth()
 
   return (
-    <header className="flex items-center justify-between border-b border-gray-200 px-6 py-4">
+    <header className="flex items-center justify-between border-b border-border px-6 py-4">
       <Link to="/" className="text-xl font-bold text-brand">
         QUALI
       </Link>

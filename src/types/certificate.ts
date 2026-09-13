@@ -72,23 +72,6 @@ export interface PassRateSummary {
   averageRate: number
 }
 
-export interface ExamArea {
-  branchCode: string
-  branchName: string
-  areaType: string
-  areaName: string
-  address: string
-  locationGuide?: string
-  phone?: string
-}
-
-export interface TestSite {
-  branchName: string
-  areaName: string
-  areaRole: string
-  hasCbtFacility: boolean
-}
-
 export interface SeriesOption {
   code: string
   name: string

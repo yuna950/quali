@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import {
   Dialog,
+  DialogBody,
   DialogContent,
   DialogFooter,
   DialogHeader,
@@ -75,55 +76,67 @@ export function ExamReadinessChecklist({ planId }: { planId: string }) {
             <DialogHeader>
               <DialogTitle>준비물 추가</DialogTitle>
             </DialogHeader>
-            <Input
-              value={newItemLabel}
-              onChange={(e) => setNewItemLabel(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') {
-                  e.preventDefault()
-                  handleAddCustom()
-                }
-              }}
-              placeholder="예: 여분 볼펜"
-              autoFocus
-            />
+            <DialogBody>
+              <Input
+                value={newItemLabel}
+                onChange={(e) => setNewItemLabel(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault()
+                    handleAddCustom()
+                  }
+                }}
+                placeholder="예: 여분 볼펜"
+                autoFocus
+              />
+            </DialogBody>
             <DialogFooter>
-              <Button onClick={handleAddCustom}>등록</Button>
+              <Button variant="brand" onClick={handleAddCustom}>
+                등록
+              </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
       </div>
 
-      {DEFAULT_ITEMS.map((item) => {
-        const checked = checklist.checkedDefaults.includes(item.id)
-        return (
-          <label key={item.id} className="flex items-center gap-2">
-            <Checkbox checked={checked} onCheckedChange={() => handleToggleDefault(item.id)} />
-            <span className={`text-sm ${checked ? 'text-muted-foreground line-through' : ''}`}>
-              {item.label}
-            </span>
-          </label>
-        )
-      })}
+      <div className="flex flex-wrap gap-2">
+        {DEFAULT_ITEMS.map((item) => {
+          const checked = checklist.checkedDefaults.includes(item.id)
+          return (
+            <label
+              key={item.id}
+              className="flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5"
+            >
+              <Checkbox checked={checked} onCheckedChange={() => handleToggleDefault(item.id)} />
+              <span className={`text-sm ${checked ? 'text-muted-foreground line-through' : ''}`}>
+                {item.label}
+              </span>
+            </label>
+          )
+        })}
 
-      {checklist.customItems.map((item) => (
-        <div key={item.id} className="flex items-center gap-2">
-          <label className="flex flex-1 items-center gap-2">
-            <Checkbox checked={item.checked} onCheckedChange={() => handleToggleCustom(item.id)} />
-            <span className={`text-sm ${item.checked ? 'text-muted-foreground line-through' : ''}`}>
-              {item.label}
-            </span>
-          </label>
-          <Button
-            variant="ghost"
-            size="icon-xs"
-            aria-label="준비물 삭제"
-            onClick={() => handleRemoveCustom(item.id)}
+        {checklist.customItems.map((item) => (
+          <div
+            key={item.id}
+            className="flex items-center gap-1 rounded-lg border border-border py-1 pr-1 pl-3"
           >
-            <X />
-          </Button>
-        </div>
-      ))}
+            <label className="flex items-center gap-1.5">
+              <Checkbox checked={item.checked} onCheckedChange={() => handleToggleCustom(item.id)} />
+              <span className={`text-sm ${item.checked ? 'text-muted-foreground line-through' : ''}`}>
+                {item.label}
+              </span>
+            </label>
+            <Button
+              variant="ghost"
+              size="icon-xs"
+              aria-label="준비물 삭제"
+              onClick={() => handleRemoveCustom(item.id)}
+            >
+              <X />
+            </Button>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

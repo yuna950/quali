@@ -1,5 +1,7 @@
+import { Plus } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { QuickAddPlanDialog } from '@/components/home/QuickAddPlanDialog'
 import { ExamRecordFormDialog } from '@/components/mypage/ExamRecordFormDialog'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -49,25 +51,39 @@ export function MyCertificatesPage() {
     setPlans((prev) => prev?.filter((p) => p.id !== planId) ?? null)
   }
 
+  function handlePlanAdded(plan: MyExamPlan) {
+    setPlans((prev) => (prev ? [...prev, plan] : [plan]))
+  }
+
   if (!plans) return null
 
   const groups = groupByCertificate(plans)
 
-  if (groups.length === 0) {
-    return (
-      <Card>
-        <CardContent className="flex flex-col items-center gap-3 py-10 text-center">
-          <p className="desc-3 text-muted-foreground">준비 중인 시험이 없어요.</p>
-          <Button variant="outline" size="sm" nativeButton={false} render={<Link to="/search" />}>
-            자격증 검색하러 가기
-          </Button>
-        </CardContent>
-      </Card>
-    )
-  }
-
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-4">
+      <div className="flex justify-end">
+        <QuickAddPlanDialog
+          onAdded={handlePlanAdded}
+          trigger={
+            <Button variant="outline" size="sm" className="text-brand hover:bg-brand/5">
+              <Plus />
+              시험 추가
+            </Button>
+          }
+        />
+      </div>
+
+      {groups.length === 0 && (
+        <Card>
+          <CardContent className="flex flex-col items-center gap-3 py-10 text-center">
+            <p className="desc-3 text-muted-foreground">준비 중인 시험이 없어요.</p>
+            <Button variant="outline" size="sm" nativeButton={false} render={<Link to="/search" />}>
+              자격증 검색하러 가기
+            </Button>
+          </CardContent>
+        </Card>
+      )}
+
       {groups.map((group) => (
         <Link key={group.jmCd} to={`/mypage/records/${group.jmCd}`}>
           <Card className="transition-shadow hover:shadow-md">

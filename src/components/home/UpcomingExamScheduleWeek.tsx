@@ -67,7 +67,7 @@ export function UpcomingExamScheduleWeek() {
               return (
                 <div
                   key={dateStr}
-                  className="flex flex-col items-center gap-1.5 border-r border-b border-border py-2"
+                  className="flex aspect-square flex-col items-center gap-1.5 border-r border-b border-border pt-1.5 sm:pt-2"
                 >
                   <span className="text-sm font-medium">{day.getDate()}</span>
                   <span className="flex h-1.5 gap-0.5">

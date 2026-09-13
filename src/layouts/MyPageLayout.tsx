@@ -10,7 +10,7 @@ const tabs = [
 export function MyPageLayout() {
   return (
     <div className="mx-auto max-w-4xl px-6 py-8">
-      <nav className="mb-6 flex gap-4 border-b border-gray-200">
+      <nav className="mb-6 flex gap-4 border-b border-border">
         {tabs.map((tab) => (
           <NavLink
             key={tab.to}
@@ -19,8 +19,8 @@ export function MyPageLayout() {
             className={({ isActive }) =>
               `pb-3 text-sm font-medium ${
                 isActive
-                  ? 'border-b-2 border-black text-black'
-                  : 'text-gray-500'
+                  ? 'border-b-2 border-brand text-brand'
+                  : 'text-muted-foreground'
               }`
             }
           >

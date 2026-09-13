@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "호텔경영사",
+    "kmNm": "관광법규",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "10",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "호텔경영사",
+    "kmNm": "호텔회계론",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "30",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "호텔경영사",
+    "kmNm": "호텔인사및조직관리론",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "30",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "호텔경영사",
+    "kmNm": "호텔마케팅론",
+    "kmOrder": "4",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "30",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "면접형",
+    "jmNm": "호텔경영사",
+    "kmNm": "면접(전체)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "100",
+    "qitemCnt": "4",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "20"
+  }
+]

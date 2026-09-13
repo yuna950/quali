@@ -1,0 +1,58 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "제과산업기사",
+    "kmNm": "위생안전관리",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "제과산업기사",
+    "kmNm": "제과점관리",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "제과산업기사",
+    "kmNm": "제과류 제품제조",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "작업형",
+    "jmNm": "제과산업기사",
+    "kmNm": "제1과제",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "100",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "180"
+  }
+]

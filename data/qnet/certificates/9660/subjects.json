@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "한국어교육능력검정시험",
+    "kmNm": "한국어학",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "60",
+    "omrStdPnt": "90",
+    "qitemCnt": "60",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "50"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "한국어교육능력검정시험",
+    "kmNm": "일반언어학 및 응용언어학",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "30",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "50"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "한국어교육능력검정시험",
+    "kmNm": "한국문화",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "2",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "30",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "75"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "한국어교육능력검정시험",
+    "kmNm": "외국어로서의 한국어교육론",
+    "kmOrder": "4",
+    "kmYn": "필수과목",
+    "lssnNo": "2",
+    "omrQitemCnt": "92",
+    "omrStdPnt": "138",
+    "qitemCnt": "93",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "75"
+  },
+  {
+    "dtlTypNm": "면접형",
+    "jmNm": "한국어교육능력검정시험",
+    "kmNm": "면접(전체)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "100",
+    "qitemCnt": "4",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "10"
+  }
+]

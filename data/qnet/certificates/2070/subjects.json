@@ -1,0 +1,71 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "자동차정비산업기사",
+    "kmNm": "자동차 엔진정비",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "자동차정비산업기사",
+    "kmNm": "자동차 섀시정비",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "자동차정비산업기사",
+    "kmNm": "자동차 전기·전자 장치 정비",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "자동차정비산업기사",
+    "kmNm": "친환경 자동차 정비",
+    "kmOrder": "4",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "작업형",
+    "jmNm": "자동차정비산업기사",
+    "kmNm": "제1과제",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrStdPnt": "100",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "30"
+  }
+]

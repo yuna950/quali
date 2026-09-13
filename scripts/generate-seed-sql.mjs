@@ -2,17 +2,18 @@
 // 네트워크 호출도, API 키도 전혀 안 쓰는 순수 로컬 변환 스크립트라 민감정보가 아예 없음.
 // 실행: node scripts/generate-seed-sql.mjs
 // 적용: npx supabase db push --include-seed
-import { readFile, writeFile } from 'node:fs/promises'
+import { readdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
 const ROOT = path.resolve(import.meta.dirname, '..')
 const QNET_DIR = path.join(ROOT, 'data/qnet')
 
-// scripts/fetch-qnet-snapshot.mjs와 동일한 최종(코드 수정 반영) 18개 목록
-const JM_CODES = [
-  '0752', '0080', '0490', '1320', '2290', '1150', '9762', '9763',
-  '0960', '1790', '2434', '1512', '2432', '1982', '2982', '7798', '6793', '7796',
-]
+// data/qnet/certificates/ 아래에 실제로 받아둔 자격증 전부를 대상으로 함
+// (fetch-qnet-snapshot.mjs --all로 613개를 받았으면 613개, 기존 18개만 받았으면 18개)
+async function listFetchedJmCodes() {
+  const entries = await readdir(path.join(QNET_DIR, 'certificates'), { withFileTypes: true })
+  return entries.filter((e) => e.isDirectory()).map((e) => e.name)
+}
 
 function sqlStr(value) {
   return `'${String(value).replace(/'/g, "''")}'`
@@ -86,6 +87,14 @@ const PASS_RATE_BASE = {
   '2432': 1300, '1982': 2600, '2982': 1100, '7798': 3400, '6793': 900, '7796': 4700,
 }
 
+// PASS_RATE_BASE에 없는(기존 18개 밖의) 자격증은 jmCd에서 결정적으로 뽑아낸 값을 씀 —
+// 실행할 때마다 값이 안 바뀌면서도 자격증마다 다른 숫자가 나오게 함.
+function hashBase(jmCd) {
+  let hash = 0
+  for (const ch of jmCd) hash = (hash * 31 + ch.charCodeAt(0)) >>> 0
+  return 300 + (hash % 25000)
+}
+
 function buildPassRateSummary(base) {
   const years = [2021, 2022, 2023, 2024, 2025].map((year, i) => {
     const applicants = base + i * 137
@@ -106,9 +115,11 @@ async function main() {
 
   const qualifications = await readJson('qualifications.json')
   const byJmCd = new Map(qualifications.map((q) => [q.jmcd, q]))
+  const targetCodes = await listFetchedJmCodes()
+  console.log(`대상 자격증: ${targetCodes.length}개`)
 
   lines.push('-- certificates')
-  for (const jmCd of JM_CODES) {
+  for (const jmCd of targetCodes) {
     const q = byJmCd.get(jmCd)
     if (!q) {
       console.warn(`[경고] qualifications.json에 ${jmCd}가 없어서 certificates row를 못 만듦`)
@@ -135,7 +146,7 @@ async function main() {
   lines.push('')
 
   lines.push('-- exam_schedules')
-  for (const jmCd of JM_CODES) {
+  for (const jmCd of targetCodes) {
     const schedule = await readJson(`certificates/${jmCd}/schedule.json`)
     if (!schedule) continue
     for (const item of schedule) {
@@ -155,7 +166,7 @@ async function main() {
   lines.push('')
 
   lines.push('-- exam_fees')
-  for (const jmCd of JM_CODES) {
+  for (const jmCd of targetCodes) {
     const fee = await readJson(`certificates/${jmCd}/fee.json`)
     if (!fee || fee.length === 0) continue
     const items = fee.flatMap((f) => parseFeeItems(f.contents ?? ''))
@@ -169,7 +180,7 @@ async function main() {
   lines.push('')
 
   lines.push('-- exam_subjects')
-  for (const jmCd of JM_CODES) {
+  for (const jmCd of targetCodes) {
     const subjects = await readJson(`certificates/${jmCd}/subjects.json`)
     if (!subjects) continue
     for (const s of subjects) {
@@ -196,9 +207,8 @@ async function main() {
   lines.push('')
 
   lines.push('-- pass_rates (mock 값 — Q-net 실데이터 없음)')
-  for (const jmCd of JM_CODES) {
-    const base = PASS_RATE_BASE[jmCd]
-    if (base === undefined) continue
+  for (const jmCd of targetCodes) {
+    const base = PASS_RATE_BASE[jmCd] ?? hashBase(jmCd)
     const { years, averageRate } = buildPassRateSummary(base)
     lines.push(
       `insert into public.pass_rates (jm_cd, years, average_rate, updated_at) values (` +

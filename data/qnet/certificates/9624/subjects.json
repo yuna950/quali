@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "관광통역안내사(불어)",
+    "kmNm": "국사",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "40",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "관광통역안내사(불어)",
+    "kmNm": "관광자원해설",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "20",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "관광통역안내사(불어)",
+    "kmNm": "관광법규",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "20",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "관광통역안내사(불어)",
+    "kmNm": "관광학개론",
+    "kmOrder": "4",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "20",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "면접형",
+    "jmNm": "관광통역안내사(불어)",
+    "kmNm": "면접(전체)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "100",
+    "qitemCnt": "4",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "10"
+  }
+]

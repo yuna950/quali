@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "가맹거래사",
+    "kmNm": "경제법",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "40"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "가맹거래사",
+    "kmNm": "민법",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "40"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "가맹거래사",
+    "kmNm": "경영학",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "40"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "가맹거래사",
+    "kmNm": "가맹사업거래의 공정화에 관한 법령 및 실무",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "300",
+    "qitemCnt": "3",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "100"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "가맹거래사",
+    "kmNm": "가맹계약에 관한 이론 및 실무",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "2",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "300",
+    "qitemCnt": "3",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "100"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "주택관리사보",
+    "kmNm": "회계원리",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "50"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "주택관리사보",
+    "kmNm": "민법",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "2",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "50"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "주택관리사보",
+    "kmNm": "공동주택시설개론",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "50"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "주택관리사보",
+    "kmNm": "주택관리관계법규",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "24",
+    "omrStdPnt": "60",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "50"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "주택관리사보",
+    "kmNm": "공동주택관리실무",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "24",
+    "omrStdPnt": "60",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "50"
+  }
+]

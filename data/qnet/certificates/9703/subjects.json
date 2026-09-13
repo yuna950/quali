@@ -1,0 +1,44 @@
+[
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "경영지도사(생산관리)",
+    "kmNm": "생산관리",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "200",
+    "qitemCnt": "6",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "90"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "경영지도사(생산관리)",
+    "kmNm": "품질경영",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "2",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "200",
+    "qitemCnt": "6",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "90"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "경영지도사(생산관리)",
+    "kmNm": "경영과학",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "3",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "200",
+    "qitemCnt": "6",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "90"
+  }
+]

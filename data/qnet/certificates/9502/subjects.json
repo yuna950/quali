@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "기계경비지도사",
+    "kmNm": "법학개론",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "40"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "기계경비지도사",
+    "kmNm": "민간경비론",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "40"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "기계경비지도사",
+    "kmNm": "경비업법(청원경찰법포함)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "40"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "기계경비지도사",
+    "kmNm": "기계경비개론",
+    "kmOrder": "2",
+    "kmYn": "선택과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "40"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "기계경비지도사",
+    "kmNm": "기계경비기획및설계",
+    "kmOrder": "3",
+    "kmYn": "선택과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "40"
+  }
+]

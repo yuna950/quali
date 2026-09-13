@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "국가유산수리기술자(보수)",
+    "kmNm": "국가유산관련법령",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "국가유산수리기술자(보수)",
+    "kmNm": "한국건축사",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "국가유산수리기술자(보수)",
+    "kmNm": "한국건축보수실무",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "2",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "300",
+    "qitemCnt": "4",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "120"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "국가유산수리기술자(보수)",
+    "kmNm": "한국건축구조",
+    "kmOrder": "4",
+    "kmYn": "필수과목",
+    "lssnNo": "3",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "300",
+    "qitemCnt": "4",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "120"
+  },
+  {
+    "dtlTypNm": "면접형",
+    "jmNm": "국가유산수리기술자(보수)",
+    "kmNm": "면접(전체)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "100",
+    "qitemCnt": "8",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "10"
+  }
+]

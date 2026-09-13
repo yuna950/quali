@@ -1,0 +1,44 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "검수사",
+    "kmNm": "검수에 관한 일반적 지식",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "검수사",
+    "kmNm": "영어",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "면접형",
+    "jmNm": "검수사",
+    "kmNm": "면접(전체)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "100",
+    "qitemCnt": "3",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "10"
+  }
+]

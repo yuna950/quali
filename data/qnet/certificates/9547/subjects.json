@@ -1,0 +1,58 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "이러닝운영관리사",
+    "kmNm": "이러닝운영계획수립",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "30",
+    "omrStdPnt": "100",
+    "qitemCnt": "30",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "45"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "이러닝운영관리사",
+    "kmNm": "이러닝활동지원",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "30",
+    "omrStdPnt": "100",
+    "qitemCnt": "30",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "45"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "이러닝운영관리사",
+    "kmNm": "이러닝운영관리",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "20",
+    "omrStdPnt": "100",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "이러닝운영관리사",
+    "kmNm": "대표과목",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "100",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "120"
+  }
+]

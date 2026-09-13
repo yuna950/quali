@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "산업보건지도사(산업위생공학)",
+    "kmNm": "공통필수Ⅰ(산업안전보건법령)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "산업보건지도사(산업위생공학)",
+    "kmNm": "공통필수Ⅱ(산업위생일반)",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "산업보건지도사(산업위생공학)",
+    "kmNm": "공통필수Ⅲ(기업진단ㆍ지도)",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "산업보건지도사(산업위생공학)",
+    "kmNm": "전공필수(산업위생공학)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "300",
+    "qitemCnt": "9",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "100"
+  },
+  {
+    "dtlTypNm": "면접형",
+    "jmNm": "산업보건지도사(산업위생공학)",
+    "kmNm": "면접(전체)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "10",
+    "qitemCnt": "3",
+    "selfldNm": "선택분야없음",
+    "seqNo": "3",
+    "suhmTmMi": "20"
+  }
+]

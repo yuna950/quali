@@ -1,0 +1,58 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "경매사(약용)",
+    "kmNm": "농수산물유통및가격안정에관한법률및그하위법령",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "경매사(약용)",
+    "kmNm": "상품성평가(약용)",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "경매사(약용)",
+    "kmNm": "농수산물유통론",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "25",
+    "omrStdPnt": "100",
+    "qitemCnt": "25",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "25"
+  },
+  {
+    "dtlTypNm": "작업형",
+    "jmNm": "경매사(약용)",
+    "kmNm": "물질의 물리",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "0",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "0"
+  }
+]

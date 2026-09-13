@@ -1,0 +1,44 @@
+[
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "경영지도사(마케팅)",
+    "kmNm": "마케팅관리론",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "200",
+    "qitemCnt": "6",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "90"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "경영지도사(마케팅)",
+    "kmNm": "시장조사론",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "2",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "200",
+    "qitemCnt": "6",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "90"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "경영지도사(마케팅)",
+    "kmNm": "소비자행동론",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "3",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "200",
+    "qitemCnt": "6",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "90"
+  }
+]

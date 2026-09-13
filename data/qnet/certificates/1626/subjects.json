@@ -1,0 +1,28 @@
+[
+  {
+    "dtlTypNm": "작업형",
+    "jmNm": "어병기사",
+    "kmNm": "제1과제",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrStdPnt": "100",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "30"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "어병기사",
+    "kmNm": "대표과목",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrStdPnt": "100",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "30"
+  }
+]

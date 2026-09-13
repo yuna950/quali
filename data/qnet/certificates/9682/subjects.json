@@ -1,0 +1,30 @@
+[
+  {
+    "dtlTypNm": "당일복합형",
+    "jmNm": "국가유산수리기능자(목조각공)",
+    "kmNm": "물질의 물리",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "70",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "420"
+  },
+  {
+    "dtlTypNm": "당일복합형",
+    "jmNm": "국가유산수리기능자(목조각공)",
+    "kmNm": "면접(전체)",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "30",
+    "qitemCnt": "1",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "0"
+  }
+]

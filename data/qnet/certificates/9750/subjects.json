@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "1급 청소년지도사",
+    "kmNm": "청소년연구방법론",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "14",
+    "omrStdPnt": "70",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "20"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "1급 청소년지도사",
+    "kmNm": "청소년인권과참여",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "14",
+    "omrStdPnt": "70",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "20"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "1급 청소년지도사",
+    "kmNm": "청소년정책론",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "14",
+    "omrStdPnt": "70",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "20"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "1급 청소년지도사",
+    "kmNm": "청소년기관운영",
+    "kmOrder": "4",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "14",
+    "omrStdPnt": "70",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "20"
+  },
+  {
+    "dtlTypNm": "필답형",
+    "jmNm": "1급 청소년지도사",
+    "kmNm": "청소년지도자론",
+    "kmOrder": "5",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "14",
+    "omrStdPnt": "70",
+    "qitemCnt": "20",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "20"
+  }
+]

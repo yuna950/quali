@@ -1,0 +1,44 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "사회복지사 1급",
+    "kmNm": "사회복지기초",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "50",
+    "omrStdPnt": "50",
+    "qitemCnt": "50",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "50"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "사회복지사 1급",
+    "kmNm": "사회복지실천",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "2",
+    "omrQitemCnt": "75",
+    "omrStdPnt": "75",
+    "qitemCnt": "75",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "75"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "사회복지사 1급",
+    "kmNm": "사회복지정책과 제도",
+    "kmOrder": "3",
+    "kmYn": "필수과목",
+    "lssnNo": "3",
+    "omrQitemCnt": "75",
+    "omrStdPnt": "75",
+    "qitemCnt": "75",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "75"
+  }
+]

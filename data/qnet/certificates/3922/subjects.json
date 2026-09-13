@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "작업형",
+    "jmNm": "조리기능장",
+    "kmNm": "제2과제(선택)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "0",
+    "qitemCnt": "1",
+    "selfldNm": "복어",
+    "seqNo": "2",
+    "suhmTmMi": "1"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "조리기능장",
+    "kmNm": "과목없음",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "60",
+    "omrStdPnt": "100",
+    "qitemCnt": "60",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "60"
+  },
+  {
+    "dtlTypNm": "작업형",
+    "jmNm": "조리기능장",
+    "kmNm": "제2과제(선택)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "0",
+    "qitemCnt": "1",
+    "selfldNm": "양식",
+    "seqNo": "2",
+    "suhmTmMi": "0"
+  },
+  {
+    "dtlTypNm": "작업형",
+    "jmNm": "조리기능장",
+    "kmNm": "제2과제(선택)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "0",
+    "qitemCnt": "1",
+    "selfldNm": "일식",
+    "seqNo": "2",
+    "suhmTmMi": "0"
+  },
+  {
+    "dtlTypNm": "작업형",
+    "jmNm": "조리기능장",
+    "kmNm": "제2과제(선택)",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "0",
+    "omrStdPnt": "0",
+    "qitemCnt": "1",
+    "selfldNm": "중식",
+    "seqNo": "2",
+    "suhmTmMi": "1"
+  }
+]

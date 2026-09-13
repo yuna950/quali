@@ -1,10 +1,13 @@
-// 지금 앱의 mock 자격증 19개를 기준으로 Q-net API를 실제로 호출해서
-// data/qnet/ 아래에 JSON으로 저장하는 스크립트. Supabase 연동 전, 실제 데이터를
-// 로컬에서 눈으로 확인하기 위한 용도.
-// 실행: node --env-file=.env scripts/fetch-qnet-snapshot.mjs
+// Q-net API를 실제로 호출해서 data/qnet/ 아래에 JSON으로 저장하는 스크립트.
+// 기본은 지금 앱이 쓰는 18개 자격증만 갱신하고, --all을 주면 qualifications.json에 있는
+// 국가자격 전체(613개, 2026-09-14 기준)를 대상으로 함.
+// 실행: node --env-file=.env scripts/fetch-qnet-snapshot.mjs [--all]
+// 중간에 끊겨도 이미 받아둔 자격증(subjects.json 존재)은 건너뛰고 이어서 받음.
 import { XMLParser } from 'fast-xml-parser'
-import { mkdir, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
+
+const FETCH_ALL = process.argv.includes('--all')
 
 const SERVICE_KEY = process.env.QNET_API_KEY
 if (!SERVICE_KEY) {
@@ -79,6 +82,15 @@ async function writeJson(relPath, data) {
   console.log(`  ✔ ${relPath}`)
 }
 
+async function fileExists(relPath) {
+  try {
+    await readFile(path.join(OUT_DIR, relPath))
+    return true
+  } catch {
+    return false
+  }
+}
+
 async function main() {
   console.log('=== 국가자격 종목 전체 목록 ===')
   const qualifications = await callApi('InquiryListNationalQualifcationSVC/getList', {
@@ -96,8 +108,16 @@ async function main() {
   // 이미 폐기하기로 확정한 기능/못 쓰기로 확인된 데이터라 더 이상 스냅샷을 안 받음
   // (자세한 근거는 PROGRESS.md "시험장 정보 기능" 섹션 참고).
 
-  console.log(`\n=== 종목별 상세 (${JM_CODES.length}개) ===`)
-  for (const jmCd of JM_CODES) {
+  const targetCodes = FETCH_ALL ? qualifications.map((q) => q.jmcd) : JM_CODES
+  console.log(`\n=== 종목별 상세 (${targetCodes.length}개, ${FETCH_ALL ? '전체' : '기존 18개'}) ===`)
+
+  let skipped = 0
+  for (const jmCd of targetCodes) {
+    if (await fileExists(`certificates/${jmCd}/subjects.json`)) {
+      skipped += 1
+      continue
+    }
+
     console.log(`\n[${jmCd}]`)
 
     try {
@@ -125,7 +145,7 @@ async function main() {
     await sleep(200)
   }
 
-  console.log(`\n✅ 완료. data/qnet/ 아래 파일들을 확인하세요.`)
+  console.log(`\n✅ 완료 (이미 있어서 건너뜀: ${skipped}개). data/qnet/ 아래 파일들을 확인하세요.`)
 }
 
 main().catch((err) => {

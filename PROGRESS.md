@@ -478,12 +478,46 @@ Q-net 공공데이터 API(XML)를 Supabase Edge Function이 받아 테이블로 
   (가입 즉시 로그인되는 방식으로 전환). `SignupPage.tsx`에 이 한도초과 에러 메시지 한국어 안내도 추가.
 - `npx tsc -b --noEmit`, `npx oxlint`, `npm run build` 확인 완료
 
+## 저장 실패 시 에러 처리 + 마이페이지 실사용 검증 (2026-09-14)
+
+- 실제 회원가입 계정으로 마이페이지 전체 사이클(플랜 추가 → 결과 입력 → 그룹 카드 반영 → 삭제,
+  응시기록 추가/수정/삭제) 검증 완료
+- 검증 중 "결과 입력"/"응시기록 추가"가 저장이 안 되는 문제 발생 — 재현 시도 결과 백엔드 자체는
+  정상(직접 스크립트로 같은 방식 insert 성공)이었고, 일시적인 현상으로 재시도하니 해결됨. 다만
+  이 과정에서 `ExamRecordFormDialog`/`QuickAddPlanDialog`의 저장 로직에 에러 처리가 아예 없어서
+  실패해도 조용히 아무 반응이 없다는 진짜 문제를 발견 → try/catch 추가해서 실패 시
+  "저장에 실패했어요" 토스트가 뜨도록 수정
+
+## ⑦ 착수: 전체 자격증(613개) 백필 (2026-09-14)
+
+지금 18개뿐인 자격증을 Q-net 전체(613개)로 채우는 작업. Edge Function이 상시 자동으로 하기엔
+API가 너무 불안정해서(아래 참고), 최초 대량 적재는 로컬에서 한 번 처리하기로 함.
+
+- `scripts/fetch-qnet-snapshot.mjs`에 `--all` 옵션 추가 — 기본은 기존 18개만, `--all`이면
+  `qualifications.json`의 613개 전체 대상. 중간에 끊겨도 이미 받은 자격증(subjects.json 존재
+  여부로 판단)은 건너뛰고 이어받도록 재개 기능 추가.
+- 613개 전체 수집 완료 (`data/qnet/certificates/`). 시험일정(schedule) API가 유독 불안정해서
+  292개는 못 받았음(응시료·과목은 610/613 성공) — 못 받은 건 "아직 공고된 회차 없음" 상태로
+  자연스럽게 처리됨.
+- **`supabase db push --include-seed`가 원격(호스팅) 프로젝트에는 실제로 데이터를 안 넣는다는
+  것을 발견**: 커맨드는 "Finished" 성공 메시지를 내고 "Updating seed hash..."라고 표시하지만,
+  실제로는 해시만 기록하고 SQL을 실행하지 않음(단일 테스트 행으로 검증). 로컬 `db reset`용
+  기능이라 원격 push엔 안 맞는 것으로 보임 — CLI 문서에 명확히 안 나와 있어서 직접 겪어서 확인함.
+- 이 발견으로 **`scripts/generate-seed-sql.mjs`(SQL 파일 생성) 방식을 포기**하고,
+  **`scripts/seed-supabase.mjs`(신규)**로 교체 — `service_role` 키로 Supabase 테이블에 직접
+  upsert. 지난번에 "API 키를 안 쓰는 방법"으로 일부러 피했던 접근인데, 원격 DB에 대량 데이터를
+  실제로 넣을 안전하고 검증된 방법이 이것뿐이라 다시 채택함(키는 이 로컬 스크립트 밖으로 안 나감,
+  `.env`의 `SUPABASE_SERVICE_ROLE_KEY`로 관리, `VITE_` 접두사 절대 금지).
+- `SUPABASE_SERVICE_ROLE_KEY`를 `.env`에 추가받는 대로 `node --env-file=.env scripts/seed-supabase.mjs`
+  실행 예정 — 아직 미실행 상태 (지금 시점 `certificates` 테이블은 여전히 18건).
+
 ## 남은 것
 
-- 마이페이지 실사용 흐름(플랜 추가 → 결과 입력 → 그룹 카드 반영 → 삭제) 전체 사이클을 **실제
-  회원가입한 계정으로** 검증 필요 (Auth+userService를 Supabase로 막 바꿔서 한 번 훑어보는 게 좋음)
-- 다음은 **⑦ Edge Function + pg_cron** — 나머지 595개 자격증 + 상세정보 자동 적재, 여기서
-  `pass_rates`(Q-net 미제공)만 예외적으로 계속 mock 유지
+- **`SUPABASE_SERVICE_ROLE_KEY`를 `.env`에 추가하고 `scripts/seed-supabase.mjs` 실행** — 613개
+  자격증을 실제 DB에 반영하는 마지막 단계, 다른 컴퓨터에서 이어서 할 경우 이 키부터 다시 받아야 함
+- 그 다음 **⑦ Edge Function + pg_cron** — 이제부턴 "최초 대량 적재"가 아니라 "이미 있는 자격증들의
+  시험일정을 주기적으로 갱신 + 새 자격증 추가 감지"로 역할 축소, 주기는 매주로 잠정 합의
+  (`pass_rates`는 Q-net 미제공이라 계속 mock 유지)
 - 나중에 실제 배포하게 되면 커스텀 SMTP(Resend/SendGrid 등) 연동 후 "Confirm email" 다시 켜는 것
   검토 (지금은 대시보드에서 꺼둔 상태)
 
@@ -513,11 +547,15 @@ npx oxlint       # 린트
   따로 설정 필요).
 - `.env`의 `QNET_API_KEY`로 Q-net API 직접 조회 가능 (`scripts/`의 두 스크립트 전용, 앱 자체는
   호출 안 함). `parseTagValue: false` 꼭 필요(안 하면 `jmcd="0080"` 같은 코드값 앞자리 0이 날아감)
-- **실데이터 파이프라인**: `scripts/fetch-qnet-snapshot.mjs`(API 호출 → `data/qnet/`에 JSON 저장,
-  현재 18개 자격증) → `scripts/generate-seed-sql.mjs`(JSON → `supabase/seed.sql` 변환, API 키 불필요)
-  → `npx supabase db push --include-seed`(실제 DB에 반영). 자격증을 더 채우고 싶으면 이 3단계를
-  그대로 다시 돌리면 됨 (전부 upsert라 안전)
-- 지금 `certificates` 테이블엔 Q-net 전체 613개 중 18개만 있음 — 나머지(⑦단계에서 채울 예정)는
-  검색해도 안 나오는 게 정상
+- **실데이터 파이프라인**: `scripts/fetch-qnet-snapshot.mjs [--all]`(API 호출 → `data/qnet/`에
+  JSON 저장, `--all` 없으면 기존 18개만) → `scripts/seed-supabase.mjs`(JSON → Supabase 테이블에
+  직접 upsert, `SUPABASE_SERVICE_ROLE_KEY` 필요). ⚠️ `scripts/generate-seed-sql.mjs` +
+  `supabase/seed.sql` + `db push --include-seed` 조합은 원격 프로젝트엔 실제로 안 먹히는 걸
+  확인해서 폐기함(2026-09-14, 위 "⑦ 착수" 섹션 참고) — 더 이상 이 경로로 시딩하지 말 것
+- `.env`에 `SUPABASE_SERVICE_ROLE_KEY` 필요(Project Settings → API Keys → `service_role`,
+  `VITE_` 접두사 절대 금지 — 붙이면 브라우저에 노출됨). `scripts/seed-supabase.mjs` 전용이고
+  다른 곳에서는 안 씀
+- 지금 `certificates` 테이블엔 Q-net 전체 613개 중 18개만 있음 — 613개는 이미 로컬에 받아뒀고
+  (`data/qnet/certificates/`), DB 반영만 남음(위 "⑦ 착수" 섹션 참고)
 - 카드 컴포넌트 등은 shadcn CLI로 관리 (`npx shadcn@latest add <component>`)
 - 커밋 메시지는 "왜"를 설명하는 스타일 유지, Co-Authored-By 트레일러 포함

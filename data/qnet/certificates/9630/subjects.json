@@ -1,0 +1,72 @@
+[
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "공인중개사",
+    "kmNm": "부동산학개론",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "50"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "공인중개사",
+    "kmNm": "민법및민사특별법",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "1",
+    "suhmTmMi": "50"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "공인중개사",
+    "kmNm": "공인중개사의업무및부동산거래신고에관한법령및중개실무",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "50"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "공인중개사",
+    "kmNm": "부동산공시에관한법령및부동산관련세법",
+    "kmOrder": "1",
+    "kmYn": "필수과목",
+    "lssnNo": "2",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "50"
+  },
+  {
+    "dtlTypNm": "객관식",
+    "jmNm": "공인중개사",
+    "kmNm": "부동산공법중부동산중개에관련되는규정",
+    "kmOrder": "2",
+    "kmYn": "필수과목",
+    "lssnNo": "1",
+    "omrQitemCnt": "40",
+    "omrStdPnt": "100",
+    "qitemCnt": "40",
+    "selfldNm": "선택분야없음",
+    "seqNo": "2",
+    "suhmTmMi": "50"
+  }
+]

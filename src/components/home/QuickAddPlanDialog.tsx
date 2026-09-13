@@ -137,17 +137,23 @@ export function QuickAddPlanDialog({
       return
     }
 
-    const created = await addMyPlan({
-      jmCd: certOption.value,
-      certificateName: certOption.label,
-      stage,
-      year: Number(year),
-      round: Number(round),
-      examDate: examDate.replaceAll('-', ''),
-    })
+    try {
+      const created = await addMyPlan({
+        jmCd: certOption.value,
+        certificateName: certOption.label,
+        stage,
+        year: Number(year),
+        round: Number(round),
+        examDate: examDate.replaceAll('-', ''),
+      })
 
-    onAdded(created)
-    toast.success('나의 시험에 추가했어요.')
+      onAdded(created)
+      toast.success('나의 시험에 추가했어요.')
+    } catch {
+      toast.error('저장에 실패했어요. 잠시 후 다시 시도해주세요.')
+      return
+    }
+
     setOpen(false)
   }
 

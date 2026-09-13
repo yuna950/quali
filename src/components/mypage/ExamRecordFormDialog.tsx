@@ -199,22 +199,27 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
       memo: memo || undefined,
     }
 
-    if (editingRecord) {
-      const updated = await updateExamRecord(editingRecord.id, payload)
-      if (updated) {
-        onSaved(updated)
-        toast.success('응시기록을 수정했어요.')
-      }
-    } else {
-      const created = await addExamRecord({ ...payload, planId: lockedPlan?.id })
-      onSaved(created)
+    try {
+      if (editingRecord) {
+        const updated = await updateExamRecord(editingRecord.id, payload)
+        if (updated) {
+          onSaved(updated)
+          toast.success('응시기록을 수정했어요.')
+        }
+      } else {
+        const created = await addExamRecord({ ...payload, planId: lockedPlan?.id })
+        onSaved(created)
 
-      if (lockedPlan) {
-        await removeMyPlan(lockedPlan.id)
-        onPlanRemoved?.(lockedPlan.id)
-      }
+        if (lockedPlan) {
+          await removeMyPlan(lockedPlan.id)
+          onPlanRemoved?.(lockedPlan.id)
+        }
 
-      toast.success('응시기록을 추가했어요.')
+        toast.success('응시기록을 추가했어요.')
+      }
+    } catch {
+      toast.error('저장에 실패했어요. 잠시 후 다시 시도해주세요.')
+      return
     }
 
     setOpen(false)

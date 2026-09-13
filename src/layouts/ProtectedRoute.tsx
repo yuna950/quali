@@ -2,8 +2,10 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom'
 import { useAuth } from '../lib/auth'
 
 export function ProtectedRoute() {
-  const { isLoggedIn } = useAuth()
+  const { isLoggedIn, isLoading } = useAuth()
   const location = useLocation()
+
+  if (isLoading) return null
 
   if (!isLoggedIn) {
     const redirect = encodeURIComponent(location.pathname + location.search)

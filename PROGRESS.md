@@ -8,8 +8,9 @@
 자격증 정보 + 나의 시험 일정/응시 기록을 한 곳에서 관리하는 개인 맞춤형 자격증 관리 서비스.
 Q-net 공공데이터 API(XML)를 Supabase Edge Function이 받아 테이블로 적재하고, 프론트는 Supabase만
 조회하는 구조로 갈 계획. 프론트엔드는 완성됐고, 지금은 Supabase 연동(Phase 8) 진행 중 —
-공개 자격증 데이터(`certificateService.ts`)는 이미 실제 Supabase DB를 조회하도록 바뀌었고,
-로그인이 필요한 마이페이지 데이터(`userService.ts`)는 아직 localStorage 그대로임(Auth 연동 후 교체 예정).
+자격증 데이터(`certificateService.ts`)와 마이페이지 데이터(`userService.ts`) 모두 실제 Supabase DB를
+쓰도록 바뀌었고, 회원가입/로그인도 실제 Supabase Auth로 동작함. 남은 건 Q-net 실데이터를 나머지
+자격증까지 자동으로 채워주는 Edge Function + pg_cron뿐.
 
 ## 작업 순서 (합의된 원칙)
 
@@ -28,9 +29,10 @@ Q-net 공공데이터 API(XML)를 Supabase Edge Function이 받아 테이블로 
 - **Phase 6 (마이페이지)**: 완료
 - **Phase 7 (인증 화면 디자인)**: 완료. 로그인/회원가입 모두 같은 톤으로 완성 (회원가입은 실제 계정
   생성 백엔드가 없어서 제출하면 "준비 중" 토스트만 뜨고 테스트 계정 로그인으로 유도)
-- **Phase 8 (Supabase/API 연동)**: 진행 중. 테이블/마이그레이션/실데이터 시딩(자격증 18개)까지
-  완료, 공개 데이터 서비스 레이어(`certificateService.ts`)도 교체 완료. 남은 건 Auth 연동과
-  Edge Function — 아래 "Phase 8 착수"/"Phase 8 진행" 참고
+- **Phase 8 (Supabase/API 연동)**: 진행 중. 테이블/마이그레이션/실데이터 시딩(자격증 18개),
+  `certificateService.ts`/`userService.ts` 서비스 레이어 교체, 실제 회원가입/로그인(Supabase Auth)
+  까지 완료. 남은 건 Edge Function + pg_cron뿐 — 아래 "Phase 8 착수"/"Phase 8 진행"/"⑥ Supabase
+  Auth 연동" 참고
 
 ## 지금까지 커밋된 것 (마이페이지 v2)
 
@@ -452,19 +454,43 @@ Q-net 공공데이터 API(XML)를 Supabase Edge Function이 받아 테이블로 
   `src/lib/supabase.ts`(anon 키로 만든 공용 클라이언트) 신규 추가.
 - `npx tsc -b --noEmit`, `npx oxlint`, `npm run build` 확인 완료 (신규 에러 없음)
 
+## ⑥ Supabase Auth 연동 (2026-09-14)
+
+회원가입을 실제로 열기로 결정 → 가짜 테스트 계정을 완전히 걷어내고 실제 Supabase Auth로 교체.
+
+- `src/lib/auth.tsx` 전면 교체: `TEST_ACCOUNT`/localStorage 방식 삭제, `signup`/`login`/`logout`/
+  `updateName`을 전부 실제 Supabase Auth 호출로 구현. 세션은 `onAuthStateChange`로 실시간 추적.
+  이름은 별도 테이블 없이 `user_metadata`에 저장.
+- **`userService.ts`도 같이 Supabase로 교체**: Auth만 실제로 바꾸고 이 서비스를 localStorage에
+  남겨두면, 같은 브라우저의 여러 계정이 서로의 나의 시험/응시기록을 공유해서 보게 되는 문제가
+  생겨서 같이 진행함. 함수 시그니처는 그대로 유지해서 화면 코드는 안 건드림. 플랜 삭제 시
+  체크리스트 정리도 이제 DB `ON DELETE CASCADE`가 대신 처리(코드의 수동 정리 로직 제거).
+- **스키마 버그 추가 발견/수정**: `my_exam_plans`/`exam_records.exam_date`를 처음에 Postgres
+  네이티브 `date` 타입으로 만들었는데, 앱은 이 값을 `'20260928'` 압축 문자열로 다루는 관례라
+  안 맞았음(`date` 타입은 `'2026-09-28'`로 내려옴). TypeScript 타입상으론 둘 다 `string`이라
+  컴파일러가 못 잡아주는 종류의 버그 — 마이그레이션(`use_text_exam_date`) 추가해서 `text`로 수정.
+- **이메일 인증 관련 시행착오**: 처음엔 CLI(`supabase config push`)로 이메일 인증을 끄려고
+  했는데, `config diff`로 확인해보니 MFA/Twilio/커넥션풀 설정까지 한 번에 얽혀있고 특히 Twilio는
+  자격증명 없이 `enabled`만 맞추면 스키마 에러가 나서 위험 판단 → 시도 되돌리고 손 안 댐.
+  이후 실제로 회원가입 테스트하다가 **Supabase 기본 이메일 발송 한도(시간당 몇 건 안 됨)를
+  초과하는 문제**를 직접 겪음(`over_email_send_rate_limit`) → 커스텀 SMTP 연동 전까지는 이메일
+  인증 자체가 비현실적이라고 판단, **Supabase 대시보드에서 "Confirm email" 토글을 꺼서 해결**
+  (가입 즉시 로그인되는 방식으로 전환). `SignupPage.tsx`에 이 한도초과 에러 메시지 한국어 안내도 추가.
+- `npx tsc -b --noEmit`, `npx oxlint`, `npm run build` 확인 완료
+
 ## 남은 것
 
-- 마이페이지 실사용 흐름(플랜 추가 → 결과 입력 → 그룹 카드 반영 → 삭제) 전체 사이클 검증 —
-  `userService.ts`는 아직 안 건드려서 급하진 않지만 여전히 미완료
-- 다음은 **⑥ Supabase Auth 연동** — 시작 전에 "회원가입을 실제로 열지" 결정 필요(지금은 테스트
-  계정 로그인만 있음)
-- 그다음 **⑦ Edge Function + pg_cron** — 나머지 595개 자격증 + 상세정보 자동 적재, 여기서
+- 마이페이지 실사용 흐름(플랜 추가 → 결과 입력 → 그룹 카드 반영 → 삭제) 전체 사이클을 **실제
+  회원가입한 계정으로** 검증 필요 (Auth+userService를 Supabase로 막 바꿔서 한 번 훑어보는 게 좋음)
+- 다음은 **⑦ Edge Function + pg_cron** — 나머지 595개 자격증 + 상세정보 자동 적재, 여기서
   `pass_rates`(Q-net 미제공)만 예외적으로 계속 mock 유지
+- 나중에 실제 배포하게 되면 커스텀 SMTP(Resend/SendGrid 등) 연동 후 "Confirm email" 다시 켜는 것
+  검토 (지금은 대시보드에서 꺼둔 상태)
 
 ## 테스트 계정
 
-- 이메일: `test@quali.com` / 비밀번호: `1234` (`src/lib/auth.tsx`의 `TEST_ACCOUNT`)
-- 로그인하면 `seedDemoDataIfNeeded()`가 최초 1회 나의 시험/관심분야 데모 데이터를 채워줌
+- 더 이상 없음 — `/signup`에서 실제 이메일로 회원가입해서 사용 (이메일 인증은 대시보드에서
+  꺼둔 상태라 가입 즉시 로그인됨)
 
 ## 개발 명령어
 

@@ -23,13 +23,13 @@ export function SettingsPage() {
     })
   }, [])
 
-  function handleNameButtonClick() {
+  async function handleNameButtonClick() {
     if (!isEditingName) {
       setIsEditingName(true)
       return
     }
     if (!name.trim()) return
-    updateName(name.trim())
+    await updateName(name.trim())
     setIsEditingName(false)
     toast.success('개인정보를 저장했어요.')
   }

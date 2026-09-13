@@ -1,64 +1,74 @@
+import type { User } from '@supabase/supabase-js'
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
-import { seedDemoDataIfNeeded } from '@/services/userService'
+import { supabase } from './supabase'
 import type { AuthUser } from '@/types/user'
 
-const AUTH_STORAGE_KEY = 'quali:auth'
-
-/**
- * Supabase Auth 연동 전까지의 임시 테스트 계정.
- * 연동 시 login()의 내부 구현만 Supabase Auth 호출로 교체하면 됨.
- */
-export const TEST_ACCOUNT = {
-  email: 'test@quali.com',
-  password: '1234',
-  name: '테스트 사용자',
+export interface AuthResult {
+  error?: string
+  needsEmailConfirmation?: boolean
 }
 
 interface AuthContextValue {
   user: AuthUser | null
   isLoggedIn: boolean
-  login: (email: string, password: string) => boolean
-  logout: () => void
-  updateName: (name: string) => void
+  isLoading: boolean
+  signup: (email: string, password: string, name: string) => Promise<AuthResult>
+  login: (email: string, password: string) => Promise<AuthResult>
+  logout: () => Promise<void>
+  updateName: (name: string) => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextValue | null>(null)
 
-function readStoredUser(): AuthUser | null {
-  const raw = localStorage.getItem(AUTH_STORAGE_KEY)
-  return raw ? (JSON.parse(raw) as AuthUser) : null
+function toAuthUser(supabaseUser: User | null | undefined): AuthUser | null {
+  if (!supabaseUser?.email) return null
+  const name = supabaseUser.user_metadata?.name
+  return { email: supabaseUser.email, name: typeof name === 'string' && name ? name : supabaseUser.email }
 }
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<AuthUser | null>(() => readStoredUser())
+  const [user, setUser] = useState<AuthUser | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    if (user) {
-      localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user))
-    } else {
-      localStorage.removeItem(AUTH_STORAGE_KEY)
-    }
-  }, [user])
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(toAuthUser(session?.user))
+      setIsLoading(false)
+    })
 
-  function login(email: string, password: string): boolean {
-    if (email === TEST_ACCOUNT.email && password === TEST_ACCOUNT.password) {
-      setUser({ email: TEST_ACCOUNT.email, name: TEST_ACCOUNT.name })
-      void seedDemoDataIfNeeded()
-      return true
-    }
-    return false
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(toAuthUser(session?.user))
+    })
+
+    return () => subscription.unsubscribe()
+  }, [])
+
+  async function signup(email: string, password: string, name: string): Promise<AuthResult> {
+    const { data, error } = await supabase.auth.signUp({ email, password, options: { data: { name } } })
+    if (error) return { error: error.message }
+    if (!data.session) return { needsEmailConfirmation: true }
+    return {}
   }
 
-  function logout(): void {
-    setUser(null)
+  async function login(email: string, password: string): Promise<AuthResult> {
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
+    if (error) return { error: error.message }
+    return {}
   }
 
-  function updateName(name: string): void {
-    setUser((prev) => (prev ? { ...prev, name } : prev))
+  async function logout(): Promise<void> {
+    await supabase.auth.signOut()
+  }
+
+  async function updateName(name: string): Promise<void> {
+    const { data, error } = await supabase.auth.updateUser({ data: { name } })
+    if (!error) setUser(toAuthUser(data.user))
   }
 
   return (
-    <AuthContext.Provider value={{ user, isLoggedIn: !!user, login, logout, updateName }}>
+    <AuthContext.Provider value={{ user, isLoggedIn: !!user, isLoading, signup, login, logout, updateName }}>
       {children}
     </AuthContext.Provider>
   )

@@ -4,7 +4,17 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { TEST_ACCOUNT, useAuth } from '@/lib/auth'
+import { useAuth } from '@/lib/auth'
+
+function toErrorMessage(message: string): string {
+  if (message.includes('Email not confirmed')) {
+    return '이메일 인증이 필요해요. 받은 메일함을 확인해주세요.'
+  }
+  if (message.includes('Invalid login credentials')) {
+    return '이메일 또는 비밀번호가 올바르지 않아요.'
+  }
+  return '로그인에 실패했어요.'
+}
 
 export function LoginPage() {
   const { login } = useAuth()
@@ -12,16 +22,21 @@ export function LoginPage() {
   const [searchParams] = useSearchParams()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [error, setError] = useState(false)
+  const [error, setError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault()
-    const success = login(email, password)
-    if (success) {
-      navigate(searchParams.get('redirect') ?? '/')
-    } else {
-      setError(true)
+    setIsSubmitting(true)
+    const result = await login(email, password)
+    setIsSubmitting(false)
+
+    if (result.error) {
+      setError(toErrorMessage(result.error))
+      return
     }
+
+    navigate(searchParams.get('redirect') ?? '/')
   }
 
   return (
@@ -38,7 +53,7 @@ export function LoginPage() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder={TEST_ACCOUNT.email}
+                  placeholder="example@email.com"
                 />
               </div>
               <div className="flex flex-col gap-1.5">
@@ -48,14 +63,12 @@ export function LoginPage() {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="4자리 숫자"
                 />
               </div>
-              {error && <p className="desc-4 text-status-red">이메일 또는 비밀번호가 올바르지 않아요.</p>}
-              <Button type="submit">로그인</Button>
-              <p className="desc-5 text-center text-muted-foreground">
-                테스트 계정: {TEST_ACCOUNT.email} / {TEST_ACCOUNT.password}
-              </p>
+              {error && <p className="desc-4 text-status-red">{error}</p>}
+              <Button type="submit" variant="brand" disabled={isSubmitting}>
+                로그인
+              </Button>
               <p className="desc-5 text-center text-muted-foreground">
                 아직 계정이 없으신가요?{' '}
                 <Link to="/signup" className="text-brand hover:underline">

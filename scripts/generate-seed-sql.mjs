@@ -1,7 +1,11 @@
-// data/qnet/(Q-net 실데이터 스냅샷)를 읽어서 supabase/seed.sql을 생성하는 스크립트.
-// 네트워크 호출도, API 키도 전혀 안 쓰는 순수 로컬 변환 스크립트라 민감정보가 아예 없음.
+// data/qnet/(Q-net 실데이터 스냅샷)를 읽어서 supabase/migrations/ 아래에 자격증 613개를 채우는
+// 마이그레이션 파일을 생성하는 스크립트.
+// 네트워크 호출도, API 키도(service_role 포함) 전혀 안 쓰는 순수 로컬 변환 스크립트라 민감정보가
+// 아예 없음 — 생성된 파일은 `npx supabase db push`(이미 로그인된 CLI 세션)로만 적용하면 되고,
+// service_role 키를 다룰 필요가 없음. (예전엔 supabase/seed.sql + `db push --include-seed`
+// 조합을 썼는데, 이 조합은 원격 프로젝트에 실제로 안 먹히는 걸 확인해서 이 방식으로 교체함.)
 // 실행: node scripts/generate-seed-sql.mjs
-// 적용: npx supabase db push --include-seed
+// 적용: npx supabase db push
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
@@ -218,9 +222,10 @@ async function main() {
   }
   lines.push('')
 
-  const outPath = path.join(ROOT, 'supabase/seed.sql')
+  const outPath = path.join(ROOT, 'supabase/migrations/20260914120000_seed_all_certificates.sql')
   await writeFile(outPath, lines.join('\n'), 'utf-8')
-  console.log(`✅ supabase/seed.sql 생성 완료 (${lines.length}줄)`)
+  console.log(`✅ ${path.relative(ROOT, outPath)} 생성 완료 (${lines.length}줄)`)
+  console.log('   적용: npx supabase db push')
 }
 
 main().catch((err) => {

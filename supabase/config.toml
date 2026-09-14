@@ -64,10 +64,12 @@ schema_paths = []
 
 [db.seed]
 # If enabled, seeds the database after migrations during a db reset.
-enabled = true
+# 로컬 Docker 스택을 안 써서(원격 프로젝트에 바로 push) db reset을 쓸 일이 없고, seed.sql도
+# 삭제함(자격증 시딩은 이제 supabase/migrations/의 마이그레이션 파일로 처리) — 그래서 비활성화.
+enabled = false
 # Specifies an ordered list of seed files to load during db reset.
 # Supports glob patterns relative to supabase directory: "./seeds/*.sql"
-sql_paths = ["./seed.sql"]
+sql_paths = []
 
 [db.network_restrictions]
 # Enable management of network restrictions.

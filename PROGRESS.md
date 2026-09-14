@@ -503,18 +503,28 @@ API가 너무 불안정해서(아래 참고), 최초 대량 적재는 로컬에�
   것을 발견**: 커맨드는 "Finished" 성공 메시지를 내고 "Updating seed hash..."라고 표시하지만,
   실제로는 해시만 기록하고 SQL을 실행하지 않음(단일 테스트 행으로 검증). 로컬 `db reset`용
   기능이라 원격 push엔 안 맞는 것으로 보임 — CLI 문서에 명확히 안 나와 있어서 직접 겪어서 확인함.
-- 이 발견으로 **`scripts/generate-seed-sql.mjs`(SQL 파일 생성) 방식을 포기**하고,
-  **`scripts/seed-supabase.mjs`(신규)**로 교체 — `service_role` 키로 Supabase 테이블에 직접
-  upsert. 지난번에 "API 키를 안 쓰는 방법"으로 일부러 피했던 접근인데, 원격 DB에 대량 데이터를
-  실제로 넣을 안전하고 검증된 방법이 이것뿐이라 다시 채택함(키는 이 로컬 스크립트 밖으로 안 나감,
-  `.env`의 `SUPABASE_SERVICE_ROLE_KEY`로 관리, `VITE_` 접두사 절대 금지).
-- `SUPABASE_SERVICE_ROLE_KEY`를 `.env`에 추가받는 대로 `node --env-file=.env scripts/seed-supabase.mjs`
-  실행 예정 — 아직 미실행 상태 (지금 시점 `certificates` 테이블은 여전히 18건).
+- 이 발견 직후엔 **`scripts/seed-supabase.mjs`(신규, `service_role` 키로 직접 upsert)**로
+  교체하려 했으나, 사용자가 "서비스 롤 키를 `.env`에도 넣으면 안 되는 거 아니냐"고 제동을 걺.
+  다시 검토한 끝에 **service_role 키를 아예 안 쓰는 더 나은 방법**을 찾음: 시딩 데이터를
+  `supabase/migrations/` 밑에 타임스탬프 붙은 정식 마이그레이션 파일로 만들어서 그냥
+  `npx supabase db push`로 적용 — 이미 스키마 마이그레이션 2번 쓴 것과 완전히 같은 경로라
+  키를 전혀 안 만짐(인증은 `supabase login`으로 만든 CLI 개인 OAuth 세션이 처리, 이 토큰은
+  사람이 직접 복사/붙여넣기/타이핑할 일이 없어서 `.env`·스크립트·채팅 어디에도 노출 안 됨).
+  `scripts/generate-seed-sql.mjs`를 출력 경로만 `supabase/seed.sql` → `supabase/migrations/20260914120000_seed_all_certificates.sql`로
+  바꿔서 재사용, 기존 `seed.sql`은 삭제, `supabase/config.toml`의 `[db.seed]`도 비활성화.
+  `scripts/seed-supabase.mjs`는 결국 안 쓰기로 함(삭제 후보, 아직 안 지움).
+- **`npx supabase db push`로 613개 자격증 시딩 완료** (2026-09-14). `supabase migration list`로
+  local/remote 둘 다 `20260914120000`으로 일치하는 것 확인 — 마이그레이션은 성공적으로 적용됨.
+  단, 이 기기(`.env`에 `VITE_SUPABASE_ANON_KEY`가 아직 없는 컴퓨터)에서 앱/anon 키로 직접
+  row 수를 재검증하진 못함 — Supabase Studio Table Editor에서 `certificates` 행 수 눈으로
+  확인하는 게 남음.
 
 ## 남은 것
 
-- **`SUPABASE_SERVICE_ROLE_KEY`를 `.env`에 추가하고 `scripts/seed-supabase.mjs` 실행** — 613개
-  자격증을 실제 DB에 반영하는 마지막 단계, 다른 컴퓨터에서 이어서 할 경우 이 키부터 다시 받아야 함
+- **Studio에서 `certificates` 등 5개 테이블 실제 row 수 육안 확인** — 마이그레이션 CLI는 성공
+  메시지를 냈지만 아직 앱/쿼리로 데이터 자체를 재검증하진 않음
+- **`scripts/seed-supabase.mjs` 삭제 여부 결정** — service_role 키 방식은 폐기했으니 `seed.sql`
+  때처럼 지우는 게 자연스러움 (아직 안 지움, 사용자 확인 필요)
 - 그 다음 **⑦ Edge Function + pg_cron** — 이제부턴 "최초 대량 적재"가 아니라 "이미 있는 자격증들의
   시험일정을 주기적으로 갱신 + 새 자격증 추가 감지"로 역할 축소, 주기는 매주로 잠정 합의
   (`pass_rates`는 Q-net 미제공이라 계속 mock 유지)
@@ -548,14 +558,17 @@ npx oxlint       # 린트
 - `.env`의 `QNET_API_KEY`로 Q-net API 직접 조회 가능 (`scripts/`의 두 스크립트 전용, 앱 자체는
   호출 안 함). `parseTagValue: false` 꼭 필요(안 하면 `jmcd="0080"` 같은 코드값 앞자리 0이 날아감)
 - **실데이터 파이프라인**: `scripts/fetch-qnet-snapshot.mjs [--all]`(API 호출 → `data/qnet/`에
-  JSON 저장, `--all` 없으면 기존 18개만) → `scripts/seed-supabase.mjs`(JSON → Supabase 테이블에
-  직접 upsert, `SUPABASE_SERVICE_ROLE_KEY` 필요). ⚠️ `scripts/generate-seed-sql.mjs` +
+  JSON 저장, `--all` 없으면 기존 18개만) → `scripts/generate-seed-sql.mjs`(JSON →
+  `supabase/migrations/`에 타임스탬프 마이그레이션 파일 생성, API 키 전혀 안 씀) →
+  `npx supabase db push`(CLI 로그인 세션만 사용, `service_role` 키 불필요). ⚠️
   `supabase/seed.sql` + `db push --include-seed` 조합은 원격 프로젝트엔 실제로 안 먹히는 걸
-  확인해서 폐기함(2026-09-14, 위 "⑦ 착수" 섹션 참고) — 더 이상 이 경로로 시딩하지 말 것
-- `.env`에 `SUPABASE_SERVICE_ROLE_KEY` 필요(Project Settings → API Keys → `service_role`,
-  `VITE_` 접두사 절대 금지 — 붙이면 브라우저에 노출됨). `scripts/seed-supabase.mjs` 전용이고
-  다른 곳에서는 안 씀
-- 지금 `certificates` 테이블엔 Q-net 전체 613개 중 18개만 있음 — 613개는 이미 로컬에 받아뒀고
-  (`data/qnet/certificates/`), DB 반영만 남음(위 "⑦ 착수" 섹션 참고)
+  확인해서 폐기했고, 그 다음 검토했던 `scripts/seed-supabase.mjs`(`service_role` 키 직접
+  upsert) 방식도 "키를 아예 안 쓰는" 마이그레이션 파일 방식이 더 안전해서 폐기함
+  (2026-09-14, 위 "⑦ 착수" 섹션 참고) — 새 대량 시딩이 필요하면 이 마이그레이션 파일 방식을 쓸 것
+- `service_role` 키는 이 프로젝트 어디에서도 안 씀(`.env`에도 넣지 않음) — 대량 데이터 반영은
+  전부 `supabase/migrations/` + `db push`로 처리
+- `certificates` 등 5개 테이블에 Q-net 전체 613개 시딩하는 마이그레이션은 이미 push 완료
+  (`20260914120000_seed_all_certificates.sql`, 위 "⑦ 착수" 섹션 참고) — Studio에서 row 수
+  육안 확인만 남음
 - 카드 컴포넌트 등은 shadcn CLI로 관리 (`npx shadcn@latest add <component>`)
 - 커밋 메시지는 "왜"를 설명하는 스타일 유지, Co-Authored-By 트레일러 포함

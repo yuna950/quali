@@ -558,11 +558,28 @@ API가 너무 불안정해서(아래 참고), 최초 대량 적재는 로컬에�
   합격발표일은 빼거나 "추정" 표시를 다는 절충안이 가능함(원칙을 완전히 어기진 않으면서 실용적인
   타협안), (c) 또는 원칙을 유지한 채 재시도 스크립트를 병렬화·분산 실행하는 쪽으로 계속 개선.
 
+## ⑦ Edge Function + pg_cron 완료 (2026-09-14, v1)
+
+빠르게 끝낼 수 있는 범위로 좁혀서 v1만 구현: **이미 `exam_schedules`에 데이터가 있는 자격증만
+매주 갱신**, 신규 자격증 감지는 다음 단계로 미룸.
+
+- `supabase/functions/sync-exam-schedules/index.ts` (Deno Edge Function) — `exam_schedules`에
+  존재하는 jm_cd 목록을 뽑아서, 자격증 코드로 직접 조회하는 `getJMList`(등급별 API 아님 —
+  "⑧" 섹션에서 정한 "확실한 정보만" 원칙 유지)를 20개씩 동시에 호출해서 갱신. 실패한 건 그냥
+  넘어감(다음 주 실행 때 다시 시도되는 구조라 이번에 실패해도 기존 데이터가 지워지진 않음).
+- `supabase/migrations/20260914130000_schedule_weekly_sync.sql` — `pg_cron`/`pg_net` 확장 켜고,
+  매주 일요일 18:00 UTC(한국시간 월요일 새벽 3시)에 위 함수를 호출하도록 예약.
+- 배포 완료: `npx supabase functions deploy sync-exam-schedules --no-verify-jwt`,
+  `npx supabase secrets set QNET_API_KEY=...`(로컬 `.env` 값을 임시 파일로 전달, 채팅에 노출 안 함).
+  `service_role` 키는 Edge Function 안에서만 쓰고(Supabase가 모든 함수에 자동으로 넣어주는
+  `SUPABASE_SERVICE_ROLE_KEY` 환경변수 사용) 로컬 `.env`/스크립트/채팅 어디에도 안 들어감.
+- 수동으로 한 번 호출해서 검증: `{"total":295,"success":56,"failed":239}` — 정상 동작 확인.
+  실패율이 높은 건 예상된 것(Q-net 시험일정 API 자체가 불안정, "⑧" 섹션 참고) — 매주 반복
+  실행되니 시간이 지나면서 누적으로 갱신될 것으로 기대.
+
 ## 남은 것
 
-- 그 다음 **⑦ Edge Function + pg_cron** — 이제부턴 "최초 대량 적재"가 아니라 "이미 있는 자격증들의
-  시험일정을 주기적으로 갱신 + 새 자격증 추가 감지"로 역할 축소, 주기는 매주로 잠정 합의
-  (`pass_rates`는 Q-net 미제공이라 계속 mock 유지)
+- **신규 자격증 추가 감지** — ⑦의 다음 단계, 지금은 스킵함
 - **시험일정 누락 318개 자격증 문제** — 위 "⑧" 섹션 참고, 보류 중인 과제
 - 나중에 실제 배포하게 되면 커스텀 SMTP(Resend/SendGrid 등) 연동 후 "Confirm email" 다시 켜는 것
   검토 (지금은 대시보드에서 꺼둔 상태)

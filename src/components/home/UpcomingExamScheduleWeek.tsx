@@ -1,6 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { ScheduleEventRow } from '@/components/common/ScheduleEventRow'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { toYyyymmdd } from '@/lib/date'
@@ -86,16 +87,7 @@ export function UpcomingExamScheduleWeek() {
           {entries && entries.length > 0 && (
             <div className="flex flex-col gap-2">
               {entries.map((entry, i) => (
-                <Link key={`${entry.jmCd}-${entry.label}-${i}`} to={`/certificates/${entry.jmCd}`}>
-                  <div className="flex items-center gap-2.5 rounded-lg border border-border px-3 py-2 transition-colors hover:bg-muted">
-                    <span
-                      className={`size-1.5 shrink-0 rounded-full ${
-                        entry.type === 'registration' ? 'bg-brand' : 'bg-foreground'
-                      }`}
-                    />
-                    <p className="desc-4 truncate">{entry.label}</p>
-                  </div>
-                </Link>
+                <ScheduleEventRow key={`${entry.label}-${entry.start}-${i}`} entry={entry} />
               ))}
             </div>
           )}

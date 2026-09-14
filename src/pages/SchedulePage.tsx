@@ -1,6 +1,6 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { ScheduleEventRow } from '@/components/common/ScheduleEventRow'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { formatDateRangeKorean, toYyyymmdd } from '@/lib/date'
@@ -146,18 +146,7 @@ export function SchedulePage() {
         ) : (
           <div className="flex flex-col gap-2">
             {selectedEvents.map((event, i) => (
-              <Link key={`${event.jmCd}-${event.label}-${i}`} to={`/certificates/${event.jmCd}`}>
-                <Card className="transition-shadow hover:shadow-md">
-                  <CardContent className="flex items-center gap-3">
-                    <span
-                      className={`size-2 shrink-0 rounded-full ${
-                        event.type === 'registration' ? 'bg-brand' : 'bg-foreground'
-                      }`}
-                    />
-                    <p className="desc-4">{event.label}</p>
-                  </CardContent>
-                </Card>
-              </Link>
+              <ScheduleEventRow key={`${event.label}-${event.start}-${i}`} entry={event} />
             ))}
           </div>
         )}

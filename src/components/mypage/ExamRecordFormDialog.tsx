@@ -31,7 +31,7 @@ import { addExamRecord, removeMyPlan, updateExamRecord } from '@/services/userSe
 import type { Certificate, ExamStageKey } from '@/types/certificate'
 import type { ExamRecord, MyExamPlan } from '@/types/user'
 
-const STAGE_LABEL: Record<ExamStageKey, string> = { written: '필기', practical: '실기', interview: '면접' }
+const STAGE_LABEL: Record<ExamStageKey, string> = { written: '필기', practical: '실기' }
 const CURRENT_YEAR = new Date().getFullYear()
 const MANUAL_KEY = 'manual'
 
@@ -287,7 +287,6 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
                     <SelectContent alignItemWithTrigger={false}>
                       <SelectItem value="written">필기</SelectItem>
                       <SelectItem value="practical">실기</SelectItem>
-                      <SelectItem value="interview">면접</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

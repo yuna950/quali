@@ -22,7 +22,7 @@ import type {
   PassRateSummary,
 } from '@/types/certificate'
 
-const STAGE_TITLE = { written: '필기시험 일정', practical: '실기시험 일정', interview: '면접시험 일정' } as const
+const STAGE_TITLE = { written: '필기시험 일정', practical: '실기시험 일정' } as const
 
 export function CertificateDetailPage() {
   const { jmCd } = useParams<{ jmCd: string }>()
@@ -61,7 +61,7 @@ export function CertificateDetailPage() {
 
   if (!certificate) return null
 
-  const stages: (keyof typeof STAGE_TITLE)[] = ['written', 'practical', 'interview']
+  const stages: (keyof typeof STAGE_TITLE)[] = ['written', 'practical']
   const activeStages = stages.filter((stage) => schedules.some((s) => s.stages[stage]))
 
   return (

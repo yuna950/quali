@@ -3,11 +3,19 @@
 // 국가자격 전체(613개, 2026-09-14 기준)를 대상으로 함.
 // 실행: node --env-file=.env scripts/fetch-qnet-snapshot.mjs [--all]
 // 중간에 끊겨도 이미 받아둔 자격증(subjects.json 존재)은 건너뛰고 이어서 받음.
+//
+// --retry-missing-schedules: schedule.json이 없는 자격증만 대상으로 InquiryTestInformationNTQSVC/getJMList를
+// 더 너그러운 조건(재시도 4번, 타임아웃 20초)으로 다시 시도. 등급별(정기 회차) API에서 값을 빌려오는
+// 방식은 "그 자격증 본인의 데이터라고 API가 확인해준 게 아니다"라는 이유로 채택 안 하기로 했고
+// (2026-09-14 결정), 그 대신 원래 쓰던 자격증별 getJMList를 다시 두드리는 이 방식만 쓰기로 함 —
+// 재시도해서 성공하면 100% 그 자격증 본인 데이터, 끝까지 실패하면 그냥 없는 채로 둠(추측 안 함).
+// 실행: node --env-file=.env scripts/fetch-qnet-snapshot.mjs --retry-missing-schedules
 import { XMLParser } from 'fast-xml-parser'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
 const FETCH_ALL = process.argv.includes('--all')
+const RETRY_MISSING_SCHEDULES = process.argv.includes('--retry-missing-schedules')
 
 const SERVICE_KEY = process.env.QNET_API_KEY
 if (!SERVICE_KEY) {
@@ -37,7 +45,7 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
-async function callApi(path, params, { retries = 2 } = {}) {
+async function callApi(path, params, { retries = 2, timeoutMs = 10_000, backoffMs = 400 } = {}) {
   const url = new URL(`${BASE_URL}/${path}`)
   url.searchParams.set('serviceKey', SERVICE_KEY)
   for (const [key, value] of Object.entries(params)) {
@@ -49,14 +57,14 @@ async function callApi(path, params, { retries = 2 } = {}) {
     let json
 
     try {
-      // Q-net이 요청을 받고도 응답을 안 주는 경우가 있어서, 10초 넘으면 포기하고 재시도하도록 타임아웃 추가
-      const res = await fetch(url, { signal: AbortSignal.timeout(10_000) })
+      // Q-net이 요청을 받고도 응답을 안 주는 경우가 있어서, 시간 넘으면 포기하고 재시도하도록 타임아웃 추가
+      const res = await fetch(url, { signal: AbortSignal.timeout(timeoutMs) })
       const xmlText = await res.text()
       json = parser.parse(xmlText)
       resultCode = json?.response?.header?.resultCode
     } catch (err) {
       if (attempt < retries) {
-        await sleep(400)
+        await sleep(backoffMs)
         continue
       }
       throw new Error(`[${path}?${new URLSearchParams(params)}] ${err.message}`)
@@ -67,7 +75,7 @@ async function callApi(path, params, { retries = 2 } = {}) {
     }
 
     if (attempt < retries) {
-      await sleep(400)
+      await sleep(backoffMs)
       continue
     }
 
@@ -91,7 +99,48 @@ async function fileExists(relPath) {
   }
 }
 
+async function retryMissingSchedules() {
+  const raw = await readFile(path.join(OUT_DIR, 'qualifications.json'), 'utf-8')
+  const qualifications = JSON.parse(raw)
+  const targetCodes = qualifications.map((q) => q.jmcd)
+
+  let alreadyHad = 0
+  let recovered = 0
+  let stillFailed = 0
+
+  for (const jmCd of targetCodes) {
+    if (await fileExists(`certificates/${jmCd}/schedule.json`)) {
+      alreadyHad += 1
+      continue
+    }
+
+    console.log(`[${jmCd}] schedule 재시도 중...`)
+    try {
+      const schedule = await callApi(
+        'InquiryTestInformationNTQSVC/getJMList',
+        { jmCd },
+        { retries: 3, timeoutMs: 15_000, backoffMs: 800 },
+      )
+      await writeJson(`certificates/${jmCd}/schedule.json`, schedule)
+      recovered += 1
+    } catch (err) {
+      console.log(`  ✘ 여전히 실패: ${err.message}`)
+      stillFailed += 1
+    }
+    await sleep(500)
+  }
+
+  console.log(
+    `\n✅ 재시도 완료. 이미 있었음: ${alreadyHad}개, 새로 받음: ${recovered}개, 끝까지 실패: ${stillFailed}개`,
+  )
+}
+
 async function main() {
+  if (RETRY_MISSING_SCHEDULES) {
+    await retryMissingSchedules()
+    return
+  }
+
   console.log('=== 국가자격 종목 전체 목록 ===')
   const qualifications = await callApi('InquiryListNationalQualifcationSVC/getList', {
     pageNo: 1,

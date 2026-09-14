@@ -40,7 +40,7 @@ export interface ExamSubject {
   durationMinutes: number
 }
 
-export type ExamStageKey = 'written' | 'practical' | 'interview'
+export type ExamStageKey = 'written' | 'practical'
 
 export interface ExamStageDates {
   regStart?: string

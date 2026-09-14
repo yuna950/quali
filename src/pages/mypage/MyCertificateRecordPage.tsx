@@ -24,8 +24,8 @@ import { listExamRecords, listMyPlans, removeExamRecord, removeMyPlan } from '@/
 import type { Certificate, ExamSchedule, ExamStageKey } from '@/types/certificate'
 import type { ExamRecord, MyExamPlan } from '@/types/user'
 
-const STAGE_LABEL = { written: '필기', practical: '실기', interview: '면접' } as const
-const STAGE_KEYS: ExamStageKey[] = ['written', 'practical', 'interview']
+const STAGE_LABEL = { written: '필기', practical: '실기' } as const
+const STAGE_KEYS: ExamStageKey[] = ['written', 'practical']
 
 function ConfirmDeleteButton({ description, onConfirm }: { description: string; onConfirm: () => void }) {
   const [open, setOpen] = useState(false)

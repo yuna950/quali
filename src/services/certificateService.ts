@@ -16,7 +16,6 @@ import type { Tables } from '@/types/supabase'
 const STAGE_LABEL: Record<ExamStageKey, string> = {
   written: '필기',
   practical: '실기',
-  interview: '면접',
 }
 
 /**
@@ -110,13 +109,12 @@ export async function searchCertificates(query: SearchCertificatesQuery): Promis
   const certificates = data.map(toCertificate)
 
   if (!query.status) return certificates
+  if (certificates.length === 0) return []
 
-  const results: Certificate[] = []
-  for (const certificate of certificates) {
-    const schedules = await getExamSchedules(certificate.jmCd)
-    if (getApplicationStatus(schedules) === query.status) results.push(certificate)
-  }
-  return results
+  const schedulesByJmCd = await getExamSchedulesByJmCds(certificates.map((c) => c.jmCd))
+  return certificates.filter(
+    (certificate) => getApplicationStatus(schedulesByJmCd.get(certificate.jmCd) ?? []) === query.status,
+  )
 }
 
 export async function listSeriesOptions(): Promise<SeriesOption[]> {
@@ -155,6 +153,23 @@ export async function getExamSchedules(jmCd: string): Promise<ExamSchedule[]> {
   const { data, error } = await supabase.from('exam_schedules').select('*').eq('jm_cd', jmCd)
   if (error) throw error
   return data.map(toExamSchedule)
+}
+
+/** 여러 자격증의 일정을 한 번의 쿼리로 모아서 jm_cd별로 묶어 반환한다 (자격증 개수만큼 쿼리를
+ * 반복하는 걸 피하려고 씀 — 예: 검색 결과 목록에 접수중/접수예정 상태 필터를 적용할 때). */
+export async function getExamSchedulesByJmCds(jmCds: string[]): Promise<Map<string, ExamSchedule[]>> {
+  const schedulesByJmCd = new Map<string, ExamSchedule[]>()
+  if (jmCds.length === 0) return schedulesByJmCd
+
+  const { data, error } = await supabase.from('exam_schedules').select('*').in('jm_cd', jmCds)
+  if (error) throw error
+
+  for (const schedule of data.map(toExamSchedule)) {
+    const list = schedulesByJmCd.get(schedule.jmCd) ?? []
+    list.push(schedule)
+    schedulesByJmCd.set(schedule.jmCd, list)
+  }
+  return schedulesByJmCd
 }
 
 export async function getExamFee(jmCd: string): Promise<ExamFee | undefined> {
@@ -219,9 +234,14 @@ export interface ScheduleEventEntry {
   type: ScheduleEventType
   start: string
   end: string
+  /** 같은 회차(같은 label+기간)를 공유하는 자격증 수. 2 이상이면 특정 자격증 하나로 이동시킬 수
+   * 없어서 화면에서는 링크를 걸지 않음(Q-net도 이런 통합 회차는 링크 없이 제목만 표시). */
+  count: number
 }
 
-/** rangeStart~rangeEnd(YYYYMMDD)와 겹치는 접수기간 + 시험일을 모두 모아 반환 (월간 일정 페이지용) */
+/** rangeStart~rangeEnd(YYYYMMDD)와 겹치는 접수기간 + 시험일을 모두 모아 반환 (월간 일정 페이지용).
+ * 같은 회차를 공유하는 자격증들(예: 기사 242개가 전부 "2026년 정기 기사 1회")은 label+기간이
+ * 완전히 같으므로 하나로 묶어서 반환한다. */
 export async function listScheduleEventsInRange(
   rangeStart: string,
   rangeEnd: string,
@@ -235,7 +255,17 @@ export async function listScheduleEventsInRange(
   ])
 
   const certificateByJmCd = new Map(certificates.map((c) => [c.jmCd, c]))
-  const entries: ScheduleEventEntry[] = []
+  const grouped = new Map<string, ScheduleEventEntry>()
+
+  function addEvent(event: Omit<ScheduleEventEntry, 'count'>) {
+    const key = `${event.label}|${event.start}|${event.end}`
+    const existing = grouped.get(key)
+    if (existing) {
+      existing.count += 1
+    } else {
+      grouped.set(key, { ...event, count: 1 })
+    }
+  }
 
   for (const schedule of scheduleRows) {
     const certificate = certificateByJmCd.get(schedule.jmCd)
@@ -248,7 +278,7 @@ export async function listScheduleEventsInRange(
       if (!stage) continue
 
       if (stage.regStart && stage.regEnd && !(stage.regEnd < rangeStart || stage.regStart > rangeEnd)) {
-        entries.push({
+        addEvent({
           jmCd: certificate.jmCd,
           certificateName: certificate.name,
           label: `${roundLabel} ${STAGE_LABEL[stageKey]} 접수`,
@@ -261,7 +291,7 @@ export async function listScheduleEventsInRange(
       if (stage.examStart) {
         const examEnd = stage.examEnd ?? stage.examStart
         if (!(examEnd < rangeStart || stage.examStart > rangeEnd)) {
-          entries.push({
+          addEvent({
             jmCd: certificate.jmCd,
             certificateName: certificate.name,
             label: `${roundLabel} ${STAGE_LABEL[stageKey]} 시험`,
@@ -274,5 +304,5 @@ export async function listScheduleEventsInRange(
     }
   }
 
-  return entries
+  return [...grouped.values()]
 }

@@ -9,7 +9,7 @@ import { diffInDays, formatDday, formatYyyymmdd } from '@/lib/date'
 import { listMyPlans } from '@/services/userService'
 import type { MyExamPlan } from '@/types/user'
 
-const STAGE_LABEL = { written: '필기', practical: '실기', interview: '면접' } as const
+const STAGE_LABEL = { written: '필기', practical: '실기' } as const
 const VISIBLE_LIMIT = 2
 
 interface CertGroup {

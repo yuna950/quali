@@ -11,7 +11,7 @@ import type { ScheduleEventEntry } from '@/services/certificateService'
 export function ScheduleEventRow({ entry }: { entry: ScheduleEventEntry }) {
   const content = (
     <div
-      className={`flex flex-col gap-1 rounded-lg border border-border px-3 py-2 sm:flex-row sm:items-center sm:gap-3 ${
+      className={`flex flex-col gap-1.5 rounded-lg border border-border px-4 py-3 sm:flex-row sm:items-center sm:gap-3 ${
         entry.count === 1 ? 'transition-colors hover:bg-muted' : ''
       }`}
     >

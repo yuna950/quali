@@ -281,7 +281,7 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
                 <div className="flex flex-col gap-1.5">
                   <Label>단계</Label>
                   <Select value={stage} onValueChange={(v) => setStage(v as ExamStageKey)}>
-                    <SelectTrigger className="w-full">
+                    <SelectTrigger className="!h-10 w-full px-3.5">
                       <SelectValue>{(v: ExamStageKey | null) => (v ? STAGE_LABEL[v] : '단계를 선택하세요')}</SelectValue>
                     </SelectTrigger>
                     <SelectContent alignItemWithTrigger={false}>
@@ -297,7 +297,7 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
                       <Label>회차</Label>
                       {roundOptions.length > 0 ? (
                         <Select value={selectedRoundKey} onValueChange={handleRoundSelect}>
-                          <SelectTrigger className="w-full">
+                          <SelectTrigger className="!h-10 w-full px-3.5">
                             <SelectValue>
                               {(v: string | null) => {
                                 if (!v || v === MANUAL_KEY) return '직접 입력'
@@ -328,17 +328,32 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
                         <div className="flex gap-3">
                           <div className="flex flex-1 flex-col gap-1.5">
                             <Label>연도</Label>
-                            <Input type="number" value={year} onChange={(e) => setYear(e.target.value)} />
+                            <Input
+                              className="h-10 px-3.5 py-2"
+                              type="number"
+                              value={year}
+                              onChange={(e) => setYear(e.target.value)}
+                            />
                           </div>
                           <div className="flex flex-1 flex-col gap-1.5">
                             <Label>회차</Label>
-                            <Input type="number" value={round} onChange={(e) => setRound(e.target.value)} />
+                            <Input
+                              className="h-10 px-3.5 py-2"
+                              type="number"
+                              value={round}
+                              onChange={(e) => setRound(e.target.value)}
+                            />
                           </div>
                         </div>
 
                         <div className="flex flex-col gap-1.5">
                           <Label>시험날짜</Label>
-                          <Input type="date" value={examDate} onChange={(e) => setExamDate(e.target.value)} />
+                          <Input
+                            className="h-10 px-3.5 py-2"
+                            type="date"
+                            value={examDate}
+                            onChange={(e) => setExamDate(e.target.value)}
+                          />
                         </div>
                       </>
                     ) : (
@@ -366,6 +381,7 @@ export function ExamRecordFormDialog(props: ExamRecordFormDialogProps) {
             <div className="flex flex-col gap-1.5">
               <Label>점수 (선택)</Label>
               <Input
+                className="h-10 px-3.5 py-2"
                 type="number"
                 min={0}
                 max={100}

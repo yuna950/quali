@@ -34,13 +34,17 @@ export function InterestButton({ jmCd, className }: { jmCd: string; className?: 
       return
     }
 
-    if (interested) {
-      await removeInterest(jmCd)
-      setInterested(false)
-      toast('관심 자격증에서 삭제했어요.')
-    } else {
-      await addInterest(jmCd)
-      setInterested(true)
+    try {
+      if (interested) {
+        await removeInterest(jmCd)
+        setInterested(false)
+        toast('관심 자격증에서 삭제했어요.')
+      } else {
+        await addInterest(jmCd)
+        setInterested(true)
+      }
+    } catch {
+      toast.error('저장에 실패했어요. 잠시 후 다시 시도해주세요.')
     }
   }
 

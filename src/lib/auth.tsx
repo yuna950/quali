@@ -64,7 +64,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   async function updateName(name: string): Promise<void> {
     const { data, error } = await supabase.auth.updateUser({ data: { name } })
-    if (!error) setUser(toAuthUser(data.user))
+    if (error) throw error
+    setUser(toAuthUser(data.user))
   }
 
   return (

@@ -29,18 +29,26 @@ export function SettingsPage() {
       return
     }
     if (!name.trim()) return
-    await updateName(name.trim())
-    setIsEditingName(false)
-    toast.success('개인정보를 저장했어요.')
+    try {
+      await updateName(name.trim())
+      setIsEditingName(false)
+      toast.success('개인정보를 저장했어요.')
+    } catch {
+      toast.error('저장에 실패했어요. 잠시 후 다시 시도해주세요.')
+    }
   }
 
   async function toggleInterestField(code: string) {
-    const next = interestFieldCodes.includes(code)
-      ? interestFieldCodes.filter((c) => c !== code)
-      : [...interestFieldCodes, code]
+    const previous = interestFieldCodes
+    const next = previous.includes(code) ? previous.filter((c) => c !== code) : [...previous, code]
     setInterestFieldCodes(next)
-    await updateSettings({ interestFieldCodes: next })
-    toast('관심 분야를 저장했어요.')
+    try {
+      await updateSettings({ interestFieldCodes: next })
+      toast('관심 분야를 저장했어요.')
+    } catch {
+      setInterestFieldCodes(previous)
+      toast.error('저장에 실패했어요. 잠시 후 다시 시도해주세요.')
+    }
   }
 
   return (

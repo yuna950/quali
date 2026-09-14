@@ -5,6 +5,7 @@ import { QuickAddPlanDialog } from '@/components/home/QuickAddPlanDialog'
 import { ExamRecordFormDialog } from '@/components/mypage/ExamRecordFormDialog'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { Skeleton } from '@/components/ui/skeleton'
 import { diffInDays, formatDday, formatYyyymmdd } from '@/lib/date'
 import { listMyPlans } from '@/services/userService'
 import type { MyExamPlan } from '@/types/user'
@@ -55,9 +56,7 @@ export function MyCertificatesPage() {
     setPlans((prev) => (prev ? [...prev, plan] : [plan]))
   }
 
-  if (!plans) return null
-
-  const groups = groupByCertificate(plans)
+  const groups = plans ? groupByCertificate(plans) : null
 
   return (
     <div className="flex flex-col gap-4">
@@ -73,7 +72,17 @@ export function MyCertificatesPage() {
         />
       </div>
 
-      {groups.length === 0 && (
+      {groups === null &&
+        Array.from({ length: 3 }, (_, i) => (
+          <Card key={i}>
+            <CardContent className="flex flex-col gap-3">
+              <Skeleton className="h-5 w-40" />
+              <Skeleton className="h-4 w-56" />
+            </CardContent>
+          </Card>
+        ))}
+
+      {groups && groups.length === 0 && (
         <Card>
           <CardContent className="flex flex-col items-center gap-3 py-10 text-center">
             <p className="desc-3 text-muted-foreground">준비 중인 시험이 없어요.</p>
@@ -84,7 +93,7 @@ export function MyCertificatesPage() {
         </Card>
       )}
 
-      {groups.map((group) => (
+      {groups?.map((group) => (
         <Link key={group.jmCd} to={`/mypage/records/${group.jmCd}`}>
           <Card className="transition-shadow hover:shadow-md">
             <CardContent className="flex flex-col gap-3">

@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CertificateCard } from '@/components/certificate/CertificateCard'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Skeleton } from '@/components/ui/skeleton'
 import { getCertificate } from '@/services/certificateService'
 import { listInterests } from '@/services/userService'
 import type { Certificate } from '@/types/certificate'
@@ -17,7 +18,24 @@ export function InterestsPage() {
     })
   }, [])
 
-  if (!certificates) return null
+  if (!certificates) {
+    return (
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {Array.from({ length: 4 }, (_, i) => (
+          <Card key={i}>
+            <CardHeader>
+              <Skeleton className="h-4 w-20" />
+              <Skeleton className="h-5 w-40" />
+            </CardHeader>
+            <CardContent className="flex flex-col gap-2">
+              <Skeleton className="h-4 w-full" />
+              <Skeleton className="h-4 w-full" />
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    )
+  }
 
   if (certificates.length === 0) {
     return (

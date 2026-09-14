@@ -6,6 +6,7 @@ import { QuickAddPlanDialog } from '@/components/home/QuickAddPlanDialog'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel'
+import { Skeleton } from '@/components/ui/skeleton'
 import { diffInDays, formatDday, formatYyyymmdd } from '@/lib/date'
 import { useAuth } from '@/lib/auth'
 import { getCertificate } from '@/services/certificateService'
@@ -61,6 +62,22 @@ export function MyExamHero() {
           }
         />
       </div>
+
+      {slides === null && (
+        <Card>
+          <CardContent className="flex min-h-32 flex-col justify-between gap-6 sm:flex-row">
+            <div className="flex flex-col gap-2 sm:self-start">
+              <Skeleton className="h-4 w-36" />
+              <Skeleton className="h-6 w-48" />
+            </div>
+            <div className="flex flex-col items-end gap-2 sm:self-end">
+              <Skeleton className="h-4 w-16" />
+              <Skeleton className="h-9 w-20" />
+              <Skeleton className="h-4 w-24" />
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {slides && slides.length === 0 && (
         <Card>

@@ -18,6 +18,7 @@ import {
 } from '@/components/ui/alert-dialog'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { Skeleton } from '@/components/ui/skeleton'
 import { diffInDays, formatDday, formatYyyymmdd } from '@/lib/date'
 import { getCertificate, getExamSchedules } from '@/services/certificateService'
 import { listExamRecords, listMyPlans, removeExamRecord, removeMyPlan } from '@/services/userService'
@@ -123,15 +124,23 @@ export function MyCertificateRecordPage() {
   }
 
   async function handleRemovePlan(id: string) {
-    await removeMyPlan(id)
-    setPlans((prev) => prev?.filter((p) => p.id !== id) ?? null)
-    toast('나의 시험에서 삭제했어요.')
+    try {
+      await removeMyPlan(id)
+      setPlans((prev) => prev?.filter((p) => p.id !== id) ?? null)
+      toast('나의 시험에서 삭제했어요.')
+    } catch {
+      toast.error('삭제에 실패했어요. 잠시 후 다시 시도해주세요.')
+    }
   }
 
   async function handleRemoveRecord(id: string) {
-    await removeExamRecord(id)
-    setRecords((prev) => prev.filter((r) => r.id !== id))
-    toast('응시기록을 삭제했어요.')
+    try {
+      await removeExamRecord(id)
+      setRecords((prev) => prev.filter((r) => r.id !== id))
+      toast('응시기록을 삭제했어요.')
+    } catch {
+      toast.error('삭제에 실패했어요. 잠시 후 다시 시도해주세요.')
+    }
   }
 
   function handleRecordSaved(record: ExamRecord) {
@@ -145,7 +154,29 @@ export function MyCertificateRecordPage() {
     setPlans((prev) => prev?.filter((p) => p.id !== planId) ?? null)
   }
 
-  if (!certificate || !plans) return null
+  if (!certificate || !plans) {
+    return (
+      <div className="mx-auto flex max-w-3xl flex-col gap-10 p-6">
+        <BackButton />
+        <section>
+          <Skeleton className="mb-2 h-4 w-40" />
+          <Skeleton className="h-8 w-64" />
+        </section>
+        <section className="flex flex-col gap-3">
+          <Skeleton className="h-6 w-24" />
+          <Card>
+            <CardContent className="h-16" />
+          </Card>
+        </section>
+        <section className="flex flex-col gap-3">
+          <Skeleton className="h-6 w-24" />
+          <Card>
+            <CardContent className="h-16" />
+          </Card>
+        </section>
+      </div>
+    )
+  }
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-10 p-6">

@@ -45,18 +45,22 @@ export function AddMyPlanButton({ onChange, ...props }: AddMyPlanButtonProps) {
       return
     }
 
-    if (planId) {
-      await removeMyPlan(planId)
-      setPlanId(undefined)
-      toast('나의 시험에서 삭제했어요.')
-      onChange?.()
-      return
-    }
+    try {
+      if (planId) {
+        await removeMyPlan(planId)
+        setPlanId(undefined)
+        toast('나의 시험에서 삭제했어요.')
+        onChange?.()
+        return
+      }
 
-    const created = await addMyPlan(props)
-    setPlanId(created.id)
-    toast.success('나의 시험에 추가했어요.')
-    onChange?.()
+      const created = await addMyPlan(props)
+      setPlanId(created.id)
+      toast.success('나의 시험에 추가했어요.')
+      onChange?.()
+    } catch {
+      toast.error('저장에 실패했어요. 잠시 후 다시 시도해주세요.')
+    }
   }
 
   return (

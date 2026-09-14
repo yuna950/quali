@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { ExamRecordFormDialog } from '@/components/mypage/ExamRecordFormDialog'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { Skeleton } from '@/components/ui/skeleton'
 import { formatYyyymmdd } from '@/lib/date'
 import { listExamRecords } from '@/services/userService'
 import type { ExamRecord } from '@/types/user'
@@ -52,9 +53,7 @@ export function RecordsPage() {
     })
   }
 
-  if (!records) return null
-
-  const groups = groupByCertificate(records)
+  const groups = records ? groupByCertificate(records) : null
 
   return (
     <div className="flex flex-col gap-4">
@@ -71,7 +70,17 @@ export function RecordsPage() {
         />
       </div>
 
-      {groups.length === 0 && (
+      {groups === null &&
+        Array.from({ length: 3 }, (_, i) => (
+          <Card key={i}>
+            <CardContent className="flex flex-col gap-3">
+              <Skeleton className="h-5 w-40" />
+              <Skeleton className="h-4 w-56" />
+            </CardContent>
+          </Card>
+        ))}
+
+      {groups && groups.length === 0 && (
         <Card>
           <CardContent className="py-10 text-center">
             <p className="desc-3 text-muted-foreground">응시 기록이 없어요.</p>
@@ -79,7 +88,7 @@ export function RecordsPage() {
         </Card>
       )}
 
-      {groups.map((group) => (
+      {groups?.map((group) => (
         <Link key={group.jmCd} to={`/mypage/records/${group.jmCd}`}>
           <Card className="transition-shadow hover:shadow-md">
             <CardContent className="flex flex-col gap-3">

@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CertificateCard } from '@/components/certificate/CertificateCard'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
+import { Skeleton } from '@/components/ui/skeleton'
 import { listCertificates } from '@/services/certificateService'
 import { getSettings } from '@/services/userService'
 import type { Certificate } from '@/types/certificate'
@@ -20,6 +21,23 @@ export function InterestFieldCertificates() {
   return (
     <section>
       <h2 className="heading-3 mb-3">관심 직무분야 자격증</h2>
+
+      {certificates === null && (
+        <div className="flex gap-4 overflow-hidden">
+          {Array.from({ length: 4 }, (_, i) => (
+            <Card key={i} className="min-w-0 flex-[0_0_76.9%] sm:flex-[0_0_25%]">
+              <CardHeader>
+                <Skeleton className="h-4 w-20" />
+                <Skeleton className="h-5 w-32" />
+              </CardHeader>
+              <CardContent className="flex flex-col gap-2">
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-full" />
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
 
       {certificates && certificates.length === 0 && (
         <Card>

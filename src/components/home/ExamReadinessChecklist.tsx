@@ -38,24 +38,40 @@ export function ExamReadinessChecklist({ planId }: { planId: string }) {
   }, [planId])
 
   async function handleToggleDefault(itemId: DefaultChecklistItemId) {
-    setChecklist(await toggleDefaultChecklistItem(planId, itemId))
+    try {
+      setChecklist(await toggleDefaultChecklistItem(planId, itemId))
+    } catch {
+      toast.error('저장에 실패했어요. 잠시 후 다시 시도해주세요.')
+    }
   }
 
   async function handleToggleCustom(itemId: string) {
-    setChecklist(await toggleChecklistCustomItem(planId, itemId))
+    try {
+      setChecklist(await toggleChecklistCustomItem(planId, itemId))
+    } catch {
+      toast.error('저장에 실패했어요. 잠시 후 다시 시도해주세요.')
+    }
   }
 
   async function handleRemoveCustom(itemId: string) {
-    setChecklist(await removeChecklistCustomItem(planId, itemId))
+    try {
+      setChecklist(await removeChecklistCustomItem(planId, itemId))
+    } catch {
+      toast.error('삭제에 실패했어요. 잠시 후 다시 시도해주세요.')
+    }
   }
 
   async function handleAddCustom() {
     const label = newItemLabel.trim()
     if (!label) return
-    setChecklist(await addChecklistCustomItem(planId, label))
-    setNewItemLabel('')
-    setOpen(false)
-    toast.success('준비물을 추가했어요.')
+    try {
+      setChecklist(await addChecklistCustomItem(planId, label))
+      setNewItemLabel('')
+      setOpen(false)
+      toast.success('준비물을 추가했어요.')
+    } catch {
+      toast.error('저장에 실패했어요. 잠시 후 다시 시도해주세요.')
+    }
   }
 
   if (!checklist) return null

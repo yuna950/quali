@@ -6,6 +6,7 @@ import { InterestButton } from '@/components/certificate/InterestButton'
 import { PassRateTable } from '@/components/certificate/PassRateTable'
 import { BackButton } from '@/components/common/BackButton'
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
+import { Skeleton } from '@/components/ui/skeleton'
 import {
   getCertificate,
   getExamFee,
@@ -59,7 +60,25 @@ export function CertificateDetailPage() {
     }
   }, [jmCd])
 
-  if (!certificate) return null
+  if (!certificate) {
+    return (
+      <div className="mx-auto flex max-w-4xl flex-col gap-10 p-6">
+        <BackButton />
+        <section>
+          <div className="flex items-start justify-between">
+            <div className="flex flex-col gap-2">
+              <Skeleton className="h-4 w-32" />
+              <Skeleton className="h-8 w-64" />
+            </div>
+          </div>
+          <div className="mt-6 flex flex-col gap-3">
+            <Skeleton className="h-4 w-full max-w-md" />
+            <Skeleton className="h-4 w-full max-w-sm" />
+          </div>
+        </section>
+      </div>
+    )
+  }
 
   const stages: (keyof typeof STAGE_TITLE)[] = ['written', 'practical']
   const activeStages = stages.filter((stage) => schedules.some((s) => s.stages[stage]))

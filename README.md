@@ -1,32 +1,47 @@
-# React + TypeScript + Vite
+# QUALI
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+자격증 정보와 나의 시험 일정·응시 기록을 한 곳에서 관리하는 개인 맞춤형 자격증 관리 서비스입니다.
+Q-net(한국산업인력공단) 공공데이터를 기반으로 자격증 카탈로그, 시험 일정, 응시료, 시험 과목 정보를
+제공하고, 로그인한 사용자는 관심 자격증 등록, 나의 시험 일정 추가, 응시 기록과 합격 여부 관리를
+할 수 있습니다.
 
-Currently, two official plugins are available:
+## 기술 스택
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **프론트엔드**: React 19, TypeScript, Vite 8
+- **스타일링**: Tailwind CSS v4, shadcn/ui (Base UI 기반 컴포넌트)
+- **라우팅**: react-router-dom v7
+- **백엔드**: Supabase (Postgres, Auth, Edge Functions, pg_cron)
+- **기타**: lucide-react(아이콘), sonner(토스트), embla-carousel-react(캐러셀), date-fns
+- **린트**: oxlint
 
-## React Compiler
+## 개발 명령어
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```
+npm install      # 의존성 설치
+npm run dev      # 개발 서버 실행
+npm run build    # 타입체크 + 프로덕션 빌드
+npm run lint     # 린트
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 추후 개발 목표
+
+### 기능 / 데이터
+
+- 신규 자격증 추가 자동 감지 (현재는 기존 자격증 시험 일정 갱신만 자동화됨)
+- 일부 자격증의 시험 일정 데이터 누락 문제 보완 (Q-net 시험일정 API 불안정으로 일부 자격증은 일정
+  정보가 비어 있음)
+
+### UI / 디자인
+
+1. 팝업(다이얼로그) 디자인 개선
+2. 여러 자격증이 같은 회차로 묶여 표시되는 시험 일정 항목에, 그 회차에 속한 세부 자격증 목록을
+   볼 수 있는 페이지 신설
+3. 전체적으로 테두리 박스에 콘텐츠를 가두는 디자인 비중 축소
+4. 상세 페이지 등에 구분선 추가
+5. "나의 시험" 카드가 한눈에 더 잘 보이도록 데스크탑 그리드 폭 확장
+6. 데스크탑 기준 전반적인 폰트 크기 확대
+7. 시험 일정 목록의 가독성·색상 대비 개선
+
+### 배포 준비
+
+- 커스텀 SMTP 연동 후 이메일 인증(Confirm email) 재활성화
